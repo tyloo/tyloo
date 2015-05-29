@@ -1,0 +1,124 @@
+/*
+ * Social Buttons for Bootstrap
+ *
+ * Copyright 2013-2014 Panayiotis Lipiridis
+ * Licensed under the MIT License
+ *
+ * https://github.com/lipis/bootstrap-social
+ */
+
+.btn-social { position:relative; padding-left:44px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.btn-social :first-child { position:absolute; left:0; top:0; bottom:0; width:32px; line-height:34px; font-size:1.6em; text-align:center; border-right:1px solid rgba(0, 0, 0, 0.2) }
+.btn-social.btn-lg { padding-left:61px }
+.btn-social.btn-lg :first-child { line-height:45px; width:45px; font-size:1.8em; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease; }
+.btn-social.btn-sm { padding-left:38px }
+.btn-social.btn-sm :first-child { line-height:28px; width:28px; font-size:1.4em; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease; }
+.btn-social.btn-xs { padding-left:30px }
+.btn-social.btn-xs :first-child { line-height:20px; width:20px; font-size:1.2em; -webkit-transition:all 0.5s ease; -moz-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease; }
+.btn-social-icon { position:relative; padding-left:44px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; height:34px; width:34px; padding:0 }
+.btn-social-icon :first-child { position:absolute; left:0; top:0; bottom:0; width:32px; line-height:34px; font-size:1.6em; text-align:center; border-right:1px solid rgba(0, 0, 0, 0.2) }
+.btn-social-icon.btn-lg { padding-left:61px }
+.btn-social-icon.btn-lg :first-child { line-height:45px; width:45px; font-size:1.1em }
+.btn-social-icon.btn-sm { padding-left:38px }
+.btn-social-icon.btn-sm :first-child { line-height:28px; width:28px; font-size:1em }
+.btn-social-icon.btn-xs { padding-left:30px }
+.btn-social-icon.btn-xs :first-child { line-height:20px; width:20px; font-size:1em }
+.btn-social-icon :first-child { border:none; text-align:center; width:100% !important }
+.btn-social-icon.btn-lg { height:45px; width:45px; padding-left:0; padding-right:0 }
+.btn-social-icon.btn-sm { height:30px; width:30px; padding-left:0; padding-right:0 }
+.btn-social-icon.btn-xs { height:22px; width:22px; padding-left:0; padding-right:0 }
+.btn-adn { color:#FFF; background-color:#D87A68; }
+.btn-adn:hover, .btn-adn:focus, .btn-adn:active, .btn-adn.active, .open .dropdown-toggle.btn-adn { color:#FFF; background-color:#D05D48; }
+.btn-adn:active, .btn-adn.active, .open .dropdown-toggle.btn-adn { background-image:none }
+.btn-adn.disabled, .btn-adn[disabled], fieldset[disabled] .btn-adn, .btn-adn.disabled:hover, .btn-adn[disabled]:hover, fieldset[disabled] .btn-adn:hover, .btn-adn.disabled:focus, .btn-adn[disabled]:focus, fieldset[disabled] .btn-adn:focus, .btn-adn.disabled:active, .btn-adn[disabled]:active, fieldset[disabled] .btn-adn:active, .btn-adn.disabled.active, .btn-adn[disabled].active, fieldset[disabled] .btn-adn.active { background-color:#D87A68; }
+.btn-adn .badge { color:#D87A68; background-color:#FFF }
+.btn-bitbucket { color:#FFF; background-color:#205081; }
+.btn-bitbucket:hover, .btn-bitbucket:focus, .btn-bitbucket:active, .btn-bitbucket.active, .open .dropdown-toggle.btn-bitbucket { color:#FFF; background-color:#183C60; }
+.btn-bitbucket:active, .btn-bitbucket.active, .open .dropdown-toggle.btn-bitbucket { background-image:none }
+.btn-bitbucket.disabled, .btn-bitbucket[disabled], fieldset[disabled] .btn-bitbucket, .btn-bitbucket.disabled:hover, .btn-bitbucket[disabled]:hover, fieldset[disabled] .btn-bitbucket:hover, .btn-bitbucket.disabled:focus, .btn-bitbucket[disabled]:focus, fieldset[disabled] .btn-bitbucket:focus, .btn-bitbucket.disabled:active, .btn-bitbucket[disabled]:active, fieldset[disabled] .btn-bitbucket:active, .btn-bitbucket.disabled.active, .btn-bitbucket[disabled].active, fieldset[disabled] .btn-bitbucket.active { background-color:#205081; }
+.btn-bitbucket .badge { color:#205081; background-color:#FFF }
+.btn-dropbox { color:#FFF; background-color:#1087DD; }
+.btn-dropbox:hover, .btn-dropbox:focus, .btn-dropbox:active, .btn-dropbox.active, .open .dropdown-toggle.btn-dropbox { color:#FFF; background-color:#0D70B7; }
+.btn-dropbox:active, .btn-dropbox.active, .open .dropdown-toggle.btn-dropbox { background-image:none }
+.btn-dropbox.disabled, .btn-dropbox[disabled], fieldset[disabled] .btn-dropbox, .btn-dropbox.disabled:hover, .btn-dropbox[disabled]:hover, fieldset[disabled] .btn-dropbox:hover, .btn-dropbox.disabled:focus, .btn-dropbox[disabled]:focus, fieldset[disabled] .btn-dropbox:focus, .btn-dropbox.disabled:active, .btn-dropbox[disabled]:active, fieldset[disabled] .btn-dropbox:active, .btn-dropbox.disabled.active, .btn-dropbox[disabled].active, fieldset[disabled] .btn-dropbox.active { background-color:#1087DD; }
+.btn-dropbox .badge { color:#1087DD; background-color:#FFF }
+.btn-facebook { color:#FFF; background-color:#3B5998; }
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active, .open .dropdown-toggle.btn-facebook { color:#FFF; background-color:#30487B; }
+.btn-facebook:active, .btn-facebook.active, .open .dropdown-toggle.btn-facebook { background-image:none }
+.btn-facebook.disabled, .btn-facebook[disabled], fieldset[disabled] .btn-facebook, .btn-facebook.disabled:hover, .btn-facebook[disabled]:hover, fieldset[disabled] .btn-facebook:hover, .btn-facebook.disabled:focus, .btn-facebook[disabled]:focus, fieldset[disabled] .btn-facebook:focus, .btn-facebook.disabled:active, .btn-facebook[disabled]:active, fieldset[disabled] .btn-facebook:active, .btn-facebook.disabled.active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook.active { background-color:#3B5998; }
+.btn-facebook .badge { color:#3B5998; background-color:#FFF }
+.btn-flickr { color:#FFF; background-color:#FF0084; }
+.btn-flickr:hover, .btn-flickr:focus, .btn-flickr:active, .btn-flickr.active, .open .dropdown-toggle.btn-flickr { color:#FFF; background-color:#D6006F; }
+.btn-flickr:active, .btn-flickr.active, .open .dropdown-toggle.btn-flickr { background-image:none }
+.btn-flickr.disabled, .btn-flickr[disabled], fieldset[disabled] .btn-flickr, .btn-flickr.disabled:hover, .btn-flickr[disabled]:hover, fieldset[disabled] .btn-flickr:hover, .btn-flickr.disabled:focus, .btn-flickr[disabled]:focus, fieldset[disabled] .btn-flickr:focus, .btn-flickr.disabled:active, .btn-flickr[disabled]:active, fieldset[disabled] .btn-flickr:active, .btn-flickr.disabled.active, .btn-flickr[disabled].active, fieldset[disabled] .btn-flickr.active { background-color:#FF0084; }
+.btn-flickr .badge { color:#FF0084; background-color:#FFF }
+.btn-foursquare { color:#FFF; background-color:#0072B1; }
+.btn-foursquare:hover, .btn-foursquare:focus, .btn-foursquare:active, .btn-foursquare.active, .open .dropdown-toggle.btn-foursquare { color:#FFF; background-color:#005888; }
+.btn-foursquare:active, .btn-foursquare.active, .open .dropdown-toggle.btn-foursquare { background-image:none }
+.btn-foursquare.disabled, .btn-foursquare[disabled], fieldset[disabled] .btn-foursquare, .btn-foursquare.disabled:hover, .btn-foursquare[disabled]:hover, fieldset[disabled] .btn-foursquare:hover, .btn-foursquare.disabled:focus, .btn-foursquare[disabled]:focus, fieldset[disabled] .btn-foursquare:focus, .btn-foursquare.disabled:active, .btn-foursquare[disabled]:active, fieldset[disabled] .btn-foursquare:active, .btn-foursquare.disabled.active, .btn-foursquare[disabled].active, fieldset[disabled] .btn-foursquare.active { background-color:#0072B1; }
+.btn-foursquare .badge { color:#0072B1; background-color:#FFF }
+.btn-github { color:#FFF; background-color:#444; }
+.btn-github:hover, .btn-github:focus, .btn-github:active, .btn-github.active, .open .dropdown-toggle.btn-github { color:#FFF; background-color:#303030; }
+.btn-github:active, .btn-github.active, .open .dropdown-toggle.btn-github { background-image:none }
+.btn-github.disabled, .btn-github[disabled], fieldset[disabled] .btn-github, .btn-github.disabled:hover, .btn-github[disabled]:hover, fieldset[disabled] .btn-github:hover, .btn-github.disabled:focus, .btn-github[disabled]:focus, fieldset[disabled] .btn-github:focus, .btn-github.disabled:active, .btn-github[disabled]:active, fieldset[disabled] .btn-github:active, .btn-github.disabled.active, .btn-github[disabled].active, fieldset[disabled] .btn-github.active { background-color:#444; }
+.btn-github .badge { color:#444; background-color:#FFF }
+.btn-google-plus { color:#FFF; background-color:#DD4B39; }
+.btn-google-plus:hover, .btn-google-plus:focus, .btn-google-plus:active, .btn-google-plus.active, .open .dropdown-toggle.btn-google-plus { color:#FFF; background-color:#CA3523; }
+.btn-google-plus:active, .btn-google-plus.active, .open .dropdown-toggle.btn-google-plus { background-image:none }
+.btn-google-plus.disabled, .btn-google-plus[disabled], fieldset[disabled] .btn-google-plus, .btn-google-plus.disabled:hover, .btn-google-plus[disabled]:hover, fieldset[disabled] .btn-google-plus:hover, .btn-google-plus.disabled:focus, .btn-google-plus[disabled]:focus, fieldset[disabled] .btn-google-plus:focus, .btn-google-plus.disabled:active, .btn-google-plus[disabled]:active, fieldset[disabled] .btn-google-plus:active, .btn-google-plus.disabled.active, .btn-google-plus[disabled].active, fieldset[disabled] .btn-google-plus.active { background-color:#DD4B39; }
+.btn-google-plus .badge { color:#DD4B39; background-color:#FFF }
+.btn-instagram { color:#FFF; background-color:#3F729B; }
+.btn-instagram:hover, .btn-instagram:focus, .btn-instagram:active, .btn-instagram.active, .open .dropdown-toggle.btn-instagram { color:#FFF; background-color:#335D7E; }
+.btn-instagram:active, .btn-instagram.active, .open .dropdown-toggle.btn-instagram { background-image:none }
+.btn-instagram.disabled, .btn-instagram[disabled], fieldset[disabled] .btn-instagram, .btn-instagram.disabled:hover, .btn-instagram[disabled]:hover, fieldset[disabled] .btn-instagram:hover, .btn-instagram.disabled:focus, .btn-instagram[disabled]:focus, fieldset[disabled] .btn-instagram:focus, .btn-instagram.disabled:active, .btn-instagram[disabled]:active, fieldset[disabled] .btn-instagram:active, .btn-instagram.disabled.active, .btn-instagram[disabled].active, fieldset[disabled] .btn-instagram.active { background-color:#3F729B; }
+.btn-instagram .badge { color:#3F729B; background-color:#FFF }
+.btn-linkedin { color:#FFF; background-color:#007BB6; }
+.btn-linkedin:hover, .btn-linkedin:focus, .btn-linkedin:active, .btn-linkedin.active, .open .dropdown-toggle.btn-linkedin { color:#FFF; background-color:#005F8D; }
+.btn-linkedin:active, .btn-linkedin.active, .open .dropdown-toggle.btn-linkedin { background-image:none }
+.btn-linkedin.disabled, .btn-linkedin[disabled], fieldset[disabled] .btn-linkedin, .btn-linkedin.disabled:hover, .btn-linkedin[disabled]:hover, fieldset[disabled] .btn-linkedin:hover, .btn-linkedin.disabled:focus, .btn-linkedin[disabled]:focus, fieldset[disabled] .btn-linkedin:focus, .btn-linkedin.disabled:active, .btn-linkedin[disabled]:active, fieldset[disabled] .btn-linkedin:active, .btn-linkedin.disabled.active, .btn-linkedin[disabled].active, fieldset[disabled] .btn-linkedin.active { background-color:#007BB6; }
+.btn-linkedin .badge { color:#007BB6; background-color:#FFF }
+.btn-microsoft { color:#FFF; background-color:#2672EC; }
+.btn-microsoft:hover, .btn-microsoft:focus, .btn-microsoft:active, .btn-microsoft.active, .open .dropdown-toggle.btn-microsoft { color:#FFF; background-color:#135ED6; }
+.btn-microsoft:active, .btn-microsoft.active, .open .dropdown-toggle.btn-microsoft { background-image:none }
+.btn-microsoft.disabled, .btn-microsoft[disabled], fieldset[disabled] .btn-microsoft, .btn-microsoft.disabled:hover, .btn-microsoft[disabled]:hover, fieldset[disabled] .btn-microsoft:hover, .btn-microsoft.disabled:focus, .btn-microsoft[disabled]:focus, fieldset[disabled] .btn-microsoft:focus, .btn-microsoft.disabled:active, .btn-microsoft[disabled]:active, fieldset[disabled] .btn-microsoft:active, .btn-microsoft.disabled.active, .btn-microsoft[disabled].active, fieldset[disabled] .btn-microsoft.active { background-color:#2672EC; }
+.btn-microsoft .badge { color:#2672EC; background-color:#FFF }
+.btn-openid { color:#FFF; background-color:#F7931E; }
+.btn-openid:hover, .btn-openid:focus, .btn-openid:active, .btn-openid.active, .open .dropdown-toggle.btn-openid { color:#FFF; background-color:#E47F08; }
+.btn-openid:active, .btn-openid.active, .open .dropdown-toggle.btn-openid { background-image:none }
+.btn-openid.disabled, .btn-openid[disabled], fieldset[disabled] .btn-openid, .btn-openid.disabled:hover, .btn-openid[disabled]:hover, fieldset[disabled] .btn-openid:hover, .btn-openid.disabled:focus, .btn-openid[disabled]:focus, fieldset[disabled] .btn-openid:focus, .btn-openid.disabled:active, .btn-openid[disabled]:active, fieldset[disabled] .btn-openid:active, .btn-openid.disabled.active, .btn-openid[disabled].active, fieldset[disabled] .btn-openid.active { background-color:#F7931E; }
+.btn-openid .badge { color:#F7931E; background-color:#FFF }
+.btn-reddit { color:#000; background-color:#EFF7FF; }
+.btn-reddit:hover, .btn-reddit:focus, .btn-reddit:active, .btn-reddit.active, .open .dropdown-toggle.btn-reddit { color:#000; background-color:#C6E3FF; }
+.btn-reddit:active, .btn-reddit.active, .open .dropdown-toggle.btn-reddit { background-image:none }
+.btn-reddit.disabled, .btn-reddit[disabled], fieldset[disabled] .btn-reddit, .btn-reddit.disabled:hover, .btn-reddit[disabled]:hover, fieldset[disabled] .btn-reddit:hover, .btn-reddit.disabled:focus, .btn-reddit[disabled]:focus, fieldset[disabled] .btn-reddit:focus, .btn-reddit.disabled:active, .btn-reddit[disabled]:active, fieldset[disabled] .btn-reddit:active, .btn-reddit.disabled.active, .btn-reddit[disabled].active, fieldset[disabled] .btn-reddit.active { background-color:#EFF7FF; }
+.btn-reddit .badge { color:#EFF7FF; background-color:#000 }
+.btn-soundcloud { color:#FFF; background-color:#F50; }
+.btn-soundcloud:hover, .btn-soundcloud:focus, .btn-soundcloud:active, .btn-soundcloud.active, .open .dropdown-toggle.btn-soundcloud { color:#FFF; background-color:#D64700; }
+.btn-soundcloud:active, .btn-soundcloud.active, .open .dropdown-toggle.btn-soundcloud { background-image:none }
+.btn-soundcloud.disabled, .btn-soundcloud[disabled], fieldset[disabled] .btn-soundcloud, .btn-soundcloud.disabled:hover, .btn-soundcloud[disabled]:hover, fieldset[disabled] .btn-soundcloud:hover, .btn-soundcloud.disabled:focus, .btn-soundcloud[disabled]:focus, fieldset[disabled] .btn-soundcloud:focus, .btn-soundcloud.disabled:active, .btn-soundcloud[disabled]:active, fieldset[disabled] .btn-soundcloud:active, .btn-soundcloud.disabled.active, .btn-soundcloud[disabled].active, fieldset[disabled] .btn-soundcloud.active { background-color:#F50; }
+.btn-soundcloud .badge { color:#F50; background-color:#FFF }
+.btn-tumblr { color:#FFF; background-color:#2C4762; }
+.btn-tumblr:hover, .btn-tumblr:focus, .btn-tumblr:active, .btn-tumblr.active, .open .dropdown-toggle.btn-tumblr { color:#FFF; background-color:#1F3346; }
+.btn-tumblr:active, .btn-tumblr.active, .open .dropdown-toggle.btn-tumblr { background-image:none }
+.btn-tumblr.disabled, .btn-tumblr[disabled], fieldset[disabled] .btn-tumblr, .btn-tumblr.disabled:hover, .btn-tumblr[disabled]:hover, fieldset[disabled] .btn-tumblr:hover, .btn-tumblr.disabled:focus, .btn-tumblr[disabled]:focus, fieldset[disabled] .btn-tumblr:focus, .btn-tumblr.disabled:active, .btn-tumblr[disabled]:active, fieldset[disabled] .btn-tumblr:active, .btn-tumblr.disabled.active, .btn-tumblr[disabled].active, fieldset[disabled] .btn-tumblr.active { background-color:#2C4762; }
+.btn-tumblr .badge { color:#2C4762; background-color:#FFF }
+.btn-twitter { color:#FFF; background-color:#55ACEE; }
+.btn-twitter:hover, .btn-twitter:focus, .btn-twitter:active, .btn-twitter.active, .open .dropdown-toggle.btn-twitter { color:#FFF; background-color:#309AEA; }
+.btn-twitter:active, .btn-twitter.active, .open .dropdown-toggle.btn-twitter { background-image:none }
+.btn-twitter.disabled, .btn-twitter[disabled], fieldset[disabled] .btn-twitter, .btn-twitter.disabled:hover, .btn-twitter[disabled]:hover, fieldset[disabled] .btn-twitter:hover, .btn-twitter.disabled:focus, .btn-twitter[disabled]:focus, fieldset[disabled] .btn-twitter:focus, .btn-twitter.disabled:active, .btn-twitter[disabled]:active, fieldset[disabled] .btn-twitter:active, .btn-twitter.disabled.active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter.active { background-color:#55ACEE; }
+.btn-twitter .badge { color:#55ACEE; background-color:#FFF }
+.btn-vimeo { color:#FFF; background-color:#1AB7EA; }
+.btn-vimeo:hover, .btn-vimeo:focus, .btn-vimeo:active, .btn-vimeo.active, .open .dropdown-toggle.btn-vimeo { color:#FFF; background-color:#129CC9; }
+.btn-vimeo:active, .btn-vimeo.active, .open .dropdown-toggle.btn-vimeo { background-image:none }
+.btn-vimeo.disabled, .btn-vimeo[disabled], fieldset[disabled] .btn-vimeo, .btn-vimeo.disabled:hover, .btn-vimeo[disabled]:hover, fieldset[disabled] .btn-vimeo:hover, .btn-vimeo.disabled:focus, .btn-vimeo[disabled]:focus, fieldset[disabled] .btn-vimeo:focus, .btn-vimeo.disabled:active, .btn-vimeo[disabled]:active, fieldset[disabled] .btn-vimeo:active, .btn-vimeo.disabled.active, .btn-vimeo[disabled].active, fieldset[disabled] .btn-vimeo.active { background-color:#1AB7EA; }
+.btn-vimeo .badge { color:#1AB7EA; background-color:#FFF }
+.btn-vk { color:#FFF; background-color:#587EA3; }
+.btn-vk:hover, .btn-vk:focus, .btn-vk:active, .btn-vk.active, .open .dropdown-toggle.btn-vk { color:#FFF; background-color:#4A6A89; }
+.btn-vk:active, .btn-vk.active, .open .dropdown-toggle.btn-vk { background-image:none }
+.btn-vk.disabled, .btn-vk[disabled], fieldset[disabled] .btn-vk, .btn-vk.disabled:hover, .btn-vk[disabled]:hover, fieldset[disabled] .btn-vk:hover, .btn-vk.disabled:focus, .btn-vk[disabled]:focus, fieldset[disabled] .btn-vk:focus, .btn-vk.disabled:active, .btn-vk[disabled]:active, fieldset[disabled] .btn-vk:active, .btn-vk.disabled.active, .btn-vk[disabled].active, fieldset[disabled] .btn-vk.active { background-color:#587EA3; }
+.btn-vk .badge { color:#587EA3; background-color:#FFF }
+.btn-yahoo { color:#FFF; background-color:#720E9E; }
+.btn-yahoo:hover, .btn-yahoo:focus, .btn-yahoo:active, .btn-yahoo.active, .open .dropdown-toggle.btn-yahoo { color:#FFF; background-color:#570B79; }
+.btn-yahoo:active, .btn-yahoo.active, .open .dropdown-toggle.btn-yahoo { background-image:none }
+.btn-yahoo.disabled, .btn-yahoo[disabled], fieldset[disabled] .btn-yahoo, .btn-yahoo.disabled:hover, .btn-yahoo[disabled]:hover, fieldset[disabled] .btn-yahoo:hover, .btn-yahoo.disabled:focus, .btn-yahoo[disabled]:focus, fieldset[disabled] .btn-yahoo:focus, .btn-yahoo.disabled:active, .btn-yahoo[disabled]:active, fieldset[disabled] .btn-yahoo:active, .btn-yahoo.disabled.active, .btn-yahoo[disabled].active, fieldset[disabled] .btn-yahoo.active { background-color:#720E9E; }
+.btn-yahoo .badge { color:#720E9E; background-color:#FFF }
