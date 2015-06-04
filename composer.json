@@ -4,15 +4,7 @@
     "keywords": [
         "laravel",
         "framework",
-        "php",
-        "css",
-        "html",
-        "gulp",
-        "MVC",
-        "sass",
-        "less",
-        "phpunit",
-        "bootstrap"
+        "php"
     ],
     "homepage": "https://github.com/tyloo/tyloo",
     "license": "MIT",
