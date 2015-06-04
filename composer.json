@@ -4,7 +4,9 @@
     "keywords": [
         "laravel",
         "framework",
-        "php"
+        "php",
+        "blog",
+        "portfolio"
     ],
     "homepage": "https://github.com/tyloo/tyloo",
     "license": "MIT",
