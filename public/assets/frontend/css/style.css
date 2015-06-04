@@ -939,6 +939,9 @@ input[type=checkbox] {
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right { opacity:1; }
 .carousel-fade .carousel-control { z-index:2; }
+.carousel-item1 { background-image:url('../img/backgrounds/bg1.png'); }
+.carousel-item2 { background-image:url('../img/backgrounds/bg4.jpg'); }
+.carousel-item3 { background-image:url('../img/backgrounds/bg5.jpg'); }
 /* Quote Carousel */
 .quote-carousel .carousel, .quote-carousel .carousel .item { height:300px; }
 .quote-carousel .carousel-inner { height:300px; background-color:#272727; border-radius:0; }
@@ -1068,7 +1071,7 @@ blockquote {
     padding-top:4px;
 }
 /* Header 1 and 2 */
-.header { padding:21px 0 21px 0; border-bottom:1px dotted #D2D2D2; background:#FAFAFA; }
+.header { padding:21px 0 21px 0; border-bottom:1px dotted #D2D2D2; background: #FF7454 url('../img/backgrounds/bg1.png'); }
 .header h1 {
     font-size:16px;
     margin:0;

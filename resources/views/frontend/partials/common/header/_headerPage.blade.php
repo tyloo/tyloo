@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<div class="header" style="background: #ff7454 url('{{ asset('assets/img/backgrounds/bg1.png') }}');">
+<div class="header">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-xs-12">

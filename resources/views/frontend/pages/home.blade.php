@@ -16,7 +16,7 @@
             <div class="carousel-inner">
                 {{-- Item 1 --}}
                 <div class="item active">
-                    <div class="background-main" style="background-image:url('{{ asset('assets/frontend/img/backgrounds/bg1.png') }}');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+                    <div class="background-main carousel-item1" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
                         <div class="container">
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
@@ -44,7 +44,7 @@
 
                 {{-- Item 2 --}}
                 <div class="item">
-                    <div style="background-image:url('{{ asset('assets/frontend/img/backgrounds/bg4.jpg') }}');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+                    <div class="carousel-item2" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
                         <div class="container">
                             <div class="row carousel-content center-vertically-left">
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
@@ -73,7 +73,7 @@
 
                 {{-- Item 3 --}}
                 <div class="item">
-                    <div style="background-image:url('{{ asset('assets/frontend/assets/img/backgrounds/bg5.jpg') }}');" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
+                    <div class="carousel-item3" data-0="background-position:0px 0px;" data-500="background-position:0px -250px;">
                         <div class="container">
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInUpBig-animated" data-animation="fadeInUpBig">
@@ -150,51 +150,57 @@
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">We have over <b>30+</b> features pages.</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">I'm in love with the PHP!</a></h4>
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    We built this template keeping in mind the features you might need on your next
-                                    project. Giving you a variety of components to utilize, a variety of pages to
-                                    build on, and all of the plugins you might need, already configured for
-                                    Bootstrap 3. Aliquam erat volutpat. Aenean euismod nisl sed justo pharetra, et
-                                    pretium mauris porttitor. Mauris luctus justo eget tempus ornare. Pellentesque
-                                    vitae sollicitudin ante.
+                                    <p>
+                                        The title is a reference to a song. Feel free to search it :p So, since I'm a child (well, actually I started developing when I was 15...) I develop applications in PHP.
+                                    </p>
+                                    <p>
+                                        That being said, I could see the evolution of this language since PHP4. At this time (and because I was a novice), nothing was really structured. You didn't have the Framework echosystem and I have to admit that it was really painful...
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">We like pre built <i>components</i>.</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Brace yourself. Laravel is coming!</a></h4>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Anim pariatur. Aliquam erat
-                                    volutpat. Aenean euismod nisl sed justo pharetra, et pretium mauris porttitor.
-                                    Mauris luctus justo eget tempus ornare. Pellentesque vitae sollicitudin ante.
+                                    <p>
+                                        Recently (well, for now two years now), I discovered the Laravel Framework and I
+                                        felt in love! Indeed, this Framework based on Symfony 2 and other useful libraries
+                                        is meant to be "easy" and allows you to develop and deploy projects really quickly!
+                                    </p>
+                                    <p>
+                                        If you check my <a href="{{ URL::route('blog') }}">Blog</a>, you'll be able to find
+                                        tips, ideas and other stuff linked to Laravel... Don't hesitate to check them and give me feedback ;)
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">We like to sleep.</a></h4>
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Code is not everything... Get a life bro!</a></h4>
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Anim pariatur. Aliquam erat
-                                    volutpat. Aenean euismod nisl sed justo pharetra, et pretium mauris porttitor.
-                                    Mauris luctus justo eget tempus ornare. Pellentesque vitae sollicitudin ante.
+                                    <p>
+                                        Well, now come the cool part, at least I hope it is. As you can imagine, I'm not a robot and I don't have nerdy activities in my life!
+                                    </p>
+                                    <p>
+                                        Indeed, I love hanging out with friends (well, I live in Paris, the best city in the world! Is it? :)),
+                                        play Rugby (because I feel like a Beast there...), I watch a lot of TV shows and other cool stuff!
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center">
-                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">My Resume</a>
+                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Need to know more? Check out My Resume</a>
                     </div>
                 </div>
 
@@ -207,74 +213,8 @@
     </div>
     {{-- Accordion + IMG --}}
 
-    {{-- Carousel + Intro --}}
-    <div class="background-light-grey pt40 pb40 border-top">
-        <div class="container">
-            <div class="row">
-                {{-- Carousel --}}
-                <div class="col-sm-4" data-sr="enter left">
-                    <div id="homeCarousel2" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#homeCarousel2" data-slide-to="0" class="active"></li>
-                            <li data-target="#homeCarousel2" data-slide-to="1"></li>
-                            <li data-target="#homeCarousel2" data-slide-to="2"></li>
-                        </ol>
-
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div style="background-image:url('{{ asset('assets/frontend/img/backgrounds/stock2.jpg') }}'); height:260px;"></div>
-                            </div>
-                            <div class="item">
-                                <div style="background-image:url('{{ asset('assets/frontend/img/backgrounds/stock7.jpg') }}'); height:260px"></div>
-                            </div>
-                            <div class="item">
-                                <div style="background-image:url('{{ asset('assets/frontend/img/backgrounds/stock1.jpg') }}'); height:260px"></div>
-                            </div>
-                        </div>
-
-                        {{-- Controls --}}
-                        <a class="left carousel-control" href="#homeCarousel2" role="button" data-slide="prev">
-                            <span class="ion-ios7-arrow-left carousel-arrow-left" aria-hidden="true"></span>
-                        </a>
-                        <a class="right carousel-control" href="#homeCarousel2" role="button" data-slide="next">
-                            <span class="ion-ios7-arrow-right carousel-arrow-right" aria-hidden="true"></span>
-                        </a>
-                        {{-- /Controls --}}
-                    </div>
-                </div>
-                {{-- /Carousel --}}
-
-                {{-- Content Inside --}}
-                <div class="col-sm-8">
-                    <div class="heading mb20 mt30-xs">
-                        <h4><span class="ion-beaker mr15"></span>The Studio</h4>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu risus libero. Donec et lorem lacinia,
-                        adipiscing nunc nec, hendrerit sapien. Sed in scelerisque tortor. Praesent porttitor odio non ullamcorper gravida.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu risus libero. Donec et lorem lacinisent porttitor
-                        odio non ullamcorper gravida.
-                    </p>
-
-                    {{-- List --}}
-                    <ul class="list-arrow-2-color no-margin">
-                        <li><small>Etiam mollis pharetra adipiscing. Etiam porta in sem vitae suscipit.</small></li>
-                        <li><small>Consectetur adipiscing elit. Maecenas tempsam suscipit sagittis vestibulum.</small></li>
-                        <li><small>Nulla volutpat aliquam velit</small></li>
-                        <li><small>Faucibus porta lacus fringilla vel</small></li>
-                    </ul>
-                </div>
-                {{-- /Content Inside --}}
-            </div>
-        </div>
-    </div>
-    {{-- /Carousel + Intro --}}
-
     {{-- Recent Work + Clients --}}
-    <section class="pt40 mb40 border-top">
+    <section class="pt40 mb40">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -288,34 +228,43 @@
                         <div class="thumbnail">
                             <div class="caption v-wrap">
                                 <div class="thumbnail-caption-holder v-box">
-                                    <h4 class="text-white">The Latia Project</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
+                                    <h4 class="text-white">Project 1</h4>
+                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
                                 </div>
                             </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock1.jpg') }}" alt="...">
+                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
                         </div>
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Goose UI</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
+                                    <h4 class="text-white">Project 2</h4>
+                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
                                 </div>
                             </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock2.jpg') }}" alt="...">
+                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
                         </div>
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Schroder's List</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
+                                    <h4 class="text-white">Project 3</h4>
+                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
                                 </div>
                             </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock3.jpg') }}" alt="...">
+                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
                         </div>
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">NO Pelicans</h4>
+                                    <h4 class="text-white">Project 4</h4>
+                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
+                                </div>
+                            </div>
+                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
+                        </div>
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <div class="thumbnail-caption-holder">
+                                    <h4 class="text-white">Project 5</h4>
                                     <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
                                 </div>
                             </div>
@@ -324,43 +273,47 @@
                         <div class="thumbnail">
                             <div class="caption">
                                 <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Fanbango</h4>
+                                    <h4 class="text-white">Project 6</h4>
                                     <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
                                 </div>
                             </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock5.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">The Latia Project</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock6.jpg') }}" alt="...">
+                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
                         </div>
                     </div>
                 </div>
             </div>
-
+        </div>
+    </section>
+    <section class="mb40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading mb30">
+                        <h4><span class="ion-android-social-user mr15"></span>Customers</h4>
+                        <div class="owl-controls">
+                            <div id="customNav" class="owl-nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/boomerang.png') }}" class="img-responsive clients-img" alt="Client 1"></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 1"></a>
                 </div>
                 <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/backlight.png') }}" class="img-responsive clients-img" alt="Client 2"></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 2"></a>
                 </div>
                 <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
                     <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 3"></a>
                 </div>
                 <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/ome.png') }}" class="img-responsive clients-img" alt="Client 4"></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 4"></a>
                 </div>
                 <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/euro.png') }}" class="img-responsive clients-img" alt="Client 5"></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 5"></a>
                 </div>
                 <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/micro.png') }}" class="img-responsive clients-img" alt="Client 6"></a>
+                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 6"></a>
                 </div>
             </div>
         </div>
