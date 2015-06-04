@@ -1,4 +1,5 @@
-/vendor
-/node_modules
-.env
 build
+docs
+node_modules
+vendor
+.env

@@ -1,9 +1,29 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "tyloo/tyloo",
+    "description": "Home made PHP CMS Framework based on Laravel and some magic. See demo : http://www.tyloo.fr",
+    "keywords": [
+        "laravel",
+        "framework",
+        "php",
+        "css",
+        "html",
+        "gulp",
+        "MVC",
+        "sass",
+        "less",
+        "phpunit",
+        "bootstrap"
+    ],
+    "homepage": "https://github.com/tyloo/tyloo",
     "license": "MIT",
-    "type": "project",
+    "authors": [
+        {
+            "name": "Julien 'Tyloo' Bonvarlet",
+            "email": "jbonva@gmail.com",
+            "homepage": "http://www.tyloo.fr",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "laravel/framework": "5.1.*"
     },
@@ -39,11 +59,17 @@
         ],
         "post-create-project-cmd": [
             "php artisan key:generate"
-        ]
+        ],
+        "test": "phpunit"
     },
     "config": {
         "preferred-install": "dist"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
