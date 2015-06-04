@@ -1,20 +1,20 @@
 # Changelog
 
-All Notable changes to `:package_name` will be documented in this file
+All Notable changes to `tyloo/tyloo` will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## v1.0.0 - 2015-06-04
 
 ### Added
-- Nothing
+- Core structure
+- Design structure
+- Pages with boilerplate
+- Basic Integration tests
 
-### Deprecated
-- Nothing
-
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
+### TODO
+- Write content
+- Implement backend and backend design
+- Implement more tests
+- Create the Blog with dynamic content
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+- Make a search engine. GSA ? :)
