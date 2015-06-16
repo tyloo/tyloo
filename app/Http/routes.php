@@ -8,7 +8,3 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@contact']);
     Route::get('search', ['as' => 'search', 'uses' => 'PagesController@search']);
 });
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function () {
-    Route::get('/', ['as' => 'dashboard', 'uses' => 'PagesController@dashboard']);
-});
