@@ -1,11 +1,14 @@
-<?php namespace App\Tests\Integration;
+<?php
+
+namespace App\tests\Integration;
 
 use App\Tests\TestCase;
 
 class IntegrationTest extends TestCase
 {
     /** @test */
-    public function test_prepared() {
+    public function test_prepared()
+    {
         $this->assertEquals('App\Tests\Integration\IntegrationTest', get_class($this));
     }
 

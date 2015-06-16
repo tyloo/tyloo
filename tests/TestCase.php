@@ -1,6 +1,9 @@
-<?php namespace App\Tests;
+<?php
 
-use  Illuminate\Foundation\Testing\TestCase as TestCaseFoundation;
+namespace App\tests;
+
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Foundation\Testing\TestCase as TestCaseFoundation;
 
 class TestCase extends TestCaseFoundation
 {
@@ -20,7 +23,7 @@ class TestCase extends TestCaseFoundation
     {
         $app = require __DIR__.'/../bootstrap/app.php';
 
-        $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+        $app->make(Kernel::class)->bootstrap();
 
         return $app;
     }
