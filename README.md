@@ -4,6 +4,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/tyloo/tyloo/master.svg?style=flat-square)](https://travis-ci.org/tyloo/tyloo)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/tyloo/tyloo.svg?style=flat-square)](https://scrutinizer-ci.com/g/tyloo/tyloo/code-structure)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/2721d140-78cb-4abf-a456-332c8f4ac74c.svg?style=flat-square)](https://insight.sensiolabs.com/projects/2721d140-78cb-4abf-a456-332c8f4ac74c)
 [![Quality Score](https://img.shields.io/scrutinizer/g/tyloo/tyloo.svg?style=flat-square)](https://scrutinizer-ci.com/g/tyloo/tyloo)
 
 This package is the source code of my personal website [www.tyloo.fr](http://www.tyloo.fr/). It is written in PHP and based on the Laravel Framework.

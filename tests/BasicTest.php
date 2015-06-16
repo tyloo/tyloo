@@ -6,8 +6,6 @@ class BasicTest extends TestCase
 {
     /**
      * A basic functional Home Page test.
-     *
-     * @return void
      */
     public function testHomePage()
     {
@@ -17,8 +15,6 @@ class BasicTest extends TestCase
 
     /**
      * Test Menu Anchors : /resume
-     *
-     * @return void
      */
     public function testResumeAnchor()
     {
@@ -29,37 +25,31 @@ class BasicTest extends TestCase
 
     /**
      * Test Menu Anchors : /works
-     *
-     * @return void
      */
     public function testWorksAnchor()
     {
         $this->visit('/')
-            ->click('Works')
-            ->seePageIs('/works');
+             ->click('Works')
+             ->seePageIs('/works');
     }
 
     /**
      * Test Menu Anchors : /blog
-     *
-     * @return void
      */
     public function testBlogAnchor()
     {
         $this->visit('/')
-            ->click('Blog')
-            ->seePageIs('/blog');
+             ->click('Blog')
+             ->seePageIs('/blog');
     }
 
     /**
      * Test Menu Anchors : contact
-     *
-     * @return void
      */
     public function testContactAnchor()
     {
         $this->visit('/')
-            ->click('Contact')
-            ->seePageIs('/contact');
+             ->click('Contact')
+             ->seePageIs('/contact');
     }
 }
