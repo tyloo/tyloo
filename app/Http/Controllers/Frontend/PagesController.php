@@ -8,8 +8,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        PostRepository::getAll();
-        // return view('frontend.pages.home');
+        return view('frontend.pages.home');
     }
 
     public function resume()
