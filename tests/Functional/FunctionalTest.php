@@ -1,6 +1,6 @@
 <?php
 
-namespace App\tests\Functional;
+namespace App\Tests\Functional;
 
 use App\Tests\TestCase;
 

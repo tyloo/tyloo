@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Frontend\Auth;
 
 use App\User;
 use Validator;

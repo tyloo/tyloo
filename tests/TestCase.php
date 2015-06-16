@@ -1,6 +1,6 @@
 <?php
 
-namespace App\tests;
+namespace App\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase as TestCaseFoundation;
