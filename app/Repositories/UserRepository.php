@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Repositories\Eloquent\Repository;
 
-class PostRepository extends Repository
+class UserRepository extends Repository
 {
     /**
      * Specify Model class name
@@ -13,6 +13,6 @@ class PostRepository extends Repository
      */
     public function model()
     {
-        return 'App\Post';
+        return 'App\User';
     }
 }
