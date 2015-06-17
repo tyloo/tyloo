@@ -14,7 +14,9 @@ matrix:
 before_script:
   - mv .env.testing .env
   - travis_retry composer self-update
-  - travis_retry composer install
+  - travis_retry composer install --prefer-source
+  - php artisan migrate
+  - php artisan db:seed
 
 script:
   - phpunit --coverage-text --coverage-clover=coverage.clover
