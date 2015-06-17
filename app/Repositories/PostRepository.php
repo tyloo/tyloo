@@ -1,13 +1,16 @@
 <?php namespace App\Repositories;
 
-use App\Post;
+use App\Repositories\Eloquent\Repository;
 
-class PostRepository extends AbstractRepository implements RepositoryInterface
+class PostRepository extends Repository
 {
     /**
-     * The model linked to our resources.
+     * Specify Model class name
      *
-     * @var
+     * @return mixed
      */
-    protected $model = Post::class;
+    public function model()
+    {
+        return 'App\Post';
+    }
 }

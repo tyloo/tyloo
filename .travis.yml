@@ -12,7 +12,7 @@ matrix:
     - php: hhvm
 
 before_script:
-  - mv .env.testing .env
+  - mv .env.travis .env
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
   - php artisan migrate

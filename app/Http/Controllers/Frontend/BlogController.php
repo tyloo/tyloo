@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Post;
 use App\Http\Controllers\Controller;
-use App\Repositories\PostRepository;
+use App\Repositories\PostRepository as Post;
 
 class BlogController extends Controller
 {
     /**
-     * @var \App\Repositories\PostRepository
+     * @var \App\Http\Controllers\Frontend\Post
      */
-    protected $repository;
+    protected $post;
 
-    public function __construct(PostRepository $repository)
+    public function __construct(Post $post)
     {
-        $this->repository = $repository;
+        $this->post = $post;
     }
 
     /**
@@ -25,7 +24,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.blog.index')->withPosts($this->repository->allPaginated(10));
+        return $this->post->all();
+        //return view('frontend.pages.blog.index')->withPosts($this->repository->allPaginated(10));
     }
 
     /**
@@ -36,6 +36,7 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        return Post::where('slug', $slug)->firstOrFail();
+        return $this->post->findBy('slug', $slug);
+        //return Post::where('slug', $slug)->firstOrFail();
     }
 }
