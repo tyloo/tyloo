@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Post;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 

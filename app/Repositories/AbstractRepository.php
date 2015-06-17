@@ -85,7 +85,7 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function create($resource)
     {
-        // TODO: Implement create() method.
+
     }
 
     /**
@@ -97,7 +97,7 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function remove($id)
     {
-        // TODO: Implement remove() method.
+
     }
 
     /**
@@ -109,6 +109,6 @@ abstract class AbstractRepository implements RepositoryInterface
      */
     public function update($id, $resource)
     {
-        // TODO: Implement update() method.
+
     }
 }
