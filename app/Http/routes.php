@@ -1,9 +1,6 @@
 <?php
 
-# Event::listen('illuminate.query', function($query)
-# {
-#     dump($query);
-# });
+# Event::listen('illuminate.query', function($query) { dump($query); });
 
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
