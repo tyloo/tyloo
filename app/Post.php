@@ -26,4 +26,12 @@ class Post extends Model
      * @var array
      */
     protected $hidden = [];
+
+    /**
+     * Get the user record associated with the Post.
+     */
+    public function author()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

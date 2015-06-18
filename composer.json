@@ -20,7 +20,8 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "intervention/image": "~2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

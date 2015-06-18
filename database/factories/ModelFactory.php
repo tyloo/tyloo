@@ -19,3 +19,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    $title = substr($faker->sentence(rand(3, 7)), 0, -1);
+    return [
+        'title' => $title,
+        'slug' => str_slug($title),
+        'excerpt' => '<p>' . $faker->text(200) . '</p>',
+        'content' => '<p>' . $faker->text() . '</p>',
+        'image' => $faker->imageUrl(750, 346, 'cats', true),
+        'user_id' => rand(1, 10),
+        'published' => rand(0, 1)
+    ];
+});
