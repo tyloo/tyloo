@@ -29,6 +29,15 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'content' => '<p>' . $faker->text(2000) . '</p>',
         'image' => $faker->imageUrl(750, 346, 'cats', false),
         'author_id' => rand(1, 10),
-        'published' => rand(0, 1)
+        'published' => rand(0, 1),
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    $name = $faker->word;
+    return [
+        'name' => $name,
+        'slug' => str_slug($name),
+        'content' => $faker->text(200),
     ];
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
+use App\Repositories\Criteria\Post\WithTags;
 use App\Repositories\PostRepository as Post;
 
 class BlogController extends Controller
@@ -17,7 +18,7 @@ class BlogController extends Controller
     public function __construct(Post $post)
     {
         $this->post = $post;
-        $this->post->pushCriteria(new Published())->pushCriteria(new WithAuthor());
+        $this->post->pushCriteria(new Published())->pushCriteria(new WithAuthor())->pushCriteria(new WithTags());
     }
 
     /**

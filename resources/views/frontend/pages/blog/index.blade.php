@@ -13,7 +13,9 @@
                             <a href="{{ URL::route('blog.show', ['slug' => $post->slug]) }}"><img class="img-responsive full-width" src="{{ $post->image }}" alt=""></a>
                             <div class="blog-post-holder">
                                 <ul class="list-inline posted-info">
-                                    <li>Posted By <a href="#">{{ $post->author->name }}</a> - In <a href="#">Design</a> - {{ $post->created_at->diffForHumans() }}</li>
+                                    <li>By <a href="#">{{ $post->author->name }}</a></li>
+                                    @include('frontend.partials.blog.blocks.postTags', ['tags' => $post->tags])
+                                    <li>{{ $post->created_at->diffForHumans() }}</li>
                                 </ul>
                                 <hr align="left" class="mt15 mb10">
                                 <h2><a href="{{ URL::route('blog.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a></h2>
