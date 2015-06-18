@@ -52,12 +52,4 @@ class BasicTest extends TestCase
              ->click('Contact')
              ->seePageIs('/contact');
     }
-
-    /**
-     * Test Blog Show
-     */
-    public function testBlogShow()
-    {
-        $this->visit('/blog/test-article')->assertResponseOk();
-    }
 }

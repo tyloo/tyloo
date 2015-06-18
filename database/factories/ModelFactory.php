@@ -26,9 +26,9 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'title' => $title,
         'slug' => str_slug($title),
         'excerpt' => '<p>' . $faker->text(200) . '</p>',
-        'content' => '<p>' . $faker->text() . '</p>',
-        'image' => $faker->imageUrl(750, 346, 'cats', true),
-        'user_id' => rand(1, 10),
+        'content' => '<p>' . $faker->text(2000) . '</p>',
+        'image' => $faker->imageUrl(750, 346, 'cats', false),
+        'author_id' => rand(1, 10),
         'published' => rand(0, 1)
     ];
 });

@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('excerpt');
             $table->text('content');
             $table->string('image');
-            $table->integer('user_id');
+            $table->integer('author_id');
             $table->boolean('published');
             $table->timestamps();
         });

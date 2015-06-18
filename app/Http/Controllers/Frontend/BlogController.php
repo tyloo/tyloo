@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\Criteria\Post\Published;
+use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\PostRepository as Post;
 
 class BlogController extends Controller
@@ -16,7 +17,7 @@ class BlogController extends Controller
     public function __construct(Post $post)
     {
         $this->post = $post;
-        $this->post->pushCriteria(new Published());
+        $this->post->pushCriteria(new Published())->pushCriteria(new WithAuthor());
     }
 
     /**
@@ -38,6 +39,6 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        return $this->post->findBy('slug', $slug);
+        return view('frontend.pages.blog.show')->withPost($this->post->findBy('slug', $slug));
     }
 }
