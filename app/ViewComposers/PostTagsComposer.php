@@ -4,7 +4,6 @@ namespace App\ViewComposers;
 
 use App\Repositories\Criteria\LastFive;
 use App\Repositories\TagRepository;
-use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class PostTagsComposer
