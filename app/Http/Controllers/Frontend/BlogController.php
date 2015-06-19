@@ -6,16 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\Criteria\Post\WithTags;
-use App\Repositories\PostRepository as Post;
+use App\Repositories\PostRepository;
+use App\Tag;
 
 class BlogController extends Controller
 {
     /**
-     * @var \App\Http\Controllers\Frontend\Post
+     * @var \App\Repositories\PostRepository
      */
     protected $post;
 
-    public function __construct(Post $post)
+    public function __construct(PostRepository $post)
     {
         $this->post = $post;
         $this->post->pushCriteria(new Published())->pushCriteria(new WithAuthor())->pushCriteria(new WithTags());

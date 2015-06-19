@@ -4,4 +4,4 @@
 
 @include('frontend.partials.blog.blocks.lastPosts')
 
-@include('frontend.partials.blog.blocks.lastPosts')
+@include('frontend.partials.blog.blocks.tags')
