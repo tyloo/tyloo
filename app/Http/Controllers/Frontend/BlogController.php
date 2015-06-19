@@ -7,7 +7,6 @@ use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\Criteria\Post\WithTags;
 use App\Repositories\PostRepository;
-use App\Tag;
 
 class BlogController extends Controller
 {
