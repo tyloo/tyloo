@@ -175,7 +175,7 @@
                                         is meant to be "easy" and allows you to develop and deploy projects really quickly!
                                     </p>
                                     <p>
-                                        If you check my <a href="{{ URL::route('blog') }}">Blog</a>, you'll be able to find
+                                        If you check my <a href="{{ URL::route('blog.index') }}">Blog</a>, you'll be able to find
                                         tips, ideas and other stuff linked to Laravel... Don't hesitate to check them and give me feedback ;)
                                     </p>
                                 </div>
