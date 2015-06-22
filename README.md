@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/tyloo/tyloo.png?label=ready&title=Ready)](https://waffle.io/tyloo/tyloo)
 # Tyloo.fr
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tyloo/tyloo.svg?style=flat-square)](https://packagist.org/packages/tyloo/tyloo)
