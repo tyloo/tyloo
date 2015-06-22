@@ -17,7 +17,7 @@
 <section class="mt40 mb40">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-sm-8">
                 <div class="heading mb20"><h4><span class="ion-android-mail mr15"></span>Let's get in touch!</h4></div>
                 <p class="mb20">
                     Feel free to fill that form to enter in contact with me. I'll try to answer you as quick as possible!
@@ -53,8 +53,30 @@
                     <button type="submit" class="btn btn-rw btn-primary">Submit</button>
                 </form>
             </div>
+            <div class="col-sm-4 mt30-xs">
+                <div class="content-box content-box-primary mb30">
+                    <span class="ion-ios7-telephone-outline text-white border-white bordered-icon-static-sm mb10"></span>
+                    <h2 class="text-white no-margin">(+33) 6 29 50 93 46</h2>
+                </div>
+                <div class="panel panel-primary no-margin">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="ion-android-system-home"></span> Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <address class="no-margin">
+                            <strong>Julien 'Tyloo' Bonvarlet</strong><br>
+                            31, avenue de Nonneville<br>
+                            93600 - Aulnay-sous-Bois (France)<br>
+                            Phone: (+33) 6 29 50 93 46<br>
+                            Mail: <a href="mailto:jbonva@gmail.com">jbonva@gmail.com</a><br>
+                            <a href="#" class="btn btn-social-icon btn-github btn-sm"><i class="fa fa-github-alt"></i></a>
+                            <a href="#" class="btn btn-social-icon btn-linkedin btn-sm"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="btn btn-social-icon btn-twitter btn-sm"><i class="fa fa-twitter"></i></a>
+                        </address>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 </section>
 <!-- /Contact -->

@@ -1062,6 +1062,9 @@ blockquote {
     border-bottom:1px dotted #D2D2D2;
     font-size:12px;
 }
+.no-margin-bottom {
+    margin-bottom:1px;
+}
 .heading-caption {
     font-size:12px;
     font-family:'Open Sans', sans-serif;

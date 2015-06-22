@@ -3,98 +3,186 @@
 @section('content')
     @include('frontend.partials.common.header._headerPage', ['pageName' => 'My Resume', 'pageNameBreadcrumb' => 'Resume'])
 
-    <div class="container">
-        <ul class="timeline">
-            <li>
-                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                        <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                        <hr>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+    <section>
+        <div class="container">
+            <div class="heading no-margin-bottom pt15">
+                <h1>Work Experience<small>Former and actual jobs (with missions)</small></h1>
+            </div>
+            <ul class="timeline no-margin">
+                <!-- Left -->
+                <li>
+                    <div class="timeline-badge success"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Google Deployment Specialist @ <strong>NRX</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> October 2012 - Today</small>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="list-arrow-color no-margin">
+                                <li>Developed Web Applications on Laravel, Symfony 2 and Zend Framework 3.</li>
+                                <li>Developed Core Java Applications.</li>
+                                <li>Passed the following Google certifications :
+                                    <ul class="list-arrow-color no-margin">
+                                        <li>Google Deployment Specialist (Google Search Appliance)</li>
+                                        <li>Google Apps 100</li>
+                                        <li>Google Cloud Platform 300</li>
+                                    </ul>
+                                </li>
+                                <li>Deployed Google Search Appliance projects for some customers.</li>
+                                <li>Search & Development based on solutions related to Google for Work.</li>
+                                <li>Created a dynamic library on PHP to administrate and monitor a GSA.</li>
                             </ul>
                         </div>
                     </div>
+                </li>
+
+                <!-- Right -->
+                <li class="timeline-inverted">
+                    <div class="timeline-badge warning"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Developer Web & Mobile @ <strong>Lemonway</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> September 2011 - September 2012</small>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="list-arrow-color no-margin">
+                                <li>Developed the company's Website.</li>
+                                <li>Developed the company's Mobile App.</li>
+                                <li>Developed iPhone and Android applications for some customers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Left -->
+                <li>
+                    <div class="timeline-badge danger"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Sys Admin @ <strong>Autoscout24</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> January 2010 - August 2011</small>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="list-arrow-color no-margin">
+                                <li>Management of Software Interface for some customers.</li>
+                                <li>Handling of the Computers Listing.</li>
+                                <li>Helpdesk customers.</li>
+                                <li>Developed softwares in PHP to automatize some tasks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Right -->
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Web Developer @ <strong>Call Assurances</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> September 2008 - December 2009</small>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Developed and remade the entire Websites of the Company.</p>
+                            <p>Created some tools and technicals for SEO and SEM</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="heading no-margin-bottom pt15">
+                <h1>Education<small>Schools and Formations I made</small></h1>
+            </div>
+            <ul class="timeline no-margin">
+                <!-- Left -->
+                <li>
+                    <div class="timeline-badge success"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Master Web & e-Business @ <strong>ESGI</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2012 - 2014</small>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Right -->
+                <li class="timeline-inverted">
+                    <div class="timeline-badge warning"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>Bachelor Web & Mobile @ <strong>ECTEI</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2011 - 2012</small>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Left -->
+                <li>
+                    <div class="timeline-badge danger"></div>
+                    <div class="timeline-panel">
+                        <div class="heading">
+                            <h4>BTS Sys Admin @ <strong>ISEFAC Paris</strong></h4>
+                            <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2008 - August 2010</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="heading pt15">
+                <h1>Technical Skills</h1>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <p class="progress-head">PHP</p>
+                <div class="progress" data-sr="enter right move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Expert</span>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                <p class="progress-head">Laravel</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Expert</span>
                     </div>
                 </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                <p class="progress-head">Symfony 2</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Working on it</span>
                     </div>
                 </div>
-            </li>
-        </ul>
-    </div>
+                <p class="progress-head">GSA</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Expert</span>
+                    </div>
+                </div>
+                <p class="progress-head">Mobile (iOS &amp; Android)</p>
+                <div class="progress" data-sr="enter right move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Made some cool things!</span>
+                    </div>
+                </div>
+                <p class="progress-head">HTML &amp; CSS (Bootstrap and other tools)</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Expert</span>
+                    </div>
+                </div>
+                <p class="progress-head">Versioning (Git) and Agile</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">We're getting good here...</span>
+                    </div>
+                </div>
+                <p class="progress-head">Design</p>
+                <div class="progress" data-sr="enter left move 100px over 1s">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="progress-bar-tooltip" style="opacity: 1;">Rainbows and Unicorns!</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /Skills -->
+        </div>
+    </section>
 @stop
