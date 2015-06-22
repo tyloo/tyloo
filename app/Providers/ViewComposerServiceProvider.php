@@ -14,7 +14,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         // Using class based composers...
-        view()->composer('frontend.pages.*', 'App\ViewComposers\LastPostsComposer');
+        view()->composer('frontend.partials.common.footer._lastPosts', 'App\ViewComposers\LastPostsComposer');
         view()->composer('frontend.pages.blog.*', 'App\ViewComposers\PostTagsComposer');
     }
 

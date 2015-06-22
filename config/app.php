@@ -147,6 +147,8 @@ return [
 
         // Vendor Providers
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+        Bican\Roles\RolesServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 

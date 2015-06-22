@@ -33,6 +33,7 @@ class PagesController extends Controller
         Mail::queue('emails.contact', ['data' => $request->all()], function ($m) {
             $m->to('jbonva@gmail.com', 'Julien Bonvarlet')->subject('[Tyloo.fr] Demande de Contact');
         });
+
         return view('frontend.pages.contact')->withSuccess('Your contact form has been received. I\'ll try to answer you as soon as possible! Thank you ;)');
     }
 

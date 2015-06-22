@@ -22,22 +22,16 @@
                 <p class="mb20">
                     Feel free to fill that form to enter in contact with me. I'll try to answer you as quick as possible!
                 </p>
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+
+                @include('errors.formErrors')
+
                 @if (isset($success))
                     <div class="alert alert-success">
                         {{ $success }}
                     </div>
                 @endif
                 <form role="form" method="POST" action="{{ URL::route('contact') }}">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    {!! csrf_field() !!}
                     <div class="form-group">
                         <input type="text" name="contactName" value="{{ old('contactName') }}" placeholder="Name" class="form-control">
                     </div>
