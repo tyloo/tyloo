@@ -5,7 +5,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('resume', ['as' => 'resume', 'uses' => 'PagesController@resume']);
 
     # Contact
-    Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@contact']);
+    Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@getContact']);
+    Route::post('contact', ['as' => 'contact', 'uses' => 'PagesController@postContact']);
 
     # Search
     Route::get('search', ['as' => 'search', 'uses' => 'PagesController@search']);

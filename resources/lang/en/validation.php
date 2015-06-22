@@ -74,6 +74,7 @@ return [
     'string' => 'The :attribute must be a string.',
     'unique' => 'The :attribute has already been taken.',
     'url' => 'The :attribute format is invalid.',
+    'recaptcha' => 'The :attribute field is not correct.',
 
     /*
     |--------------------------------------------------------------------------

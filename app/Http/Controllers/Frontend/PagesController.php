@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactRequest;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -21,9 +23,17 @@ class PagesController extends Controller
         return view('frontend.pages.works');
     }
 
-    public function contact()
+    public function getContact()
     {
         return view('frontend.pages.contact');
+    }
+
+    public function postContact(ContactRequest $request)
+    {
+        Mail::queue('emails.contact', ['data' => $request->all()], function ($m) {
+            $m->to('jbonva@gmail.com', 'Julien Bonvarlet')->subject('[Tyloo.fr] Demande de Contact');
+        });
+        return view('frontend.pages.contact')->withSuccess('Your contact form has been received. I\'ll try to answer you as soon as possible! Thank you ;)');
     }
 
     public function search()
