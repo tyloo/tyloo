@@ -9,8 +9,8 @@
     <title>Tyloo.fr - Engineer, Web Developer, Google Deployment Specialist and Rugbyman!</title>
 
     {{-- Stylesheets --}}
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/font-awesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/ionicons.min.css') }}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap-social.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.min.css') }}">
@@ -85,7 +85,7 @@
 </footer>
 {{-- /Footer --}}
 
-<a href="#" class="scroll-top"><div class="scrolltop-holder"><span class="ion-ios7-arrow-up scrolltop"></span></div></a>
+<a href="#" class="scroll-top"><div class="scrolltop-holder"><span class="ion-ios-arrow-up scrolltop"></span></div></a>
 
 <script src="{{ asset('assets/frontend/js/jquery-2.1.4.min.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>

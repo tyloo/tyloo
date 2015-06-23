@@ -6,7 +6,7 @@ use App\Repositories\Criteria\LastFive;
 use App\Repositories\PostRepository;
 use Illuminate\View\View;
 
-class LastPostsComposer
+class LastPostsViewComposer
 {
     /**
      * The Post repository implementation.

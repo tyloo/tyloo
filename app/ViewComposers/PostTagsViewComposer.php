@@ -6,7 +6,7 @@ use App\Repositories\Criteria\LastFive;
 use App\Repositories\TagRepository;
 use Illuminate\View\View;
 
-class PostTagsComposer
+class PostTagsViewComposer
 {
     /**
      * The Post repository implementation.

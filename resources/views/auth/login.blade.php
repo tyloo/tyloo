@@ -27,7 +27,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">
-                                            <span class="ion-ios7-locked"></span>
+                                            <span class="ion-ios-locked"></span>
                                         </div>
                                         <input type="password" name="password" placeholder="Password" class="form-control">
                                     </div>
