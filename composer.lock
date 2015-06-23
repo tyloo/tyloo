@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c1b2e6a553ce95d85a1b5b5cee98053",
+    "hash": "15b15b2113cc91ca943b00b42d361d36",
     "packages": [
         {
             "name": "bican/roles",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/romanbican/roles.git",
-                "reference": "240bd70d55036b80b22420d7334a272edfe9cebd"
+                "reference": "808e2aad5b033b29bd0a0ddd087653dac4f0bb69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/romanbican/roles/zipball/240bd70d55036b80b22420d7334a272edfe9cebd",
-                "reference": "240bd70d55036b80b22420d7334a272edfe9cebd",
+                "url": "https://api.github.com/repos/romanbican/roles/zipball/808e2aad5b033b29bd0a0ddd087653dac4f0bb69",
+                "reference": "808e2aad5b033b29bd0a0ddd087653dac4f0bb69",
                 "shasum": ""
             },
             "require": {
@@ -42,12 +42,14 @@
             ],
             "description": "Powerful package for handling roles and permissions in Laravel 5.",
             "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
                 "laravel",
-                "laravel5",
                 "permissions",
                 "roles"
             ],
-            "time": "2015-06-22 09:51:43"
+            "time": "2015-06-22 15:49:20"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -267,26 +269,26 @@
         },
         {
             "name": "greggilbert/recaptcha",
-            "version": "dev-master",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/greggilbert/recaptcha.git",
-                "reference": "66faa94e0f8268dca130e753df801e383847caea"
+                "reference": "828b9fdeee3c3b15ea1ce148d2871adaaeca26d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/66faa94e0f8268dca130e753df801e383847caea",
-                "reference": "66faa94e0f8268dca130e753df801e383847caea",
+                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/828b9fdeee3c3b15ea1ce148d2871adaaeca26d3",
+                "reference": "828b9fdeee3c3b15ea1ce148d2871adaaeca26d3",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.1",
+                "illuminate/support": "~5.0",
                 "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -315,7 +317,7 @@
                 "laravel5",
                 "recaptcha"
             ],
-            "time": "2015-06-13 23:04:10"
+            "time": "2015-05-11 14:16:01"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3073,9 +3075,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "greggilbert/recaptcha": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

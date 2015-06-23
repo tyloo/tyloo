@@ -4,7 +4,7 @@
             {{-- Address and Phone --}}
             <div class="col-sm-7 hidden-xs contact-info">
                 <span class="ion-android-system-home home-icon"></span>Paris (France)
-                <span class="ion-ios7-telephone phone-icon"></span>(+33) 6 29 50 93 46
+                <span class="ion-ios-telephone phone-icon"></span>(+33) 6 29 50 93 46
             </div>
             {{-- Social Buttons --}}
             <div class="col-sm-5 text-right topmenu-holder">

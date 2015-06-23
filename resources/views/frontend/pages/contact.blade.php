@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-4 mt30-xs">
                 <div class="content-box content-box-primary mb30">
-                    <span class="ion-ios7-telephone-outline text-white border-white bordered-icon-static-sm mb10"></span>
+                    <span class="ion-ios-telephone-outline text-white border-white bordered-icon-static-sm mb10"></span>
                     <h2 class="text-white no-margin">(+33) 6 29 50 93 46</h2>
                 </div>
                 <div class="panel panel-primary no-margin">

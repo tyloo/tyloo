@@ -62,7 +62,7 @@
                                             Flexible for any project. And hey, we made sure you have all the features you need for any
                                             website. Also shortcodes on every features page, just copy & paste where you need.
                                         </p>
-                                        <a href="#" class="btn btn-rw btn-primary">Features &nbsp;&nbsp;<span class="ion-ios7-arrow-right"></span></a>
+                                        <a href="#" class="btn btn-rw btn-primary">Features &nbsp;&nbsp;<span class="ion-ios-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -96,8 +96,8 @@
             {{-- /Wrapper for slides --}}
 
             {{-- Controls --}}
-            <a class="left carousel-control" href="#carouselHome" role="button" data-slide="prev"><span class="ion-ios7-arrow-left carousel-arrow-left" aria-hidden="true"></span></a>
-            <a class="right carousel-control" href="#carouselHome" role="button" data-slide="next"><span class="ion-ios7-arrow-right carousel-arrow-right" aria-hidden="true"></span></a>
+            <a class="left carousel-control" href="#carouselHome" role="button" data-slide="prev"><span class="ion-ios-arrow-left carousel-arrow-left" aria-hidden="true"></span></a>
+            <a class="right carousel-control" href="#carouselHome" role="button" data-slide="next"><span class="ion-ios-arrow-right carousel-arrow-right" aria-hidden="true"></span></a>
             {{-- /Controls --}}
         </div>
     </div>
