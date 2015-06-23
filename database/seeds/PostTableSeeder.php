@@ -13,6 +13,10 @@ class PostTableSeeder extends Seeder
     {
         DB::table('posts')->truncate();
 
-        factory(App\Post::class, 50)->create();
+        factory(App\Post::class, 50)
+            ->create()
+            ->each(function(App\Post $p) {
+                $p->tags()->save(factory(App\Tag::class)->make());
+            });
     }
 }

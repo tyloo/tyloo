@@ -25,5 +25,6 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
         <env name="APP_KEY" value="ThisIsARandomGeneratedStringTest"/>
+        <env name="DB_CONNECTION" value="sqlite"/>
     </php>
 </phpunit>

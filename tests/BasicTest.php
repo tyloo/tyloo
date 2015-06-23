@@ -2,15 +2,20 @@
 
 namespace App\Tests;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+
 class BasicTest extends TestCase
 {
+    use DatabaseMigrations, DatabaseTransactions;
+
     /**
      * A basic functional Home Page test.
      */
     public function testHomePage()
     {
         $this->visit('/')
-             ->see('Julien \'Tyloo\' Bonvarlet');
+            ->seePageIs('/');
     }
 
     /**
