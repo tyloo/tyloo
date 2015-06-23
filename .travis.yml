@@ -12,11 +12,9 @@ matrix:
     - php: hhvm
 
 before_script:
-  - mv .env.travis .env
+  - touch storage/database.sqlite
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
-  - php artisan migrate
-  - php artisan db:seed
 
 script:
   - phpunit --coverage-text --coverage-clover=coverage.clover
