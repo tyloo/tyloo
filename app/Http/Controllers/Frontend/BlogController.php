@@ -7,18 +7,28 @@ use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\Criteria\Post\WithTags;
 use App\Repositories\PostRepository;
+use App\Repositories\TagRepository;
 
 class BlogController extends Controller
 {
     /**
-     * @var \App\Repositories\PostRepository
+     * @var PostRepository
      */
     protected $post;
 
-    public function __construct(PostRepository $post)
+    /**
+     * @var TagRepository
+     */
+    protected $tag;
+
+    public function __construct(PostRepository $post, TagRepository $tag)
     {
         $this->post = $post;
-        $this->post->pushCriteria(new Published())->pushCriteria(new WithAuthor())->pushCriteria(new WithTags());
+        $this->tag = $tag;
+
+        $this->post->pushCriteria(new Published())
+                   ->pushCriteria(new WithAuthor())
+                   ->pushCriteria(new WithTags());
     }
 
     /**
@@ -28,7 +38,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.blog.index')->withPosts($this->post->paginate(10));
+        $posts = $this->post->paginate(10);
+
+        return view('frontend.pages.blog.index', compact('posts'));
     }
 
     /**
@@ -40,6 +52,23 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        return view('frontend.pages.blog.show')->withPost($this->post->findBy('slug', $slug));
+        $posts = $this->post->findBy('slug', $slug);
+
+        return view('frontend.pages.blog.show', compact('posts'));
+    }
+
+    /**
+     * Display a listing of the resource based on a tag.
+     *
+     * @param $slug
+     *
+     * @return Response
+     */
+    public function tag($slug)
+    {
+        $tag = $this->tag->findBy('slug', $slug);
+        $posts = $tag->posts()->paginate(10);
+
+        return view('frontend.pages.blog.tag', compact('tag', 'posts'));
     }
 }

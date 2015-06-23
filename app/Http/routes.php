@@ -17,6 +17,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     # Blog
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.show', 'uses' => 'BlogController@show']);
+    Route::get('blog/tag/{slug}', ['as' => 'blog.tag', 'uses' => 'BlogController@tag']);
 
     # Works
     Route::get('works', ['as' => 'works.index', 'uses' => 'WorksController@index']);
