@@ -18,11 +18,6 @@ class PagesController extends Controller
         return view('frontend.pages.resume');
     }
 
-    public function works()
-    {
-        return view('frontend.pages.works');
-    }
-
     public function getContact()
     {
         return view('frontend.pages.contact');
@@ -33,10 +28,5 @@ class PagesController extends Controller
         $this->dispatch(new SendContactEmail($request->all()));
 
         return view('frontend.pages.contact')->withSuccess('Your contact form has been received. I\'ll try to answer you as soon as possible! Thank you ;)');
-    }
-
-    public function search()
-    {
-        return view('frontend.pages.search');
     }
 }

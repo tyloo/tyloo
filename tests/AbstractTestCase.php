@@ -3,10 +3,14 @@
 namespace App\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Foundation\Testing\TestCase as TestCaseFoundation;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase;
 
-class TestCase extends TestCaseFoundation
+abstract class AbstractTestCase extends TestCase
 {
+    use DatabaseMigrations, DatabaseTransactions;
+
     /**
      * The base URL to use while testing the application.
      *
@@ -21,7 +25,7 @@ class TestCase extends TestCaseFoundation
      */
     public function createApplication()
     {
-        $app = require __DIR__.'/../bootstrap/app.php';
+        $app = require __DIR__ . '/../bootstrap/app.php';
 
         $app->make(Kernel::class)->bootstrap();
 
