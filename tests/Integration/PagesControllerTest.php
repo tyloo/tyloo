@@ -41,4 +41,16 @@ class PagesControllerTest extends AbstractTestCase
         $this->visit('/contact')
              ->seePageIs('/contact');
     }
+
+    /** @test */
+    public function it_sends_contact_form()
+    {
+        $this->visit('contact')
+            ->type('Julien Bonvarlet', 'contactName')
+            ->type('jbonva@gmail.Com', 'contactEmail')
+            ->type('This is a sample message.', 'contactMessage')
+            ->press('Submit')
+            ->seePageIs('/contact')
+            ->see('Your contact form has been received.');
+    }
 }

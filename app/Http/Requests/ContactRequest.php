@@ -23,11 +23,16 @@ class ContactRequest extends Request
      */
     public function rules()
     {
-        return [
-            'contactName'          => 'required|string',
-            'contactEmail'         => 'required|email',
-            'contactMessage'       => 'required',
-            'g-recaptcha-response' => 'required|recaptcha',
+        $rules = [
+            'contactName'    => 'required|string',
+            'contactEmail'   => 'required|email',
+            'contactMessage' => 'required',
         ];
+
+        if ( ! app()->environment('testing')) {
+            $rules['g-recaptcha-response'] = 'required|recaptcha';
+        }
+
+        return $rules;
     }
 }

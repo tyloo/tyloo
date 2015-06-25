@@ -11,7 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        if (app()->environment() == 'testing') {
+            DB::statement('PRAGMA foreign_keys = OFF');
+        }
+        else {
+            DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        }
 
         Model::unguard();
 
@@ -22,6 +27,11 @@ class DatabaseSeeder extends Seeder
 
         Model::reguard();
 
-        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        if (app()->environment() == 'testing') {
+            DB::statement('PRAGMA foreign_keys = ON');
+        }
+        else {
+            DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        }
     }
 }
