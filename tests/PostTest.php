@@ -16,7 +16,6 @@ class PostTest extends AbstractTestCase
     {
         $mock = Mockery::mock('App\Post')->makePartial();
         $mock->shouldReceive('belongsTo')
-            ->atLeast()
             ->once()
             ->with('App\User')
             ->andReturn('mocked');
@@ -29,7 +28,6 @@ class PostTest extends AbstractTestCase
     {
         $mock = Mockery::mock('App\Post')->makePartial();
         $mock->shouldReceive('belongsToMany')
-            ->atLeast()
             ->once()
             ->with('App\Tag')
             ->andReturn('mocked');

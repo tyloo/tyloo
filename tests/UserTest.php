@@ -2,11 +2,14 @@
 
 namespace App\Tests;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\Hash;
 use Mockery;
 
 class UserTest extends AbstractTestCase
 {
+    use DatabaseMigrations;
+
     public function tearDown()
     {
         Mockery::close();
@@ -17,7 +20,6 @@ class UserTest extends AbstractTestCase
     {
         $mock = Mockery::mock('App\User')->makePartial();
         $mock->shouldReceive('hasMany')
-            ->atLeast()
             ->once()
             ->with('App\Post')
             ->andReturn('mocked');
@@ -28,7 +30,7 @@ class UserTest extends AbstractTestCase
     /** @test */
     public function it_hashes_password()
     {
-        $user = factory('App\User')->create(['password' => 'test']);
+        $user = factory('App\User')->make(['password' => 'test']);
 
         $this->assertTrue(Hash::check('test', $user->password));
     }

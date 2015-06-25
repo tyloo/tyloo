@@ -16,7 +16,6 @@ class TagTest extends AbstractTestCase
     {
         $mock = Mockery::mock('App\Tag')->makePartial();
         $mock->shouldReceive('belongsToMany')
-            ->atLeast()
             ->once()
             ->with('App\Post')
             ->andReturn('mocked');
