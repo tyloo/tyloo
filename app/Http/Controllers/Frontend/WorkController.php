@@ -7,7 +7,7 @@ use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\WorkRepository;
 
-class WorksController extends Controller
+class WorkController extends Controller
 {
     /**
      * @var \App\Repositories\WorkRepository
@@ -17,7 +17,7 @@ class WorksController extends Controller
     public function __construct(WorkRepository $work)
     {
         $this->work = $work;
-        $this->work->pushCriteria(new Published());
+        $this->work->pushCriteria(new Published())->pushCriteria(new WithAuthor());
     }
 
     /**
@@ -27,7 +27,9 @@ class WorksController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.works.index')->withWorks($this->work->all());
+        $works = $this->work->all();
+
+        return view('frontend.pages.works.index', compact('works'));
     }
 
     /**
@@ -39,7 +41,8 @@ class WorksController extends Controller
      */
     public function show($slug)
     {
-        $this->work->pushCriteria(new WithAuthor());
-        return view('frontend.pages.works.show')->withWork($this->work->findBy('slug', $slug));
+        $work = $this->work->findBy('slug', $slug);
+
+        return view('frontend.pages.works.show', compact('work'));
     }
 }

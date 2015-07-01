@@ -3,6 +3,7 @@
 namespace App\ViewComposers;
 
 use App\Repositories\Criteria\LastFive;
+use App\Repositories\Criteria\Rememberable;
 use App\Repositories\PostRepository;
 use Illuminate\View\View;
 
@@ -34,7 +35,7 @@ class LastPostsViewComposer
      */
     public function compose(View $view)
     {
-        $this->post->pushCriteria(new LastFive());
+        $this->post->pushCriteria(new Rememberable(60))->pushCriteria(new LastFive());
         $view->with('lastPosts', $this->post->all());
     }
 }

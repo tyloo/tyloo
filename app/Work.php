@@ -2,9 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Work extends Model
+class Work extends AbstractModel
 {
     /**
      * The database table used by the model.

@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Jobs\Job;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Mail\Message;
 use Illuminate\Queue\SerializesModels;
@@ -35,8 +34,11 @@ class SendContactEmail extends Job implements SelfHandling, ShouldQueue
      */
     public function handle(Mailer $mailer)
     {
-        $mailer->send('emails.contact', ['data' => $this->data], function (Message $m) {
-            $m->to('jbonva@gmail.com', 'Julien Bonvarlet')->subject('[Tyloo.fr] Demande de Contact');
-        });
+        $message = function (Message $m) {
+            $m->to('jbonva@gmail.com', 'Julien Bonvarlet');
+            $m->subject('[Tyloo.fr] Demande de Contact');
+        };
+
+        return $mailer->send('emails.contact', ['data' => $this->data], $message);
     }
 }

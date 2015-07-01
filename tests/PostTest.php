@@ -6,11 +6,6 @@ use Mockery;
 
 class PostTest extends AbstractTestCase
 {
-    public function tearDown()
-    {
-        Mockery::close();
-    }
-
     /** @test */
     public function it_has_an_author()
     {

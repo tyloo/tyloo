@@ -2,8 +2,8 @@
 
 namespace App\Repositories\Criteria\Post;
 
-use App\Repositories\Contracts\RepositoryInterface;
-use App\Repositories\Criteria\Criteria;
+use Bosnadev\Repositories\Contracts\RepositoryInterface;
+use Bosnadev\Repositories\Criteria\Criteria;
 
 class WithAuthor extends Criteria
 {

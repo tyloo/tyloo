@@ -52,9 +52,9 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $posts = $this->post->findBy('slug', $slug);
+        $post = $this->post->findBy('slug', $slug);
 
-        return view('frontend.pages.blog.show', compact('posts'));
+        return view('frontend.pages.blog.show', compact('post'));
     }
 
     /**

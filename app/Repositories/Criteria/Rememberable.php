@@ -1,12 +1,20 @@
-<?php
-
-namespace App\Repositories\Criteria\Post;
+<?php namespace App\Repositories\Criteria;
 
 use Bosnadev\Repositories\Contracts\RepositoryInterface;
 use Bosnadev\Repositories\Criteria\Criteria;
 
-class Published extends Criteria
+class Rememberable extends Criteria
 {
+    /**
+     * @var int
+     */
+    protected $time;
+
+    public function __construct($time = 60)
+    {
+
+        $this->time = $time;
+    }
     /**
      * @param                     $model
      * @param RepositoryInterface $repository
@@ -15,6 +23,6 @@ class Published extends Criteria
      */
     public function apply($model, RepositoryInterface $repository)
     {
-        return $model->where('published', 1);
+        return $model->remember($this->time);
     }
 }

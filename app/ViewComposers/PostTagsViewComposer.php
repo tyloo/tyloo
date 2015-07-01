@@ -3,6 +3,7 @@
 namespace App\ViewComposers;
 
 use App\Repositories\Criteria\LastFive;
+use App\Repositories\Criteria\Rememberable;
 use App\Repositories\TagRepository;
 use Illuminate\View\View;
 
@@ -34,7 +35,7 @@ class PostTagsViewComposer
      */
     public function compose(View $view)
     {
-        $this->tag->pushCriteria(new LastFive());
+        $this->tag->pushCriteria(new Rememberable(60))->pushCriteria(new LastFive());
         $view->with('postTags', $this->tag->all());
     }
 }

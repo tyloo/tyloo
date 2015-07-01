@@ -2,9 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Post extends Model
+class Post extends AbstractModel
 {
     /**
      * The database table used by the model.

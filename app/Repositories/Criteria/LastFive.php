@@ -2,8 +2,8 @@
 
 namespace App\Repositories\Criteria;
 
-use App\Repositories\Contracts\RepositoryInterface;
-use App\Repositories\Criteria\Criteria;
+use Bosnadev\Repositories\Contracts\RepositoryInterface;
+use Bosnadev\Repositories\Criteria\Criteria;
 
 class LastFive extends Criteria
 {

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Repositories\Eloquent\Repository;
+use Bosnadev\Repositories\Eloquent\Repository;
 
 class UserRepository extends Repository
 {
