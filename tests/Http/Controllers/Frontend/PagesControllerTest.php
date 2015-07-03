@@ -2,7 +2,6 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
-use App\Jobs\SendContactEmail;
 use App\Tests\AbstractTestCase;
 
 class PagesControllerTest extends AbstractTestCase
@@ -11,19 +10,22 @@ class PagesControllerTest extends AbstractTestCase
     /** @test */
     public function it_has_an_home_page()
     {
-        $this->visit('/')->seePageIs('/');
+        $this->visit('/')
+             ->seePageIs('/');
     }
 
     /** @test */
     public function it_has_a_resume_page()
     {
-        $this->visit('/resume')->seePageIs('/resume');
+        $this->visit('/resume')
+             ->seePageIs('/resume');
     }
 
     /** @test */
     public function it_has_a_contact_page()
     {
-        $this->visit('/contact')->seePageIs('/contact');
+        $this->visit('/contact')
+             ->seePageIs('/contact');
     }
 
     /** @test */

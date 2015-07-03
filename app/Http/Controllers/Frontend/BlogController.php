@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Criteria\Post\Published;
 use App\Repositories\Criteria\Post\WithAuthor;
 use App\Repositories\Criteria\Post\WithTags;
+use App\Repositories\Criteria\Rememberable;
 use App\Repositories\PostRepository;
 use App\Repositories\TagRepository;
 
@@ -26,7 +27,8 @@ class BlogController extends Controller
         $this->post = $post;
         $this->tag = $tag;
 
-        $this->post->pushCriteria(new Published())
+        $this->post->pushCriteria(new Rememberable(60))
+                   ->pushCriteria(new Published())
                    ->pushCriteria(new WithAuthor())
                    ->pushCriteria(new WithTags());
     }

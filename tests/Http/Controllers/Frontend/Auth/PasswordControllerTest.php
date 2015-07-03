@@ -3,12 +3,11 @@
 namespace App\Tests\Http\Controllers\Frontend\Auth;
 
 use App\Tests\AbstractTestCase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class PasswordControllerTest extends AbstractTestCase
 {
-    use DatabaseMigrations, DatabaseTransactions;
+    use DatabaseTransactions;
 
     /** @test */
     public function it_can_remind_password()

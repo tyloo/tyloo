@@ -2,6 +2,6 @@
 
 @include('frontend.partials.blog.blocks.about')
 
-@include('frontend.partials.blog.blocks.lastPosts')
+{{--@include('frontend.partials.blog.blocks.lastPosts')--}}
 
-@include('frontend.partials.blog.blocks.tags')
+{{--@include('frontend.partials.blog.blocks.tags')--}}
