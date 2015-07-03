@@ -20,6 +20,7 @@ class UserTableSeeder extends Seeder
             'password' => '123456',
             'remember_token' => str_random(10),
         ]);
+
         factory(App\User::class, 9)->create();
     }
 }

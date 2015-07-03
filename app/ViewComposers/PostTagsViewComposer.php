@@ -12,7 +12,7 @@ class PostTagsViewComposer
     /**
      * The Post repository implementation.
      *
-     * @var \App\Repositories\PostRepository
+     * @var \App\Repositories\TagRepository
      */
     private $tag;
 

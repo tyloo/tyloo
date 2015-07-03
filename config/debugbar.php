@@ -80,8 +80,8 @@ return array(
         'db'              => true,  // Show database (PDO) queries and bindings
         'views'           => true,  // Views with their data
         'route'           => true,  // Current route information
-        'laravel'         => false, // Laravel version and environment
-        'events'          => false, // All events fired
+        'laravel'         => true, // Laravel version and environment
+        'events'          => true, // All events fired
         'default_request' => false, // Regular or special Symfony request logger
         'symfony_request' => true,  // Only one can be enabled..
         'mail'            => true,  // Catch mail messages
@@ -103,15 +103,15 @@ return array(
 
     'options' => array(
         'auth' => array(
-            'show_name' => false,   // Also show the users name/email in the debugbar
+            'show_name' => true,   // Also show the users name/email in the debugbar
         ),
         'db' => array(
             'with_params'       => true,   // Render SQL with the parameters substituted
-            'timeline'          => false,  // Add the queries to the timeline
+            'timeline'          => true,  // Add the queries to the timeline
             'backtrace'         => false,  // EXPERIMENTAL: Use a backtrace to find the origin of the query in your files.
             'explain' => array(            // EXPERIMENTAL: Show EXPLAIN output on queries
                 'enabled' => false,
-                'types' => array('SELECT'), // array('SELECT', 'INSERT', 'UPDATE', 'DELETE'); for MySQL 5.6.3+
+                'types' => array('SELECT', 'INSERT', 'UPDATE', 'DELETE'),
             ),
             'hints'             => true,    // Show hints for common mistakes
         ),
