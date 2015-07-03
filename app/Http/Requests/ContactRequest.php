@@ -29,10 +29,6 @@ class ContactRequest extends Request
             'contactMessage' => 'required',
         ];
 
-        if ( ! app()->environment('testing')) {
-            $rules['g-recaptcha-response'] = 'required|recaptcha';
-        }
-
         return $rules;
     }
 }

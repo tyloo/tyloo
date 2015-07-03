@@ -41,9 +41,6 @@
                     <div class="form-group">
                         <textarea class="form-control" name="contactMessage" placeholder="Message" rows="7">{{ old('contactMessage') }}</textarea>
                     </div>
-                    <div class="form-group">
-                        {!! Recaptcha::render() !!}
-                    </div>
                     <button type="submit" class="btn btn-rw btn-primary">Submit</button>
                 </form>
             </div>
