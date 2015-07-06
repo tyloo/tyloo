@@ -21,13 +21,11 @@
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
                                     <div class="carousel-description col-sm-5">
-                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">Clean Code + Design</span></h3>
-                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">HTML5 and CSS3</span></h3>
-                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">70+ Pages Total</span></h3>
+                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">Engineer: Passionate & Adaptive</span></h3>
                                         <p>
-                                            With over 90% of Bootstraps components restyled, over 35 pages of shortcode
-                                            features, and over 30 pages for you to use, this is the <strong>ultimate</strong> parallax,
-                                            responsive Bootstrap 3 template.
+                                            You might have not realized yet, but I'm in love with my job! Indeed, I always wanted to work on computers
+                                            and started to learn how to code very early in my life. Since then I try to be able to adapt to new technologies
+                                            and new devices. I am able to develop mobile &amp; tablets applications and also Websites and Web Applications...
                                         </p>
                                     </div>
                                 </div>
@@ -54,15 +52,15 @@
                                 </div>
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
                                     <div class="carousel-description mt10 col-sm-5 col-sm-offset-1">
-                                        <h4 class="heavy text-white"><span class="carousel-title-bg">Many Javascript Plugins</span></h4>
-                                        <h4 class="heavy text-white"><span class="carousel-title-bg">Responsive Video Content</span></h4>
-                                        <h4 class="heavy text-white"><span class="carousel-title-bg">Shortcodes Pages + Docs</span></h4>
+                                        <h4 class="heavy text-white"><span class="carousel-title-bg">Google Deployment Specialist</span></h4>
 
                                         <p>
-                                            Flexible for any project. And hey, we made sure you have all the features you need for any
-                                            website. Also shortcodes on every features page, just copy & paste where you need.
+                                            I have been working for three years now (and It's still the case today) for a Google Partner! I am specialised
+                                            in the GSA (Google Search Appliance). My Job is to integrate the GSA's echosystem inside a company allowing them to
+                                            have a powerful, centralized and customizable Search Engine. With the power of Google and a bit of magic, you can find everything
+                                            inside your company just like you'd do it on google.com! Sound cool, right? :)
                                         </p>
-                                        <a href="#" class="btn btn-rw btn-primary">Features &nbsp;&nbsp;<span class="ion-ios-arrow-right"></span></a>
+                                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Check out more at my Resume &nbsp;&nbsp;<span class="ion-ios-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -80,10 +78,12 @@
                                     <div class="carousel-description col-sm-8 col-sm-offset-2 text-center">
                                         <span class="fa fa-heartbeat fa-4x text-white"></span>
 
-                                        <h2 class="heavy text-white"><span class="carousel-title-bgclear">Clean Code + Design</span></h2>
+                                        <h2 class="heavy text-white"><span class="carousel-title-bgclear">Sharing is Caring</span></h2>
                                         <p>
-                                            Raleway comes packed with over 30 pages and 50 components. All restyled to refresh your
-                                            visitors. We have pricing tables, 404 pages, coming soon pages, about pages, and many more.
+                                            I always wanted to be a teacher somehow in my life. The thing is, if you are able to learn something
+                                            to someone, you can validate the fact that you fully understood the subject. More interesting, with the power
+                                            of the Internet, if you make some mistakes and don't tell the truth, Internet guardians (trolls somehow) will just
+                                            put you in troubles and you'll be forced to tell the truth. Finally, you start to correct yourself and you become better...
                                         </p>
                                     </div>
                                 </div>

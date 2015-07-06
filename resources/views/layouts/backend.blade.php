@@ -148,20 +148,8 @@
 
                                 <p>
                                     {{ $user->name }}
-                                    <small>Role (TODO)</small>
+                                    <small>{{ $user->role() }}</small>
                                 </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
@@ -218,48 +206,34 @@
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-files-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ URL::route('admin.blog.index') }}"><i class="fa fa-files-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-eye"></i> List Posts</a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> Add a Post</a></li>
+                        <li><a href="{{ URL::route('admin.blog.index') }}"><i class="fa fa-eye"></i> List Posts</a></li>
+                        <li><a href="{{ URL::route('admin.blog.create') }}"><i class="fa fa-plus"></i> Add a Post</a></li>
                         <li class="treeview">
-                            <a href="#"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
+                            <a href="{{ URL::route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-eye"></i> List Tags</a></li>
-                                <li><a href="#"><i class="fa fa-plus"></i> Add a Tag</a></li>
+                                <li><a href="{{ URL::route('admin.tags.index') }}"><i class="fa fa-eye"></i> List Tags</a></li>
+                                <li><a href="{{ URL::route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-file-image-o"></i> <span>Works</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ URL::route('admin.works.index') }}"><i class="fa fa-file-image-o"></i> <span>Works</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-eye"></i> List Works</a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> Add a Work</a></li>
+                        <li><a href="{{ URL::route('admin.works.index') }}"><i class="fa fa-eye"></i> List Works</a></li>
+                        <li><a href="{{ URL::route('admin.works.create') }}"><i class="fa fa-plus"></i> Add a Work</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-users"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ URL::route('admin.users.index') }}"><i class="fa fa-users"></i> <span>Users</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-eye"></i> List Users</a></li>
-                        <li><a href="#"><i class="fa fa-plus"></i> Add an User</a></li>
-                        <li class="treeview">
-                            <a href="#"><i class="fa fa-road"></i> <span>Roles</span> <i class="fa fa-angle-left pull-right"></i></a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-eye"></i> List Roles</a></li>
-                                <li><a href="#"><i class="fa fa-plus"></i> Add a Role</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#"><i class="fa fa-lock"></i> <span>Permissions</span> <i class="fa fa-angle-left pull-right"></i></a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-eye"></i> List Permissions</a></li>
-                                <li><a href="#"><i class="fa fa-plus"></i> Add a Permission</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="{{ URL::route('admin.users.index') }}"><i class="fa fa-eye"></i> List Users</a></li>
+                        <li><a href="{{ URL::route('admin.users.create') }}"><i class="fa fa-plus"></i> Add an User</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="fa fa-cogs"></i> <span>Settings</span></a></li>
+                <li><a href="{{ URL::route('admin.settings.edit') }}"><i class="fa fa-cogs"></i> <span>Settings</span></a></li>
             </ul>
         </section>
     </aside>

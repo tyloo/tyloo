@@ -47,4 +47,24 @@ Route::group(['namespace' => 'Frontend'], function () {
 Route::group(['namespace' => 'Backend', 'middleware' => 'auth', 'prefix' => 'admin'], function () {
     # Dashboard
     Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);
+
+    # Settings
+    Route::get('settings', ['as' => 'admin.settings.edit', 'uses' => 'SettingsController@edit']);
+    Route::put('settings', ['as' => 'admin.settings.update', 'uses' => 'SettingsController@update']);
+
+    # Blog
+    Route::resource('blog', 'BlogController');
+    Route::get('blog/delete/{id}', ['as' => 'admin.blog.destroy', 'uses' => 'BlogController@destroy']);
+
+    # Works
+    Route::resource('works', 'WorksController');
+    Route::get('works/delete/{id}', ['as' => 'admin.works.destroy', 'uses' => 'WorksController@destroy']);
+
+    # Users
+    Route::resource('users', 'UsersController');
+    Route::get('users/delete/{id}', ['as' => 'admin.users.destroy', 'uses' => 'UsersController@destroy']);
+
+    # Tags
+    Route::resource('tags', 'TagsController');
+    Route::get('tags/delete/{id}', ['as' => 'admin.tags.destroy', 'uses' => 'TagsController@destroy']);
 });

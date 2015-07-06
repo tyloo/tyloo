@@ -19,7 +19,7 @@ class ViewComposerServiceProvider extends ServiceProvider
             'App\ViewComposers\LastPostsViewComposer'
         );
         view()->composer('frontend.pages.blog.*', 'App\ViewComposers\PostTagsViewComposer');
-        view()->composer('backend.pages.*', 'App\ViewComposers\LoggedInUserViewComposer');
+        view()->composer('backend.*', 'App\ViewComposers\LoggedInUserViewComposer');
     }
 
     /**

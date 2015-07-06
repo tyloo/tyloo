@@ -15,10 +15,11 @@ class UserTableSeeder extends Seeder
         DB::table('users')->truncate();
 
         User::create([
-            'name' => 'Julien Bonvarlet',
-            'email' => 'jbonva@gmail.com',
-            'password' => '123456',
+            'name'           => 'Julien Bonvarlet',
+            'email'          => 'jbonva@gmail.com',
+            'password'       => '123456',
             'remember_token' => str_random(10),
+            'admin'          => 1
         ]);
 
         factory(App\User::class, 9)->create();

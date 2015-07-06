@@ -43,4 +43,8 @@ class User extends AbstractModel implements AuthenticatableContract, CanResetPas
     {
         return $this->hasMany('App\Post');
     }
+
+    public function role() {
+        return $this->admin ? 'Admin' : 'User';
+    }
 }

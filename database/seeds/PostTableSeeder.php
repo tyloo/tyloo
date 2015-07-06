@@ -16,7 +16,7 @@ class PostTableSeeder extends Seeder
 
         factory(App\Post::class, 50)
             ->create()
-            ->each(function(App\Post $p) {
+            ->each(function (App\Post $p) {
                 $p->tags()->save(factory(App\Tag::class)->make());
             });
     }

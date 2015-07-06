@@ -40,4 +40,9 @@ class Post extends AbstractModel
     {
         return $this->belongsToMany('App\Tag');
     }
+
+    public function isPublished()
+    {
+        return $this->published ? 'Yes'  : 'No';
+    }
 }
