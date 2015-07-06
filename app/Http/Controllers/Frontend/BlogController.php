@@ -26,7 +26,7 @@ class BlogController extends Controller
         $this->post = $post;
         $this->tag = $tag;
 
-        $this->post
+        $this->post->pushCriteria(new Rememberable(60))
                    ->pushCriteria(new WithAuthor())
                    ->pushCriteria(new WithTags());
     }
