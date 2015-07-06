@@ -4,53 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "890f2438f52e7c56c07ed67b69b66eb3",
+    "hash": "1c2bbf144443c6b77257face5172dafa",
     "packages": [
-        {
-            "name": "bican/roles",
-            "version": "2.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/romanbican/roles.git",
-                "reference": "8958428dc02b7d1d358784575a44eda901706cab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/romanbican/roles/zipball/8958428dc02b7d1d358784575a44eda901706cab",
-                "reference": "8958428dc02b7d1d358784575a44eda901706cab",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Bican\\Roles": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Bičan",
-                    "email": "romanbican@seznam.cz"
-                }
-            ],
-            "description": "Powerful package for handling roles and permissions in Laravel 5.",
-            "keywords": [
-                "acl",
-                "auth",
-                "illuminate",
-                "laravel",
-                "permissions",
-                "roles"
-            ],
-            "time": "2015-07-01 08:22:07"
-        },
         {
             "name": "bosnadev/repositories",
             "version": "0.8",
@@ -309,58 +264,6 @@
             "time": "2014-12-20 21:24:13"
         },
         {
-            "name": "greggilbert/recaptcha",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/greggilbert/recaptcha.git",
-                "reference": "828b9fdeee3c3b15ea1ce148d2871adaaeca26d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/828b9fdeee3c3b15ea1ce148d2871adaaeca26d3",
-                "reference": "828b9fdeee3c3b15ea1ce148d2871adaaeca26d3",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/migrations"
-                ],
-                "psr-4": {
-                    "Greggilbert\\Recaptcha\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Gilbert",
-                    "email": "greg@greg-gilbert.com"
-                }
-            ],
-            "description": "reCAPTCHA Validator for Laravel 5",
-            "homepage": "http://github.com/greggilbert/recaptcha",
-            "keywords": [
-                "captcha",
-                "laravel",
-                "laravel5",
-                "recaptcha"
-            ],
-            "time": "2015-05-11 14:16:01"
-        },
-        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -507,16 +410,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.5",
+            "version": "v5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "25d872ec1945b30083f3e348039c380307b42d5e"
+                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/25d872ec1945b30083f3e348039c380307b42d5e",
-                "reference": "25d872ec1945b30083f3e348039c380307b42d5e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/356418f315e4f6bf55d2f4bd451606e45a7595df",
+                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df",
                 "shasum": ""
             },
             "require": {
@@ -631,7 +534,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-02 02:28:22"
+            "time": "2015-07-03 13:48:44"
         },
         {
             "name": "league/flysystem",
@@ -2639,16 +2542,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35"
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/92408bb1968a81b3217a6fdf6c1a198da83caa35",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/1c330b1b6e1ea8fd15f2fbea46770576e366855c",
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c",
                 "shasum": ""
             },
             "require": {
@@ -2690,7 +2593,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-06-11 15:55:48"
+            "time": "2015-07-04 05:41:32"
         },
         {
             "name": "sebastian/comparator",

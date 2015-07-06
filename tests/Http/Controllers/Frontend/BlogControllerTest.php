@@ -2,36 +2,34 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
+use App\Tests\AbstractTestCase;
 use App\Post;
 use App\Tag;
-use App\Tests\AbstractTestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\User;
 
 class BlogControllerTest extends AbstractTestCase
 {
-    use DatabaseTransactions;
-
     /** @test */
     public function it_has_an_index_page_listing_blog_posts()
     {
-        $this->visit('/blog')->seePageIs('/blog');
+        $this->visit('/blog');
         $this->assertViewHas('posts');
     }
 
     /** @test */
     public function it_has_a_page_listing_showing_a_single_post()
     {
-        $post = Post::first();
-        $this->visit('/blog/' . $post->slug)
-             ->seePageIs('/blog/' . $post->slug);
+        $user = factory(User::class)->create();
+        factory(Post::class)->create(['title' => 'Post Title', 'slug' => 'post-title', 'published' => 1, 'author_id' => $user->id]);
+        $this->visit('/blog/post-title');
+        $this->assertViewHas('post');
     }
 
     /** @test */
     public function it_has_a_page_listing_posts_from_a_tag()
     {
-        $tag = Tag::first();
-        $this->visit('/blog/tag/' . $tag->slug)
-             ->seePageIs('/blog/tag/' . $tag->slug);
+        $tag = factory(Tag::class)->create();
+        $this->visit('/blog/tag/' . $tag->slug);
         $this->assertViewHas('posts');
     }
 }

@@ -3,12 +3,9 @@
 namespace App\Tests\Http\Controllers\Frontend\Auth;
 
 use App\Tests\AbstractTestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class AuthControllerTest extends AbstractTestCase
 {
-    use DatabaseTransactions;
-
     /** @test */
     public function it_can_register_users()
     {

@@ -10,22 +10,19 @@ class PagesControllerTest extends AbstractTestCase
     /** @test */
     public function it_has_an_home_page()
     {
-        $this->visit('/')
-             ->seePageIs('/');
+        $this->visit('/');
     }
 
     /** @test */
     public function it_has_a_resume_page()
     {
-        $this->visit('/resume')
-             ->seePageIs('/resume');
+        $this->visit('/resume');
     }
 
     /** @test */
     public function it_has_a_contact_page()
     {
-        $this->visit('/contact')
-             ->seePageIs('/contact');
+        $this->visit('/contact');
     }
 
     /** @test */
