@@ -17,7 +17,7 @@ class BlogControllerTest extends AbstractTestCase
     }
 
     /** @test */
-    public function it_has_a_page_listing_showing_a_single_post()
+    public function it_has_a_page_showing_a_single_post()
     {
         $user = factory(User::class)->create();
         factory(Post::class)->create(['title' => 'Post Title', 'slug' => 'post-title', 'published' => 1, 'author_id' => $user->id]);

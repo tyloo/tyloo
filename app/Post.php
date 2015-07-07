@@ -16,7 +16,7 @@ class Post extends AbstractModel
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'user_id', 'published'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'author_id', 'published', 'image'];
 
     /**
      * The attributes excluded from the model's JSON form.

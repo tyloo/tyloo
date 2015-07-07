@@ -1,5 +1,13 @@
 @extends('layouts.backend')
 
+@section('page-title')
+    Blog Posts
+@stop
+
+@section('breadcrumb-title')
+    Blog Posts
+@stop
+
 @section('content')
     <table class="table table-bordered">
         <thead>

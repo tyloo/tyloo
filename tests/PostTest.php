@@ -2,6 +2,9 @@
 
 namespace App\Tests;
 
+use App\Post;
+use App\Tag;
+use App\User;
 use Mockery;
 
 class PostTest extends AbstractTestCase
@@ -9,10 +12,10 @@ class PostTest extends AbstractTestCase
     /** @test */
     public function it_has_an_author()
     {
-        $mock = Mockery::mock('App\Post')->makePartial();
+        $mock = Mockery::mock(Post::class)->makePartial();
         $mock->shouldReceive('belongsTo')
             ->once()
-            ->with('App\User')
+            ->with(User::class)
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->author());
@@ -21,13 +24,21 @@ class PostTest extends AbstractTestCase
     /** @test */
     public function it_has_tags()
     {
-        $mock = Mockery::mock('App\Post')->makePartial();
+        $mock = Mockery::mock(Post::class)->makePartial();
         $mock->shouldReceive('belongsToMany')
             ->once()
-            ->with('App\Tag')
+            ->with(Tag::class)
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->tags());
+    }
+
+    /** @test */
+    public function it_displays_published_state()
+    {
+        $post = factory(Post::class)->make(['published' => 1]);
+
+        $this->assertEquals('Yes', $post->isPublished());
     }
 }
 

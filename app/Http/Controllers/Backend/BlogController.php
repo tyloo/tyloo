@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PostRequest;
+use App\Jobs\DeletePost;
+use App\Jobs\SavePost;
 use App\Repositories\PostRepository;
 
 class BlogController extends Controller
@@ -43,11 +45,15 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @return Response
+     * @param PostRequest $request
+     *
+     * @return string
      */
-    public function store()
+    public function store(PostRequest $request)
     {
-        return 'OK';
+        $post = $this->dispatch(new SavePost($request, $this->post));
+
+        return redirect()->route('admin.blog.index');
     }
 
     /**
@@ -58,7 +64,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $post = $this->post->findOrFail($id);
+        $post = $this->post->find($id);
 
         return view('backend.blog.show', compact('post'));
     }
@@ -71,7 +77,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $post = $this->post->findOrFail($id);
+        $post = $this->post->find($id);
 
         return view('backend.blog.edit', compact('post'));
     }
@@ -79,12 +85,16 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param PostRequest $request
+     * @param  int                           $id
+     *
      * @return Response
      */
-    public function update($id)
+    public function update(PostRequest $request, $id)
     {
-        return 'OK';
+        $this->dispatch(new SavePost($request, $this->post, $id));
+
+        return redirect()->route('admin.blog.index');
     }
 
     /**
@@ -95,6 +105,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        return 'OK';
+        $this->dispatch(new DeletePost($this->post, $id));
+
+        return redirect()->route('admin.blog.index');
     }
 }
