@@ -55,7 +55,7 @@ class SavePost extends Job implements SelfHandling
         $this->buildImage($this->request->file('image'));
 
         // New Post
-        if ($this->id == null) {
+        if ($this->id) {
             // We assign the author of the post
             $this->assignAuthor();
 
