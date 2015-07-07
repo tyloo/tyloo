@@ -2,6 +2,7 @@
 
 namespace App\Tests;
 
+use App\User;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -10,6 +11,7 @@ use Illuminate\Foundation\Testing\TestCase;
 abstract class AbstractTestCase extends TestCase
 {
     use DatabaseMigrations, DatabaseTransactions;
+
     /**
      * The base URL to use while testing the application.
      *
@@ -29,5 +31,14 @@ abstract class AbstractTestCase extends TestCase
         $app->make(Kernel::class)->bootstrap();
 
         return $app;
+    }
+
+    /**
+     * Create and Log In an User.
+     */
+    public function createAndBe()
+    {
+        $user = factory(User::class)->create();
+        $this->be($user);
     }
 }

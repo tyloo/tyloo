@@ -9,13 +9,12 @@ use Mockery;
 
 class BlogControllerTest extends AbstractTestCase
 {
-    public function setUp()
+    /** @before */
+    public function createAndBe()
     {
-        parent::setUp();
-
-        $user = factory(User::class)->create();
-        $this->be($user);
+        parent::createAndBe();
     }
+
     /** @test */
     public function it_can_fetch_blog_posts_list()
     {
@@ -34,10 +33,10 @@ class BlogControllerTest extends AbstractTestCase
         $this->withoutMiddleware();
 
         $data = [
-            'title' => 'Blog Post',
-            'slug' => 'blog-post',
-            'excerpt' => 'Blog Post Excerpt',
-            'content' => 'Blog Post Content',
+            'title'     => 'Blog Post',
+            'slug'      => 'blog-post',
+            'excerpt'   => 'Blog Post Excerpt',
+            'content'   => 'Blog Post Content',
             'published' => 1
         ];
 
@@ -50,7 +49,11 @@ class BlogControllerTest extends AbstractTestCase
     public function it_has_a_page_showing_a_single_post()
     {
         $user = factory(User::class)->create();
-        $post = factory(Post::class)->create(['title' => 'Post Title', 'slug' => 'post-title', 'published' => 1, 'author_id' => $user->id]);
+        $post = factory(Post::class)->create(['title'     => 'Post Title',
+                                              'slug'      => 'post-title',
+                                              'published' => 1,
+                                              'author_id' => $user->id
+        ]);
         $this->visit('/admin/blog/' . $post->id);
         $this->assertViewHas('post');
     }
@@ -82,10 +85,10 @@ class BlogControllerTest extends AbstractTestCase
         $this->withoutMiddleware();
 
         $data = [
-            'title' => 'Blog Post',
-            'slug' => 'blog-post',
-            'excerpt' => 'Blog Post Excerpt',
-            'content' => 'Blog Post Content',
+            'title'     => 'Blog Post',
+            'slug'      => 'blog-post',
+            'excerpt'   => 'Blog Post Excerpt',
+            'content'   => 'Blog Post Content',
             'published' => 1
         ];
         $post = factory(Post::class)->create();

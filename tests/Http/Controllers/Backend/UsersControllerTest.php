@@ -7,19 +7,21 @@ use App\User;
 
 class UsersControllerTest extends AbstractTestCase
 {
+    /** @before */
+    public function createAndBe()
+    {
+        parent::createAndBe();
+    }
+
     /** @test */
     public function it_can_fetch_users_list()
     {
-        $user = factory(User::class)->make();
-        $this->actingAs($user)
-             ->visit('/admin/users');
+        $this->visit('/admin/users');
     }
 
     /** @test */
     public function it_can_create_an_user()
     {
-        $user = factory(User::class)->make();
-        $this->actingAs($user)
-             ->visit('/admin/users/create');
+        $this->visit('/admin/users/create');
     }
 }
