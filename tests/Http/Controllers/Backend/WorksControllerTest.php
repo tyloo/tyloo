@@ -20,13 +20,13 @@ class WorksControllerTest extends AbstractTestCase
     public function it_can_fetch_works_list()
     {
         $this->actingAs($this->user)
-            ->visit('/admin/works');
+             ->visit('/admin/works');
     }
 
     /** @test */
     public function it_can_create_a_work()
     {
         $this->actingAs($this->user)
-            ->visit('/admin/works/create');
+             ->visit('/admin/works/create');
     }
 }

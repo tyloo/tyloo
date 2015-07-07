@@ -20,13 +20,13 @@ class UsersControllerTest extends AbstractTestCase
     public function it_can_fetch_users_list()
     {
         $this->actingAs($this->user)
-            ->visit('/admin/users');
+             ->visit('/admin/users');
     }
 
     /** @test */
     public function it_can_create_an_user()
     {
         $this->actingAs($this->user)
-            ->visit('/admin/users/create');
+             ->visit('/admin/users/create');
     }
 }

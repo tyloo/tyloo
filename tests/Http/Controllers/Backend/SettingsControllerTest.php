@@ -20,6 +20,6 @@ class SettingsControllerTest extends AbstractTestCase
     public function it_can_edit_settings()
     {
         $this->actingAs($this->user)
-            ->visit('/admin/settings');
+             ->visit('/admin/settings');
     }
 }

@@ -32,4 +32,9 @@ class Work extends AbstractModel
     {
         return $this->belongsTo('App\User');
     }
+
+    public function isPublished()
+    {
+        return $this->published ? 'Yes'  : 'No';
+    }
 }
