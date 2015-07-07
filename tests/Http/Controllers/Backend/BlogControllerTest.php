@@ -50,10 +50,11 @@ class BlogControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $user = factory(User::class)->create();
-        $post = factory(Post::class)->create(['title'     => 'Post Title',
-                                              'slug'      => 'post-title',
-                                              'published' => 1,
-                                              'author_id' => $user->id
+        $post = factory(Post::class)->create([
+            'title'     => 'Post Title',
+            'slug'      => 'post-title',
+            'published' => 1,
+            'author_id' => $user->id
         ]);
         $this->visit('/admin/blog/' . $post->id);
         $this->assertViewHas('post');

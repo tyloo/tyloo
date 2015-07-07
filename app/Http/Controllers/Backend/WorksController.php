@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\WorkRequest;
+use App\Jobs\Work\DeleteWork;
+use App\Jobs\Work\SaveWork;
 use App\Repositories\WorkRepository;
 
 class WorksController extends Controller
@@ -42,11 +45,15 @@ class WorksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @return Response
+     * @param WorkRequest $request
+     *
+     * @return string
      */
-    public function store()
+    public function store(WorkRequest $request)
     {
-        return 'OK';
+        $this->dispatch(new SaveWork($request, $this->work));
+
+        return redirect()->route('admin.works.index');
     }
 
     /**
@@ -57,7 +64,7 @@ class WorksController extends Controller
      */
     public function show($id)
     {
-        $work = $this->work->findOrFail($id);
+        $work = $this->work->find($id);
 
         return view('backend.works.show', compact('work'));
     }
@@ -70,7 +77,7 @@ class WorksController extends Controller
      */
     public function edit($id)
     {
-        $work = $this->work->findOrFail($id);
+        $work = $this->work->find($id);
 
         return view('backend.works.edit', compact('work'));
     }
@@ -78,12 +85,16 @@ class WorksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param WorkRequest $request
+     * @param  int                           $id
+     *
      * @return Response
      */
-    public function update($id)
+    public function update(WorkRequest $request, $id)
     {
-        return 'OK';
+        $this->dispatch(new SaveWork($request, $this->work, $id));
+
+        return redirect()->route('admin.works.index');
     }
 
     /**
@@ -94,6 +105,8 @@ class WorksController extends Controller
      */
     public function destroy($id)
     {
-        return 'OK';
+        $this->dispatch(new DeleteWork($this->work, $id));
+
+        return redirect()->route('admin.works.index');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class ContactRequest extends Request
+class WorkRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,12 +21,17 @@ class ContactRequest extends Request
      */
     public function rules()
     {
-        $rules = [
-            'contactName'    => 'required|string',
-            'contactEmail'   => 'required|email',
-            'contactMessage' => 'required',
-        ];
+        if ($this->method() == 'PUT') {
+            return [
+                'title' => 'required',
+                'content' => 'required',
+            ];
+        }
 
-        return $rules;
+        return [
+            'title' => 'required',
+            'slug' => 'required|unique:posts',
+            'content' => 'required',
+        ];
     }
 }

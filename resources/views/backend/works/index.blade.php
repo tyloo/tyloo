@@ -1,11 +1,11 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Works List
+    Works
 @stop
 
 @section('breadcrumb-title')
-    Works List
+    Works
 @stop
 
 @section('content')
@@ -23,7 +23,7 @@
     @forelse($works as $work)
         <tr>
             <td>{{ $work->title }}</td>
-            <td><a href="{{URL::route('admin.works.show', $work->slug)}}" target="_blank">/blog/{{ $work->slug }}</a></td>
+            <td><a href="{{URL::route('admin.works.show', $work->slug)}}" target="_blank">/works/{{ $work->slug }}</a></td>
             <td>{{ $work->isPublished() }}</td>
             <td><a href="{{URL::route('admin.users.show', $work->author->id)}}" target="_blank">{{ $work->author->name }}</a></td>
             <td>{{ $work->updated_at->diffForHumans() }}</td>

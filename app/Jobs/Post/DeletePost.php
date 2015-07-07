@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Jobs\Post;
 
+use App\Jobs\Job;
 use App\Repositories\PostRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 

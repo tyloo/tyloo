@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Jobs\Post;
 
 use App\Http\Requests\PostRequest;
+use App\Jobs\Job;
 use App\Repositories\PostRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Support\Facades\Auth;
@@ -55,7 +56,7 @@ class SavePost extends Job implements SelfHandling
         $this->buildImage($this->request->file('image'));
 
         // New Post
-        if ($this->id) {
+        if ($this->id === null) {
             // We assign the author of the post
             $this->assignAuthor();
 

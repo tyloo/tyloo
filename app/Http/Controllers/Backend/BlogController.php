@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostRequest;
-use App\Jobs\DeletePost;
-use App\Jobs\SavePost;
+use App\Jobs\Post\DeletePost;
+use App\Jobs\Post\SavePost;
 use App\Repositories\PostRepository;
 
 class BlogController extends Controller
