@@ -7,15 +7,11 @@ use App\User;
 
 class SettingsControllerTest extends AbstractTestCase
 {
-    /** @before */
-    public function createAndBe()
-    {
-        parent::createAndBe();
-    }
-
     /** @test */
     public function it_can_edit_settings()
     {
+        $this->createAndBe();
+
         $this->visit('/admin/settings');
     }
 }
