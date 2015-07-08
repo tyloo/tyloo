@@ -22,7 +22,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "bosnadev/repositories": "0.*",
-        "watson/rememberable": "~1.0"
+        "watson/rememberable": "~1.0",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -101,4 +101,19 @@ class BlogControllerTest extends AbstractTestCase
         $this->notSeeInDatabase('posts', $data);
         $this->assertRedirectedToRoute('admin.blog.index');
     }
+
+    /** @test */
+    public function it_can_upload_an_image()
+    {
+        $this->createAndBe();
+        $absolutePathToFile = public_path('assets/frontend/img/logo.png');
+
+        $this->visit('/admin/blog/create')
+            ->type('Blog Post', 'title')
+            ->type('blog-post', 'slug')
+            ->type('Test Content', 'content')
+            ->attach($absolutePathToFile, 'image')
+            ->press('Submit');
+        $this->seeInDatabase('posts', ['image' => '/uploads/blog/blog-post.png']);
+    }
 }

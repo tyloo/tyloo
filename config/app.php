@@ -146,7 +146,8 @@ return [
         App\Providers\ViewComposerServiceProvider::class,
 
         // Vendor Providers
-        Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class, // DebugBar
+        Intervention\Image\ImageServiceProvider::class, // Image Manipulation
 
     ],
 
@@ -195,6 +196,9 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        // Custom Aliases
+        'Image' => Intervention\Image\Facades\Image::class, // Image Manipulation
 
     ],
 

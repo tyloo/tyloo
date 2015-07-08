@@ -103,4 +103,19 @@ class WorksControllerTest extends AbstractTestCase
         $this->notSeeInDatabase('works', $data);
         $this->assertRedirectedToRoute('admin.works.index');
     }
+
+    /** @test */
+    public function it_can_upload_an_image()
+    {
+        $this->createAndBe();
+        $absolutePathToFile = public_path('assets/frontend/img/logo.png');
+
+        $this->visit('/admin/works/create')
+            ->type('Work Entry', 'title')
+            ->type('work-entry', 'slug')
+            ->type('Test Content', 'content')
+            ->attach($absolutePathToFile, 'image')
+            ->press('Submit');
+        $this->seeInDatabase('works', ['image' => '/uploads/works/work-entry.png']);
+    }
 }

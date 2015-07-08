@@ -7,6 +7,7 @@ use App\Jobs\Job;
 use App\Repositories\PostRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class SavePost extends Job implements SelfHandling
 {
@@ -67,6 +68,7 @@ class SavePost extends Job implements SelfHandling
 
             return $this->post->create($this->data);
         }
+
         // Update Post
         return $this->post->update($this->data, $this->id);
     }
@@ -84,16 +86,18 @@ class SavePost extends Job implements SelfHandling
      *
      * @param $file
      *
-     * @return string
+     * @return null|string
      */
     public function buildImage($file)
     {
-        if (isset($file) && $file->isValid()) {
-            $file->move(public_path('uploads/'), $this->data['slug'] . '.' . $file->getClientOriginalExtension());
-
-            return '/uploads/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
+        if ($file != null) {
+            $filePath = '/uploads/blog/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
+            if (Image::make($file)->save(public_path($filePath))) {
+                return $filePath;
+            }
         }
-
-        return '';
+        else {
+            return null;
+        }
     }
 }

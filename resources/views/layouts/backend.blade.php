@@ -54,7 +54,6 @@
 
                                 <p>
                                     {{ $user->name }}
-                                    <small>{{ $user->role() }}</small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->

@@ -16,12 +16,12 @@ class CreateWorksTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique();
-            $table->text('excerpt');
+            $table->text('excerpt')->nullable();
             $table->text('content');
             $table->string('type');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->integer('author_id');
-            $table->boolean('published');
+            $table->boolean('published')->default(0);
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@ use App\Jobs\Job;
 use App\Repositories\WorkRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class SaveWork extends Job implements SelfHandling
 {
@@ -53,7 +54,7 @@ class SaveWork extends Job implements SelfHandling
     public function handle()
     {
         // We build the image
-        $this->buildImage($this->request->file('image'));
+        $this->data['image'] = $this->buildImage($this->request->file('image'));
 
         // New Work
         if ($this->id === null) {
@@ -78,14 +79,19 @@ class SaveWork extends Job implements SelfHandling
      * Build the Work Image.
      *
      * @param $file
+     *
+     * @return null|string
      */
-    private function buildImage($file)
+    public function buildImage($file)
     {
-        if (isset($file) && $file->isValid()) {
-            $file->move(public_path('uploads/'), $this->data['slug'] . '.' . $file->getClientOriginalExtension());
-            $this->data['image'] = '/uploads/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
-        } else {
-            $this->data['image'] = '';
+        if ($file != null) {
+            $filePath = '/uploads/works/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
+            if (Image::make($file)->save(public_path($filePath))) {
+                return $filePath;
+            }
+        }
+        else {
+            return null;
         }
     }
 }
