@@ -1,6 +1,4 @@
-build
-docs
-node_modules
-vendor
-.env
-storage/database.sqlite
+/build
+/vendor
+/.env
+/storage/database.sqlite
