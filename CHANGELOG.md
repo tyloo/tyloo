@@ -2,6 +2,26 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
+## v1.1.0 - 2015-07-08
+
+### Added
+- Auth System
+- Backend Design
+- Backend logic (Blog, Tags, Work)
+- Written content
+- Added plenty of tests (still more to do ^)
+
+### TODO
+- Make a link between Tags and Blog
+- Make a link between Categories (create it) and Work
+- Stuff to do on the design
+- Rework content (and the bullshit)
+- Implement more tests
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+- Make a search engine. GSA ? :)
+
+
 ## v1.0.0 - 2015-06-04
 
 ### Added

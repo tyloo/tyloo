@@ -2,13 +2,10 @@
 
 namespace App\Jobs\Tag;
 
-use App\Http\Requests\PostRequest;
 use App\Http\Requests\TagRequest;
 use App\Jobs\Job;
-use App\Repositories\PostRepository;
 use App\Repositories\TagRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
-use Illuminate\Support\Facades\Auth;
 
 class SaveTag extends Job implements SelfHandling
 {
