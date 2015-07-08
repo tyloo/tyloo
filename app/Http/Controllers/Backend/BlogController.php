@@ -51,7 +51,7 @@ class BlogController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $this->dispatch(new SavePost($request, $this->post));
+        $this->dispatch(new SavePost($request, $this->post, null));
 
         return redirect()->route('admin.blog.index');
     }

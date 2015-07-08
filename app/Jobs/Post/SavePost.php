@@ -31,6 +31,11 @@ class SavePost extends Job implements SelfHandling
     protected $id;
 
     /**
+     * @var null
+     */
+    private $image;
+
+    /**
      * Create a new job instance.
      *
      * @param \App\Http\Requests\PostRequest   $request
@@ -53,7 +58,7 @@ class SavePost extends Job implements SelfHandling
     public function handle()
     {
         // We build the image
-        $this->buildImage($this->request->file('image'));
+        $this->data['image'] = $this->buildImage($this->request->file('image'));
 
         // New Post
         if ($this->id === null) {
@@ -78,14 +83,17 @@ class SavePost extends Job implements SelfHandling
      * Build the Post Image.
      *
      * @param $file
+     *
+     * @return string
      */
-    private function buildImage($file)
+    public function buildImage($file)
     {
         if (isset($file) && $file->isValid()) {
             $file->move(public_path('uploads/'), $this->data['slug'] . '.' . $file->getClientOriginalExtension());
-            $this->data['image'] = '/uploads/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
-        } else {
-            $this->data['image'] = '';
+
+            return '/uploads/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
         }
+
+        return '';
     }
 }

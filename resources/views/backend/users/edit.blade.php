@@ -19,7 +19,8 @@
             <input type="text" name="name" placeholder="Name" value="{{ old('name', $user->name) }}" class="form-control">
         </div>
         <div class="form-group">
-            <input type="email" name="email" placeholder="Email" value="{{ old('email', $user->email) }}" class="form-control" disabled="disabled">
+            <input type="email" name="email" placeholder="Email" value="{{ $user->email }}" class="form-control" disabled="disabled">
+            <input type="hidden" name="email" value="{{ $user->email }}">
         </div>
         <div class="form-group">
             <input type="password" name="password" placeholder="Password" class="form-control">

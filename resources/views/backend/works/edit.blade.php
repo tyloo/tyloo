@@ -19,7 +19,8 @@
             <input type="text" name="title" value="{{ old('title', $work->title) }}" placeholder="Title" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="slug" value="{{ old('slug', $work->slug) }}" placeholder="Slug" class="form-control" disabled="disabled">
+            <input type="text" name="slug" value="{{ $work->slug }}" placeholder="Slug" class="form-control" disabled="disabled">
+            <input type="hidden" name="slug" value="{{ $work->slug }}">
         </div>
         <div class="form-group">
             <textarea class="form-control" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt', $work->excerpt) }}</textarea>

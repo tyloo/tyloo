@@ -5,7 +5,6 @@ namespace App\Tests\Http\Controllers\Backend;
 use App\Post;
 use App\Tests\AbstractTestCase;
 use App\User;
-use Mockery;
 
 class BlogControllerTest extends AbstractTestCase
 {
