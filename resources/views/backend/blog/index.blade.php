@@ -23,9 +23,9 @@
     @forelse($posts as $post)
         <tr>
             <td>{{ $post->title }}</td>
-            <td><a href="{{URL::route('admin.blog.show', $post->slug)}}" target="_blank">/blog/{{ $post->slug }}</a></td>
+            <td><a href="{{ URL::route('blog.show', $post->slug) }}" target="_blank">/blog/{{ $post->slug }}</a></td>
             <td>{{ $post->isPublished() }}</td>
-            <td><a href="{{URL::route('admin.users.show', $post->author->id)}}" target="_blank">{{ $post->author->name }}</a></td>
+            <td><a href="{{ URL::route('admin.users.show', $post->author->id) }}" target="_blank">{{ $post->author->name }}</a></td>
             <td>{{ $post->updated_at->diffForHumans() }}</td>
             <td><a href="{{ URL::route('admin.blog.show', $post->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
             <a href="{{ URL::route('admin.blog.edit', $post->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>

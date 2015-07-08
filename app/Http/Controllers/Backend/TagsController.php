@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagRequest;
+use App\Jobs\Tag\DeleteTag;
+use App\Jobs\Tag\SaveTag;
 use App\Repositories\TagRepository;
 
 class TagsController extends Controller
@@ -42,11 +45,15 @@ class TagsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @return Response
+     * @param TagRequest $request
+     *
+     * @return string
      */
-    public function store()
+    public function store(TagRequest $request)
     {
-        return 'OK';
+        $this->dispatch(new SaveTag($request, $this->tag));
+
+        return redirect()->route('admin.tags.index');
     }
 
     /**
@@ -57,7 +64,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        $tag = $this->tag->findOrFail($id);
+        $tag = $this->tag->find($id);
 
         return view('backend.tags.show', compact('tag'));
     }
@@ -70,7 +77,7 @@ class TagsController extends Controller
      */
     public function edit($id)
     {
-        $tag = $this->tag->findOrFail($id);
+        $tag = $this->tag->find($id);
 
         return view('backend.tags.edit', compact('tag'));
     }
@@ -78,12 +85,16 @@ class TagsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param TagRequest $request
+     * @param  int                           $id
+     *
      * @return Response
      */
-    public function update($id)
+    public function update(TagRequest $request, $id)
     {
-        return 'OK';
+        $this->dispatch(new SaveTag($request, $this->tag, $id));
+
+        return redirect()->route('admin.tags.index');
     }
 
     /**
@@ -94,6 +105,8 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        return 'OK';
+        $this->dispatch(new DeleteTag($this->tag, $id));
+
+        return redirect()->route('admin.tags.index');
     }
 }

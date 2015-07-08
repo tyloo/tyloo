@@ -50,7 +50,7 @@ $factory->define(App\Work::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Tag::class, function (Faker\Generator $faker) {
-    $name = $faker->word;
+    $name = $faker->unique()->word;
 
     return [
         'name'    => $name,

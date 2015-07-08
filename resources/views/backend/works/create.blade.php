@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Create Work
+    Create a Work
 @stop
 
 @section('breadcrumb-title')

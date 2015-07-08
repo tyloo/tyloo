@@ -1,5 +1,27 @@
 @extends('layouts.backend')
 
+@section('page-title')
+    Tag "{{ $tag->name }}"
+@stop
+
+@section('breadcrumb-title')
+    Tag Details
+@stop
+
 @section('content')
-    Show
+    <section class="mt40 mb40">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="blog-post mb40">
+                        <div class="blog-post-holder">
+                            <h1>{{ $tag->name }}</h1>
+                            <h2>{{ $tag->slug }}</h2>
+                            {!! $tag->content !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @stop

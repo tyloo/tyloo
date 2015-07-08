@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Create Blog Post
+    Create a Blog Post
 @stop
 
 @section('breadcrumb-title')

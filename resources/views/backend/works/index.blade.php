@@ -23,9 +23,9 @@
     @forelse($works as $work)
         <tr>
             <td>{{ $work->title }}</td>
-            <td><a href="{{URL::route('admin.works.show', $work->slug)}}" target="_blank">/works/{{ $work->slug }}</a></td>
+            <td><a href="{{ URL::route('works.show', $work->slug) }}" target="_blank">/works/{{ $work->slug }}</a></td>
             <td>{{ $work->isPublished() }}</td>
-            <td><a href="{{URL::route('admin.users.show', $work->author->id)}}" target="_blank">{{ $work->author->name }}</a></td>
+            <td><a href="{{ URL::route('admin.users.show', $work->author->id) }}" target="_blank">{{ $work->author->name }}</a></td>
             <td>{{ $work->updated_at->diffForHumans() }}</td>
             <td><a href="{{ URL::route('admin.works.show', $work->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
             <a href="{{ URL::route('admin.works.edit', $work->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
