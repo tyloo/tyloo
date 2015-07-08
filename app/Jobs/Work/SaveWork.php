@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class SaveWork extends Job implements SelfHandling
 {
     /**
-     * @var array
+     * @var \App\Http\Requests\WorkRequest
      */
     protected $request;
 

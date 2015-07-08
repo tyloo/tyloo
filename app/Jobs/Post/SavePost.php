@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class SavePost extends Job implements SelfHandling
 {
     /**
-     * @var array
+     * @var \App\Http\Requests\PostRequest
      */
     protected $request;
 

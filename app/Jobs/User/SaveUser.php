@@ -10,7 +10,7 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class SaveUser extends Job implements SelfHandling
 {
     /**
-     * @var array
+     * @var \App\Http\Requests\UserRequest
      */
     protected $request;
 

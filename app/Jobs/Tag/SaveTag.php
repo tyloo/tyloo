@@ -10,7 +10,7 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class SaveTag extends Job implements SelfHandling
 {
     /**
-     * @var array
+     * @var \App\Http\Requests\TagRequest
      */
     protected $request;
 

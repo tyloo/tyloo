@@ -14,7 +14,7 @@ class DeletePost extends Job implements SelfHandling
     protected $post;
 
     /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 
