@@ -23,14 +23,14 @@ class WorkRequest extends Request
     {
         if ($this->method() == 'PUT') {
             return [
-                'title' => 'required',
+                'title' => 'required|max:255',
                 'content' => 'required',
             ];
         }
 
         return [
-            'title' => 'required',
-            'slug' => 'required|unique:posts',
+            'title' => 'required|max:255',
+            'slug' => 'required|max:255|unique:posts',
             'content' => 'required',
         ];
     }

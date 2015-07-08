@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
+use App\Jobs\User\DeleteUser;
+use App\Jobs\User\SaveUser;
 use App\Repositories\UserRepository;
 
 class UsersController extends Controller
@@ -42,11 +45,15 @@ class UsersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @return Response
+     * @param UserRequest $request
+     *
+     * @return string
      */
-    public function store()
+    public function store(UserRequest $request)
     {
-        return 'OK';
+        $this->dispatch(new SaveUser($request, $this->user));
+
+        return redirect()->route('admin.users.index');
     }
 
     /**
@@ -57,7 +64,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = $this->user->findOrFail($id);
+        $user = $this->user->find($id);
 
         return view('backend.users.show', compact('user'));
     }
@@ -70,7 +77,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->user->findOrFail($id);
+        $user = $this->user->find($id);
 
         return view('backend.users.edit', compact('user'));
     }
@@ -78,12 +85,16 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param UserRequest $request
+     * @param  int                           $id
+     *
      * @return Response
      */
-    public function update($id)
+    public function update(UserRequest $request, $id)
     {
-        return 'OK';
+        $this->dispatch(new SaveUser($request, $this->user, $id));
+
+        return redirect()->route('admin.users.index');
     }
 
     /**
@@ -94,6 +105,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        return 'OK';
+        $this->dispatch(new DeleteUser($this->user, $id));
+
+        return redirect()->route('admin.users.index');
     }
 }

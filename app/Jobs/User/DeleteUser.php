@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Jobs\Tag;
+namespace App\Jobs\User;
 
 use App\Jobs\Job;
-use App\Repositories\TagRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
 
-class DeleteTag extends Job implements SelfHandling
+class DeleteUser extends Job implements SelfHandling
 {
     /**
-     * @var \App\Repositories\TagRepository
+     * @var \App\Repositories\UserRepository
      */
-    protected $tag;
+    protected $user;
 
     /**
      * @var null|string
@@ -21,12 +21,12 @@ class DeleteTag extends Job implements SelfHandling
     /**
      * Create a new job instance.
      *
-     * @param \App\Repositories\TagRepository $tag
+     * @param \App\Repositories\UserRepository $user
      * @param int                              $id
      */
-    public function __construct(TagRepository $tag, $id = 0)
+    public function __construct(UserRepository $user, $id = 0)
     {
-        $this->tag = $tag;
+        $this->user = $user;
         $this->id = $id;
     }
 
@@ -37,7 +37,7 @@ class DeleteTag extends Job implements SelfHandling
      */
     public function handle()
     {
-        // Delete Tag
-        return $this->tag->delete($this->id);
+        // Delete User
+        return $this->user->delete($this->id);
     }
 }

@@ -22,8 +22,8 @@ class ContactRequest extends Request
     public function rules()
     {
         $rules = [
-            'contactName'    => 'required|string',
-            'contactEmail'   => 'required|email',
+            'contactName'    => 'required|string|max:255',
+            'contactEmail'   => 'required|email|max:255',
             'contactMessage' => 'required',
         ];
 
