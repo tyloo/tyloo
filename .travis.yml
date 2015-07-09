@@ -8,7 +8,6 @@ php:
 
 matrix:
   allow_failures:
-    - php: 7.0
     - php: hhvm
 
 before_script:
@@ -20,5 +19,5 @@ script:
   - phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_script:
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
