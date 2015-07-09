@@ -50,8 +50,3 @@ checks:
         spacing_around_conditional_operators: true
         spacing_around_non_conditional_operators: true
         spacing_of_function_arguments: true
-
-tools:
-    external_code_coverage:
-        timeout: 600
-        runs: 3
