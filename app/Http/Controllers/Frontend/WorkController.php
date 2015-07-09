@@ -23,7 +23,7 @@ class WorkController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -37,7 +37,7 @@ class WorkController extends Controller
      *
      * @param  string $slug
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function show($slug)
     {

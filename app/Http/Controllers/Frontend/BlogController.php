@@ -36,7 +36,7 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -50,7 +50,7 @@ class BlogController extends Controller
      *
      * @param  string $slug
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function show($slug)
     {
@@ -64,7 +64,7 @@ class BlogController extends Controller
      *
      * @param $slug
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function tag($slug)
     {

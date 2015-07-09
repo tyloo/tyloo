@@ -23,7 +23,7 @@ class UsersController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -35,7 +35,7 @@ class UsersController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function create()
     {
@@ -47,7 +47,7 @@ class UsersController extends Controller
      *
      * @param UserRequest $request
      *
-     * @return string
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UserRequest $request)
     {
@@ -59,8 +59,9 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return Response
+     * @param  int $id
+     *
+     * @return \Illuminate\View\View
      */
     public function show($id)
     {
@@ -72,8 +73,9 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return Response
+     * @param  int $id
+     *
+     * @return \Illuminate\View\View
      */
     public function edit($id)
     {
@@ -86,9 +88,9 @@ class UsersController extends Controller
      * Update the specified resource in storage.
      *
      * @param UserRequest $request
-     * @param  int                           $id
+     * @param  int        $id
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UserRequest $request, $id)
     {
@@ -100,8 +102,9 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return Response
+     * @param  int $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {

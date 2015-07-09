@@ -20,7 +20,7 @@ class TagTableSeeder extends Seeder
         $posts = Post::all();
 
         foreach ($posts as $post) {
-            $tags = Tag::orderByRaw("RAND()")->take(rand(1, 5))->get(['id']);
+            $tags = Tag::orderByRaw('RAND()')->take(rand(1, 5))->get(['id']);
             $post->tags()->sync($tags);
         }
     }
