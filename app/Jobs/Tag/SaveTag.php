@@ -19,7 +19,7 @@ class SaveTag extends Job implements SelfHandling
     protected $tag;
 
     /**
-     * @var null|int
+     * @var integer|null
      */
     protected $id;
 
@@ -28,7 +28,7 @@ class SaveTag extends Job implements SelfHandling
      *
      * @param array                           $data
      * @param \App\Repositories\TagRepository $tag
-     * @param int                             $id
+     * @param integer|null                    $id
      */
     public function __construct(array $data = [], TagRepository $tag, $id = null)
     {

@@ -146,7 +146,6 @@ return [
         App\Providers\ViewComposerServiceProvider::class,
 
         // Vendor Providers
-        Barryvdh\Debugbar\ServiceProvider::class, // DebugBar
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
 
     ],

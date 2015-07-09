@@ -21,7 +21,7 @@ class SavePost extends Job implements SelfHandling
     protected $post;
 
     /**
-     * @var null|int
+     * @var integer|null
      */
     protected $id;
 
@@ -30,7 +30,7 @@ class SavePost extends Job implements SelfHandling
      *
      * @param array                            $data
      * @param \App\Repositories\PostRepository $post
-     * @param int                              $id
+     * @param integer|null                     $id
      */
     public function __construct(array $data = [], PostRepository $post, $id = null)
     {

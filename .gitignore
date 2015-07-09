@@ -2,3 +2,4 @@
 /vendor
 /.env
 /storage/database.sqlite
+/Envoy.blade.php

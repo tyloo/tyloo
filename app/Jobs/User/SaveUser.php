@@ -19,7 +19,7 @@ class SaveUser extends Job implements SelfHandling
     protected $user;
 
     /**
-     * @var null|int
+     * @var integer|null
      */
     protected $id;
 
@@ -28,7 +28,7 @@ class SaveUser extends Job implements SelfHandling
      *
      * @param array                            $data
      * @param \App\Repositories\UserRepository $user
-     * @param int                              $id
+     * @param integer|null                     $id
      */
     public function __construct(array $data = [], UserRepository $user, $id = null)
     {
