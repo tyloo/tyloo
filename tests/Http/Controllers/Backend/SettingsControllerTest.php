@@ -14,4 +14,14 @@ class SettingsControllerTest extends AbstractTestCase
 
         $this->visit('/admin/settings');
     }
+
+    /** @test */
+    public function it_can_update_settings()
+    {
+        $this->withoutMiddleware();
+        $this->createAndBe();
+
+        $this->put('/admin/settings')->see('OK');
+        $this->assertResponseOk();
+    }
 }

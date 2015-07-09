@@ -13,6 +13,6 @@ class SettingsController extends Controller
 
     public function update()
     {
-        return 'OK';
+        return response('OK', 200);
     }
 }

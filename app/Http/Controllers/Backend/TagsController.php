@@ -51,7 +51,7 @@ class TagsController extends Controller
      */
     public function store(TagRequest $request)
     {
-        $this->dispatch(new SaveTag($request, $this->tag));
+        $this->dispatch(new SaveTag($request->except(['_token', '_method']), $this->tag));
 
         return redirect()->route('admin.tags.index');
     }
@@ -92,7 +92,7 @@ class TagsController extends Controller
      */
     public function update(TagRequest $request, $id)
     {
-        $this->dispatch(new SaveTag($request, $this->tag, $id));
+        $this->dispatch(new SaveTag($request->except(['_token', '_method']), $this->tag, $id));
 
         return redirect()->route('admin.tags.index');
     }

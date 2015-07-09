@@ -2,7 +2,6 @@
 
 namespace App\Jobs\Tag;
 
-use App\Http\Requests\TagRequest;
 use App\Jobs\Job;
 use App\Repositories\TagRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
@@ -10,9 +9,9 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class SaveTag extends Job implements SelfHandling
 {
     /**
-     * @var \App\Http\Requests\TagRequest
+     * @var array
      */
-    protected $request;
+    protected $data;
 
     /**
      * @var \App\Repositories\TagRepository
@@ -20,26 +19,20 @@ class SaveTag extends Job implements SelfHandling
     protected $tag;
 
     /**
-     * @var array
-     */
-    protected $data;
-
-    /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 
     /**
      * Create a new job instance.
      *
-     * @param \App\Http\Requests\TagRequest   $request
+     * @param array                           $data
      * @param \App\Repositories\TagRepository $tag
-     * @param string                          $id
+     * @param int                             $id
      */
-    public function __construct(TagRequest $request, TagRepository $tag, $id = null)
+    public function __construct(array $data = [], TagRepository $tag, $id = null)
     {
-        $this->request = $request;
-        $this->data = $request->except(['_token', '_method']);
+        $this->data = $data;
         $this->tag = $tag;
         $this->id = $id;
     }

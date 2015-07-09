@@ -2,7 +2,6 @@
 
 namespace App\Jobs\Post;
 
-use App\Http\Requests\PostRequest;
 use App\Jobs\Job;
 use App\Repositories\PostRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
@@ -12,9 +11,9 @@ use Intervention\Image\Facades\Image;
 class SavePost extends Job implements SelfHandling
 {
     /**
-     * @var \App\Http\Requests\PostRequest
+     * @var array
      */
-    protected $request;
+    protected $data;
 
     /**
      * @var \App\Repositories\PostRepository
@@ -22,26 +21,20 @@ class SavePost extends Job implements SelfHandling
     protected $post;
 
     /**
-     * @var array
-     */
-    protected $data;
-
-    /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 
     /**
      * Create a new job instance.
      *
-     * @param \App\Http\Requests\PostRequest   $request
+     * @param array                            $data
      * @param \App\Repositories\PostRepository $post
-     * @param string                           $id
+     * @param int                              $id
      */
-    public function __construct(PostRequest $request, PostRepository $post, $id = null)
+    public function __construct(array $data = [], PostRepository $post, $id = null)
     {
-        $this->request = $request;
-        $this->data = $request->except(['_token', '_method']);
+        $this->data = $data;
         $this->post = $post;
         $this->id = $id;
     }
@@ -54,7 +47,7 @@ class SavePost extends Job implements SelfHandling
     public function handle()
     {
         // We build the image
-        $this->data['image'] = $this->buildImage($this->request->file('image'));
+        $this->data['image'] = isset($this->data['image']) ? $this->buildImage($this->data['image']) : null;
 
         // New Post
         if ($this->id === null) {
@@ -81,18 +74,13 @@ class SavePost extends Job implements SelfHandling
      *
      * @param $file
      *
-     * @return null|string
+     * @return string
      */
     public function buildImage($file)
     {
-        if ($file != null) {
-            $filePath = '/uploads/blog/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
-            if (Image::make($file)->save(public_path($filePath))) {
-                return $filePath;
-            }
-        }
-        else {
-            return null;
-        }
+        $filePath = '/uploads/blog/' . $this->data['slug'] . '.' . $file->getClientOriginalExtension();
+        Image::make($file)->save(public_path($filePath));
+
+        return $filePath;
     }
 }

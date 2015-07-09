@@ -51,7 +51,7 @@ class UsersController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $this->dispatch(new SaveUser($request, $this->user));
+        $this->dispatch(new SaveUser($request->except(['_token', '_method']), $this->user));
 
         return redirect()->route('admin.users.index');
     }
@@ -92,7 +92,7 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $this->dispatch(new SaveUser($request, $this->user, $id));
+        $this->dispatch(new SaveUser($request->except(['_token', '_method']), $this->user, $id));
 
         return redirect()->route('admin.users.index');
     }

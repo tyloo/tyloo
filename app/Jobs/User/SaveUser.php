@@ -2,7 +2,6 @@
 
 namespace App\Jobs\User;
 
-use App\Http\Requests\UserRequest;
 use App\Jobs\Job;
 use App\Repositories\UserRepository;
 use Illuminate\Contracts\Bus\SelfHandling;
@@ -10,9 +9,9 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class SaveUser extends Job implements SelfHandling
 {
     /**
-     * @var \App\Http\Requests\UserRequest
+     * @var array
      */
-    protected $request;
+    protected $data;
 
     /**
      * @var \App\Repositories\UserRepository
@@ -20,26 +19,20 @@ class SaveUser extends Job implements SelfHandling
     protected $user;
 
     /**
-     * @var array
-     */
-    protected $data;
-
-    /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 
     /**
      * Create a new job instance.
      *
-     * @param \App\Http\Requests\UserRequest   $request
+     * @param array                            $data
      * @param \App\Repositories\UserRepository $user
-     * @param string                           $id
+     * @param int                              $id
      */
-    public function __construct(UserRequest $request, UserRepository $user, $id = null)
+    public function __construct(array $data = [], UserRepository $user, $id = null)
     {
-        $this->request = $request;
-        $this->data = $request->except(['_token', '_method']);
+        $this->data = $data;
         $this->user = $user;
         $this->id = $id;
     }
