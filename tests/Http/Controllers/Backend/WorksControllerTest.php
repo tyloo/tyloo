@@ -5,6 +5,7 @@ namespace App\Tests\Http\Controllers\Backend;
 use App\Tests\AbstractTestCase;
 use App\User;
 use App\Work;
+use Illuminate\Support\Facades\File;
 
 class WorksControllerTest extends AbstractTestCase
 {
@@ -109,6 +110,7 @@ class WorksControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/frontend/img/logo.png');
+        $uploadPath = '/uploads/works/work-entry.png';
 
         $this->visit('/admin/works/create')
             ->type('Work Entry', 'title')
@@ -116,6 +118,7 @@ class WorksControllerTest extends AbstractTestCase
             ->type('Test Content', 'content')
             ->attach($absolutePathToFile, 'image')
             ->press('Submit');
-        $this->seeInDatabase('works', ['image' => '/uploads/works/work-entry.png']);
+        $this->seeInDatabase('works', ['image' => $uploadPath]);
+        File::delete(public_path($uploadPath));
     }
 }

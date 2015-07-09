@@ -14,7 +14,7 @@ class DeleteWork extends Job implements SelfHandling
     protected $work;
 
     /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 

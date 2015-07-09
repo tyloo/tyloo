@@ -35,6 +35,6 @@ class Work extends AbstractModel
 
     public function isPublished()
     {
-        return $this->published ? 'Yes'  : 'No';
+        return $this->attributes['published'] ? 'Yes'  : 'No';
     }
 }

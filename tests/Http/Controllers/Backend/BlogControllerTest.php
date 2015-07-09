@@ -5,6 +5,7 @@ namespace App\Tests\Http\Controllers\Backend;
 use App\Post;
 use App\Tests\AbstractTestCase;
 use App\User;
+use Illuminate\Support\Facades\File;
 
 class BlogControllerTest extends AbstractTestCase
 {
@@ -107,6 +108,7 @@ class BlogControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/frontend/img/logo.png');
+        $uploadPath = '/uploads/blog/blog-post.png';
 
         $this->visit('/admin/blog/create')
             ->type('Blog Post', 'title')
@@ -114,6 +116,7 @@ class BlogControllerTest extends AbstractTestCase
             ->type('Test Content', 'content')
             ->attach($absolutePathToFile, 'image')
             ->press('Submit');
-        $this->seeInDatabase('posts', ['image' => '/uploads/blog/blog-post.png']);
+        $this->seeInDatabase('posts', ['image' => $uploadPath]);
+        File::delete(public_path($uploadPath));
     }
 }

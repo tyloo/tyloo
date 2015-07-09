@@ -14,7 +14,7 @@ class DeleteTag extends Job implements SelfHandling
     protected $tag;
 
     /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 

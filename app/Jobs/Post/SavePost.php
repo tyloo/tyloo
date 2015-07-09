@@ -32,11 +32,6 @@ class SavePost extends Job implements SelfHandling
     protected $id;
 
     /**
-     * @var null
-     */
-    private $image;
-
-    /**
      * Create a new job instance.
      *
      * @param \App\Http\Requests\PostRequest   $request

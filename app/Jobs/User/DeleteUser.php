@@ -14,7 +14,7 @@ class DeleteUser extends Job implements SelfHandling
     protected $user;
 
     /**
-     * @var null|string
+     * @var null|int
      */
     protected $id;
 
