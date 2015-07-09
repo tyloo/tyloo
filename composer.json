@@ -29,6 +29,7 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
+        "codeclimate/php-test-reporter": "^0.1.2",
         "barryvdh/laravel-debugbar": "~2.0"
     },
     "autoload": {

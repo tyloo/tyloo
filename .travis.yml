@@ -17,8 +17,9 @@ before_script:
   - travis_retry composer install --prefer-source
 
 script:
-  - phpunit --coverage-text --coverage-clover=coverage.clover
+  - phpunit --coverage-text --coverage-clover build/logs/clover.xml
 
 after_script:
   - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then wget https://scrutinizer-ci.com/ocular.phar; fi
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then php ocular.phar code-coverage:upload --format=php-clover coverage.clover; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.5" ]]; then ./vendor/bin/test-reporter; fi
