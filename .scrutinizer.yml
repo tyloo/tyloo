@@ -67,8 +67,6 @@ checks:
         more_specific_types_in_doc_comments: true
         missing_arguments: true
         method_calls_on_non_object: true
-        line_length:
-            max_length: '120'
         instanceof_class_exists: true
         function_in_camel_caps: true
         foreach_usable_as_reference: true
@@ -108,7 +106,6 @@ checks:
         avoid_aliased_php_functions: true
         argument_type_checks: true
         assignment_of_null_return: true
-        align_assignments: true
 
 coding_style:
     php: {  }
