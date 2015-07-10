@@ -9,7 +9,7 @@ class WorkRepository extends Repository
     /**
      * Specify Model class name
      *
-     * @return mixed
+     * @return string
      */
     public function model()
     {

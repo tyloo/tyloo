@@ -74,7 +74,7 @@ class SaveWork extends Job implements SelfHandling
      *
      * @param $file
      *
-     * @return null|string
+     * @return string
      */
     public function buildImage($file)
     {
