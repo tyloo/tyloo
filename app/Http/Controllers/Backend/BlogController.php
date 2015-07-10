@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostWorkRequest;
 use App\Jobs\Post\DeletePost;
 use App\Jobs\Post\SavePost;
 use App\Repositories\PostRepository;
@@ -45,11 +45,11 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param PostRequest $request
+     * @param PostWorkRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(PostRequest $request)
+    public function store(PostWorkRequest $request)
     {
         $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), null));
 
@@ -87,12 +87,12 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param PostRequest $request
-     * @param  int        $id
+     * @param PostWorkRequest $request
+     * @param  int            $id
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(PostRequest $request, $id)
+    public function update(PostWorkRequest $request, $id)
     {
         $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), $id));
 

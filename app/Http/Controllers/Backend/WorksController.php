@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\WorkRequest;
+use App\Http\Requests\PostWorkRequest;
 use App\Jobs\Work\DeleteWork;
 use App\Jobs\Work\SaveWork;
 use App\Repositories\WorkRepository;
@@ -45,11 +45,11 @@ class WorksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param WorkRequest $request
+     * @param PostWorkRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(WorkRequest $request)
+    public function store(PostWorkRequest $request)
     {
         $this->dispatch(new SaveWork($this->work, $request->except(['_token', '_method'])));
 
@@ -87,12 +87,12 @@ class WorksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param WorkRequest $request
-     * @param  int        $id
+     * @param PostWorkRequest $request
+     * @param  int            $id
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(WorkRequest $request, $id)
+    public function update(PostWorkRequest $request, $id)
     {
         $this->dispatch(new SaveWork($this->work, $request->except(['_token', '_method']), $id));
 
