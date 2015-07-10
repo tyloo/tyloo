@@ -52,13 +52,9 @@ Route::group(['namespace' => 'Backend', 'middleware' => 'auth', 'prefix' => 'adm
     Route::get('settings', ['as' => 'admin.settings.edit', 'uses' => 'SettingsController@edit']);
     Route::put('settings', ['as' => 'admin.settings.update', 'uses' => 'SettingsController@update']);
 
-    // Blog
-    Route::resource('blog', 'BlogController');
-    Route::get('blog/delete/{id}', ['as' => 'admin.blog.destroy', 'uses' => 'BlogController@destroy']);
-
-    // Works
-    Route::resource('works', 'WorksController');
-    Route::get('works/delete/{id}', ['as' => 'admin.works.destroy', 'uses' => 'WorksController@destroy']);
+    // Posts
+    Route::resource('posts', 'PostsController');
+    Route::get('posts/delete/{id}', ['as' => 'admin.posts.destroy', 'uses' => 'PostsController@destroy']);
 
     // Users
     Route::resource('users', 'UsersController');

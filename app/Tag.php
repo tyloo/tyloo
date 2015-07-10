@@ -2,7 +2,9 @@
 
 namespace App;
 
-class Tag extends AbstractModel
+use Illuminate\Database\Eloquent\Model;
+
+class Tag extends Model
 {
     /**
      * The database table used by the model.

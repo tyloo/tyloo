@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->text('content');
             $table->string('image')->nullable();
             $table->integer('author_id');
-            $table->boolean('published')->default(0);
+            $table->string('type')->default('blog');
             $table->timestamps();
         });
     }

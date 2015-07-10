@@ -30,22 +30,6 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'content'   => '<p>' . $faker->text(2000) . '</p>',
         'image'     => $faker->imageUrl(750, 346, 'cats', false),
         'author_id' => rand(1, 10),
-        'published' => rand(0, 1),
-    ];
-});
-
-$factory->define(App\Work::class, function (Faker\Generator $faker) {
-    $title = substr($faker->sentence(rand(2, 4)), 0, -1);
-
-    return [
-        'title'     => $title,
-        'slug'      => str_slug($title),
-        'excerpt'   => '<p>' . $faker->text(200) . '</p>',
-        'content'   => '<p>' . $faker->text(2000) . '</p>',
-        'image'     => $faker->imageUrl(750, 346, 'cats', false),
-        'author_id' => rand(1, 10),
-        'published' => rand(0, 1),
-        'type'      => ['Website', 'Search', 'Application (mobile)'][rand(0, 2)],
     ];
 });
 

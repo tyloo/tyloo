@@ -32,13 +32,5 @@ class PostTest extends AbstractTestCase
 
         $this->assertEquals('mocked', $mock->tags());
     }
-
-    /** @test */
-    public function it_displays_published_state()
-    {
-        $post = factory(Post::class)->make(['published' => 1]);
-
-        $this->assertEquals('Yes', $post->isPublished());
-    }
 }
 

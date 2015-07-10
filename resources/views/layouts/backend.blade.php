@@ -107,10 +107,10 @@
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="treeview">
-                    <a href="{{ URL::route('admin.blog.index') }}"><i class="fa fa-files-o"></i> <span>Blog</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ URL::route('admin.posts.index') }}"><i class="fa fa-files-o"></i> <span>Posts</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ URL::route('admin.blog.index') }}"><i class="fa fa-eye"></i> List Posts</a></li>
-                        <li><a href="{{ URL::route('admin.blog.create') }}"><i class="fa fa-plus"></i> Add a Post</a></li>
+                        <li><a href="{{ URL::route('admin.posts.index') }}"><i class="fa fa-eye"></i> List Posts</a></li>
+                        <li><a href="{{ URL::route('admin.posts.create') }}"><i class="fa fa-plus"></i> Add a Post</a></li>
                         <li class="treeview">
                             <a href="{{ URL::route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
@@ -118,13 +118,6 @@
                                 <li><a href="{{ URL::route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="{{ URL::route('admin.works.index') }}"><i class="fa fa-file-image-o"></i> <span>Works</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ URL::route('admin.works.index') }}"><i class="fa fa-eye"></i> List Works</a></li>
-                        <li><a href="{{ URL::route('admin.works.create') }}"><i class="fa fa-plus"></i> Add a Work</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

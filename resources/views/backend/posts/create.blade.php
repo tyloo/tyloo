@@ -1,15 +1,15 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Create a Work
+    Create a Blog Post
 @stop
 
 @section('breadcrumb-title')
-    New Work
+    New Blog Post
 @stop
 
 @section('content')
-    <form role="form" action="{{ URL::route('admin.works.store') }}" method="POST" enctype="multipart/form-data">
+    <form role="form" action="{{ URL::route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
 
         @include('errors.formErrors')
@@ -25,14 +25,6 @@
         </div>
         <div class="form-group">
             <textarea class="form-control" name="content" placeholder="Content" cols="30" rows="10">{{ old('content') }}</textarea>
-        </div>
-        <div class="form-group">
-            <select name="type" class="form-control">
-                <option value="">Type:</option>
-                <option value="Website">Website</option>
-                <option value="Search">Search</option>
-                <option value="Application (mobile)">Application (mobile)</option>
-            </select>
         </div>
         <div class="form-group">
             <label for="image">Image</label>

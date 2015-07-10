@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\UserRepository;
+use App\Repositories\UsersRepository;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
     /**
-     * @var \App\Repositories\UserRepository
+     * @var \App\Repositories\UsersRepository
      */
     protected $user;
 
-    public function __construct(UserRepository $user)
+    public function __construct(UsersRepository $user)
     {
         $this->user = $user;
     }

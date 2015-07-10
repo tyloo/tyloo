@@ -8,7 +8,6 @@
         <small>
             <ul class="list-inline posted-info">
                 <li>{{ $post->created_at->diffForHumans() }}</li>
-                @include('frontend.partials.blog.blocks.postTags', ['tags' => $post->tags])
             </ul>
         </small>
         {!! $post->excerpt !!}

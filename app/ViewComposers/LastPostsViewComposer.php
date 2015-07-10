@@ -2,9 +2,7 @@
 
 namespace App\ViewComposers;
 
-use App\Repositories\Criteria\LastFive;
-use App\Repositories\Criteria\Rememberable;
-use App\Repositories\PostRepository;
+use App\Repositories\PostsRepository;
 use Illuminate\View\View;
 
 class LastPostsViewComposer
@@ -12,30 +10,27 @@ class LastPostsViewComposer
     /**
      * The Post repository implementation.
      *
-     * @var \App\Repositories\PostRepository
+     * @var \App\Repositories\PostsRepository
      */
-    private $post;
+    private $repository;
 
     /**
      * Create a new Last Posts composer.
      *
-     * @param PostRepository $post
+     * @param PostsRepository $repository
      */
-    public function __construct(PostRepository $post)
+    public function __construct(PostsRepository $repository)
     {
-        // Dependencies automatically resolved by service container...
-        $this->post = $post;
+        $this->repository = $repository;
     }
 
     /**
      * Bind data to the view.
      *
      * @param  View  $view
-     * @return void
      */
     public function compose(View $view)
     {
-        $this->post->pushCriteria(new Rememberable(60))->pushCriteria(new LastFive());
-        $view->with('lastPosts', $this->post->all());
+        $view->with('lastPosts', $this->repository->all());
     }
 }

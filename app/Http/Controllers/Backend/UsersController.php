@@ -4,20 +4,18 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
-use App\Jobs\User\DeleteUser;
-use App\Jobs\User\SaveUser;
-use App\Repositories\UserRepository;
+use App\Repositories\UsersRepository;
 
 class UsersController extends Controller
 {
     /**
-     * @var \App\Repositories\UserRepository
+     * @var \App\Repositories\UsersRepository
      */
-    protected $user;
+    protected $repository;
 
-    public function __construct(UserRepository $user)
+    public function __construct(UsersRepository $repository)
     {
-        $this->user = $user;
+        $this->repository = $repository;
     }
 
     /**
@@ -27,7 +25,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = $this->user->all();
+        $users = $this->repository->all();
 
         return view('backend.users.index', compact('users'));
     }
@@ -51,7 +49,7 @@ class UsersController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $this->dispatch(new SaveUser($this->user, $request->except(['_token', '_method'])));
+        $this->repository->create($request->all());
 
         return redirect()->route('admin.users.index');
     }
@@ -65,7 +63,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = $this->user->find($id);
+        $user = $this->repository->find($id);
 
         return view('backend.users.show', compact('user'));
     }
@@ -79,7 +77,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->user->find($id);
+        $user = $this->repository->find($id);
 
         return view('backend.users.edit', compact('user'));
     }
@@ -94,7 +92,7 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $this->dispatch(new SaveUser($this->user, $request->except(['_token', '_method']), $id));
+        $this->repository->update($id, $request->except(['_token', '_method']));
 
         return redirect()->route('admin.users.index');
     }
@@ -108,7 +106,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $this->dispatch(new DeleteUser($this->user, $id));
+        $this->repository->delete($id);
 
         return redirect()->route('admin.users.index');
     }

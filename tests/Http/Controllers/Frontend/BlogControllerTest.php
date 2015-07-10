@@ -20,7 +20,7 @@ class BlogControllerTest extends AbstractTestCase
     public function it_has_a_page_showing_a_single_post()
     {
         $user = factory(User::class)->create();
-        $post = factory(Post::class)->create(['published' => 1, 'author_id' => $user->id]);
+        $post = factory(Post::class)->create(['author_id' => $user->id]);
         $this->visit('/blog/' . $post->slug);
         $this->assertViewHas('post');
     }

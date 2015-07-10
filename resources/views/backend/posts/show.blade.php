@@ -1,11 +1,11 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Blog Post "{{ $post->title }}"
+    Post "{{ $post->title }}"
 @stop
 
 @section('breadcrumb-title')
-    Blog Post
+    Post
 @stop
 
 @section('content')
@@ -18,7 +18,6 @@
                         <div class="blog-post-holder">
                             <ul class="list-inline posted-info">
                                 <li>By <a href="#">{{ $post->author->name }}</a></li>
-                                @include('frontend.partials.blog.blocks.postTags', ['tags' => $post->tags])
                                 <li>{{ $post->created_at->diffForHumans() }}</li>
                             </ul>
                             <hr align="left" class="mt15 mb10">

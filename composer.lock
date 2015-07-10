@@ -4,55 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b79706f92965555a9238128e1511aae",
+    "hash": "db92612e653a7a1bf78cca65f7306734",
     "packages": [
-        {
-            "name": "bosnadev/repositories",
-            "version": "0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Bosnadev/Repositories.git",
-                "reference": "c4eb564902a58bdbb8047f09da591f6177c39c6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Bosnadev/Repositories/zipball/c4eb564902a58bdbb8047f09da591f6177c39c6a",
-                "reference": "c4eb564902a58bdbb8047f09da591f6177c39c6a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "5.*",
-                "illuminate/support": "5.*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bosnadev\\Repositories\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Mirza Pasic",
-                    "email": "mirza.pasic@edu.fit.ba"
-                }
-            ],
-            "description": "Laravel Repositories",
-            "keywords": [
-                "database",
-                "eloquent",
-                "laravel",
-                "repositories",
-                "repository"
-            ],
-            "time": "2015-04-20 12:10:57"
-        },
         {
             "name": "classpreloader/classpreloader",
             "version": "2.0.0",
@@ -1103,6 +1056,64 @@
             "time": "2015-03-26 18:43:54"
         },
         {
+            "name": "sebastian-berc/repositories",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SebastianBerc/Repositories.git",
+                "reference": "daf3c092f9ae24dfc997ef09de20e75ab3737806"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/daf3c092f9ae24dfc997ef09de20e75ab3737806",
+                "reference": "daf3c092f9ae24dfc997ef09de20e75ab3737806",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.0|~5.1",
+                "illuminate/database": "~5.0|~5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.4",
+                "laracasts/testdummy": "^2.3",
+                "mockery/mockery": "^0.9.4",
+                "orchestra/testbench": "3.0.*",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SebastianBerc\\Repositories\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Berć",
+                    "email": "contact@sebastian-berc.pl",
+                    "homepage": "http://sebastian-berc.pl/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Flexable Laravel ~5.0 Repository Library.",
+            "homepage": "https://github.com/SebastianBerc/Repositories",
+            "keywords": [
+                "league",
+                "repository"
+            ],
+            "time": "2015-07-07 23:04:48"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.1",
             "source": {
@@ -1903,54 +1914,6 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
-        },
-        {
-            "name": "watson/rememberable",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dwightwatson/rememberable.git",
-                "reference": "dd3d188c1f66c4f73f736a61dad8e8a364e40122"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dwightwatson/rememberable/zipball/dd3d188c1f66c4f73f736a61dad8e8a364e40122",
-                "reference": "dd3d188c1f66c4f73f736a61dad8e8a364e40122",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "4.2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Watson\\Rememberable\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dwight Watson",
-                    "email": "dwight@studiousapp.com"
-                }
-            ],
-            "description": "Query caching for Laravel 5",
-            "keywords": [
-                "caching",
-                "eloquent",
-                "laravel",
-                "remember"
-            ],
-            "time": "2015-04-21 01:07:16"
         }
     ],
     "packages-dev": [
@@ -3069,7 +3032,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sebastian-berc/repositories": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

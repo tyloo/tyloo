@@ -4,20 +4,18 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
-use App\Jobs\Tag\DeleteTag;
-use App\Jobs\Tag\SaveTag;
-use App\Repositories\TagRepository;
+use App\Repositories\TagsRepository;
 
 class TagsController extends Controller
 {
     /**
-     * @var \App\Repositories\TagRepository
+     * @var \App\Repositories\TagsRepository
      */
-    protected $tag;
+    protected $repository;
 
-    public function __construct(TagRepository $tag)
+    public function __construct(TagsRepository $repository)
     {
-        $this->tag = $tag;
+        $this->repository = $repository;
     }
 
     /**
@@ -27,7 +25,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        $tags = $this->tag->all();
+        $tags = $this->repository->all();
 
         return view('backend.tags.index', compact('tags'));
     }
@@ -51,7 +49,7 @@ class TagsController extends Controller
      */
     public function store(TagRequest $request)
     {
-        $this->dispatch(new SaveTag($this->tag, $request->except(['_token', '_method'])));
+        $this->repository->create($request->all());
 
         return redirect()->route('admin.tags.index');
     }
@@ -65,7 +63,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        $tag = $this->tag->find($id);
+        $tag = $this->repository->find($id);
 
         return view('backend.tags.show', compact('tag'));
     }
@@ -79,7 +77,7 @@ class TagsController extends Controller
      */
     public function edit($id)
     {
-        $tag = $this->tag->find($id);
+        $tag = $this->repository->find($id);
 
         return view('backend.tags.edit', compact('tag'));
     }
@@ -94,7 +92,7 @@ class TagsController extends Controller
      */
     public function update(TagRequest $request, $id)
     {
-        $this->dispatch(new SaveTag($this->tag, $request->except(['_token', '_method']), $id));
+        $this->repository->update($id, $request->except(['_token', '_method']));
 
         return redirect()->route('admin.tags.index');
     }
@@ -108,7 +106,7 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        $this->dispatch(new DeleteTag($this->tag, $id));
+        $this->repository->delete($id);
 
         return redirect()->route('admin.tags.index');
     }

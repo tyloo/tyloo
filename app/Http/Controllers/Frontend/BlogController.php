@@ -3,12 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\Criteria\Post\Published;
-use App\Repositories\Criteria\Post\WithAuthor;
-use App\Repositories\Criteria\Post\WithTags;
-use App\Repositories\Criteria\Rememberable;
-use App\Repositories\PostRepository;
-use App\Repositories\TagRepository;
+use App\Repositories\PostsRepository;
+use App\Repositories\TagsRepository;
 
 class BlogController extends Controller
 {
@@ -22,15 +18,10 @@ class BlogController extends Controller
      */
     protected $tag;
 
-    public function __construct(PostRepository $post, TagRepository $tag)
+    public function __construct(PostsRepository $post, TagsRepository $tag)
     {
         $this->post = $post;
         $this->tag = $tag;
-
-        $this->post->pushCriteria(new Published())
-                   ->pushCriteria(new Rememberable(60))
-                   ->pushCriteria(new WithAuthor())
-                   ->pushCriteria(new WithTags());
     }
 
     /**
@@ -40,7 +31,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = $this->post->paginate(10);
+        $posts = $this->post->paginate(5);
 
         return view('frontend.pages.blog.index', compact('posts'));
     }

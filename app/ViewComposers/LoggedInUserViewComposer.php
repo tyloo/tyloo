@@ -3,6 +3,7 @@
 namespace App\ViewComposers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 
 class LoggedInUserViewComposer
@@ -15,6 +16,9 @@ class LoggedInUserViewComposer
      */
     public function compose(View $view)
     {
-        $view->with('user', Auth::user());
+        $user = Cache::remember('user', 60, function() {
+            return Auth::user();
+        });
+        $view->with('user', $user);
     }
 }

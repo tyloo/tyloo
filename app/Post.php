@@ -2,7 +2,9 @@
 
 namespace App;
 
-class Post extends AbstractModel
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
 {
     /**
      * The database table used by the model.
@@ -16,7 +18,7 @@ class Post extends AbstractModel
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'author_id', 'published', 'image'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'image', 'author_id', 'type'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -39,10 +41,5 @@ class Post extends AbstractModel
     public function tags()
     {
         return $this->belongsToMany('App\Tag');
-    }
-
-    public function isPublished()
-    {
-        return $this->attributes['published'] ? 'Yes'  : 'No';
     }
 }

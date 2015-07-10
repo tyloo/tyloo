@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <form role="form" action="{{ URL::route('admin.blog.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+    <form role="form" action="{{ URL::route('admin.posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <input type="hidden" name="_method" value="PUT">
 

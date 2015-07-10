@@ -4,20 +4,19 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostWorkRequest;
-use App\Jobs\Post\DeletePost;
-use App\Jobs\Post\SavePost;
-use App\Repositories\PostRepository;
+use App\Jobs\SavePost;
+use App\Repositories\PostsRepository;
 
-class BlogController extends Controller
+class PostsController extends Controller
 {
     /**
-     * @var \App\Repositories\PostRepository
+     * @var \App\Repositories\PostsRepository
      */
-    protected $post;
+    protected $repository;
 
-    public function __construct(PostRepository $post)
+    public function __construct(PostsRepository $repository)
     {
-        $this->post = $post;
+        $this->repository = $repository;
     }
 
     /**
@@ -27,9 +26,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = $this->post->all();
+        $posts = $this->repository->all();
 
-        return view('backend.blog.index', compact('posts'));
+        return view('backend.posts.index', compact('posts'));
     }
 
     /**
@@ -39,7 +38,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('backend.blog.create');
+        return view('backend.posts.create');
     }
 
     /**
@@ -51,9 +50,9 @@ class BlogController extends Controller
      */
     public function store(PostWorkRequest $request)
     {
-        $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), null));
+        $this->dispatch(new SavePost($this->repository, $request->all()));
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -65,9 +64,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $post = $this->post->find($id);
+        $post = $this->repository->find($id);
 
-        return view('backend.blog.show', compact('post'));
+        return view('backend.posts.show', compact('post'));
     }
 
     /**
@@ -79,9 +78,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $post = $this->post->find($id);
+        $post = $this->repository->find($id);
 
-        return view('backend.blog.edit', compact('post'));
+        return view('backend.posts.edit', compact('post'));
     }
 
     /**
@@ -94,9 +93,9 @@ class BlogController extends Controller
      */
     public function update(PostWorkRequest $request, $id)
     {
-        $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), $id));
+        $this->dispatch(new SavePost($this->repository, $request->except(['_token', '_method']), $id));
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -108,8 +107,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $this->dispatch(new DeletePost($this->post, $id));
+        $this->repository->delete($id);
 
-        return redirect()->route('admin.blog.index');
+        return redirect()->route('admin.posts.index');
     }
 }

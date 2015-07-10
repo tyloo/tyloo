@@ -18,7 +18,6 @@ class ViewComposerServiceProvider extends ServiceProvider
             ['frontend.partials.common.footer._lastPosts', 'frontend.partials.blog.blocks.lastPosts'],
             'App\ViewComposers\LastPostsViewComposer'
         );
-        view()->composer('frontend.pages.blog.*', 'App\ViewComposers\PostTagsViewComposer');
         view()->composer('backend.*', 'App\ViewComposers\LoggedInUserViewComposer');
     }
 
