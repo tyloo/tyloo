@@ -51,7 +51,7 @@ class WorksController extends Controller
      */
     public function store(WorkRequest $request)
     {
-        $this->dispatch(new SaveWork($request->except(['_token', '_method']), $this->work));
+        $this->dispatch(new SaveWork($this->work, $request->except(['_token', '_method'])));
 
         return redirect()->route('admin.works.index');
     }
@@ -94,7 +94,7 @@ class WorksController extends Controller
      */
     public function update(WorkRequest $request, $id)
     {
-        $this->dispatch(new SaveWork($request->except(['_token', '_method']), $this->work, $id));
+        $this->dispatch(new SaveWork($this->work, $request->except(['_token', '_method']), $id));
 
         return redirect()->route('admin.works.index');
     }

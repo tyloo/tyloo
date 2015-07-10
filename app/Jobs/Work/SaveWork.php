@@ -11,14 +11,14 @@ use Intervention\Image\Facades\Image;
 class SaveWork extends Job implements SelfHandling
 {
     /**
-     * @var array
-     */
-    protected $data;
-
-    /**
      * @var \App\Repositories\WorkRepository
      */
     protected $work;
+
+    /**
+     * @var array
+     */
+    protected $data;
 
     /**
      * @var integer|null
@@ -28,14 +28,14 @@ class SaveWork extends Job implements SelfHandling
     /**
      * Create a new job instance.
      *
-     * @param array                            $data
      * @param \App\Repositories\WorkRepository $work
+     * @param array                            $data
      * @param integer|null                     $id
      */
-    public function __construct(array $data = [], WorkRepository $work, $id = null)
+    public function __construct(WorkRepository $work, array $data = [], $id = null)
     {
-        $this->data = $data;
         $this->work = $work;
+        $this->data = $data;
         $this->id = $id;
     }
 

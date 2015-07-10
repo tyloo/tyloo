@@ -49,6 +49,6 @@ class PagesController extends Controller
     {
         $this->dispatch(new SendContactEmail($request->all()));
 
-        return view('frontend.pages.contact')->withSuccess('Your contact form has been received. I\'ll try to answer you as soon as possible! Thank you ;)');
+        return view('frontend.pages.contact')->withSuccess(trans('app.contact.confirmMailSent'));
     }
 }

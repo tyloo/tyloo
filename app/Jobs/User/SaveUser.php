@@ -9,14 +9,14 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class SaveUser extends Job implements SelfHandling
 {
     /**
-     * @var array
-     */
-    protected $data;
-
-    /**
      * @var \App\Repositories\UserRepository
      */
     protected $user;
+
+    /**
+     * @var array
+     */
+    protected $data;
 
     /**
      * @var integer|null
@@ -26,14 +26,14 @@ class SaveUser extends Job implements SelfHandling
     /**
      * Create a new job instance.
      *
-     * @param array                            $data
      * @param \App\Repositories\UserRepository $user
+     * @param array                            $data
      * @param integer|null                     $id
      */
-    public function __construct(array $data = [], UserRepository $user, $id = null)
+    public function __construct(UserRepository $user, array $data = [], $id = null)
     {
-        $this->data = $data;
         $this->user = $user;
+        $this->data = $data;
         $this->id = $id;
     }
 

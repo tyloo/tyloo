@@ -51,7 +51,7 @@ class BlogController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $this->dispatch(new SavePost($request->except(['_token', '_method']), $this->post, null));
+        $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), null));
 
         return redirect()->route('admin.blog.index');
     }
@@ -94,7 +94,7 @@ class BlogController extends Controller
      */
     public function update(PostRequest $request, $id)
     {
-        $this->dispatch(new SavePost($request->except(['_token', '_method']), $this->post, $id));
+        $this->dispatch(new SavePost($this->post, $request->except(['_token', '_method']), $id));
 
         return redirect()->route('admin.blog.index');
     }
