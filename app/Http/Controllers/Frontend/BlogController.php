@@ -9,15 +9,21 @@ use App\Repositories\TagsRepository;
 class BlogController extends Controller
 {
     /**
-     * @var PostRepository
+     * @var PostsRepository
      */
     protected $post;
 
     /**
-     * @var TagRepository
+     * @var TagsRepository
      */
     protected $tag;
 
+    /**
+     * Blog Constructor.
+     *
+     * @param \App\Repositories\PostsRepository $post
+     * @param \App\Repositories\TagsRepository  $tag
+     */
     public function __construct(PostsRepository $post, TagsRepository $tag)
     {
         $this->post = $post;
