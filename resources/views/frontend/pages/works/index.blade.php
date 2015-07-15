@@ -6,20 +6,24 @@
     <section class="mt40 mb10">
         <div id="portfolio" class="container-fluid">
             <!-- Portfolio Filter -->
-            <div class="row mb30" style="visibility: visible; ">
-                <ul class="nav nav-pills col-xs-12 text-center">
-                    <li class="filter active" data-filter="all">All</li>
-                    <li class="filter" data-filter="Website">Website</li>
-                    <li class="filter" data-filter="Search">Search</li>
-                    <li class="filter" data-filter="Application (mobile)">Application (mobile)</li>
-                </ul>
-            </div>
+            @if($tags->count() > 0)
+                <div class="row mb30" style="visibility: visible; ">
+                    <ul class="nav nav-pills col-xs-12 text-center">
+                        <li class="filter active" data-filter="all">All</li>
+                        @foreach($tags as $tag)
+                            <li class="filter" data-filter="{{ $tag->slug }}">{{ $tag->name }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <!-- Portfolio Items -->
             <div class="row">
                 <ul id="myPortfolio" class="col-sm-12 text-center">
                     @forelse($works as $work)
-                        <li class="item {{ $work->type }} col-sm-2 mix_all">
+                        <li class="item col-sm-2 mix_all
+@foreach($work->tags as $tag) {{ $tag->slug }}@endforeach
+">
                             <div class="border">
                                 <div class="view portfolio-hover-1">
                                     <!-- Project Thumb -->
