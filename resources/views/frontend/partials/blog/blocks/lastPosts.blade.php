@@ -2,7 +2,7 @@
     <h3>Last Posts</h3>
 </div>
 <ul class="list-unstyled latest-posts">
-    @foreach($lastPosts as $post)
+    @forelse($lastPosts as $post)
     <li>
         <h3 class="no-margin"><a href="{{ URL::route('blog.show', ['slug', $post->slug]) }}">{{ $post->title }}</a></h3>
         <small>
@@ -12,5 +12,7 @@
         </small>
         {!! $post->excerpt !!}
     </li>
-    @endforeach
+    @empty
+        <li>No post were found.</li>
+    @endforelse
 </ul>
