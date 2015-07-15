@@ -35,18 +35,13 @@ class SitemapCommand extends Command
         $sitemap->addItem(config('app.url') . '/', time(), Sitemap::DAILY, 0.9);
         $sitemap->addItem(config('app.url') . '/resume', time(), Sitemap::DAILY, 0.8);
         $sitemap->addItem(config('app.url') . '/blog', time(), Sitemap::DAILY, 0.8);
-        // @codeCoverageIgnoreStart
-        foreach($posts['blog'] as $post) {
-            $sitemap->addItem(config('app.url') . '/blog/' . $post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
-        }
-        // @codeCoverageIgnoreEnd
         $sitemap->addItem(config('app.url') . '/works', time(), Sitemap::DAILY, 0.8);
+        $sitemap->addItem(config('app.url') . '/contact', time(), Sitemap::DAILY, 0.3);
         // @codeCoverageIgnoreStart
-        foreach($posts['work'] as $post) {
-            $sitemap->addItem(config('app.url') . '/works/' . $post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
+        foreach($posts as $post) {
+            $sitemap->addItem(config('app.url') . '/' . $post->type . '/' . $post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
         }
         // @codeCoverageIgnoreEnd
-        $sitemap->addItem(config('app.url') . '/contact', time(), Sitemap::DAILY, 0.3);
 
         $sitemap->write();
 
@@ -58,9 +53,6 @@ class SitemapCommand extends Command
      */
     public function getPosts()
     {
-        $posts['blog'] = Post::where('type', 'blog')->get(['slug', 'updated_at']);
-        $posts['work'] = Post::where('type', 'work')->get(['slug', 'updated_at']);
-
-        return $posts;
+        return Post::all(['type', 'slug', 'updated_at']);
     }
 }
