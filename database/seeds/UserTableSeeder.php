@@ -14,13 +14,13 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->truncate();
 
-        User::create([
+        $tyloo = [
             'name'           => 'Julien Bonvarlet',
             'email'          => 'jbonva@gmail.com',
             'password'       => '123456',
-            'remember_token' => str_random(10)
-        ]);
-
+            'avatar'         => '//www.gravatar.com/avatar/' . md5('jbonva@gmail.com'),
+        ];
+        factory(App\User::class)->create($tyloo);
         factory(App\User::class, 9)->create();
     }
 }
