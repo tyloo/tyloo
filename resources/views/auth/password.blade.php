@@ -11,7 +11,7 @@
                     <div class="panel no-margin panel-default">
                         <div class="panel-heading">I have lost my password!</div>
                         <div class="panel-body">
-                            <form role="form" method="POST" action="{{ URL::route('auth.remind') }}">
+                            <form role="form" method="POST" action="{{ URL::route('admin.auth.remind') }}">
                                 {!! csrf_field() !!}
 
                                 @include('errors.formErrors')

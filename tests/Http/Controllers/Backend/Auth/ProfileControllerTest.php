@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Http\Controllers\Frontend\Auth;
+namespace App\Tests\Http\Controllers\Backend\Auth;
 
 use App\Tests\AbstractTestCase;
 use App\User;
@@ -12,7 +12,7 @@ class ProfileControllerTest extends AbstractTestCase
     {
         $user = factory(User::class)->create();
         $this->actingAs($user)
-             ->visit('/auth/profile')
+             ->visit('/admin/profile')
              ->see('Welcome');
     }
 }

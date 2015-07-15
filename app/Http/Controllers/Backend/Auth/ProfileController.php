@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Backend\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\UsersRepository;
@@ -21,6 +21,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user = $this->user->find(Auth::id());
+
         return view('auth.profile', compact('user'));
     }
 }

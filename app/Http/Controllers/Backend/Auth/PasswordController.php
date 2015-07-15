@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace App\Http\Controllers\Backend\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
@@ -21,12 +21,4 @@ class PasswordController extends Controller
     use ResetsPasswords;
 
     protected $redirectTo = '/auth/profile';
-
-    /**
-     * Create a new password controller instance.
-     */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
 }

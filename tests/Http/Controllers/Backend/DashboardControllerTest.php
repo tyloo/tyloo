@@ -11,7 +11,7 @@ class DashboardControllerTest extends AbstractTestCase
     public function it_cannot_visit_dashboard_when_anonymous()
     {
         $this->visit('/admin')
-             ->seePageIs('/auth/login');
+             ->seePageIs('/admin/auth/login');
     }
 
     /** @test */

@@ -11,7 +11,7 @@
                     <div class="panel no-margin panel-default">
                         <div class="panel-heading">Reset my Password</div>
                         <div class="panel-body">
-                            <form role="form" method="POST" action="{{ URL::route('auth.reset') }}">
+                            <form role="form" method="POST" action="{{ URL::route('admin.auth.reset') }}">
                                 {!! csrf_field() !!}
                                 <input type="hidden" name="token" value="{{ $token }}">
 

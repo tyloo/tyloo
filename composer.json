@@ -22,8 +22,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "intervention/image": "~2.3",
-        "sebastian-berc/repositories" : "dev-master",
-        "barryvdh/laravel-debugbar": "^2.0"
+        "sebastian-berc/repositories" : "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.5",

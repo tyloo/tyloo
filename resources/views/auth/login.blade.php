@@ -11,7 +11,7 @@
                     <div class="panel no-margin panel-default">
                         <div class="panel-heading">Login to your account</div>
                         <div class="panel-body">
-                            <form role="form" method="POST" action="{{ URL::route('auth.login') }}">
+                            <form role="form" method="POST" action="{{ URL::route('admin.auth.login') }}">
                                 {!! csrf_field() !!}
 
                                 @include('errors.formErrors')

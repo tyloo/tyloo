@@ -139,7 +139,6 @@ return [
 
         // Vendor Providers
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
-        Barryvdh\Debugbar\ServiceProvider::class, // Debug Bar
 
     ],
     /*
@@ -190,7 +189,6 @@ return [
 
         // Custom Aliases
         'Image'     => Intervention\Image\Facades\Image::class, // Image Manipulation
-        'Debugbar' => Barryvdh\Debugbar\Facade::class, // Debug Bar
 
     ],
 
