@@ -18,7 +18,7 @@
             <!-- Portfolio Items -->
             <div class="row">
                 <ul id="myPortfolio" class="col-sm-12 text-center">
-                    @foreach($works as $work)
+                    @forelse($works as $work)
                         <li class="item {{ $work->type }} col-sm-2 mix_all">
                             <div class="border">
                                 <div class="view portfolio-hover-1">
@@ -44,7 +44,11 @@
                                 </div>
                             </div>
                         </li>
-                    @endforeach
+                    @empty
+                        <p>
+                            No post have been found in the Database...
+                        </p>
+                    @endforelse
                 </ul>
             </div>
         </div>
