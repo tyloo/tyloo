@@ -9,9 +9,7 @@
                 <h1>Work Experience<small>Former and actual jobs (with missions)</small></h1>
             </div>
             <ul class="timeline no-margin">
-                <!-- Left -->
                 <li>
-                    <div class="timeline-badge success"></div>
                     <div class="timeline-panel">
                         <div class="heading">
                             <h4>Google Deployment Specialist @ <strong>NRX</strong></h4>
@@ -35,10 +33,7 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- Right -->
-                <li class="timeline-inverted">
-                    <div class="timeline-badge warning"></div>
+                <li>
                     <div class="timeline-panel">
                         <div class="heading">
                             <h4>Developer Web & Mobile @ <strong>Lemonway</strong></h4>
@@ -53,10 +48,7 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- Left -->
                 <li>
-                    <div class="timeline-badge danger"></div>
                     <div class="timeline-panel">
                         <div class="heading">
                             <h4>Sys Admin @ <strong>Autoscout24</strong></h4>
@@ -72,10 +64,7 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- Right -->
-                <li class="timeline-inverted">
-                    <div class="timeline-badge primary"></div>
+                <li>
                     <div class="timeline-panel">
                         <div class="heading">
                             <h4>Web Developer @ <strong>Call Assurances</strong></h4>
@@ -93,33 +82,25 @@
                 <h1>Education<small>Schools and Formations I made</small></h1>
             </div>
             <ul class="timeline no-margin">
-                <!-- Left -->
                 <li>
-                    <div class="timeline-badge success"></div>
                     <div class="timeline-panel">
-                        <div class="heading">
+                        <div class="heading no-margin">
                             <h4>Master Web & e-Business @ <strong>ESGI</strong></h4>
                             <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2012 - 2014</small>
                         </div>
                     </div>
                 </li>
-
-                <!-- Right -->
                 <li class="timeline-inverted">
-                    <div class="timeline-badge warning"></div>
                     <div class="timeline-panel">
-                        <div class="heading">
+                        <div class="heading no-margin">
                             <h4>Bachelor Web & Mobile @ <strong>ECTEI</strong></h4>
                             <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2011 - 2012</small>
                         </div>
                     </div>
                 </li>
-
-                <!-- Left -->
                 <li>
-                    <div class="timeline-badge danger"></div>
                     <div class="timeline-panel">
-                        <div class="heading">
+                        <div class="heading no-margin">
                             <h4>BTS Sys Admin @ <strong>ISEFAC Paris</strong></h4>
                             <small class="heading-caption hidden-xs"><i class="glyphicon glyphicon-time"></i> 2008 - August 2010</small>
                         </div>
@@ -130,8 +111,6 @@
             <div class="heading pt15">
                 <h1>Technical Skills</h1>
             </div>
-
-            <!-- Skills -->
             <div>
                 <p class="progress-head">PHP</p>
                 <div class="progress" data-sr="enter right move 100px over 1s">
@@ -182,7 +161,6 @@
                     </div>
                 </div>
             </div>
-            <!-- /Skills -->
         </div>
     </section>
 @stop
