@@ -22,7 +22,19 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers;
 
+    /**
+     * Redirect if login form passes.
+     *
+     * @var string
+     */
     protected $redirectTo = '/admin';
+
+    /**
+     * Redirect if login form is invalid.
+     *
+     * @var string
+     */
+    protected $loginPath = '/admin/auth/login';
 
     /**
      * Get a validator for an incoming registration request.
