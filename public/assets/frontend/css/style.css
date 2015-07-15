@@ -1930,16 +1930,6 @@ footer a {
 .timeline-body > p + p {
     margin-top:5px;
 }
-@media (max-width:767px) {
-    ul.timeline > li > .timeline-panel {
-        width:calc(100% - 90px);
-        width:-moz-calc(100% - 90px);
-        width:-webkit-calc(100% - 90px);
-    }
-    ul.timeline > li > .timeline-panel {
-        float:right;
-    }
-}
 /* Media Queries */
 /* Phones and down */
 @media (max-width:480px) {
@@ -2000,8 +1990,6 @@ footer a {
     .mb15-xs { margin-bottom:15px !important; }
     .mb20-xs { margin-bottom:20px !important; }
     .error-404 { font-size:80px; }
-    ul.timeline > li > .timeline-panel { width:calc(100% - 90px); width:-moz-calc(100% - 90px); width:-webkit-calc(100% - 90px); }
-    ul.timeline > li > .timeline-panel { float:right; }
     .carousel-nav.nav > li > a { padding:8px 15px; }
 }
 @media (min-width:768px) {
