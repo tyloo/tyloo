@@ -1,44 +1,30 @@
-@extends('layouts.frontend')
+@extends('layouts.auth')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'I have lost my password!', 'pageNameBreadcrumb' => 'Password Remind'])
+    <div class="login-box-body">
+        <p class="login-box-msg">I forgot my password!</p>
 
-    <div class="content-40mg">
-        <div class="container">
-            <div class="row">
-                <!-- Remind -->
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="panel no-margin panel-default">
-                        <div class="panel-heading">I have lost my password!</div>
-                        <div class="panel-body">
-                            <form role="form" method="POST" action="{{ URL::route('admin.auth.remind') }}">
-                                {!! csrf_field() !!}
+        <form role="form" action="{{ URL::route('admin.auth.remind') }}" method="POST">
+            {!! csrf_field() !!}
 
-                                @include('errors.formErrors')
+            @include('errors.formErrors')
 
-                                @if (isset($status))
-                                    <div class="alert alert-success">
-                                        {{ $status }}
-                                    </div>
-                                @endif
-
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <span class="ion-android-mail" style="font-size:10px;"></span>
-                                        </div>
-                                        <input type="email" name="email" placeholder="Enter email" value="{{ old('email') }}" class="form-control">
-                                    </div>
-                                </div>
-
-                                <hr class="mb20 mt15">
-                                <button type="submit" class="btn btn-rw btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
+            @if (isset($status))
+                <div class="alert alert-success">
+                    {{ $status }}
                 </div>
-                <!-- /Remind -->
+            @endif
+
+            <div class="form-group has-feedback">
+                <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
-        </div>
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 @stop

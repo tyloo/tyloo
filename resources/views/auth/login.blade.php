@@ -1,50 +1,38 @@
-@extends('layouts.frontend')
+@extends('layouts.auth')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'Sign In', 'pageNameBreadcrumb' => 'Sign In'])
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
 
-    <div class="content-40mg">
-        <div class="container">
+        <form role="form" action="{{ URL::route('admin.auth.login') }}" method="POST">
+            {!! csrf_field() !!}
+
+            @include('errors.formErrors')
+
+            <div class="form-group has-feedback">
+                <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" name="password" class="form-control" placeholder="Password">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
             <div class="row">
-                <!-- Login -->
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="panel no-margin panel-default">
-                        <div class="panel-heading">Login to your account</div>
-                        <div class="panel-body">
-                            <form role="form" method="POST" action="{{ URL::route('admin.auth.login') }}">
-                                {!! csrf_field() !!}
-
-                                @include('errors.formErrors')
-
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <span class="ion-android-mail" style="font-size:10px;"></span>
-                                        </div>
-                                        <input type="email" name="email" placeholder="Enter email" value="{{ old('email') }}" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <span class="ion-ios-locked"></span>
-                                        </div>
-                                        <input type="password" name="password" placeholder="Password" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember me
-                                    </label>
-                                </div>
-                                <hr class="mb20 mt15">
-                                <button type="submit" class="btn btn-rw btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;<small><a href="#">Forgot your password?</a></small>
-                            </form>
-                        </div>
+                <div class="col-xs-8">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="remember"> Remember me
+                        </label>
                     </div>
                 </div>
-                <!-- /Login -->
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                </div>
             </div>
+        </form>
+
+        <div class="text-right">
+            <a href="{{ URL::route('admin.auth.remind') }}">I forgot my password!</a>
         </div>
     </div>
 @stop
