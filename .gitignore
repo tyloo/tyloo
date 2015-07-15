@@ -3,3 +3,4 @@
 /.env
 /storage/database.sqlite
 /Envoy.blade.php
+/public/sitemap.xml

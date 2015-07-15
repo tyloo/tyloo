@@ -19,8 +19,6 @@
             <directory suffix=".php">app/</directory>
             <exclude>
                 <directory>./app/Providers/</directory>
-                <directory>./app/Console/</directory>
-                <directory>./app/Exceptions/</directory>
                 <directory>./app/Exceptions/</directory>
                 <directory>./app/Http/Middleware/</directory>
                 <directory>./app/Http/Requests/</directory>

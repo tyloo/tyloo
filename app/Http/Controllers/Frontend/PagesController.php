@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Jobs\SendContactEmail;
+use samdark\sitemap\Sitemap;
 
 class PagesController extends Controller
 {

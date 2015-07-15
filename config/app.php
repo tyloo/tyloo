@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'url'             => 'http://localhost',
+    'url'             => 'http://tyloo.fr',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

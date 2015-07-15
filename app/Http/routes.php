@@ -11,9 +11,6 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@getContact']);
     Route::post('contact', ['as' => 'contact', 'uses' => 'PagesController@postContact']);
 
-    // Search
-    Route::get('search', ['as' => 'search', 'uses' => 'PagesController@search']);
-
     // Blog
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.show', 'uses' => 'BlogController@show']);

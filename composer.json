@@ -22,7 +22,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "intervention/image": "~2.3",
-        "sebastian-berc/repositories" : "1.0.x-dev"
+        "sebastian-berc/repositories" : "1.0.x-dev",
+        "samdark/sitemap": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.5",
