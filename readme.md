@@ -11,6 +11,9 @@ This package is the source code of my personal website [www.tyloo.fr](http://www
 It contains Resume, Works, Blog and Contact pages and has a complete backend.
 I accept PRs, so don't hesitate if you spot some bugs or want to add features. You can fork it and use it as you wish, but don't forget to mention me please ;)
 
+**If you like my work, please hit the STAR button!**
+
+
 ## Install
 
 Via Composer
