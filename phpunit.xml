@@ -18,12 +18,10 @@
         <whitelist>
             <directory suffix=".php">app/</directory>
             <exclude>
-                <directory>./app/Providers/</directory>
                 <directory>./app/Exceptions/</directory>
                 <directory>./app/Http/Middleware/</directory>
                 <directory>./app/Http/Requests/</directory>
-                <directory>./app/Http/Listeners/</directory>
-                <directory>./app/Http/Providers/</directory>
+                <directory>./app/Providers/</directory>
             </exclude>
         </whitelist>
     </filter>
