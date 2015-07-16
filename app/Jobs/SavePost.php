@@ -51,10 +51,6 @@ class SavePost extends Job implements SelfHandling
             $this->data['image'] = $this->buildImage();
         }
 
-        // Post Images Handling
-        $this->data['excerpt'] = !empty($this->data['excerpt']) ? $this->buildPostImages($this->data['excerpt']) : null;
-        $this->data['content'] = !empty($this->data['content']) ? $this->buildPostImages($this->data['content']) : null;
-
         // We create the Post
         if ($this->id === null) {
             $this->data['author_id'] = Auth::id();
@@ -75,46 +71,5 @@ class SavePost extends Job implements SelfHandling
         Image::make($this->data['image'])->save(public_path($filePath));
 
         return $filePath;
-    }
-
-    /**
-     * Build the Post images.
-     *
-     * @param $data
-     *
-     * @return string
-     */
-    public function buildPostImages($data)
-    {
-
-        $dom = new DomDocument();
-        $dom->loadHtml($data, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-        $images = $dom->getElementsByTagName('img');
-
-        // foreach <img> in the submited message
-        foreach ($images as $img) {
-            $src = $img->getAttribute('src');
-
-            // if the img source is 'data-url'
-            if (preg_match('/data:image/', $src)) {
-                // get the mimetype
-                preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
-                $mimetype = $groups['mime'];
-
-                // Generating a random filename
-                $filename = uniqid();
-                $filepath = "/uploads/$filename.$mimetype";
-
-                Image::make($src)
-                    ->encode($mimetype, 100)
-                    ->save(public_path($filepath));
-
-                $new_src = asset($filepath);
-                $img->removeAttribute('src');
-                $img->setAttribute('src', $new_src);
-            }
-        }
-
-        return $dom->saveHTML();
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Tags
+    Tags <a href="{{ URL::route('admin.tags.create') }}" class="btn btn-sm btn-primary">Create a new Tag</a>
 @stop
 
 @section('breadcrumb-title')

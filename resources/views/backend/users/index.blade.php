@@ -5,7 +5,7 @@
 @stop
 
 @section('breadcrumb-title')
-    Users
+    Users <a href="{{ URL::route('admin.users.create') }}" class="btn btn-sm btn-primary">Create a new User</a>
 @stop
 
 @section('content')

@@ -30,12 +30,6 @@
             <label for="image">Image</label>
             <input type="file" id="image" name="image">
         </div>
-        <div class="checkbox">
-            <label>
-                <input type="hidden" name="published" value="0">
-                <input type="checkbox" name="published" value="1"{{ old('published') == 1 ? ' checked="checked"' : '' }}> Published?
-            </label>
-        </div>
         <button type="submit" class="btn btn-rw btn-primary">Submit</button>
     </form>
 @stop

@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Posts (Blog / Work)
+    Posts (Blog / Work) <a href="{{ URL::route('admin.posts.create') }}" class="btn btn-sm btn-primary">Create a new Post</a>
 @stop
 
 @section('breadcrumb-title')
