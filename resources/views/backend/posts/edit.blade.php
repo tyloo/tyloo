@@ -23,10 +23,10 @@
             <input type="hidden" name="slug" value="{{ $post->slug }}">
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt', $post->excerpt) }}</textarea>
+            <textarea class="form-control summernote" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt', $post->excerpt) }}</textarea>
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $post->content) }}</textarea>
+            <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $post->content) }}</textarea>
         </div>
         <div class="form-group">
             <div>

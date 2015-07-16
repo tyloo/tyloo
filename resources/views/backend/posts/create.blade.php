@@ -21,10 +21,10 @@
             <input type="text" name="slug" value="{{ old('slug') }}" placeholder="Slug" class="form-control">
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt') }}</textarea>
+            <textarea class="form-control summernote" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt') }}</textarea>
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="content" placeholder="Content" cols="30" rows="10">{{ old('content') }}</textarea>
+            <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content') }}</textarea>
         </div>
         <div class="form-group">
             <label for="image">Image</label>

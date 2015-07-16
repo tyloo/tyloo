@@ -56,7 +56,7 @@ class PostsControllerTest extends AbstractTestCase
         ];
 
         $this->post('/admin/posts', $data);
-        $this->seeInDatabase('posts', $data);
+        $this->seeInDatabase('posts', ['title' => $data['title'], 'slug' => $data['slug']]);
         $this->assertRedirectedToRoute('admin.posts.index');
     }
 
@@ -95,7 +95,7 @@ class PostsControllerTest extends AbstractTestCase
         $post = factory(Post::class)->create();
 
         $this->put('/admin/posts/' . $post->id, $data);
-        $this->seeInDatabase('posts', $data);
+        $this->seeInDatabase('posts', ['title' => $data['title']]);
         $this->assertRedirectedToRoute('admin.posts.index');
     }
 

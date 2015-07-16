@@ -23,7 +23,7 @@
             <input type="hidden" name="slug" value="{{ $tag->slug }}">
         </div>
         <div class="form-group">
-            <textarea class="form-control" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $tag->content) }}</textarea>
+            <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $tag->content) }}</textarea>
         </div>
         <button type="submit" class="btn btn-rw btn-primary">Submit</button>
     </form>
