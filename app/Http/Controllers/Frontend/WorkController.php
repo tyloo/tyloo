@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\PostsRepository;
-use App\Repositories\TagsRepository;
 use App\Tag;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class WorkController extends Controller
 {
@@ -27,10 +27,11 @@ class WorkController extends Controller
     public function index()
     {
         $works = $this->repository->with('tags')->all();
-        $tags = Tag::with(['posts' => function($query)
-        {
-            $query->where('type', 'work');
-        }])->get();
+        $tags = Tag::with([
+            'posts' => function (BelongsToMany $query) {
+                $query->where('type', 'work');
+            }
+        ])->get();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
     }
