@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Repositories\PostsRepository;
-use DOMDocument;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;

@@ -1,8 +1,9 @@
-<?php namespace App\Repositories;
+<?php
 
-use SebastianBerc\Repositories\Contracts\ShouldCache;
+namespace App\Repositories;
+
 use SebastianBerc\Repositories\Repository;
 
-abstract class AbstractRepository extends Repository implements ShouldCache
+abstract class AbstractRepository extends Repository
 {
 }
