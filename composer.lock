@@ -991,16 +991,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.5.1",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/aaf8772ade08b5f0f6830774a5d5c2f800415975",
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975",
                 "shasum": ""
             },
             "require": {
@@ -1059,7 +1059,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-07-03 16:48:00"
+            "time": "2015-07-16 15:26:57"
         },
         {
             "name": "samdark/sitemap",
@@ -1108,12 +1108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SebastianBerc/Repositories.git",
-                "reference": "daf3c092f9ae24dfc997ef09de20e75ab3737806"
+                "reference": "9e50ccd69f2971f87432f6eb52b0b48afd1ab992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/daf3c092f9ae24dfc997ef09de20e75ab3737806",
-                "reference": "daf3c092f9ae24dfc997ef09de20e75ab3737806",
+                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/9e50ccd69f2971f87432f6eb52b0b48afd1ab992",
+                "reference": "9e50ccd69f2971f87432f6eb52b0b48afd1ab992",
                 "shasum": ""
             },
             "require": {
@@ -1158,7 +1158,7 @@
                 "league",
                 "repository"
             ],
-            "time": "2015-07-07 23:04:48"
+            "time": "2015-07-15 20:31:53"
         },
         {
             "name": "swiftmailer/swiftmailer",
