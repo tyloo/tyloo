@@ -24,7 +24,7 @@
                         </div>
                     @empty
                         <p>
-                            No post have been found in the Database...
+                            No Post have been found in the Database...
                         </p>
                     @endforelse
 

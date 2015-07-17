@@ -50,7 +50,7 @@
                         </li>
                     @empty
                         <p>
-                            No post have been found in the Database...
+                            No Work have been found in the Database...
                         </p>
                     @endforelse
                 </ul>
