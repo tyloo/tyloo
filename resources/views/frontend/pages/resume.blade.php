@@ -6,7 +6,7 @@
     <section>
         <div class="container">
             <div class="heading no-margin-bottom pt15">
-                <h1>Work Experience<small>Former and actual jobs (with missions)</small></h1>
+                <h2>Work Experience</h2>
             </div>
             <ul class="timeline no-margin">
                 <li>
@@ -79,7 +79,7 @@
             </ul>
 
             <div class="heading no-margin-bottom pt15">
-                <h1>Education<small>Schools and Formations I made</small></h1>
+                <h2>Education</h2>
             </div>
             <ul class="timeline no-margin">
                 <li>
@@ -109,7 +109,7 @@
             </ul>
 
             <div class="heading pt15">
-                <h1>Technical Skills</h1>
+                <h2>Technical Skills</h2>
             </div>
             <div>
                 <p class="progress-head">PHP</p>
