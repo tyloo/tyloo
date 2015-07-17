@@ -21,11 +21,11 @@
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
                                     <div class="carousel-description col-sm-5">
-                                        <h4 class="heavy text-white"><span class="carousel-title-bgclear">Engineer: Passionate & Adaptive</span></h4>
+                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">Passionate & Flexible</span></h3>
                                         <p>
                                             You might have not realized yet, but I'm in love with my job! Indeed, I always wanted to work on computers
                                             and started to learn how to code very early in my life. Since then I try to be able to adapt to new technologies
-                                            and new devices. I am able to develop mobile &amp; tablets applications and also Websites and Web Applications...
+                                            and new devices...
                                         </p>
                                     </div>
                                 </div>
@@ -53,7 +53,6 @@
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
                                     <div class="carousel-description mt10 col-sm-5 col-sm-offset-1">
                                         <h4 class="heavy text-white"><span class="carousel-title-bg">Google Deployment Specialist</span></h4>
-
                                         <p>
                                             I have been working for three years now (and It's still the case today) for a Google Partner! I am specialised
                                             in the GSA (Google Search Appliance). My Job is to integrate the GSA's echosystem inside a company allowing them to
@@ -76,13 +75,11 @@
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInUpBig-animated" data-animation="fadeInUpBig">
                                     <div class="carousel-description col-sm-8 col-sm-offset-2 text-center">
-                                        <span class="fa fa-heartbeat fa-4x text-white"></span>
-
-                                        <h4 class="heavy text-white"><span class="carousel-title-bgclear">Sharing is Caring</span></h4>
+                                        <h2 class="heavy text-white"><span class="carousel-title-bgclear">Sharing is Caring</span></h2>
                                         <p>
                                             I always wanted to be a teacher somehow in my life. The thing is, if you are able to learn something
-                                            to someone, you can validate the fact that you fully understood the subject. More interesting, with the power
-                                            of the Internet, if you make some mistakes and don't tell the truth, Internet guardians (trolls somehow) will just
+                                            to someone, you can validate the fact that you fully understand the subject. More interesting, with the power
+                                            of the Interwebs, if you make some mistakes and don't tell the truth, Internet guardians (trolls somehow) will just
                                             put you in troubles and you'll be forced to tell the truth. Finally, you start to correct yourself and you become better...
                                         </p>
                                     </div>
@@ -155,7 +152,7 @@
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body">
                                     <p>
-                                        The title is a reference to a song. Feel free to search it :p So, since I'm a child (well, actually I started developing when I was 15...) I develop applications in PHP.
+                                        The title is a reference to a song. Feel free to search it :p So, since I'm a child (well, actually I started nerd stuff when I was 15...) I develop applications in PHP.
                                     </p>
                                     <p>
                                         That being said, I could see the evolution of this language since PHP4. At this time (and because I was a novice), nothing was really structured. You didn't have the Framework echosystem and I have to admit that it was really painful...
@@ -170,7 +167,7 @@
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>
-                                        Recently (well, for now two years now), I discovered the Laravel Framework and I
+                                        Recently (well, for two years now), I discovered the Laravel Framework and I
                                         felt in love! Indeed, this Framework based on Symfony 2 and other useful libraries
                                         is meant to be "easy" and allows you to develop and deploy projects really quickly!
                                     </p>
@@ -188,10 +185,10 @@
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>
-                                        Well, now come the cool part, at least I hope it is. As you can imagine, I'm not a robot and I don't have nerdy activities in my life!
+                                        Well, now come the cool part, at least I hope it is. As you can imagine, I'm not a robot and I don't have only nerdy activities in my life!
                                     </p>
                                     <p>
-                                        Indeed, I love hanging out with friends (well, I live in Paris, the best city in the world! Is it? :)),
+                                        Indeed, I love hanging out with friends (well, I live in Paris, the best city in the world! Isn't it? :)),
                                         play Rugby (because I feel like a Beast there...), I watch a lot of TV shows and other cool stuff!
                                     </p>
                                 </div>
