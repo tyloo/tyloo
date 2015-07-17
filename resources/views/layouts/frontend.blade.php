@@ -65,9 +65,9 @@
             @include('frontend.partials.common.footer._about')
             {{-- /About --}}
 
-            {{-- Recent Work --}}
+            {{-- Recent Post --}}
             @include('frontend.partials.common.footer._lastPosts')
-            {{-- /Recent Work --}}
+            {{-- /Recent Post --}}
 
             {{-- Contact --}}
             @include('frontend.partials.common.footer._contact')

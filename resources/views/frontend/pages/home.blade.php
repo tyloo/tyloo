@@ -213,7 +213,7 @@
     </div>
     {{-- Accordion + IMG --}}
 
-    {{-- Recent Work + Clients --}}
+    {{-- Recent Work --}}
     <section class="pt40 mb40">
         <div class="container">
             <div class="row">
@@ -224,66 +224,14 @@
                             <div id="customNav" class="owl-nav"></div>
                         </div>
                     </div>
-                    <div id="owl-carousel-thumb" class="owl-carousel">
-                        <div class="thumbnail">
-                            <div class="caption v-wrap">
-                                <div class="thumbnail-caption-holder v-box">
-                                    <h4 class="text-white">Project 1</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Project 2</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Project 3</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Project 4</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Project 5</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                        <div class="thumbnail">
-                            <div class="caption">
-                                <div class="thumbnail-caption-holder">
-                                    <h4 class="text-white">Project 6</h4>
-                                    <a href="#" class="btn btn-rw btn-clear"><span class="ion-android-search"></span>View</a>
-                                </div>
-                            </div>
-                            <img src="{{ asset('assets/frontend/img/backgrounds/stock4.jpg') }}" alt="...">
-                        </div>
-                    </div>
+                    @include('frontend.partials.home._lastWorks')
                 </div>
             </div>
         </div>
     </section>
+    {{-- /Recent Work --}}
+
+    {{-- Customers --}}
     <section class="mb40">
         <div class="container">
             <div class="row">
@@ -297,26 +245,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 1"></a>
-                </div>
-                <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 2"></a>
-                </div>
-                <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 3"></a>
-                </div>
-                <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 4"></a>
-                </div>
-                <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 5"></a>
-                </div>
-                <div class="col-sm-2 col-xs-4" data-sr="enter left">
-                    <a href="#"><img src="{{ asset('assets/frontend/img/logos/equi.png') }}" class="img-responsive clients-img" alt="Client 6"></a>
-                </div>
+                @include('frontend.partials.home._customers')
             </div>
         </div>
     </section>
-    {{-- /Recent Work + Clients --}}
+    {{-- /Customers --}}
 @stop
