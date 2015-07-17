@@ -21,7 +21,7 @@
                             <div class="row carousel-content center-vertically-right">
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
                                     <div class="carousel-description col-sm-5">
-                                        <h3 class="heavy text-white"><span class="carousel-title-bgclear">Engineer: Passionate & Adaptive</span></h3>
+                                        <h4 class="heavy text-white"><span class="carousel-title-bgclear">Engineer: Passionate & Adaptive</span></h4>
                                         <p>
                                             You might have not realized yet, but I'm in love with my job! Indeed, I always wanted to work on computers
                                             and started to learn how to code very early in my life. Since then I try to be able to adapt to new technologies
@@ -78,7 +78,7 @@
                                     <div class="carousel-description col-sm-8 col-sm-offset-2 text-center">
                                         <span class="fa fa-heartbeat fa-4x text-white"></span>
 
-                                        <h2 class="heavy text-white"><span class="carousel-title-bgclear">Sharing is Caring</span></h2>
+                                        <h4 class="heavy text-white"><span class="carousel-title-bgclear">Sharing is Caring</span></h4>
                                         <p>
                                             I always wanted to be a teacher somehow in my life. The thing is, if you are able to learn something
                                             to someone, you can validate the fact that you fully understood the subject. More interesting, with the power
