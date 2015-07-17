@@ -3,7 +3,7 @@
 @section('content')
     {{-- Carousel --}}
     <div class="carousel">
-        <div id="carouselHome" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="carouselHome" class="carousel slide carousel-fade" data-ride="carousel" data-interval="15000">
             {{-- Indicators --}}
             <ol class="carousel-indicators">
                 <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
