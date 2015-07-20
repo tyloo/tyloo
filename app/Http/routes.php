@@ -7,10 +7,6 @@ Route::group(['namespace' => 'Frontend'], function () {
     // Resume
     Route::get('resume', ['as' => 'resume', 'uses' => 'PagesController@resume']);
 
-    // Contact
-    Route::get('contact', ['as' => 'contact', 'uses' => 'PagesController@getContact']);
-    Route::post('contact', ['as' => 'contact', 'uses' => 'PagesController@postContact']);
-
     // Blog
     Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
     Route::get('blog/{slug}', ['as' => 'blog.show', 'uses' => 'BlogController@show']);

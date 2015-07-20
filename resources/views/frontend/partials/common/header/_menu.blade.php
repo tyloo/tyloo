@@ -4,7 +4,6 @@
         <li{{ Request::is('resume') ? ' class=active' : '' }}><a href="{{ URL::route('resume') }}">Resume</a></li>
         <li{{ Request::segment(1) == 'works' ? ' class=active' : '' }}><a href="{{ URL::route('works.index') }}">Works</a></li>
         <li{{ Request::segment(1) == 'blog/' ? ' class=active' : '' }}><a href="{{ URL::route('blog.index') }}">Blog</a></li>
-        <li{{ Request::is('contact') ? ' class=active' : '' }}><a href="{{ URL::route('contact') }}">Contact</a></li>
 
         {{-- Search --}}
         <li class="dropdown visible-lg-block">

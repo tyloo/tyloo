@@ -27,28 +27,4 @@ class PagesController extends Controller
     {
         return view('frontend.pages.resume');
     }
-
-    /**
-     * Contact form.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function getContact()
-    {
-        return view('frontend.pages.contact');
-    }
-
-    /**
-     * Send the Contact request.
-     *
-     * @param \App\Http\Requests\ContactRequest $request
-     *
-     * @return \Illuminate\View\View
-     */
-    public function postContact(ContactRequest $request)
-    {
-        $this->dispatch(new SendContactEmail($request->all()));
-
-        return view('frontend.pages.contact')->withSuccess(trans('app.contact.confirmMailSent'));
-    }
 }
