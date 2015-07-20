@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ContactRequest;
-use App\Jobs\SendContactEmail;
 
 class PagesController extends Controller
 {
