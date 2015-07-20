@@ -100,5 +100,6 @@
 <script src="{{ asset('assets/frontend/js/activate-snippet.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/skrollr.min.js') }}"></script>
 <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
+@include('frontend.partials.common.footer._analytics')
 </body>
 </html>
