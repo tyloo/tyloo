@@ -139,7 +139,7 @@ return [
 
         // Vendor Providers
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
-        Barryvdh\Debugbar\ServiceProvider::class, // Laravel DebugBar
+        Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider::class, // BugSnag
 
     ],
     /*
@@ -190,6 +190,7 @@ return [
 
         // Custom Aliases
         'Image'     => Intervention\Image\Facades\Image::class, // Image Manipulation
+        'Bugsnag' => Bugsnag\BugsnagLaravel\BugsnagFacade::class, // BugSnag
 
     ],
 
