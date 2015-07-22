@@ -140,7 +140,6 @@ return [
         // Vendor Providers
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
         Barryvdh\Debugbar\ServiceProvider::class, // Laravel DebugBar
-        Spatie\ResponseCache\ResponseCacheServiceProvider::class, // Response Cache
 
     ],
     /*
