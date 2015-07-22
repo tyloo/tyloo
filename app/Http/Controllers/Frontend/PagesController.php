@@ -13,8 +13,6 @@ class PagesController extends Controller
      */
     public function home()
     {
-        \Bugsnag::notifyError('ErrorType', 'Test Error');
-
         return view('frontend.pages.home');
     }
 
