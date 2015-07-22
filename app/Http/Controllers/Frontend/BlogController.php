@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\Criteria\PostType;
 use App\Repositories\PostsRepository;
 use App\Repositories\TagsRepository;
 
@@ -26,7 +27,7 @@ class BlogController extends Controller
      */
     public function __construct(PostsRepository $post, TagsRepository $tag)
     {
-        $this->post = $post;
+        $this->post = $post->criteria(new PostType('blog'));
         $this->tag = $tag;
     }
 
@@ -37,7 +38,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = $this->post->paginate(5);
+        $posts = $this->post->with('author')->paginate(5);
 
         return view('frontend.pages.blog.index', compact('posts'));
     }
@@ -66,7 +67,7 @@ class BlogController extends Controller
     public function tag($slug)
     {
         $tag = $this->tag->findBy('slug', $slug);
-        $posts = $tag->posts()->paginate(10);
+        $posts = $tag->posts()->paginate(5);
 
         return view('frontend.pages.blog.tag', compact('tag', 'posts'));
     }

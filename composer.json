@@ -23,12 +23,14 @@
         "laravel/framework": "5.1.*",
         "intervention/image": "~2.3",
         "sebastian-berc/repositories" : "1.0.x-dev",
-        "samdark/sitemap": "^2.0"
+        "samdark/sitemap": "^2.0",
+        "predis/predis": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.5",
         "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~4.7"
+        "phpunit/phpunit": "~4.7",
+        "barryvdh/laravel-debugbar": "^2.0"
     },
     "autoload": {
         "classmap": [

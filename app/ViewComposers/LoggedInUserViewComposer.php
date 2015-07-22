@@ -16,7 +16,7 @@ class LoggedInUserViewComposer
      */
     public function compose(View $view)
     {
-        $user = Cache::remember('user', 60, function() {
+        $user = Cache::remember('user', 1440, function() {
             return Auth::user();
         });
         $view->with('user', $user);

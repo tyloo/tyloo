@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\Criteria\PostType;
 use App\Repositories\PostsRepository;
 use App\Tag;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -16,7 +17,7 @@ class WorkController extends Controller
 
     public function __construct(PostsRepository $repository)
     {
-        $this->repository = $repository;
+        $this->repository = $repository->criteria(new PostType('work'));
     }
 
     /**
