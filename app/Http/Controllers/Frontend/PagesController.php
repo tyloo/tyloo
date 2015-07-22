@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Cache;
 
 class PagesController extends Controller
 {
@@ -14,7 +13,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        Cache::put('key', 'value', 1440);
+        \Bugsnag::notifyError('ErrorType', 'Test Error');
 
         return view('frontend.pages.home');
     }
