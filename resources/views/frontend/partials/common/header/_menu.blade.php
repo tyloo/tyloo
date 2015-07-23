@@ -23,8 +23,8 @@
         {{--</li>--}}
         {{-- /Search --}}
 
-        <li class="navbar-social visible-lg-block"><a href="#" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-github-alt"></i></a></li>
-        <li class="navbar-social visible-lg-block"><a href="#" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-linkedin"></i></a></li>
-        <li class="navbar-social visible-lg-block"><a href="#" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-twitter"></i></a></li>
+        <li class="navbar-social visible-lg-block"><a href="https://github.com/tyloo" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-github-alt"></i></a></li>
+        <li class="navbar-social visible-lg-block"><a href="https://www.linkedin.com/pub/julien-bonvarlet/32/427/778" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-linkedin"></i></a></li>
+        <li class="navbar-social visible-lg-block"><a href="https://twitter.com/TylooFR" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-twitter"></i></a></li>
     </ul>
 </nav>
