@@ -717,7 +717,7 @@ ul.list-arrow-2-color li:before { font-family:FontAwesome; content:"\f0a9"; floa
 .search-btn { padding:6px 12px; }
 .navbar .navbar-nav li.navbar-social a {
     line-height: 1;
-    margin: 29px 8px 29px 0;
+    margin: 29px 0 29px 8px;
     color: #FFF;
     background-color: #FF7454;
     padding: 9px 10px;
