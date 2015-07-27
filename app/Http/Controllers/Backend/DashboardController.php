@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Post;
 use App\Repositories\Criteria\PostType;
 use App\Repositories\PostsRepository;
 use App\Repositories\UsersRepository;
-use App\User;
 
 class DashboardController extends Controller
 {
