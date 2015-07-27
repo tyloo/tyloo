@@ -2,6 +2,20 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
+## v1.2.0 - 2015-07-27
+
+### Added
+- Link between Tags and Blog/Work
+- Rework content (and the bullshit)
+- Implemented more tests
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+- Make a search engine. GSA ? :)
+- Use Gulp with minify and other stuff (Laravel Elixir)
+- Make it i18n
+
 
 ## v1.1.0 - 2015-07-08
 
