@@ -505,35 +505,7 @@ ul.list-arrow-2-color li:before { font-family:FontAwesome; content:"\f0a9"; floa
     -o-transition:color 0.1s ease;
     transition:color 0.1s ease;
 }
-.bs-glyphicons li:hover {
-    color:#FFF;
-    background-color:#FF7454;
-}
-.bs-glyphicons li {
-    float:left;
-    width:12.5%;
-    height:115px;
-    padding:10px;
-    font-size:10px;
-    line-height:1.4;
-    text-align:center;
-    background-color:#F9F9F9;
-    border:1px solid #FFF;
-}
-.bs-glyphicons-list {
-    padding-left:0;
-    list-style:none;
-}
-.bs-glyphicons .glyphicon {
-    margin-top:5px;
-    margin-bottom:10px;
-    font-size:24px;
-}
-.bs-glyphicons .glyphicon-class {
-    display:block;
-    text-align:center;
-    word-wrap:break-word;
-}
+
 /* Navigation */
 .navbar {
     border-radius:0;
@@ -1816,7 +1788,6 @@ footer a {
     .content-60pd { padding:40px 0 40px 0 }
     .content-60pd-bordered { padding:40px 0 40px 0 }
     .mt30-lgscreen { margin-top:0 }
-    .bs-glyphicons li { width:25%; font-size:12px }
     .copyright { line-height:1.4 }
     .navbar-header { height:80px; border-bottom:1px solid #E0E0E0 }
     .panel-group .panel-title:after { display:none }
