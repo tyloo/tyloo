@@ -27,15 +27,15 @@
                             <div class="border">
                                 <div class="view portfolio-hover-1">
                                     <!-- Project Thumb -->
-                                    <img class="img-responsive" src="{{ asset('assets/frontend/img/projects/thumbs/illustration1.jpg') }}" alt="...">
+                                    <img class="img-responsive" src="{{ $work->image }}" alt="...">
                                     <div class="mask">
                                         <div class="portfolio-hover-content">
                                             <!-- Zoom + Project Link -->
-                                            <a href="{{ asset('assets/frontend/img/projects/illustration1.jpg') }}" class="info image-zoom-link">
-                                                <div class="portfolio-icon-holder"><span class="ion-ios-search portfolio-icons"></span></div>
+                                            <a href="{{ $work->image }}" class="info image-zoom-link">
+                                                <div class="portfolio-icon-holder"><i class="fa fa-search portfolio-icons"></i></div>
                                             </a>
                                             <a href="{{ URL::route('works.show', ['slug' => $work->slug]) }}" class="info">
-                                                <div class="portfolio-icon-holder"><span class="ion-link portfolio-icons"></span></div>
+                                                <div class="portfolio-icon-holder"><i class="fa fa-link portfolio-icons"></i></div>
                                             </a>
                                             <!-- /Zoom + Project Link -->
                                         </div>
@@ -44,7 +44,6 @@
                                 </div>
                                 <div class="portfolio-text background-white">
                                     <h3 class="portfolio-title"><a href="{{ URL::route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h3>
-                                    <div class="project-category">{{ $work->type }}</div>
                                 </div>
                             </div>
                         </li>

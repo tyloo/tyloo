@@ -1,5 +1,5 @@
 <div class="content-box content-box-bordered mt30-xs mb30">
-    <span class="ion-beaker bordered-icon-sm"></span>
+    <i class="fa fa-flask bordered-icon-sm"></i>
     <h4 class="pt15">The Laboratory</h4>
     <p class="no-margin">
         In this section, I'll try to share you cool ideas, tools and techniques I learnt. I think that sharing my

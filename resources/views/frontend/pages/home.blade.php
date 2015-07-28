@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
                                     <div class="col-sm-6 col-sm-offset-1">
-                                        <img src="{{ asset('assets/frontend/img/showcase-full.png') }}" class="img-responsive carousel-image" alt="Responsive Showcase">
+                                        <img src="{{ asset('assets/img/showcase-full.png') }}" class="img-responsive carousel-image" alt="Responsive Showcase" width="540" height="270px">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="row carousel-content center-vertically-left">
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
                                     <div class="col-sm-6 hidden-xs">
-                                        <img src="{{ asset('assets/frontend/img/showcase2.png') }}" class="img-responsive carousel-image" alt="Responsive Showcase">
+                                        <img src="{{ asset('assets/img/showcase2.png') }}" width="510" height="328" class="img-responsive carousel-image" alt="Responsive Showcase">
                                     </div>
                                 </div>
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
@@ -59,7 +59,7 @@
                                             have a powerful, centralized and customizable Search Engine. With the power of Google and a bit of magic, you can find everything
                                             inside your company just like you'd do it on google.com! Sound cool, right? :)
                                         </p>
-                                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Check out more at my Resume &nbsp;&nbsp;<span class="ion-ios-arrow-right"></span></a>
+                                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Check out more at my Resume <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -93,8 +93,8 @@
             {{-- /Wrapper for slides --}}
 
             {{-- Controls --}}
-            <a class="left carousel-control" href="#carouselHome" role="button" data-slide="prev"><span class="ion-ios-arrow-left carousel-arrow-left" aria-hidden="true"></span></a>
-            <a class="right carousel-control" href="#carouselHome" role="button" data-slide="next"><span class="ion-ios-arrow-right carousel-arrow-right" aria-hidden="true"></span></a>
+            <a class="left carousel-control" href="#carouselHome" role="button" data-slide="prev"><i class="fa fa-arrow-left carousel-arrow-left" aria-hidden="true"></i></a>
+            <a class="right carousel-control" href="#carouselHome" role="button" data-slide="next"><i class="fa fa-arrow-right carousel-arrow-right" aria-hidden="true"></i></a>
             {{-- /Controls --}}
         </div>
     </div>
@@ -105,14 +105,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 fadeInUp-animated text-center">
-                    <span class="ion-code bordered-icon-sm"></span>
+                    <i class="fa fa-code bordered-icon-sm"></i>
                     <h4 class="mt15">All for the Code.</h4>
                     <p class="p15xs no-margin">
                         When I was a child, I wanted to work on computers. That's why I became an engineer and Web Developer!
                     </p>
                 </div>
                 <div class="col-sm-4 fadeInUp-animated text-center mt20-xs">
-                    <span class="ion-erlenmeyer-flask bordered-icon-sm"></span>
+                    <i class="fa fa-flask bordered-icon-sm"></i>
                     <h4 class="mt15">Never stop learning.</h4>
                     <p class="p15xs no-margin">
                         Whereas I have been graduated 6 months ago, I keep learning many things everyday. I am the kind of
@@ -120,7 +120,7 @@
                     </p>
                 </div>
                 <div class="col-sm-4 fadeInUp-animated text-center mt20-xs">
-                    <span class="ion-ios-americanfootball bordered-icon-sm"></span>
+                    <i class="fa fa-trophy bordered-icon-sm"></i>
                     <h4 class="mt15">Rugby is my duty.</h4>
                     <p class="p15xs no-margin">
                         I started playing Rugby 3 years ago. From that time, I started to think as a team, not for myself as an individual.
@@ -202,7 +202,7 @@
                 </div>
 
                 <div class="col-sm-6" data-sr="enter bottom">
-                    <img src="{{ asset('assets/frontend/img/showcase.png') }}" class="img-responsive showcase-image" alt="Responsive Showcase">
+                    <img src="{{ asset('assets/img/showcase.png') }}" width="555" height="316" class="img-responsive showcase-image" alt="Responsive Showcase">
                 </div>
             </div>
             {{-- /Accordion --}}
@@ -216,7 +216,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb30">
-                        <h4><span class="ion-android-social-user mr15"></span>Recent Work</h4>
+                        <h4>Recent Work</h4>
                         <div class="owl-controls">
                             <div id="customNav" class="owl-nav"></div>
                         </div>
@@ -234,7 +234,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb30">
-                        <h4><span class="ion-android-social-user mr15"></span>Customers</h4>
+                        <h4>Customers</h4>
                         <div class="owl-controls">
                             <div id="customNav" class="owl-nav"></div>
                         </div>

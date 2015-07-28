@@ -5,20 +5,11 @@
     <meta name="author" content="Julien 'Tyloo' Bonvarlet <jbonva@gmail.com>">
     <meta name="description" content="Design - description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="{{ asset('assets/frontend/img/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
     <title>Tyloo.fr - Engineer, Web Developer, Google Deployment Specialist and Rugbyman!</title>
 
     {{-- Stylesheets --}}
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap-social.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/jquery.snippet.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/buttons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/frontend.css') }}">
 </head>
 <body>
 
@@ -85,21 +76,9 @@
 </footer>
 {{-- /Footer --}}
 
-<a href="#" class="scroll-top"><div class="scrolltop-holder"><span class="ion-ios-arrow-up scrolltop"></span></div></a>
+<a href="#" class="scroll-top"><div class="scrolltop-holder"><i class="fa fa-arrow-up scrolltop"></i></div></a>
 
-<script src="{{ asset('assets/frontend/js/jquery-2.1.4.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/hover-dropdown.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.easing.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.mixitup.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/scrollReveal.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.snippet.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/jquery.fitvids.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/activate-snippet.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/skrollr.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/js/main.js') }}"></script>
+<script src="{{ asset('assets/js/frontend.js') }}"></script>
 @include('frontend.partials.common.footer._analytics')
 </body>
 </html>

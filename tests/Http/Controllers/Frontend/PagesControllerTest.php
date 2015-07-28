@@ -18,4 +18,22 @@ class PagesControllerTest extends AbstractTestCase
     {
         $this->visit('/resume');
     }
+
+    /** @test */
+    public function it_has_a_contact_page()
+    {
+        $this->visit('/contact');
+    }
+
+    /** @test */
+    public function it_can_send_contact_form()
+    {
+        $this->withoutMiddleware();
+        $data = [
+            'contactName'    => 'Julien Bonvarlet',
+            'contactEmail'   => 'jbonva@gmail.com',
+            'contactMessage' => 'Test Message'
+        ];
+        $this->post('/contact', $data);
+    }
 }

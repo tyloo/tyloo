@@ -17,7 +17,7 @@
                     <p>Blog Posts</p>
                 </div>
                 <div class="icon">
-                    <i class="ion-social-wordpress-outline"></i>
+                    <i class="fa fa-wordpress"></i>
                 </div>
                 <a href="{{ URL::route('admin.posts.index') }}" class="small-box-footer">
                     More info <i class="fa fa-arrow-circle-right"></i>
@@ -31,7 +31,7 @@
                     <p>Work Entries</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-network"></i>
+                    <i class="fa fa-briefcase"></i>
                 </div>
                 <a href="{{ URL::route('admin.posts.index') }}" class="small-box-footer">
                     More info <i class="fa fa-arrow-circle-right"></i>
@@ -45,7 +45,7 @@
                     <p>Customers</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-ios-people"></i>
+                    <i class="fa fa-users"></i>
                 </div>
                 <a href="#" class="small-box-footer">
                     More info <i class="fa fa-arrow-circle-right"></i>
@@ -59,7 +59,7 @@
                     <p>Registered Users</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
+                    <i class="fa fa-user"></i>
                 </div>
                 <a href="{{ URL::route('admin.users.index') }}" class="small-box-footer">
                     More info <i class="fa fa-arrow-circle-right"></i>

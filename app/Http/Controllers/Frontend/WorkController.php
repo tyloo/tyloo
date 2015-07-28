@@ -47,7 +47,8 @@ class WorkController extends Controller
     public function show($slug)
     {
         $work = $this->repository->findBy('slug', $slug);
+        $works = $this->repository->all();
 
-        return view('frontend.pages.works.show', compact('work'));
+        return view('frontend.pages.works.show', compact('work', 'works'));
     }
 }
