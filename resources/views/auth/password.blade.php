@@ -17,7 +17,7 @@
 
             <div class="form-group has-feedback">
                 <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <i class="fa fa-envelope form-control-feedback"></i>
             </div>
 
             <div class="row">

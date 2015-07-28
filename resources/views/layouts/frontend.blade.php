@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
     <title>Tyloo.fr - Engineer, Web Developer, Google Deployment Specialist and Rugbyman!</title>
 
-    {{-- Stylesheets --}}
     <link rel="stylesheet" href="{{ asset('assets/css/frontend.css') }}">
 </head>
 <body>

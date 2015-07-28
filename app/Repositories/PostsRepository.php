@@ -3,9 +3,8 @@
 namespace App\Repositories;
 
 use App\Post;
-use SebastianBerc\Repositories\Contracts\ShouldCache;
 
-class PostsRepository extends AbstractRepository implements ShouldCache
+class PostsRepository extends AbstractRepository
 {
     /**
      * Return fully qualified model class name.

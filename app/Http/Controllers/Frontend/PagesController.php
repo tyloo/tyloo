@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Jobs\SendContactEmail;
 use App\Repositories\PostsRepository;
 
 class PagesController extends Controller

@@ -3,9 +3,8 @@
 namespace App\Repositories;
 
 use App\Tag;
-use SebastianBerc\Repositories\Contracts\ShouldCache;
 
-class TagsRepository extends AbstractRepository implements ShouldCache
+class TagsRepository extends AbstractRepository
 {
     /**
      * Return fully qualified model class name.
