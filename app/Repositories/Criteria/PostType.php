@@ -22,7 +22,7 @@ class PostType extends Criteria
      *
      * @param Builder $query
      *
-     * @return mixed
+     * @return Builder
      */
     public function execute(Builder $query)
     {

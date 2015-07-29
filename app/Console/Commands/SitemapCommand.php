@@ -48,7 +48,7 @@ class SitemapCommand extends Command
     }
 
     /**
-     * @return array
+     * @return \Illuminate\Database\Eloquent\Collection
      */
     public function getPosts()
     {
