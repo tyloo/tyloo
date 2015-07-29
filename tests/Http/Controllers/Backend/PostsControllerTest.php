@@ -5,7 +5,6 @@ namespace App\Tests\Http\Controllers\Backend;
 use App\Post;
 use App\Tests\AbstractTestCase;
 use App\User;
-use Illuminate\Support\Facades\File;
 
 class PostsControllerTest extends AbstractTestCase
 {
@@ -13,7 +12,7 @@ class PostsControllerTest extends AbstractTestCase
     public function it_can_upload_an_image()
     {
         $this->createAndBe();
-        $absolutePathToFile = public_path('assets/frontend/img/logo.png');
+        $absolutePathToFile = public_path('assets/img/logo.png');
         $uploadPath = '/uploads/post-title.png';
 
         $this->visit('/admin/posts/create')
@@ -23,7 +22,7 @@ class PostsControllerTest extends AbstractTestCase
             ->attach($absolutePathToFile, 'image')
             ->press('Submit');
         $this->seeInDatabase('posts', ['image' => $uploadPath]);
-        File::delete(public_path($uploadPath));
+        unlink(public_path($uploadPath));
     }
 
     /** @test */
