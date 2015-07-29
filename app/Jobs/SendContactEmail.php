@@ -35,7 +35,7 @@ class SendContactEmail extends Job implements SelfHandling, ShouldQueue
      */
     public function handle(Mailer $mailer)
     {
-        $message = function (Message $m) {
+        $message = function(Message $m) {
             $m->to('jbonva@gmail.com', 'Julien Bonvarlet');
             $m->subject('[Tyloo.fr] Demande de Contact');
         };
