@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "797eea9ada7ff164b98bc0ac039a2b33",
+    "hash": "d1c6fcf291c64f5087f972a8c69ea3b9",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -706,16 +706,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3475ce0b1b5cab41f012905c4c58ad645088f7c9"
+                "reference": "c16222fdc02467eaa12cb6d6d0e65527741f6040"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3475ce0b1b5cab41f012905c4c58ad645088f7c9",
-                "reference": "3475ce0b1b5cab41f012905c4c58ad645088f7c9",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c16222fdc02467eaa12cb6d6d0e65527741f6040",
+                "reference": "c16222fdc02467eaa12cb6d6d0e65527741f6040",
                 "shasum": ""
             },
             "require": {
@@ -783,7 +783,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-07-21 19:35:53"
+            "time": "2015-07-28 20:41:58"
         },
         {
             "name": "monolog/monolog",
@@ -1249,16 +1249,16 @@
         },
         {
             "name": "sebastian-berc/repositories",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SebastianBerc/Repositories.git",
-                "reference": "9e50ccd69f2971f87432f6eb52b0b48afd1ab992"
+                "reference": "5e120b1e70a41770da154f9abafaf9ed25793a34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/9e50ccd69f2971f87432f6eb52b0b48afd1ab992",
-                "reference": "9e50ccd69f2971f87432f6eb52b0b48afd1ab992",
+                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/5e120b1e70a41770da154f9abafaf9ed25793a34",
+                "reference": "5e120b1e70a41770da154f9abafaf9ed25793a34",
                 "shasum": ""
             },
             "require": {
@@ -1303,7 +1303,7 @@
                 "league",
                 "repository"
             ],
-            "time": "2015-07-15 20:31:53"
+            "time": "2015-07-28 17:55:20"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3225,9 +3225,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "sebastian-berc/repositories": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
