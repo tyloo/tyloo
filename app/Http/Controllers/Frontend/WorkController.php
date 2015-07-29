@@ -29,7 +29,7 @@ class WorkController extends Controller
     {
         $works = $this->repository->with('tags')->all();
         $tags = Tag::with([
-            'posts' => function (BelongsToMany $query) {
+            'posts' => function(BelongsToMany $query) {
                 $query->where('type', 'work');
             }
         ])->get();
