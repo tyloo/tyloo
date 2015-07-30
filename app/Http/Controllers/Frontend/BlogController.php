@@ -12,12 +12,12 @@ class BlogController extends Controller
     /**
      * @var PostsRepository
      */
-    protected $post;
+    private $post;
 
     /**
      * @var TagsRepository
      */
-    protected $tag;
+    private $tag;
 
     /**
      * Blog Constructor.

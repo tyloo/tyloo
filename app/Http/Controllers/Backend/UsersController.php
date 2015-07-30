@@ -11,7 +11,7 @@ class UsersController extends Controller
     /**
      * @var \App\Repositories\UsersRepository
      */
-    protected $repository;
+    private $repository;
 
     public function __construct(UsersRepository $repository)
     {

@@ -11,7 +11,7 @@ class ProfileController extends Controller
     /**
      * @var \App\Repositories\UsersRepository
      */
-    protected $user;
+    private $user;
 
     public function __construct(UsersRepository $user)
     {

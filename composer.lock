@@ -999,16 +999,16 @@
         },
         {
             "name": "predis/predis",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "7a170b3d8123c556597b4fbdb88631f99de180c2"
+                "reference": "0b92e8d156c615a823e533655908df8cdffc3543"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/7a170b3d8123c556597b4fbdb88631f99de180c2",
-                "reference": "7a170b3d8123c556597b4fbdb88631f99de180c2",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/0b92e8d156c615a823e533655908df8cdffc3543",
+                "reference": "0b92e8d156c615a823e533655908df8cdffc3543",
                 "shasum": ""
             },
             "require": {
@@ -1045,7 +1045,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2015-01-02 12:51:34"
+            "time": "2015-07-30 09:20:39"
         },
         {
             "name": "psr/http-message",
