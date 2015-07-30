@@ -12,12 +12,12 @@ class DashboardController extends Controller
     /**
      * @var \App\Repositories\PostsRepository
      */
-    protected $post;
+    private $post;
 
     /**
      * @var \App\Repositories\UsersRepository
      */
-    protected $user;
+    private $user;
 
     public function __construct(PostsRepository $post, UsersRepository $user)
     {

@@ -12,7 +12,7 @@ class PostsController extends Controller
     /**
      * @var \App\Repositories\PostsRepository
      */
-    protected $repository;
+    private $repository;
 
     public function __construct(PostsRepository $repository)
     {

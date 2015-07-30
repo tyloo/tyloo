@@ -11,7 +11,7 @@ class TagsController extends Controller
     /**
      * @var \App\Repositories\TagsRepository
      */
-    protected $repository;
+    private $repository;
 
     public function __construct(TagsRepository $repository)
     {
