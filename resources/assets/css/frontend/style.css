@@ -39,9 +39,9 @@
 - Google Map
 - Media Queries
 */
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700%7CRaleway:300,400,700,900');
+@import url('http://fonts.googleapis.com/css?family=Nunito:300,400,700');
 /* Common Styles */
-body { background:#FFF; font:normal 14px 'Open Sans', sans-serif; font-weight:300; color:#8F8F8F; height:100%; line-height:1.6; min-height:100% !important; margin-top:80px }
+body { background:#FFF; font:normal 14px Nunito, sans-serif; font-weight:300; color:#8F8F8F; height:100%; line-height:1.6; min-height:100% !important; margin-top:80px }
 html { min-height:100% !important }
 /* WebKit/Blink Browsers */
 ::selection { background:#FF7454; color:#FFF; box-shadow:0 }
@@ -115,7 +115,7 @@ a:hover { color:#FF7454; text-decoration:underline; cursor:pointer }
 .success-rw { background-color:#2ECC71 }
 section { overflow:hidden }
 /* Typography */
-h1, h2, h3, h4, h5, h6 { color:#8A8A8A; font-family:'Raleway', sans-serif; font-weight:400; margin:0 0 14px }
+h1, h2, h3, h4, h5, h6 { color:#8A8A8A; font-family:Nunito, sans-serif; font-weight:400; margin:0 0 14px }
 h1 { font-weight:700; text-transform:uppercase }
 h2 { font-weight:700; text-transform:uppercase }
 h3 { font-size:24px; font-weight:300 }
@@ -132,7 +132,7 @@ h3 { font-size:24px; font-weight:300 }
 .text-dark { color:#272727 !important }
 .text-light-grey { color:#CBCBCB }
 blockquote:before { content:'\f10d'; font-family:FontAwesome; margin-right:0.5em; margin-right:20px; float:left; font-size:21px;margin-top:-5px }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small { font-weight:300; font-family:'Open Sans'; padding-left:10px }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small { font-weight:300; font-family:Nunito; padding-left:10px }
 mark { background:#FF7454; color:#FFF; padding:1px 4px 2px }
 ul.list-arrow { list-style-type:none }
 ul.list-arrow li { text-indent:-1.3em }
@@ -168,7 +168,7 @@ ul.list-arrow-2-color li:before { font-family:FontAwesome; content:"\f0a9"; floa
 /* Buttons */
 .btn-rw {
     border-radius:2px;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     font-weight:300;
     border:0;
 }
@@ -511,7 +511,7 @@ ul.list-arrow-2-color li:before { font-family:FontAwesome; content:"\f0a9"; floa
     border-radius:0;
     border:0;
     background-color:#FFF;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     font-size:14px;
     font-weight:400;
     margin:0;
@@ -527,7 +527,7 @@ ul.list-arrow-2-color li:before { font-family:FontAwesome; content:"\f0a9"; floa
     font-weight:900;
     color:#FF7454;
     text-transform:uppercase;
-    font-family:'Raleway', sans-serif;
+    font-family:Nunito, sans-serif;
     -webkit-transition:all 0.4s ease-in-out;
     -moz-transition:all 0.4s ease-in-out;
     -o-transition:all 0.4s ease-in-out;
@@ -979,7 +979,7 @@ blockquote {
 }
 .heading-caption {
     font-size:12px;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     position:absolute;
     line-height:1.4;
     padding-left:25px;
@@ -1020,10 +1020,10 @@ blockquote {
 .panel-default > .panel-heading {
     background-color:#FAFAFA;
 }
-.panel-title { font-family:'Open Sans', sans-serif }
+.panel-title { font-family:Nunito, sans-serif }
 .panel-title > a {
     font-size:14px;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     color:#8A8A8A;
 }
 .panel-title > a:hover {
@@ -1174,7 +1174,7 @@ hr { border-top:1px dotted #D2D2D2; margin-top:30px; margin-bottom:30px }
 .modal .close:hover { opacity:0.9 }
 /* Labels and Badges */
 .label {
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     text-transform:none;
     font-weight:300;
     border-radius:2px;
@@ -1285,7 +1285,7 @@ h6.progress-head { margin-bottom:2px }
     border-radius:2px;
     margin-left:20px;
     line-height:30px;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
 }
 #portfolio .nav-pills > li:hover {
     color:#FFF;
@@ -1412,7 +1412,7 @@ h6.progress-head { margin-bottom:2px }
 }
 .project-category {
     font-size:12px;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
 }
 .portfolio-text {
     background-color:transparent;
@@ -1585,7 +1585,7 @@ h6.progress-head { margin-bottom:2px }
     display:inline-block;
     font-weight:400;
     border-bottom:2px solid #FF7454;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     color:#A5A5A5;
     font-size:14px;
 }
@@ -1642,7 +1642,7 @@ footer a {
     display:inline-block;
     font-weight:400;
     border-bottom:2px solid #FF7454;
-    font-family:'Open Sans', sans-serif;
+    font-family:Nunito, sans-serif;
     color:#DEDEDE;
     font-size:14px;
 }
