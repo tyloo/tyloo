@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Jobs\SendContactEmail;
-use App\Repositories\PagesRepository;
 use App\Repositories\PostsRepository;
-use Flynsarmy\DbBladeCompiler\Facades\DbView;
 
 class PagesController extends Controller
 {
