@@ -13,7 +13,7 @@ class AuthControllerTest extends AbstractTestCase
         $this->withoutMiddleware();
 
         $credentials = [
-            'email' => 'jbonva@gmail.com',
+            'email'    => 'jbonva@gmail.com',
             'password' => '123456',
         ];
         factory(User::class)->create($credentials);
@@ -27,7 +27,7 @@ class AuthControllerTest extends AbstractTestCase
         $this->withoutMiddleware();
 
         $credentials = [
-            'email' => 'badguy@tyloo.fr',
+            'email'    => 'badguy@tyloo.fr',
             'password' => '123456',
         ];
         $this->post('/admin/auth/login', $credentials);

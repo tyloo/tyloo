@@ -2,9 +2,9 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
-use App\Tests\AbstractTestCase;
 use App\Post;
 use App\Tag;
+use App\Tests\AbstractTestCase;
 use App\User;
 
 class BlogControllerTest extends AbstractTestCase
@@ -21,7 +21,7 @@ class BlogControllerTest extends AbstractTestCase
     {
         $user = factory(User::class)->create();
         $post = factory(Post::class)->create(['author_id' => $user->id]);
-        $this->visit('/blog/' . $post->slug);
+        $this->visit('/blog/'.$post->slug);
         $this->assertViewHas('post');
     }
 
@@ -29,7 +29,7 @@ class BlogControllerTest extends AbstractTestCase
     public function it_has_a_page_listing_posts_from_a_tag()
     {
         $tag = factory(Tag::class)->create();
-        $this->visit('/blog/tag/' . $tag->slug);
+        $this->visit('/blog/tag/'.$tag->slug);
         $this->assertViewHas('posts');
     }
 }

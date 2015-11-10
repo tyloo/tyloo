@@ -29,9 +29,9 @@ class WorkController extends Controller
     {
         $works = $this->repository->with('tags')->all();
         $tags = Tag::with([
-            'posts' => function(BelongsToMany $query) {
+            'posts' => function (BelongsToMany $query) {
                 $query->where('type', 'work');
-            }
+            },
         ])->get();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
@@ -40,7 +40,7 @@ class WorkController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string $slug
+     * @param string $slug
      *
      * @return \Illuminate\View\View
      */

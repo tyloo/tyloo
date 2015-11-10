@@ -13,19 +13,18 @@ class SitemapCommandTest extends AbstractTestCase
     {
         Mockery::close();
     }
+
     /** @test */
     public function it_can_generate_a_sitemap()
     {
         // Given
         $mock = Mockery::mock('\App\Console\Commands\SitemapCommand[getPosts, handle]')->makePartial();
 
-
         Artisan::call('sitemap');
 
         // When
 
         // Then
-
     }
 
     public function testWritingFile()
@@ -40,6 +39,6 @@ class SitemapCommandTest extends AbstractTestCase
     {
         $xml = new DOMDocument();
         $xml->load($fileName);
-        $this->assertTrue($xml->schemaValidate(__DIR__ . '/sitemap.xsd'));
+        $this->assertTrue($xml->schemaValidate(__DIR__.'/sitemap.xsd'));
     }
 }

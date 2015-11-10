@@ -23,14 +23,14 @@ class PostWorkRequest extends Request
     {
         if ($this->method() == 'PUT') {
             return [
-                'title' => 'required|max:255',
+                'title'   => 'required|max:255',
                 'content' => 'required',
             ];
         }
 
         return [
-            'title' => 'required|max:255',
-            'slug' => 'required|max:255|unique:posts',
+            'title'   => 'required|max:255',
+            'slug'    => 'required|max:255|unique:posts',
             'content' => 'required',
         ];
     }

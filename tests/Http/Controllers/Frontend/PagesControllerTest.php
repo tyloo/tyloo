@@ -6,7 +6,6 @@ use App\Tests\AbstractTestCase;
 
 class PagesControllerTest extends AbstractTestCase
 {
-
     /** @test */
     public function it_has_an_home_page()
     {
@@ -32,7 +31,7 @@ class PagesControllerTest extends AbstractTestCase
         $data = [
             'contactName'    => 'Julien Bonvarlet',
             'contactEmail'   => 'jbonva@gmail.com',
-            'contactMessage' => 'Test Message'
+            'contactMessage' => 'Test Message',
         ];
         $this->post('/contact', $data);
     }

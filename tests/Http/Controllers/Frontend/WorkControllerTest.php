@@ -18,7 +18,7 @@ class WorkControllerTest extends AbstractTestCase
     public function it_can_fetch_a_single_work_page()
     {
         $work = factory(Post::class)->create(['type' => 'work']);
-        $this->call('GET', '/works/' . $work->slug);
+        $this->call('GET', '/works/'.$work->slug);
         $this->assertViewHas('work');
     }
 }

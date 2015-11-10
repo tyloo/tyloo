@@ -13,11 +13,12 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     $email = $faker->email;
+
     return [
         'name'           => $faker->name,
         'email'          => $faker->email,
         'password'       => str_random(10),
-        'avatar'         => '//www.gravatar.com/avatar/' . md5(strtolower(trim($email))),
+        'avatar'         => '//www.gravatar.com/avatar/'.md5(strtolower(trim($email))),
         'remember_token' => str_random(10),
     ];
 });
@@ -28,8 +29,8 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
         'title'     => $title,
         'slug'      => str_slug($title),
-        'excerpt'   => '<p>' . $faker->text(200) . '</p>',
-        'content'   => '<p>' . $faker->text(2000) . '</p>',
+        'excerpt'   => '<p>'.$faker->text(200).'</p>',
+        'content'   => '<p>'.$faker->text(2000).'</p>',
         'image'     => $faker->imageUrl(750, 346, 'cats', false),
         'author_id' => rand(1, 10),
     ];

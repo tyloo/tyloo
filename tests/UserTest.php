@@ -35,4 +35,3 @@ class UserTest extends AbstractTestCase
         $this->assertTrue(Hash::check('test', $user->password));
     }
 }
-

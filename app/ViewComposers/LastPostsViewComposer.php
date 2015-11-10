@@ -22,7 +22,7 @@ class LastPostsViewComposer
     /**
      * Bind data to the view.
      *
-     * @param  View  $view
+     * @param View $view
      */
     public function compose(View $view)
     {
