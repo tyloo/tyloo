@@ -16,8 +16,7 @@ before_script:
   - travis_retry composer install --prefer-source
 
 script:
-  - phpunit
+  - phpunit --coverage-clover build/logs/clover.xml
 
-addons:
-    code_climate:
-        repo_token: 822795719849692635a8afced2d2478026498dbd31f84e900682f14e2e867a09
+after_script:
+  - vendor/bin/test-reporter
