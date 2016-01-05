@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tyloo/tyloo.svg?style=flat-square)](https://packagist.org/packages/tyloo/tyloo)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/tyloo/tyloo/master.svg?style=flat-square)](https://travis-ci.org/tyloo/tyloo)
-[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/2721d140-78cb-4abf-a456-332c8f4ac74c.svg?style=flat-square)](https://insight.sensiolabs.com/projects/2721d140-78cb-4abf-a456-332c8f4ac74c)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/8cfdc531-0c50-4cec-bf78-ed8c070119ec.svg?style=flat-square)](https://insight.sensiolabs.com/projects/8cfdc531-0c50-4cec-bf78-ed8c070119ec)
 [![StyleCI](https://styleci.io/repos/35223632/shield)](https://styleci.io/repos/35223632)
 [![Coverage Status](https://img.shields.io/codeclimate/coverage/github/tyloo/tyloo.svg?style=flat-square)](https://codeclimate.com/github/tyloo/tyloo/coverage)
 
