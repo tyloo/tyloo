@@ -11,13 +11,9 @@ matrix:
     - php: hhvm
 
 before_script:
-  - touch storage/database.sqlite
+  - touch database/database.sqlite
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
 
 script:
-  - phpunit --coverage-clover=coverage.clover
-
-after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --access-token="3c3e8e4b858a54c260af811370229eabfccdc963c139ff223f26cabd67039f9a" --format=php-clover coverage.clover
+  - phpunit
