@@ -23,4 +23,3 @@ class TagTest extends AbstractTestCase
         $this->assertEquals('mocked', $mock->posts());
     }
 }
-

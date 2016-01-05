@@ -20,7 +20,7 @@ class SavePost extends Job implements SelfHandling
     protected $data;
 
     /**
-     * @var integer|null
+     * @var int|null
      */
     protected $id;
 
@@ -29,7 +29,7 @@ class SavePost extends Job implements SelfHandling
      *
      * @param \App\Repositories\PostsRepository $repository
      * @param array                             $data
-     * @param integer|null                      $id
+     * @param int|null                          $id
      */
     public function __construct(PostsRepository $repository, array $data = [], $id = null)
     {
@@ -66,7 +66,7 @@ class SavePost extends Job implements SelfHandling
      */
     public function buildImage()
     {
-        $filePath = '/uploads/' . $this->data['slug'] . '.' . $this->data['image']->getClientOriginalExtension();
+        $filePath = '/uploads/'.$this->data['slug'].'.'.$this->data['image']->getClientOriginalExtension();
         Image::make($this->data['image'])->save(public_path($filePath));
 
         return $filePath;

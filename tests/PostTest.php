@@ -33,4 +33,3 @@ class PostTest extends AbstractTestCase
         $this->assertEquals('mocked', $mock->tags());
     }
 }
-

@@ -46,7 +46,7 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string $slug
+     * @param string $slug
      *
      * @return \Illuminate\View\View
      */

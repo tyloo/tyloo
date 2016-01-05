@@ -31,10 +31,10 @@ class UsersControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $data = [
-            'name'    => 'User',
-            'email'    => 'user@tyloo.fr',
-            'password' => '123456',
-            'password_confirmation' => '123456'
+            'name'                  => 'User',
+            'email'                 => 'user@tyloo.fr',
+            'password'              => '123456',
+            'password_confirmation' => '123456',
         ];
 
         $this->post('/admin/users', $data);
@@ -48,7 +48,7 @@ class UsersControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $user = factory(User::class)->create();
-        $this->visit('/admin/users/' . $user->id);
+        $this->visit('/admin/users/'.$user->id);
         $this->assertViewHas('user');
     }
 
@@ -58,7 +58,7 @@ class UsersControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $user = factory(User::class)->create();
-        $this->visit('/admin/users/' . $user->id . '/edit');
+        $this->visit('/admin/users/'.$user->id.'/edit');
         $this->assertViewHas('user');
     }
 
@@ -71,7 +71,7 @@ class UsersControllerTest extends AbstractTestCase
         $data = ['name' => 'New Name'];
         $user = factory(User::class)->create();
 
-        $this->put('/admin/users/' . $user->id, $data);
+        $this->put('/admin/users/'.$user->id, $data);
         $this->seeInDatabase('users', $data);
         $this->assertRedirectedToRoute('admin.users.index');
     }
@@ -82,13 +82,13 @@ class UsersControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $data = [
-            'name'    => 'User',
+            'name'     => 'User',
             'email'    => 'user@tyloo.fr',
             'password' => '123456',
         ];
         $user = factory(User::class)->create($data);
 
-        $this->get('/admin/users/delete/' . $user->id);
+        $this->get('/admin/users/delete/'.$user->id);
 
         $data['password'] = Hash::make($data['password']);
         $this->notSeeInDatabase('users', $data);

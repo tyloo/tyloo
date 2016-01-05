@@ -23,14 +23,14 @@ class UserRequest extends Request
     {
         if ($this->method() == 'PUT') {
             return [
-                'name' => 'required|max:255',
+                'name'     => 'required|max:255',
                 'password' => 'confirmed|min:6',
             ];
         }
 
         return [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'name'     => 'required|max:255',
+            'email'    => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ];
     }

@@ -68,9 +68,9 @@ class PostsControllerTest extends AbstractTestCase
         $post = factory(Post::class)->create([
             'title'     => 'Post Title',
             'slug'      => 'post-title',
-            'author_id' => $user->id
+            'author_id' => $user->id,
         ]);
-        $this->visit('/admin/posts/' . $post->id);
+        $this->visit('/admin/posts/'.$post->id);
         $this->assertViewHas('post');
     }
 
@@ -80,7 +80,7 @@ class PostsControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $post = factory(Post::class)->create();
-        $this->visit('/admin/posts/' . $post->id . '/edit');
+        $this->visit('/admin/posts/'.$post->id.'/edit');
         $this->assertViewHas('post');
     }
 
@@ -93,7 +93,7 @@ class PostsControllerTest extends AbstractTestCase
         $data = ['title' => 'New Title', 'content' => 'New Content'];
         $post = factory(Post::class)->create();
 
-        $this->put('/admin/posts/' . $post->id, $data);
+        $this->put('/admin/posts/'.$post->id, $data);
         $this->seeInDatabase('posts', ['title' => $data['title']]);
         $this->assertRedirectedToRoute('admin.posts.index');
     }
@@ -111,7 +111,7 @@ class PostsControllerTest extends AbstractTestCase
         ];
         $post = factory(Post::class)->create($data);
 
-        $this->get('/admin/posts/delete/' . $post->id);
+        $this->get('/admin/posts/delete/'.$post->id);
         $this->notSeeInDatabase('posts', $data);
         $this->assertRedirectedToRoute('admin.posts.index');
     }

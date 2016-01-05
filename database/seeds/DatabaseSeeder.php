@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
@@ -13,8 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         if (app()->environment() == 'testing') {
             DB::statement('PRAGMA foreign_keys = OFF');
-        }
-        else {
+        } else {
             DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         }
 
@@ -28,8 +27,7 @@ class DatabaseSeeder extends Seeder
 
         if (app()->environment() == 'testing') {
             DB::statement('PRAGMA foreign_keys = ON');
-        }
-        else {
+        } else {
             DB::statement('SET FOREIGN_KEY_CHECKS = 1');
         }
     }

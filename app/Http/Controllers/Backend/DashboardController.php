@@ -21,7 +21,6 @@ class DashboardController extends Controller
 
     public function __construct(PostsRepository $post, UsersRepository $user)
     {
-
         $this->post = $post;
         $this->user = $user;
     }

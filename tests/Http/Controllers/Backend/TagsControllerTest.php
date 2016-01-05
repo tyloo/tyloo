@@ -4,7 +4,6 @@ namespace App\Tests\Http\Controllers\Backend;
 
 use App\Tag;
 use App\Tests\AbstractTestCase;
-use App\User;
 
 class TagsControllerTest extends AbstractTestCase
 {
@@ -47,7 +46,7 @@ class TagsControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $tag = factory(Tag::class)->create();
-        $this->visit('/admin/tags/' . $tag->id);
+        $this->visit('/admin/tags/'.$tag->id);
         $this->assertViewHas('tag');
     }
 
@@ -57,7 +56,7 @@ class TagsControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $tag = factory(Tag::class)->create();
-        $this->visit('/admin/tags/' . $tag->id . '/edit');
+        $this->visit('/admin/tags/'.$tag->id.'/edit');
         $this->assertViewHas('tag');
     }
 
@@ -70,7 +69,7 @@ class TagsControllerTest extends AbstractTestCase
         $data = ['name' => 'New Name', 'content' => 'New Content'];
         $tag = factory(Tag::class)->create();
 
-        $this->put('/admin/tags/' . $tag->id, $data);
+        $this->put('/admin/tags/'.$tag->id, $data);
         $this->seeInDatabase('tags', $data);
         $this->assertRedirectedToRoute('admin.tags.index');
     }
@@ -87,7 +86,7 @@ class TagsControllerTest extends AbstractTestCase
         ];
         $tag = factory(Tag::class)->create($data);
 
-        $this->get('/admin/tags/delete/' . $tag->id);
+        $this->get('/admin/tags/delete/'.$tag->id);
         $this->notSeeInDatabase('tags', $data);
         $this->assertRedirectedToRoute('admin.tags.index');
     }

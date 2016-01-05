@@ -3,7 +3,6 @@
 namespace App\Tests\Http\Controllers\Backend;
 
 use App\Tests\AbstractTestCase;
-use App\User;
 
 class SettingsControllerTest extends AbstractTestCase
 {

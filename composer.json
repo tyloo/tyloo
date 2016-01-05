@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
+        "laravel/framework": "5.2.*",
         "intervention/image": "~2.3",
         "sebastian-berc/repositories" : "^1.0",
         "samdark/sitemap": "^2.0",
@@ -30,7 +30,9 @@
     "require-dev": {
         "fzaninotto/faker": "~1.5",
         "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~4.7"
+        "symfony/dom-crawler": "~3.0",
+        "symfony/css-selector": "~3.0",
+        "phpunit/phpunit": "~5.0"
     },
     "autoload": {
         "classmap": [
