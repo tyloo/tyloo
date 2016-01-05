@@ -12,6 +12,10 @@ ratings:
   paths:
   - "**.php"
 exclude_paths:
+- app/Exceptions/**/*
+- app/Http/Middleware/**/*
+- app/Http/Requests/**/*
+- app/Providers/**/*
 - bootstrap/**/*
 - public/**/*
 - resources/**/*
