@@ -27,7 +27,6 @@ class PagesControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_send_contact_form()
     {
-        $this->withoutMiddleware();
         $data = [
             'contactName'    => 'Julien Bonvarlet',
             'contactEmail'   => 'jbonva@gmail.com',

@@ -44,7 +44,6 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_store_a_post()
     {
-        $this->withoutMiddleware();
         $this->createAndBe();
 
         $data = [
@@ -87,7 +86,6 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_update_a_post()
     {
-        $this->withoutMiddleware();
         $this->createAndBe();
 
         $data = ['title' => 'New Title', 'content' => 'New Content'];

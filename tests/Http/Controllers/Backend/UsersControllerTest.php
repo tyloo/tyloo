@@ -27,7 +27,6 @@ class UsersControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_store_an_user()
     {
-        $this->withoutMiddleware();
         $this->createAndBe();
 
         $data = [
@@ -65,7 +64,6 @@ class UsersControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_update_an_user()
     {
-        $this->withoutMiddleware();
         $this->createAndBe();
 
         $data = ['name' => 'New Name'];
