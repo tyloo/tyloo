@@ -17,3 +17,7 @@ before_script:
 
 script:
   - phpunit
+
+addons:
+    code_climate:
+        repo_token: 822795719849692635a8afced2d2478026498dbd31f84e900682f14e2e867a09
