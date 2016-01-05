@@ -17,6 +17,12 @@
         <whitelist>
             <directory suffix=".php">app/</directory>
         </whitelist>
+        <exclude>
+            <directory>./app/Exceptions/</directory>
+            <directory>./app/Http/Middleware/</directory>
+            <directory>./app/Http/Requests/</directory>
+            <directory>./app/Providers/</directory>
+        </exclude>
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
