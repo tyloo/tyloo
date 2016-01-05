@@ -1,6 +1,6 @@
-/vendor
+/build
 /node_modules
+/vendor
 /.env
 /database/database.sqlite
 /public/sitemap.xml
-
