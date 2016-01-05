@@ -2,6 +2,16 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
+## v1.2.0 - 2016-01-05
+
+### Added
+- Upgraded to 5.2
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+- Make it i18n
+
 ## v1.2.0 - 2015-07-27
 
 ### Added
