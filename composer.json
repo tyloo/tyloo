@@ -31,8 +31,7 @@
         "mockery/mockery": "~0.9",
         "symfony/dom-crawler": "~3.0",
         "symfony/css-selector": "~3.0",
-        "phpunit/phpunit": "~5.0",
-        "codeclimate/php-test-reporter": "^0.2.0"
+        "phpunit/phpunit": "~5.0"
     },
     "autoload": {
         "classmap": [

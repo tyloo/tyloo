@@ -15,7 +15,4 @@ before_script:
   - travis_retry composer install --prefer-source
 
 script:
-  - phpunit --coverage-clover build/logs/clover.xml
-
-after_script:
-  - vendor/bin/test-reporter
+  - phpunit
