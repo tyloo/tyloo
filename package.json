@@ -4,6 +4,6 @@
     "gulp": "^3.9.0"
   },
   "dependencies": {
-    "laravel-elixir": "^4.1.2"
+    "laravel-elixir": "^4.2.0"
   }
 }

@@ -29,7 +29,7 @@
 
                     @if (isset($success))
                         <div class="alert alert-success">
-                            {{ $success }}
+                            {!! $success !!}
                         </div>
                     @endif
                     <form role="form" method="POST" action="{{ URL::route('contact') }}">
