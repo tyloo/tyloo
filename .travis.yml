@@ -10,6 +10,7 @@ matrix:
     - php: hhvm
 
 before_script:
+  - cp .env.example .env
   - touch database/database.sqlite
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
