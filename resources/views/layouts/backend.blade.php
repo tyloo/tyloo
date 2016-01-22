@@ -150,7 +150,7 @@
             Powered by Laravel &amp; AdminLTE
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 1988-2015 <a href="http://www.tyloo.fr">Tyloo.fr</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 1988-{{ date('Y') }} <a href="http://www.tyloo.fr">Tyloo.fr</a>.</strong> All rights reserved.
     </footer>
 </div>
 
