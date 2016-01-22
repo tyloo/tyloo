@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
                                     <div class="col-sm-6 col-sm-offset-1">
-                                        <img src="{{ asset('assets/img/showcase-full.png') }}" class="img-responsive carousel-image" alt="Responsive Showcase" width="540" height="270px">
+                                        <img src="/assets/img/showcase-full.png" class="img-responsive carousel-image" alt="Responsive Showcase" width="540" height="270px">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="row carousel-content center-vertically-left">
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
                                     <div class="col-sm-6 hidden-xs">
-                                        <img src="{{ asset('assets/img/showcase2.png') }}" width="510" height="328" class="img-responsive carousel-image" alt="Responsive Showcase">
+                                        <img src="/assets/img/showcase2.png" width="510" height="328" class="img-responsive carousel-image" alt="Responsive Showcase">
                                     </div>
                                 </div>
                                 <div class="fadeInRight-animated" data-animation="fadeInRight">
@@ -202,7 +202,7 @@
                 </div>
 
                 <div class="col-sm-6" data-sr="enter bottom">
-                    <img src="{{ asset('assets/img/showcase.png') }}" width="555" height="316" class="img-responsive showcase-image" alt="Responsive Showcase">
+                    <img src="/assets/img/showcase.png" width="555" height="316" class="img-responsive showcase-image" alt="Responsive Showcase">
                 </div>
             </div>
             {{-- /Accordion --}}

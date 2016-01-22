@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('page-title', 'Auth') - Tyloo.fr Backend</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link href="{{ asset('assets/css/backend.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/backend.css" rel="stylesheet" type="text/css"/>
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -19,6 +19,6 @@
         @yield('content')
     </div>
 
-    <script src="{{ asset('assets/js/backend.js') }}"></script>
+    <script src="/assets/js/backend.js"></script>
 </body>
 </html>

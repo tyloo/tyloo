@@ -5,10 +5,10 @@
     <meta name="author" content="Julien 'Tyloo' Bonvarlet <jbonva@gmail.com>">
     <meta name="description" content="Design - description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
     <title>Tyloo.fr - Engineer, Web Developer, Google Deployment Specialist and Rugbyman!</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/css/frontend.css') }}">
+    <link rel="stylesheet" href="/assets/css/frontend.css">
 </head>
 <body>
 
@@ -77,7 +77,7 @@
 
 <a href="#" class="scroll-top"><div class="scrolltop-holder"><i class="fa fa-arrow-up scrolltop"></i></div></a>
 
-<script src="{{ asset('assets/js/frontend.js') }}"></script>
+<script src="/assets/js/frontend.js"></script>
 @include('frontend.partials.common.footer._analytics')
 </body>
 </html>
