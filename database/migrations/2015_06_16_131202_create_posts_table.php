@@ -22,6 +22,9 @@ class CreatePostsTable extends Migration
             $table->integer('author_id');
             $table->string('type')->default('blog');
             $table->timestamps();
+            $table->foreign('author_id')
+                ->references('id')
+                ->on('users');
         });
     }
 
