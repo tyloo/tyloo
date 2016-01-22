@@ -4,7 +4,7 @@
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
-        <form role="form" action="{{ URL::route('admin.auth.login') }}" method="POST">
+        <form role="form" action="{{ route('admin.auth.login') }}" method="POST">
             {!! csrf_field() !!}
 
             @include('errors.formErrors')
@@ -32,7 +32,7 @@
         </form>
 
         <div class="text-right">
-            <a href="{{ URL::route('admin.auth.remind') }}">I forgot my password!</a>
+            <a href="{{ route('admin.auth.remind') }}">I forgot my password!</a>
         </div>
     </div>
 @stop

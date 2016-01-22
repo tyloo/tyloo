@@ -4,7 +4,7 @@
     <div class="login-box-body">
         <p class="login-box-msg">Reset your Password now</p>
 
-        <form role="form" action="{{ URL::route('admin.auth.reset') }}" method="POST">
+        <form role="form" action="{{ route('admin.auth.reset') }}" method="POST">
             {!! csrf_field() !!}
 
             @include('errors.formErrors')

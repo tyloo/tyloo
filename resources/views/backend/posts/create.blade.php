@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <form role="form" action="{{ URL::route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
+    <form role="form" action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
 
         @include('errors.formErrors')

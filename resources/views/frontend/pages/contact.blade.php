@@ -32,7 +32,7 @@
                             {!! $success !!}
                         </div>
                     @endif
-                    <form role="form" method="POST" action="{{ URL::route('contact') }}">
+                    <form role="form" method="POST" action="{{ route('contact') }}">
                         {!! csrf_field() !!}
                         <div class="form-group">
                             <input type="text" name="contactName" value="{{ old('contactName') }}" placeholder="Name" class="form-control">

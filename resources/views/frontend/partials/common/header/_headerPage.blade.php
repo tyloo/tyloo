@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb text-white link-white">
-                    <li><i class="fa fa-home breadcrumb-home"></i><a href="{{ URL::route('home') }}">Home</a></li>
+                    <li><i class="fa fa-home breadcrumb-home"></i><a href="{{ route('home') }}">Home</a></li>
                     <li><strong>{{ $pageNameBreadcrumb }}</strong></li>
                 </ol>
             </div>

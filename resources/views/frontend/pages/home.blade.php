@@ -59,7 +59,7 @@
                                             have a powerful, centralized and customizable Search Engine. With the power of Google and a bit of magic, you can find everything
                                             inside your company just like you'd do it on google.com! Sound cool, right? :)
                                         </p>
-                                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Check out more at my Resume <i class="fa fa-arrow-right"></i></a>
+                                        <a href="{{ route('resume') }}" class="btn btn-rw btn-primary">Check out more at my Resume <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                         is meant to be "easy" and allows you to develop and deploy projects really quickly!
                                     </p>
                                     <p>
-                                        If you check my <a href="{{ URL::route('blog.index') }}">Blog</a>, you'll be able to find
+                                        If you check my <a href="{{ route('blog.index') }}">Blog</a>, you'll be able to find
                                         tips, ideas and other stuff linked to Laravel... Don't hesitate to check them and give me feedback ;)
                                     </p>
                                 </div>
@@ -197,7 +197,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="{{ URL::route('resume') }}" class="btn btn-rw btn-primary">Need to know more? Check out My Resume</a>
+                        <a href="{{ route('resume') }}" class="btn btn-rw btn-primary">Need to know more? Check out My Resume</a>
                     </div>
                 </div>
 

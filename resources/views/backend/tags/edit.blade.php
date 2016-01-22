@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <form role="form" action="{{ URL::route('admin.tags.update', $tag->id) }}" method="POST">
+    <form role="form" action="{{ route('admin.tags.update', $tag->id) }}" method="POST">
         {!! csrf_field() !!}
         <input type="hidden" name="_method" value="PUT">
 

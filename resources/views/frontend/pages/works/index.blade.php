@@ -34,7 +34,7 @@
                                             <a href="{{ $work->image }}" class="info image-zoom-link">
                                                 <div class="portfolio-icon-holder"><i class="fa fa-search portfolio-icons"></i></div>
                                             </a>
-                                            <a href="{{ URL::route('works.show', ['slug' => $work->slug]) }}" class="info">
+                                            <a href="{{ route('works.show', ['slug' => $work->slug]) }}" class="info">
                                                 <div class="portfolio-icon-holder"><i class="fa fa-link portfolio-icons"></i></div>
                                             </a>
                                             <!-- /Zoom + Project Link -->
@@ -43,7 +43,7 @@
                                     <!-- /Project Thumb -->
                                 </div>
                                 <div class="portfolio-text background-white">
-                                    <h3 class="portfolio-title"><a href="{{ URL::route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h3>
+                                    <h3 class="portfolio-title"><a href="{{ route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h3>
                                 </div>
                             </div>
                         </li>

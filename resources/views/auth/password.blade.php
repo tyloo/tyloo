@@ -4,7 +4,7 @@
     <div class="login-box-body">
         <p class="login-box-msg">I forgot my password!</p>
 
-        <form role="form" action="{{ URL::route('admin.auth.remind') }}" method="POST">
+        <form role="form" action="{{ route('admin.auth.remind') }}" method="POST">
             {!! csrf_field() !!}
 
             @include('errors.formErrors')

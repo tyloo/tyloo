@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Tags <a href="{{ URL::route('admin.tags.create') }}" class="btn btn-sm btn-primary">Create a new Tag</a>
+    Tags <a href="{{ route('admin.tags.create') }}" class="btn btn-sm btn-primary">Create a new Tag</a>
 @stop
 
 @section('breadcrumb-title')
@@ -21,11 +21,11 @@
     @forelse($tags as $tag)
         <tr>
             <td>{{ $tag->name }}</td>
-            <td><a href="{{ URL::route('blog.tag', $tag->slug) }}" target="_blank">/blog/tag/{{ $tag->slug }}</a></td>
+            <td><a href="{{ route('blog.tag', $tag->slug) }}" target="_blank">/blog/tag/{{ $tag->slug }}</a></td>
             <td>{{ $tag->updated_at->diffForHumans() }}</td>
-            <td><a href="{{ URL::route('admin.tags.show', $tag->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
-            <a href="{{ URL::route('admin.tags.edit', $tag->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-            <a href="{{ URL::route('admin.tags.destroy', $tag->id) }}" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a></td>
+            <td><a href="{{ route('admin.tags.show', $tag->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
+            <a href="{{ route('admin.tags.edit', $tag->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
+            <a href="{{ route('admin.tags.destroy', $tag->id) }}" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a></td>
         </tr>
     @empty
         <tr>

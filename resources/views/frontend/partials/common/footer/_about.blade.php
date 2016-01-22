@@ -4,5 +4,5 @@
         My name is Julien 'Tyloo' Bonvarlet and I'm an engineer specialised in Web Development. I work mainly on PHP applications
         and especially on the Laravel Framework.
     </p>
-    <a href="{{ URL::route('resume') }}" class="btn btn-primary btn-rw mt10">Want to know more?</a>
+    <a href="{{ route('resume') }}" class="btn btn-primary btn-rw mt10">Want to know more?</a>
 </div>
