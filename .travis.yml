@@ -11,9 +11,9 @@ matrix:
 
 before_script:
   - touch database/database.sqlite
-  - travis_retry php artisan migrate --database="sqlite"
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
+  - travis_retry php artisan migrate --database="sqlite"
 
 script:
   - phpunit
