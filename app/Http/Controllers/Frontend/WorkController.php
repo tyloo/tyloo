@@ -27,7 +27,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = $this->repository->with('tags')->all();
+        $works = $this->repository->with('tags')->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
         $tags = Tag::with([
             'posts' => function (BelongsToMany $query) {
                 $query->where('type', 'work');
@@ -47,7 +47,7 @@ class WorkController extends Controller
     public function show($slug)
     {
         $work = $this->repository->findBy('slug', $slug);
-        $works = $this->repository->all();
+        $works = $this->repository->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
 
         return view('frontend.pages.works.show', compact('work', 'works'));
     }

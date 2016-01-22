@@ -16,7 +16,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        $works = PostsRepository::instance()->all();
+        $works = PostsRepository::instance()->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
 
         return view('frontend.pages.home', compact('works'));
     }
