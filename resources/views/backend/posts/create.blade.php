@@ -27,6 +27,15 @@
             <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content') }}</textarea>
         </div>
         <div class="form-group">
+            <label for="type">Post Type</label>
+            <div class="radio">
+                <label><input type="radio" name="type" id="typeBlog" value="blog"{{ old('type') == 'blog' ? ' checked="checked"' : '' }}>Blog Post</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="type" id="typeWork" value="work"{{ old('type') == 'work' ? ' checked="checked"' : '' }}>Work</label>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="image">Image</label>
             <input type="file" id="image" name="image">
         </div>
