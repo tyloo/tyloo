@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('excerpt')->nullable();
             $table->text('content');
             $table->string('image')->nullable();
-            $table->integer('author_id');
+            $table->integer('author_id')->unsigned();
             $table->string('type')->default('blog');
             $table->timestamps();
             $table->foreign('author_id')
