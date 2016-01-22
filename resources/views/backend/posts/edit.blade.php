@@ -1,11 +1,11 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Editing Blog Post "{{ $post->title }}"
+    Editing Post "{{ $post->title }}"
 @stop
 
 @section('breadcrumb-title')
-    Edit Blog Post
+    Edit Post
 @stop
 
 @section('content')
