@@ -2,9 +2,9 @@
 
 namespace App\Tests\Http\Controllers\Backend;
 
-use App\Work;
 use App\Tests\AbstractTestCase;
 use App\User;
+use App\Work;
 
 class WorksControllerTest extends AbstractTestCase
 {

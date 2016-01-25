@@ -78,7 +78,7 @@ class PostsController extends Controller
      * Update the specified resource in storage.
      *
      * @param PostRequest $request
-     * @param int             $id
+     * @param int         $id
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -105,8 +105,8 @@ class PostsController extends Controller
     }
 
     /**
-     * @param array        $data
-     * @param integer|null $id
+     * @param array    $data
+     * @param int|null $id
      */
     protected function savePost(array $data = [], $id = null)
     {
@@ -134,7 +134,7 @@ class PostsController extends Controller
      */
     protected function buildImage($slug, $image)
     {
-        $filePath = '/uploads/' . $slug . '.' . $image->getClientOriginalExtension();
+        $filePath = '/uploads/'.$slug.'.'.$image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;

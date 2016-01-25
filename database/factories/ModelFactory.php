@@ -46,7 +46,7 @@ $factory->define(App\Work::class, function (Faker\Generator $faker) {
         'content'   => '<p>'.$faker->text(2000).'</p>',
         'image'     => $faker->imageUrl(750, 346, 'cats', false),
         'author_id' => 1,
-        'link'      => 'https://tyloo.fr'
+        'link'      => 'https://tyloo.fr',
     ];
 });
 
