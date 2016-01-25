@@ -2,7 +2,17 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
-## v1.2.0 - 2016-01-05
+## v1.3.1 - 2016-01-25
+
+### Added
+- Separated Works from Blog
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+- Make it i18n
+
+## v1.3.0 - 2016-01-05
 
 ### Added
 - Upgraded to 5.2
