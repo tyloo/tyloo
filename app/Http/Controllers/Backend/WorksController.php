@@ -134,7 +134,7 @@ class WorksController extends Controller
      */
     protected function buildImage($slug, $image)
     {
-        $filePath = '/uploads/' . $slug . '.' . $image->getClientOriginalExtension();
+        $filePath = '/uploads/'.$slug.'.'.$image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;
