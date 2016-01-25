@@ -2,7 +2,6 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
-use App\Post;
 use App\Tests\AbstractTestCase;
 use App\Work;
 

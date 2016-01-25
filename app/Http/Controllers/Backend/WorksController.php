@@ -105,8 +105,8 @@ class WorksController extends Controller
     }
 
     /**
-     * @param array        $data
-     * @param integer|null $id
+     * @param array    $data
+     * @param int|null $id
      */
     protected function saveWork(array $data = [], $id = null)
     {
