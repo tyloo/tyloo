@@ -4,12 +4,14 @@ namespace App\Tests\Http\Controllers\Frontend;
 
 use App\Post;
 use App\Tests\AbstractTestCase;
+use App\Work;
 
 class WorkControllerTest extends AbstractTestCase
 {
     /** @test */
     public function it_loads_works_on_index_page()
     {
+        factory(Work::class, 10)->create();
         $this->visit('/works');
         $this->assertViewHas('works');
     }
@@ -17,7 +19,7 @@ class WorkControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_fetch_a_single_work_page()
     {
-        $work = factory(Post::class)->create(['type' => 'work']);
+        $work = factory(Work::class)->create();
         $this->call('GET', '/works/'.$work->slug);
         $this->assertViewHas('work');
     }

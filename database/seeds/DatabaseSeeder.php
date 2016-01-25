@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call('UserTableSeeder');
         $this->call('PostTableSeeder');
+        $this->call('WorkTableSeeder');
         $this->call('TagTableSeeder');
 
         Model::reguard();

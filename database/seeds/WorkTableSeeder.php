@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PostTableSeeder extends Seeder
+class WorkTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,7 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posts')->truncate();
-
-        factory(App\Post::class, 30)->create();
+        DB::table('works')->truncate();
+        factory(App\Work::class, 10)->create();
     }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Jobs\SendContactEmail;
-use App\Repositories\PostsRepository;
+use App\Work;
 
 class PagesController extends Controller
 {
@@ -16,7 +16,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        $works = PostsRepository::instance()->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
+        $works = Work::latest()->get();
 
         return view('frontend.pages.home', compact('works'));
     }

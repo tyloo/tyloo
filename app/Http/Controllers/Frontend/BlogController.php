@@ -3,34 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\Criteria\PostType;
-use App\Repositories\PostsRepository;
-use App\Repositories\TagsRepository;
+use App\Post;
+use App\Tag;
 
 class BlogController extends Controller
 {
-    /**
-     * @var PostsRepository
-     */
-    private $post;
-
-    /**
-     * @var TagsRepository
-     */
-    private $tag;
-
-    /**
-     * Blog Constructor.
-     *
-     * @param \App\Repositories\PostsRepository $post
-     * @param \App\Repositories\TagsRepository  $tag
-     */
-    public function __construct(PostsRepository $post, TagsRepository $tag)
-    {
-        $this->post = $post->criteria(new PostType('blog'));
-        $this->tag = $tag;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +15,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = $this->post->with('author')->paginate(5);
+        $posts = Post::with('author')->paginate(5);
 
         return view('frontend.pages.blog.index', compact('posts'));
     }
@@ -52,7 +29,7 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $post = $this->post->findBy('slug', $slug);
+        $post = Post::where('slug', $slug)->firstOrFail();
 
         return view('frontend.pages.blog.show', compact('post'));
     }
@@ -66,7 +43,7 @@ class BlogController extends Controller
      */
     public function tag($slug)
     {
-        $tag = $this->tag->findBy('slug', $slug);
+        $tag = Tag::where('slug', $slug)->firstOrFail();
         $posts = $tag->posts()->paginate(5);
 
         return view('frontend.pages.blog.tag', compact('tag', 'posts'));

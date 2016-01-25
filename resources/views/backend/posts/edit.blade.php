@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Editing Post "{{ $post->title }}"
+@stop
+
 @section('page-title')
     Editing Post "{{ $post->title }}"
 @stop
@@ -27,15 +31,6 @@
         </div>
         <div class="form-group">
             <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $post->content) }}</textarea>
-        </div>
-        <div class="form-group">
-            <label for="type">Post Type</label>
-            <div class="radio">
-                <label><input type="radio" name="type" id="typeBlog" value="blog"{{ old('type', $post->type) == 'blog' ? ' checked="checked"' : '' }}>Blog Post</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="type" id="typeWork" value="work"{{ old('type', $post->type) == 'work' ? ' checked="checked"' : '' }}>Work</label>
-            </div>
         </div>
         <div class="form-group">
             <div>

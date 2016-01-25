@@ -20,6 +20,7 @@ Route::group(['middleware' => ['web']], function () {
         // Works
         Route::get('works', ['as' => 'works.index', 'uses' => 'WorkController@index']);
         Route::get('works/{slug}', ['as' => 'works.show', 'uses' => 'WorkController@show']);
+        Route::get('works/tag/{slug}', ['as' => 'works.tag', 'uses' => 'WorkController@tag']);
     });
 
     Route::group(['namespace'      => 'Backend', 'prefix' => 'admin'], function () {
@@ -34,6 +35,10 @@ Route::group(['middleware' => ['web']], function () {
             // Posts
             Route::resource('posts', 'PostsController');
             Route::get('posts/delete/{id}', ['as' => 'admin.posts.destroy', 'uses' => 'PostsController@destroy']);
+
+            // Posts
+            Route::resource('works', 'WorksController');
+            Route::get('works/delete/{id}', ['as' => 'admin.works.destroy', 'uses' => 'WorksController@destroy']);
 
             // Users
             Route::resource('users', 'UsersController');

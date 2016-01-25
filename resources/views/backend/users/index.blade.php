@@ -1,11 +1,15 @@
 @extends('layouts.backend')
 
-@section('page-title')
+@section('meta-title')
     Users
 @stop
 
-@section('breadcrumb-title')
+@section('page-title')
     Users <a href="{{ route('admin.users.create') }}" class="btn btn-sm btn-primary">Create a new User</a>
+@stop
+
+@section('breadcrumb-title')
+    Users
 @stop
 
 @section('content')

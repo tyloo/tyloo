@@ -4,21 +4,21 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Work extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'tags';
+    protected $table = 'works';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'slug', 'content'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'image', 'author_id', 'link'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -28,18 +28,18 @@ class Tag extends Model
     protected $hidden = [];
 
     /**
-     * Get all the posts for a given Tag.
+     * Get the user record associated with the Post.
      */
-    public function posts()
+    public function author()
     {
-        return $this->belongsToMany('App\Post');
+        return $this->belongsTo('App\User');
     }
 
     /**
-     * Get all the works for a given Tag.
+     * Get all the tags for a given Post.
      */
-    public function works()
+    public function tags()
     {
-        return $this->belongsToMany('App\Work');
+        return $this->belongsToMany('App\Tag', 'work_tag');
     }
 }

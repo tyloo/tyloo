@@ -18,7 +18,7 @@ class Post extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'image', 'author_id', 'type'];
+    protected $fillable = ['title', 'slug', 'excerpt', 'content', 'image', 'author_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -40,6 +40,6 @@ class Post extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany('App\Tag', 'post_tag');
     }
 }

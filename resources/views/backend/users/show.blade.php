@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    User "{{ $user->name }}"
+@stop
+
 @section('page-title')
     User "{{ $user->name }}"
 @stop

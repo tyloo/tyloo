@@ -1,19 +1,19 @@
 @extends('layouts.backend')
 
 @section('meta-title')
-    Create a Post
+    Create a Work
 @stop
 
 @section('page-title')
-    Create a Post
+    Create a Work
 @stop
 
 @section('breadcrumb-title')
-    New Post
+    New Work
 @stop
 
 @section('content')
-    <form role="form" action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
+    <form role="form" action="{{ route('admin.works.store') }}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
 
         @include('errors.formErrors')

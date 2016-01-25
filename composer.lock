@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b3d6bc9cd0d0343be5d6addebfe648c4",
-    "content-hash": "61423f0e4e1353ac5a47a0cb80f1b249",
+    "hash": "051fae30de387b59c1f7c18def72c9c1",
+    "content-hash": "ec14024fcfa797214d0f9c05d694a169",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -328,16 +328,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
+                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5d04bdd2881ac89abde1fb78cc234bce24327bb",
+                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb",
                 "shasum": ""
             },
             "require": {
@@ -382,7 +382,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-11-03 01:34:55"
+            "time": "2016-01-23 01:23:02"
         },
         {
             "name": "intervention/image",
@@ -593,16 +593,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.10",
+            "version": "v5.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "93dc5b0089eef468157fd7200e575c3861ec59a5"
+                "reference": "e8ad411ac3ca63f532952417156e32d010fcc522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/93dc5b0089eef468157fd7200e575c3861ec59a5",
-                "reference": "93dc5b0089eef468157fd7200e575c3861ec59a5",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e8ad411ac3ca63f532952417156e32d010fcc522",
+                "reference": "e8ad411ac3ca63f532952417156e32d010fcc522",
                 "shasum": ""
             },
             "require": {
@@ -717,7 +717,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-01-13 20:29:10"
+            "time": "2016-01-22 18:36:05"
         },
         {
             "name": "league/flysystem",
@@ -1319,64 +1319,6 @@
                 "Sitemap"
             ],
             "time": "2015-07-14 07:10:08"
-        },
-        {
-            "name": "sebastian-berc/repositories",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SebastianBerc/Repositories.git",
-                "reference": "26e3041e4bdfabb22f2c46ee4362f152718eb444"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SebastianBerc/Repositories/zipball/26e3041e4bdfabb22f2c46ee4362f152718eb444",
-                "reference": "26e3041e4bdfabb22f2c46ee4362f152718eb444",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "~5.0|~5.1",
-                "illuminate/database": "~5.0|~5.1",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "fzaninotto/faker": "^1.4",
-                "laracasts/testdummy": "^2.3",
-                "mockery/mockery": "^0.9.4",
-                "orchestra/testbench": "3.0.*",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SebastianBerc\\Repositories\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Berć",
-                    "email": "contact@sebastian-berc.pl",
-                    "homepage": "http://sebastian-berc.pl/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Flexable Laravel ~5.0 Repository Library.",
-            "homepage": "https://github.com/SebastianBerc/Repositories",
-            "keywords": [
-                "league",
-                "repository"
-            ],
-            "time": "2015-10-09 22:53:54"
         },
         {
             "name": "swiftmailer/swiftmailer",

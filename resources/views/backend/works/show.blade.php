@@ -1,15 +1,15 @@
 @extends('layouts.backend')
 
 @section('meta-title')
-    Post "{{ $post->title }}"
+    Work "{{ $work->title }}"
 @stop
 
 @section('page-title')
-    Post "{{ $post->title }}"
+    Work "{{ $work->title }}"
 @stop
 
 @section('breadcrumb-title')
-    Post
+    Work
 @stop
 
 @section('content')
@@ -18,15 +18,15 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="blog-post mb40">
-                        <img class="img-responsive full-width" src="{{ $post->image }}" alt="">
+                        <img class="img-responsive full-width" src="{{ $work->image }}" alt="">
                         <div class="blog-post-holder">
                             <ul class="list-inline posted-info">
-                                <li>By <a href="#">{{ $post->author->name }}</a></li>
-                                <li>{{ $post->created_at->diffForHumans() }}</li>
+                                <li>By <a href="#">{{ $work->author->name }}</a></li>
+                                <li>{{ $work->created_at->diffForHumans() }}</li>
                             </ul>
                             <hr align="left" class="mt15 mb10">
-                            <h2>{{ $post->title }}</h2>
-                            {!! $post->content !!}
+                            <h2>{{ $work->title }}</h2>
+                            {!! $work->content !!}
                         </div>
                     </div>
                 </div>

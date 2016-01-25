@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>@yield('page-title', 'Page Title') - Tyloo.fr Backend</title>
+    <title>@yield('meta-title', 'Page Title') - Tyloo.fr Backend</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <link href="/assets/css/backend.css" rel="stylesheet">
@@ -97,7 +97,7 @@
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
-                <li class="header">HEADER</li>
+                <li class="header">Elements</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li class="treeview">
@@ -105,13 +105,20 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('admin.posts.index') }}"><i class="fa fa-eye"></i> List Posts</a></li>
                         <li><a href="{{ route('admin.posts.create') }}"><i class="fa fa-plus"></i> Add a Post</a></li>
-                        <li class="treeview">
-                            <a href="{{ route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
-                            <ul class="treeview-menu">
-                                <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-eye"></i> List Tags</a></li>
-                                <li><a href="{{ route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
-                            </ul>
-                        </li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ route('admin.works.index') }}"><i class="fa fa-files-o"></i> <span>Works</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('admin.works.index') }}"><i class="fa fa-eye"></i> List Works</a></li>
+                        <li><a href="{{ route('admin.works.create') }}"><i class="fa fa-plus"></i> Add a Work</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-eye"></i> List Tags</a></li>
+                        <li><a href="{{ route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

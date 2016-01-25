@@ -2,6 +2,7 @@
 
 use App\Post;
 use App\Tag;
+use App\Work;
 use Illuminate\Database\Seeder;
 
 class TagTableSeeder extends Seeder
@@ -22,6 +23,13 @@ class TagTableSeeder extends Seeder
         foreach ($posts as $post) {
             $tags = Tag::orderByRaw('RAND()')->take(rand(1, 5))->get(['id']);
             $post->tags()->sync($tags);
+        }
+
+        $works = Work::all();
+
+        foreach ($works as $work) {
+            $tags = Tag::orderByRaw('RAND()')->take(rand(1, 5))->get(['id']);
+            $work->tags()->sync($tags);
         }
     }
 }

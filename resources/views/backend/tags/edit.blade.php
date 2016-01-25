@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Editing Tag "{{ $tag->name }}"
+@stop
+
 @section('page-title')
     Editing Tag "{{ $tag->name }}"
 @stop

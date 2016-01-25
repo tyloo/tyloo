@@ -32,7 +32,21 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'excerpt'   => '<p>'.$faker->text(200).'</p>',
         'content'   => '<p>'.$faker->text(2000).'</p>',
         'image'     => $faker->imageUrl(750, 346, 'cats', false),
-        'author_id' => rand(1, 10),
+        'author_id' => 1,
+    ];
+});
+
+$factory->define(App\Work::class, function (Faker\Generator $faker) {
+    $title = substr($faker->sentence(rand(3, 7)), 0, -1);
+
+    return [
+        'title'     => $title,
+        'slug'      => str_slug($title),
+        'excerpt'   => '<p>'.$faker->text(200).'</p>',
+        'content'   => '<p>'.$faker->text(2000).'</p>',
+        'image'     => $faker->imageUrl(750, 346, 'cats', false),
+        'author_id' => 1,
+        'link'      => 'https://tyloo.fr'
     ];
 });
 

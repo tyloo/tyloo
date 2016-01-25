@@ -9,7 +9,7 @@ use App\User;
 class PostsControllerTest extends AbstractTestCase
 {
     /** @test */
-    public function it_can_upload_an_image()
+    public function it_can_upload_an_image_for_post()
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/img/logo.png');

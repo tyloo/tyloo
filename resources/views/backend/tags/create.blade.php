@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Create a Tag
+@stop
+
 @section('page-title')
     Create a Tag
 @stop

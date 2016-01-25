@@ -1,11 +1,15 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Posts
+@stop
+
 @section('page-title')
-    Posts (Blog / Work) <a href="{{ route('admin.posts.create') }}" class="btn btn-sm btn-primary">Create a new Post</a>
+    Posts <a href="{{ route('admin.posts.create') }}" class="btn btn-sm btn-primary">Create a new Post</a>
 @stop
 
 @section('breadcrumb-title')
-    Posts (Blog / Work)
+    Posts
 @stop
 
 @section('content')

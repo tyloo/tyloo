@@ -4,20 +4,10 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
-use App\Repositories\TagsRepository;
+use App\Tag;
 
 class TagsController extends Controller
 {
-    /**
-     * @var \App\Repositories\TagsRepository
-     */
-    private $repository;
-
-    public function __construct(TagsRepository $repository)
-    {
-        $this->repository = $repository;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +15,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        $tags = $this->repository->all();
+        $tags = Tag::all();
 
         return view('backend.tags.index', compact('tags'));
     }
@@ -49,7 +39,7 @@ class TagsController extends Controller
      */
     public function store(TagRequest $request)
     {
-        $this->repository->create($request->all());
+        Tag::create($request->all());
 
         return redirect()->route('admin.tags.index');
     }
@@ -63,7 +53,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        $tag = $this->repository->find($id);
+        $tag = Tag::findOrFail($id);
 
         return view('backend.tags.show', compact('tag'));
     }
@@ -77,7 +67,7 @@ class TagsController extends Controller
      */
     public function edit($id)
     {
-        $tag = $this->repository->find($id);
+        $tag = Tag::findOrFail($id);
 
         return view('backend.tags.edit', compact('tag'));
     }
@@ -92,7 +82,7 @@ class TagsController extends Controller
      */
     public function update(TagRequest $request, $id)
     {
-        $this->repository->update($id, $request->except(['_token', '_method']));
+        Tag::findOrFail($id)->update($request->all());
 
         return redirect()->route('admin.tags.index');
     }
@@ -106,7 +96,8 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        $this->repository->delete($id);
+        $tag = Tag::findOrFail($id);
+        $tag->delete($id);
 
         return redirect()->route('admin.tags.index');
     }

@@ -4,20 +4,10 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
-use App\Repositories\UsersRepository;
+use App\User;
 
 class UsersController extends Controller
 {
-    /**
-     * @var \App\Repositories\UsersRepository
-     */
-    private $repository;
-
-    public function __construct(UsersRepository $repository)
-    {
-        $this->repository = $repository;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = $this->repository->all();
+        $users = User::all();
 
         return view('backend.users.index', compact('users'));
     }
@@ -49,7 +39,7 @@ class UsersController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $this->repository->create($request->all());
+        User::create($request->all());
 
         return redirect()->route('admin.users.index');
     }
@@ -63,7 +53,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = $this->repository->find($id);
+        $user = User::findOrFail($id);
 
         return view('backend.users.show', compact('user'));
     }
@@ -77,7 +67,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->repository->find($id);
+        $user = User::findOrFail($id);
 
         return view('backend.users.edit', compact('user'));
     }
@@ -92,7 +82,7 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $this->repository->update($id, $request->except(['_token', '_method']));
+        User::findOrFail($id)->update($request->all());
 
         return redirect()->route('admin.users.index');
     }
@@ -106,7 +96,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $this->repository->delete($id);
+        $user = User::findOrFail($id);
+        $user->delete($id);
 
         return redirect()->route('admin.users.index');
     }

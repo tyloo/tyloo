@@ -2,17 +2,17 @@
 
 namespace App\Tests;
 
-use App\Post;
 use App\Tag;
 use App\User;
+use App\Work;
 use Mockery;
 
-class PostTest extends AbstractTestCase
+class WorkTest extends AbstractTestCase
 {
     /** @test */
     public function it_has_an_author()
     {
-        $mock = Mockery::mock(Post::class)->makePartial();
+        $mock = Mockery::mock(Work::class)->makePartial();
         $mock->shouldReceive('belongsTo')
             ->once()
             ->with(User::class)
@@ -24,10 +24,10 @@ class PostTest extends AbstractTestCase
     /** @test */
     public function it_has_tags()
     {
-        $mock = Mockery::mock(Post::class)->makePartial();
+        $mock = Mockery::mock(Work::class)->makePartial();
         $mock->shouldReceive('belongsToMany')
             ->once()
-            ->with(Tag::class, 'post_tag')
+            ->with(Tag::class, 'work_tag')
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->tags());

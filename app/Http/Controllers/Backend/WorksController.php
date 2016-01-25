@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\PostRequest;
-use App\Post;
+use App\Http\Requests\WorkRequest;
+use App\Work;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
-class PostsController extends Controller
+class WorksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $works = Work::all();
 
-        return view('backend.posts.index', compact('posts'));
+        return view('backend.works.index', compact('works'));
     }
 
     /**
@@ -29,21 +29,21 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('backend.posts.create');
+        return view('backend.works.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param PostRequest $request
+     * @param WorkRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(PostRequest $request)
+    public function store(WorkRequest $request)
     {
-        $this->savePost($request->all());
+        $this->saveWork($request->all());
 
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.works.index');
     }
 
     /**
@@ -55,9 +55,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $work = Work::findOrFail($id);
 
-        return view('backend.posts.show', compact('post'));
+        return view('backend.works.show', compact('work'));
     }
 
     /**
@@ -69,24 +69,24 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
+        $work = Work::findOrFail($id);
 
-        return view('backend.posts.edit', compact('post'));
+        return view('backend.works.edit', compact('work'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param PostRequest $request
-     * @param int             $id
+     * @param WorkRequest $request
+     * @param int         $id
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(PostRequest $request, $id)
+    public function update(WorkRequest $request, $id)
     {
-        $this->savePost($request->all(), $id);
+        $this->saveWork($request->all(), $id);
 
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.works.index');
     }
 
     /**
@@ -98,29 +98,29 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
-        $post->delete($id);
+        $work = Work::findOrFail($id);
+        $work->delete($id);
 
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.works.index');
     }
 
     /**
      * @param array        $data
      * @param integer|null $id
      */
-    protected function savePost(array $data = [], $id = null)
+    protected function saveWork(array $data = [], $id = null)
     {
         // Image Handling
         if (isset($data['image'])) {
             $data['image'] = $this->buildImage($data['slug'], $data['image']);
         }
 
-        // We create the Post
+        // We create the Work
         if ($id === null) {
             $data['author_id'] = Auth::id();
-            Post::create($data);
+            Work::create($data);
         } else {
-            Post::findOrFail($id)->update($data);
+            Work::findOrFail($id)->update($data);
         }
     }
 

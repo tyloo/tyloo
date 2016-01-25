@@ -3,23 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\Criteria\PostType;
-use App\Repositories\PostsRepository;
 use App\Tag;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Work;
 
 class WorkController extends Controller
 {
-    /**
-     * @var \App\Repositories\PostsRepository
-     */
-    private $repository;
-
-    public function __construct(PostsRepository $repository)
-    {
-        $this->repository = $repository->criteria(new PostType('work'));
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -27,12 +15,8 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = $this->repository->with('tags')->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
-        $tags = Tag::with([
-            'posts' => function (BelongsToMany $query) {
-                $query->where('type', 'work');
-            },
-        ])->get();
+        $works = Work::with('tags')->latest()->get();
+        $tags = Tag::all();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
     }
@@ -46,8 +30,8 @@ class WorkController extends Controller
      */
     public function show($slug)
     {
-        $work = $this->repository->findBy('slug', $slug);
-        $works = $this->repository->fetch(1, 30, ['*'], [], ['id' => 'DESC']);
+        $work = Work::where('slug', $slug)->firstOrFail();
+        $works = Work::latest()->get();
 
         return view('frontend.pages.works.show', compact('work', 'works'));
     }

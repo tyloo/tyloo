@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Create an User
+@stop
+
 @section('page-title')
     Create an User
 @stop

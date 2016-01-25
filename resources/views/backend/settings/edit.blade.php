@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Edit Settings
+@stop
+
 @section('page-title')
     Edit Settings
 @stop

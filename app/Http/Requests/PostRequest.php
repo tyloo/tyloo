@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class PostWorkRequest extends Request
+class PostRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.

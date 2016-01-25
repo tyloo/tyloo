@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('meta-title')
+    Dashboard
+@stop
+
 @section('page-title')
     Dashboard
 @stop
