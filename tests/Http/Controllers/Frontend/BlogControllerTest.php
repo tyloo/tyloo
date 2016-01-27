@@ -4,8 +4,8 @@ namespace App\Tests\Http\Controllers\Frontend;
 
 use App\Post;
 use App\Tag;
-use App\Tests\AbstractTestCase;
 use App\User;
+use Tests\AbstractTestCase;
 
 class BlogControllerTest extends AbstractTestCase
 {

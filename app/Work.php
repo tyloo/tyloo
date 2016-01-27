@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Work extends Model
+class Work extends Model implements Transformable
 {
+    use TransformableTrait;
+
     /**
      * The database table used by the model.
      *
@@ -32,7 +36,7 @@ class Work extends Model
      */
     public function author()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -40,6 +44,6 @@ class Work extends Model
      */
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'work_tag');
+        return $this->belongsToMany(Tag::class, 'work_tag');
     }
 }

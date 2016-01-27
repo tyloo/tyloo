@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Password Reset</title>
+    <title>{{ trans('app.emails.password.password-reset') }}</title>
 </head>
 <body>
-<p>Bonjour Monsieur,<br>
+<p>{{ trans('app.emails.password.password-heading') }}<br>
 <br>
-Vous avez demandé de réinitialiser votre mot de passe et dans toute ma bonté, votre souhait est exhaussé !<br>
-Voici le lien pour changer votre mot de passe : {{ url('password/reset/'.$token) }}
+{{ trans('app.emails.password.password-content1') }}<br>
+{{ trans('app.emails.password.password-content2', ['reset_url' => url('password/reset/'.$token)]) }}
 <hr>
-<p>Cordialement,<br>
-R2D2</p>
+<p>{{ trans('app.emails.password.bottom-message') }}</p>
 </body>
 </html>

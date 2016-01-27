@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Post;
-use App\User;
-use App\Work;
+use App\Repositories\PostRepository;
+use App\Repositories\UserRepository;
+use App\Repositories\WorkRepository;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        $blogPostsCount = Post::all()->count();
-        $workPostsCount = Work::all()->count();
-        $usersCount = User::all()->count();
+        $postsCount = app(PostRepository::class)->all()->count();
+        $worksCount = app(WorkRepository::class)->all()->count();
+        $usersCount = app(UserRepository::class)->all()->count();
 
-        return view('backend.dashboard.index', compact('blogPostsCount', 'workPostsCount', 'usersCount'));
+        return view('backend.dashboard.index', compact('postsCount', 'worksCount', 'usersCount'));
     }
 }

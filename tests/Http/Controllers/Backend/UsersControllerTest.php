@@ -2,9 +2,9 @@
 
 namespace App\Tests\Http\Controllers\Backend;
 
-use App\Tests\AbstractTestCase;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Tests\AbstractTestCase;
 
 class UsersControllerTest extends AbstractTestCase
 {

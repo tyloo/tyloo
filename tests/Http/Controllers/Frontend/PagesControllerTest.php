@@ -2,7 +2,7 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
-use App\Tests\AbstractTestCase;
+use Tests\AbstractTestCase;
 
 class PagesControllerTest extends AbstractTestCase
 {

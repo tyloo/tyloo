@@ -1,10 +1,10 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'My Works', 'pageNameBreadcrumb' => 'Works'])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.works.index.page-title'), 'pageNameBreadcrumb' => trans('app.frontend.works.index.breadcrumb-title')])
 
     <section class="mt40 mb10">
-        <div id="portfolio" class="container-fluid">
+        <div id="portfolio" class="container">
             <!-- Portfolio Filter -->
             @if($tags->count() > 0)
                 <div class="row mb30" style="visibility: visible; ">
@@ -21,9 +21,7 @@
             <div class="row">
                 <ul id="myPortfolio" class="col-sm-12 text-center">
                     @forelse($works as $work)
-                        <li class="item col-sm-2 mix_all
-@foreach($work->tags as $tag) {{ $tag->slug }}@endforeach
-">
+                        <li class="item col-sm-4 mix_all {{ $work->tags->implode('slug', ' ') }}">
                             <div class="border">
                                 <div class="view portfolio-hover-1">
                                     <!-- Project Thumb -->
@@ -49,7 +47,7 @@
                         </li>
                     @empty
                         <p>
-                            No Work have been found in the Database...
+                            {{ trans('app.frontend.works.index.no-work-found') }}
                         </p>
                     @endforelse
                 </ul>

@@ -4,12 +4,22 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WorkRequest;
-use App\Work;
+use App\Repositories\WorkRepository;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
 class WorksController extends Controller
 {
+    /**
+     * @var \App\Repositories\WorkRepository
+     */
+    protected $works;
+
+    public function __construct(WorkRepository $works)
+    {
+        $this->works = $works;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +27,7 @@ class WorksController extends Controller
      */
     public function index()
     {
-        $works = Work::all();
+        $works = $this->works->all();
 
         return view('backend.works.index', compact('works'));
     }
@@ -55,7 +65,7 @@ class WorksController extends Controller
      */
     public function show($id)
     {
-        $work = Work::findOrFail($id);
+        $work = $this->works->find($id);
 
         return view('backend.works.show', compact('work'));
     }
@@ -69,7 +79,7 @@ class WorksController extends Controller
      */
     public function edit($id)
     {
-        $work = Work::findOrFail($id);
+        $work = $this->works->find($id);
 
         return view('backend.works.edit', compact('work'));
     }
@@ -98,8 +108,7 @@ class WorksController extends Controller
      */
     public function destroy($id)
     {
-        $work = Work::findOrFail($id);
-        $work->delete($id);
+        $this->works->delete($id);
 
         return redirect()->route('admin.works.index');
     }
@@ -118,9 +127,9 @@ class WorksController extends Controller
         // We create the Work
         if ($id === null) {
             $data['author_id'] = Auth::id();
-            Work::create($data);
+            $this->works->create($data);
         } else {
-            Work::findOrFail($id)->update($data);
+            $this->works->update($data, $id);
         }
     }
 
@@ -134,7 +143,7 @@ class WorksController extends Controller
      */
     protected function buildImage($slug, $image)
     {
-        $filePath = '/uploads/'.$slug.'.'.$image->getClientOriginalExtension();
+        $filePath = '/uploads/' . $slug . '.' . $image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;

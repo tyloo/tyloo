@@ -3,11 +3,27 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Tag;
-use App\Work;
+use App\Repositories\TagRepository;
+use App\Repositories\WorkRepository;
 
 class WorkController extends Controller
 {
+    /**
+     * @var \App\Repositories\WorkRepository
+     */
+    protected $works;
+
+    /**
+     * @var \App\Repositories\TagRepository
+     */
+    protected $tags;
+
+    public function __construct(WorkRepository $works, TagRepository $tags)
+    {
+        $this->works = $works;
+        $this->tags = $tags;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +31,8 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::with('tags')->latest()->get();
-        $tags = Tag::all();
+        $works = $this->works->with('tags')->latest()->all();
+        $tags = $this->tags->all();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
     }
@@ -30,9 +46,24 @@ class WorkController extends Controller
      */
     public function show($slug)
     {
-        $work = Work::where('slug', $slug)->firstOrFail();
-        $works = Work::latest()->get();
+        $work = $this->works->findByField('slug', $slug)->first();
+        $works = $this->works->latest()->all();
 
         return view('frontend.pages.works.show', compact('work', 'works'));
+    }
+
+    /**
+     * Display a listing of the resource based on a tag.
+     *
+     * @param $slug
+     *
+     * @return \Illuminate\View\View
+     */
+    public function tag($slug)
+    {
+        $tag = $this->tags->findByField('slug', $slug)->first();
+        $works = $tag->works()->paginate(5);
+
+        return view('frontend.pages.works.tag', compact('tag', 'works'));
     }
 }

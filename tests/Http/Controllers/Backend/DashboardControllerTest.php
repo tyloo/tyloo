@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests\Http\Controllers\Backend;
+namespace Tests\Http\Controllers\Backend;
 
-use App\Tests\AbstractTestCase;
 use App\User;
+use Tests\AbstractTestCase;
 
 class DashboardControllerTest extends AbstractTestCase
 {

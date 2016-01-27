@@ -1,5 +1,5 @@
 <div class="blog-heading">
-    <h3>Last Posts</h3>
+    <h3>{{ trans('app.blocks.blog.last-posts.title') }}</h3>
 </div>
 <ul class="list-unstyled latest-posts">
     @forelse($lastPosts as $post)
@@ -13,6 +13,6 @@
         {!! $post->excerpt !!}
     </li>
     @empty
-        <li>No post were found.</li>
+        <li>{{ trans('app.blocks.blog.last-posts.no-post-found') }}</li>
     @endforelse
 </ul>

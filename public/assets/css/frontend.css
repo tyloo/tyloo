@@ -1536,6 +1536,13 @@ blockquote {
     border-bottom:1px dotted #D2D2D2;
     font-size:12px;
 }
+.heading.no-margin {
+    border-bottom: none;
+}
+.heading.no-margin h4 {
+    border-bottom:none;
+    padding-bottom:0;
+}
 .no-margin-bottom {
     margin-bottom:1px;
 }

@@ -5,10 +5,19 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Jobs\SendContactEmail;
-use App\Work;
+use App\Repositories\WorkRepository;
 
 class PagesController extends Controller
 {
+    /**
+     * @var \App\Repositories\WorkRepository
+     */
+    private $works;
+
+    public function __construct(WorkRepository $works) {
+        $this->works = $works;
+    }
+
     /**
      * Home Page.
      *
@@ -16,7 +25,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        $works = Work::latest()->get();
+        $works = $this->works->latest()->all();
 
         return view('frontend.pages.home', compact('works'));
     }
@@ -52,6 +61,6 @@ class PagesController extends Controller
     {
         $this->dispatch(new SendContactEmail($request->all()));
 
-        return view('frontend.pages.contact')->withSuccess(trans('app.contact.confirmMailSent'));
+        return view('frontend.pages.contact')->withSuccess(trans('app.frontend.contact.confirmMailSent'));
     }
 }

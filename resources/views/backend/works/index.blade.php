@@ -16,7 +16,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Type</th>
                 <th>Title</th>
                 <th>URL</th>
                 <th>Author</th>
@@ -26,10 +25,9 @@
         </thead>
     @forelse($works as $work)
         <tr>
-            <td>{{ ucfirst($work->type) }}</td>
             <td>{{ $work->title }}</td>
-            <td>/{{ $work->type }}/{{ $work->slug }}</td>
-            <td><a href="{{ route('admin.works.show', $work->author->id) }}" target="_blank">{{ $work->author->name }}</a></td>
+            <td>/works/{{ $work->slug }}</td>
+            <td><a href="{{ route('admin.users.show', $work->author->id) }}" target="_blank">{{ $work->author->name }}</a></td>
             <td>{{ $work->updated_at->diffForHumans() }}</td>
             <td><a href="{{ route('admin.works.show', $work->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
             <a href="{{ route('admin.works.edit', $work->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>

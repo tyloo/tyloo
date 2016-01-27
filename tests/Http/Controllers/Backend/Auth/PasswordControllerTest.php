@@ -2,7 +2,7 @@
 
 namespace App\Tests\Http\Controllers\Backend\Auth;
 
-use App\Tests\AbstractTestCase;
+use Tests\AbstractTestCase;
 
 class PasswordControllerTest extends AbstractTestCase
 {

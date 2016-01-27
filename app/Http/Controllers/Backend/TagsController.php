@@ -4,10 +4,20 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
-use App\Tag;
+use App\Repositories\TagRepository;
 
 class TagsController extends Controller
 {
+    /**
+     * @var \App\Repositories\TagRepository
+     */
+    protected $tags;
+
+    public function __construct(TagRepository $tags)
+    {
+        $this->tags = $tags;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +25,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
+        $tags = $this->tags->all();
 
         return view('backend.tags.index', compact('tags'));
     }
@@ -39,7 +49,7 @@ class TagsController extends Controller
      */
     public function store(TagRequest $request)
     {
-        Tag::create($request->all());
+        $this->tags->create($request->all());
 
         return redirect()->route('admin.tags.index');
     }
@@ -53,7 +63,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        $tag = Tag::findOrFail($id);
+        $tag = $this->tags->find($id);
 
         return view('backend.tags.show', compact('tag'));
     }
@@ -67,7 +77,7 @@ class TagsController extends Controller
      */
     public function edit($id)
     {
-        $tag = Tag::findOrFail($id);
+        $tag = $this->tags->find($id);
 
         return view('backend.tags.edit', compact('tag'));
     }
@@ -82,7 +92,7 @@ class TagsController extends Controller
      */
     public function update(TagRequest $request, $id)
     {
-        Tag::findOrFail($id)->update($request->all());
+        $this->tags->update($request->all(), $id);
 
         return redirect()->route('admin.tags.index');
     }
@@ -96,8 +106,7 @@ class TagsController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::findOrFail($id);
-        $tag->delete($id);
+        $this->tags->delete($id);
 
         return redirect()->route('admin.tags.index');
     }

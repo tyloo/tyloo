@@ -1,15 +1,15 @@
 @extends('layouts.backend')
 
 @section('page-title')
-    Profile
+    {{ trans('app.auth.profile') }}
 @stop
 
 @section('breadcrumb-title')
-    Profile
+    {{ trans('app.auth.profile') }}
 @stop
 
 @section('content')
-    <div class="alert alert-success">
-        Welcome, {{ $user->name }} !
+    <div class="alert alert-info">
+        {{ trans('app.auth.welcome', ['user_name' => $user->name]) }}
     </div>
 @stop

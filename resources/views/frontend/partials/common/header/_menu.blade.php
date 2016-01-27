@@ -1,10 +1,10 @@
 <nav class="navbar-collapse collapse navHeaderCollapse" role="navigation">
     <ul class="nav navbar-nav navbar-right">
-        <li{{ Request::is('/') ? ' class=active' : '' }}><a href="{{ route('home') }}">Home</a></li>
-        <li{{ Request::is('resume') ? ' class=active' : '' }}><a href="{{ route('resume') }}">Resume</a></li>
-        <li{{ Request::segment(1) == 'works' ? ' class=active' : '' }}><a href="{{ route('works.index') }}">Works</a></li>
-        <li{{ Request::segment(1) == 'blog' ? ' class=active' : '' }}><a href="{{ route('blog.index') }}">Blog</a></li>
-        <li{{ Request::is('contact') ? ' class=active' : '' }}><a href="{{ route('contact') }}">Contact</a></li>
+        <li{{ Request::is('/') ? ' class=active' : '' }}><a href="{{ route('home') }}">{{ trans('app.menu.home') }}</a></li>
+        <li{{ Request::is('resume') ? ' class=active' : '' }}><a href="{{ route('resume') }}">{{ trans('app.menu.resume') }}</a></li>
+        <li{{ Request::segment(1) == 'works' ? ' class=active' : '' }}><a href="{{ route('works.index') }}">{{ trans('app.menu.works') }}</a></li>
+        <li{{ Request::segment(1) == 'blog' ? ' class=active' : '' }}><a href="{{ route('blog.index') }}">{{ trans('app.menu.blog') }}</a></li>
+        <li{{ Request::is('contact') ? ' class=active' : '' }}><a href="{{ route('contact') }}">{{ trans('app.menu.contact') }}</a></li>
 
         <li class="navbar-social visible-lg-block"><a href="https://github.com/tyloo" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-github-alt"></i></a></li>
         <li class="navbar-social visible-lg-block"><a href="https://www.linkedin.com/pub/julien-bonvarlet/32/427/778" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-linkedin"></i></a></li>

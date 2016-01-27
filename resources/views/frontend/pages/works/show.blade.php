@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'Blog', 'pageNameBreadcrumb' => 'Blog'])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.works.show.page-title', ['work_title' => $work->title]), 'pageNameBreadcrumb' => trans('app.frontend.works.show.breadcrumb-title')])
 
     <!-- Project Details -->
     <section class="mt40 mb40">
@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb30">
-                        <h4>Recent Work</h4>
+                        <h4>{{ trans('app.frontend.works.show.recent-work') }}</h4>
                         <div class="owl-controls">
                             <div id="customNav" class="owl-nav"></div>
                         </div>

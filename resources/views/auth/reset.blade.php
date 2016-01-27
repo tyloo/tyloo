@@ -10,20 +10,20 @@
             @include('errors.formErrors')
 
             <div class="form-group has-feedback">
-                <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                <input type="email" name="email" class="form-control" placeholder="{{ trans('app.email') }}" value="{{ old('email') }}">
                 <i class="fa fa-envelope form-control-feedback"></i>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="{{ trans('app.password') }}">
                 <i class="fa fa-lock form-control-feedback"></i>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder="{{ trans('app.password-confirm') }}">
                 <i class="fa fa-lock form-control-feedback"></i>
             </div>
             <div class="row">
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('app.btn-submit') }}</button>
                 </div>
             </div>
         </form>

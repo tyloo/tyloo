@@ -4,9 +4,13 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Transformable
 {
+    use TransformableTrait;
+
     /**
      * The database table used by the model.
      *
@@ -38,6 +42,6 @@ class User extends Authenticatable
      */
     public function posts()
     {
-        return $this->hasMany('App\Post');
+        return $this->hasMany(Post::class);
     }
 }

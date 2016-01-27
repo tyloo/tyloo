@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Tests\Http\Controllers\Backend;
+namespace Tests\Http\Controllers\Backend;
 
-use App\Tests\AbstractTestCase;
+use Tests\AbstractTestCase;
 
 class SettingsControllerTest extends AbstractTestCase
 {

@@ -4,10 +4,20 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
-use App\User;
+use App\Repositories\UserRepository;
 
 class UsersController extends Controller
 {
+    /**
+     * @var \App\Repositories\UserRepository
+     */
+    protected $users;
+
+    public function __construct(UserRepository $users)
+    {
+        $this->users = $users;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +25,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = $this->users->all();
 
         return view('backend.users.index', compact('users'));
     }
@@ -39,7 +49,7 @@ class UsersController extends Controller
      */
     public function store(UserRequest $request)
     {
-        User::create($request->all());
+        $this->users->create($request->all());
 
         return redirect()->route('admin.users.index');
     }
@@ -53,7 +63,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
+        $user = $this->users->find($id);
 
         return view('backend.users.show', compact('user'));
     }
@@ -67,7 +77,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        $user = $this->users->find($id);
 
         return view('backend.users.edit', compact('user'));
     }
@@ -82,7 +92,7 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        User::findOrFail($id)->update($request->all());
+        $this->users->update($request->all(), $id);
 
         return redirect()->route('admin.users.index');
     }
@@ -96,8 +106,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete($id);
+        $this->users->delete($id);
 
         return redirect()->route('admin.users.index');
     }

@@ -2,10 +2,10 @@
 
 namespace App\Tests\Console\Commands;
 
-use App\Tests\AbstractTestCase;
 use DOMDocument;
 use Illuminate\Support\Facades\Artisan;
 use Mockery;
+use Tests\AbstractTestCase;
 
 class SitemapCommandTest extends AbstractTestCase
 {

@@ -3,7 +3,7 @@
 namespace App\Tests\Http\Controllers\Backend;
 
 use App\Tag;
-use App\Tests\AbstractTestCase;
+use Tests\AbstractTestCase;
 
 class TagsControllerTest extends AbstractTestCase
 {

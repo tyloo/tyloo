@@ -16,7 +16,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Type</th>
                 <th>Title</th>
                 <th>URL</th>
                 <th>Author</th>
@@ -26,10 +25,9 @@
         </thead>
     @forelse($posts as $post)
         <tr>
-            <td>{{ ucfirst($post->type) }}</td>
             <td>{{ $post->title }}</td>
-            <td>/{{ $post->type }}/{{ $post->slug }}</td>
-            <td><a href="{{ route('admin.posts.show', $post->author->id) }}" target="_blank">{{ $post->author->name }}</a></td>
+            <td>/blog/{{ $post->slug }}</td>
+            <td><a href="{{ route('admin.users.show', $post->author->id) }}" target="_blank">{{ $post->author->name }}</a></td>
             <td>{{ $post->updated_at->diffForHumans() }}</td>
             <td><a href="{{ route('admin.posts.show', $post->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>
             <a href="{{ route('admin.posts.edit', $post->id) }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>

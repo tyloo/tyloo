@@ -2,8 +2,8 @@
 
 namespace App\Tests\Http\Controllers\Backend\Auth;
 
-use App\Tests\AbstractTestCase;
 use App\User;
+use Tests\AbstractTestCase;
 
 class ProfileControllerTest extends AbstractTestCase
 {

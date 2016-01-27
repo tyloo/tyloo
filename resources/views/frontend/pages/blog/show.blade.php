@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'Blog', 'pageNameBreadcrumb' => 'Blog'])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.show.index.page-title', ['post_title' => $post->title]), 'pageNameBreadcrumb' => trans('app.frontend.blog.show.breadcrumb-title')])
 
     <section class="mt40 mb40">
         <div class="container">
@@ -11,7 +11,7 @@
                         <img class="img-responsive full-width" src="{{ $post->image }}" alt="">
                         <div class="blog-post-holder">
                             <ul class="list-inline posted-info">
-                                <li>By <a href="#">{{ $post->author->name }}</a></li>
+                                <li>{{ trans('app.by') }} <a href="#">{{ $post->author->name }}</a></li>
                                 <li>{{ $post->created_at->diffForHumans() }}</li>
                             </ul>
                             <hr align="left" class="mt15 mb10">

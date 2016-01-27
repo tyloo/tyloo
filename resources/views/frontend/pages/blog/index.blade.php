@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => 'Blog', 'pageNameBreadcrumb' => 'Blog'])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.blog.index.page-title'), 'pageNameBreadcrumb' => trans('app.frontend.blog.index.breadcrumb-title')])
 
     <section class="mt40 mb40">
         <div class="container">
@@ -13,18 +13,18 @@
                             <a href="{{ route('blog.show', ['slug' => $post->slug]) }}"><img class="img-responsive full-width" src="{{ $post->image }}" alt=""></a>
                             <div class="blog-post-holder">
                                 <ul class="list-inline posted-info">
-                                    <li>By <a href="#">{{ $post->author->name }}</a></li>
+                                    <li>{{ trans('app.by') }} <a href="#">{{ $post->author->name }}</a></li>
                                     <li>{{ $post->created_at->diffForHumans() }}</li>
                                 </ul>
                                 <hr align="left" class="mt15 mb10">
                                 <h2><a href="{{ route('blog.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a></h2>
                                 {!! $post->excerpt !!}
-                                <a href="{{ route('blog.show', ['slug' => $post->slug]) }}" class="btn btn-rw btn-primary mt10">Read more</a>
+                                <a href="{{ route('blog.show', ['slug' => $post->slug]) }}" class="btn btn-rw btn-primary mt10">{{ trans('app.btn-read-more') }}</a>
                             </div>
                         </div>
                     @empty
                         <p>
-                            No Post have been found in the Database...
+                            {{ trans('app.frontend.blog.index.no-post-found') }}
                         </p>
                     @endforelse
 

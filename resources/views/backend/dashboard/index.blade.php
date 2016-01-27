@@ -17,7 +17,7 @@
         <div class="col-lg-3 col-xs-6">
             <div class="small-box bg-aqua">
                 <div class="inner">
-                    <h3>{{ $blogPostsCount }}</h3>
+                    <h3>{{ $postsCount }}</h3>
                     <p>Blog Posts</p>
                 </div>
                 <div class="icon">
@@ -29,7 +29,7 @@
         <div class="col-lg-3 col-xs-6">
             <div class="small-box bg-green">
                 <div class="inner">
-                    <h3>{{ $workPostsCount }}</h3>
+                    <h3>{{ $worksCount }}</h3>
                     <p>Work Entries</p>
                 </div>
                 <div class="icon">

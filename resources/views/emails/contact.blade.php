@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demande de contact</title>
+    <title>{{ trans('app.emails.contact.contact-message') }}</title>
 </head>
 <body>
-<p>Bonjour Dieu,<br>
-<br>
-Une demande de Contact a été effectuée sur le site <a href="http://www.tyloo.fr">www.tyloo.fr</a> !</p>
-<p>Voici les informations :</p>
+<p>
+    {{ trans('app.emails.contact.contact-message') }}<br>
+    <br>
+    {!! trans('app.emails.contact.contact-info-text', ['website_url' => route('home')]) !!}
+</p>
+<p>{{ trans('app.emails.contact.here-are-the-infos') }}</p>
 <ul>
-    <li><strong>Nom</strong> : {{ $data['contactName'] }}</li>
-    <li><strong>Email</strong> : {{ $data['contactEmail'] }}</li>
-    <li><strong>Message</strong> : {!! $data['contactMessage'] !!}</li>
+    <li><strong>{{ trans('app.name') }}</strong> : {{ $data['contactName'] }}</li>
+    <li><strong>{{ trans('app.email') }}</strong> : {{ $data['contactEmail'] }}</li>
+    <li><strong>{{ trans('app.message') }}</strong> : {!! $data['contactMessage'] !!}</li>
 </ul>
 <hr>
-<p>Cordialement,<br>
-R2D2</p>
+<p>{{ trans('app.emails.contact.bottom-message') }}</p>
 </body>
 </html>
