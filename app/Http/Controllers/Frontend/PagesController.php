@@ -14,7 +14,8 @@ class PagesController extends Controller
      */
     private $works;
 
-    public function __construct(WorkRepository $works) {
+    public function __construct(WorkRepository $works)
+    {
         $this->works = $works;
     }
 

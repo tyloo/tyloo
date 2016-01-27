@@ -19,11 +19,12 @@ class BlogController extends Controller
      */
     protected $tags;
 
-    public function __construct(PostRepository $posts, TagRepository $tags) {
+    public function __construct(PostRepository $posts, TagRepository $tags)
+    {
         $this->posts = $posts;
         $this->tags = $tags;
     }
-    
+
     /**
      * Display a listing of the resource.
      *

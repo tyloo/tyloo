@@ -9,7 +9,7 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class WorkRepository extends BaseRepository
 {
     /**
-     * Specify Model class name
+     * Specify Model class name.
      *
      * @return string
      */
@@ -19,15 +19,21 @@ class WorkRepository extends BaseRepository
     }
 
     /**
-     * Boot up the repository, pushing criteria
+     * Boot up the repository, pushing criteria.
      */
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
 
-    public function latest() {
-        return $this->scopeQuery(function($query){
+    /**
+     * Latest works query scope.
+     *
+     * @return $this
+     */
+    public function latest()
+    {
+        return $this->scopeQuery(function ($query) {
             return $query->latest();
         });
     }

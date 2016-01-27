@@ -9,7 +9,7 @@ use Prettus\Repository\Eloquent\BaseRepository;
 class TagRepository extends BaseRepository
 {
     /**
-     * Specify Model class name
+     * Specify Model class name.
      *
      * @return string
      */
@@ -19,7 +19,7 @@ class TagRepository extends BaseRepository
     }
 
     /**
-     * Boot up the repository, pushing criteria
+     * Boot up the repository, pushing criteria.
      */
     public function boot()
     {
