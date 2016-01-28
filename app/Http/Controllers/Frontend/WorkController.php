@@ -31,7 +31,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = $this->works->with('tags')->latest()->all();
+        $works = $this->works->with('tags')->all();
         $tags = $this->tags->all();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
@@ -47,7 +47,7 @@ class WorkController extends Controller
     public function show($slug)
     {
         $work = $this->works->findByField('slug', $slug)->first();
-        $works = $this->works->latest()->all();
+        $works = $this->works->all();
 
         return view('frontend.pages.works.show', compact('work', 'works'));
     }

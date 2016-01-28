@@ -26,7 +26,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        $works = $this->works->latest()->all();
+        $works = $this->works->all();
 
         return view('frontend.pages.home', compact('works'));
     }

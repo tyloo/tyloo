@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 use App\Repositories\TagRepository;
-use App\Tag;
 
 class BlogController extends Controller
 {

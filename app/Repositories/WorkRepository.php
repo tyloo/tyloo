@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Work;
+use Illuminate\Database\Eloquent\Builder;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Prettus\Repository\Eloquent\BaseRepository;
 
@@ -24,17 +25,5 @@ class WorkRepository extends BaseRepository
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
-    }
-
-    /**
-     * Latest works query scope.
-     *
-     * @return $this
-     */
-    public function latest()
-    {
-        return $this->scopeQuery(function ($query) {
-            return $query->latest();
-        });
     }
 }
