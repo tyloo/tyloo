@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Post;
-use Illuminate\Database\Eloquent\Builder;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Prettus\Repository\Eloquent\BaseRepository;
 
