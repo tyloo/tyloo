@@ -32,14 +32,6 @@ class Tag extends Model implements Transformable
     protected $hidden = [];
 
     /**
-     * Get all the posts for a given Tag.
-     */
-    public function posts()
-    {
-        return $this->belongsToMany(Post::class, 'post_tag');
-    }
-
-    /**
      * Get all the works for a given Tag.
      */
     public function works()

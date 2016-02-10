@@ -39,5 +39,7 @@ abstract class AbstractTestCase extends TestCase
     {
         $user = factory(User::class)->create();
         $this->be($user);
+
+        return $user;
     }
 }

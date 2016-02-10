@@ -250,8 +250,8 @@ return [
                 'page-title'       => 'Blog',
                 'breadcrumb-title' => 'Blog',
             ],
-            'tag'   => [
-                'page-title'       => 'Blog - All Posts with tag ":tag_name"',
+            'topic'   => [
+                'page-title'       => 'Blog - All Posts with topic ":topic_name"',
                 'breadcrumb-title' => 'Blog',
                 'no-post-found'    => 'No post have been found in the database...',
             ],

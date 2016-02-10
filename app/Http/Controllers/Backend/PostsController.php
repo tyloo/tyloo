@@ -114,8 +114,12 @@ class PostsController extends Controller
     }
 
     /**
+     * We create or update the Post.
+     *
      * @param array    $data
      * @param int|null $id
+     *
+     * @return Post
      */
     protected function savePost(array $data = [], $id = null)
     {
@@ -127,10 +131,11 @@ class PostsController extends Controller
         // We create the Post
         if ($id === null) {
             $data['author_id'] = Auth::id();
-            $this->posts->create($data);
-        } else {
-            $this->posts->update($data, $id);
+
+            return $this->posts->create($data);
         }
+
+        return $this->posts->update($data, $id);
     }
 
     /**
@@ -143,7 +148,7 @@ class PostsController extends Controller
      */
     protected function buildImage($slug, $image)
     {
-        $filePath = '/uploads/'.$slug.'.'.$image->getClientOriginalExtension();
+        $filePath = '/uploads/posts/'.$slug.'.'.$image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;

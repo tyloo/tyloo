@@ -3,7 +3,6 @@
 namespace Tests\Http\Controllers\Backend;
 
 use App\Post;
-use App\User;
 use Tests\AbstractTestCase;
 
 class PostsControllerTest extends AbstractTestCase
@@ -13,7 +12,7 @@ class PostsControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/img/logo.png');
-        $uploadPath = '/uploads/post-title.png';
+        $uploadPath = '/uploads/posts/post-title.png';
 
         $this->visit('/admin/posts/create')
             ->type('Post Title', 'title')
@@ -61,14 +60,13 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_has_a_page_showing_a_single_post()
     {
-        $this->createAndBe();
-
-        $user = factory(User::class)->create();
+        $user = $this->createAndBe();
         $post = factory(Post::class)->create([
             'title'     => 'Post Title',
             'slug'      => 'post-title',
             'author_id' => $user->id,
         ]);
+
         $this->visit('/admin/posts/'.$post->id);
         $this->assertViewHas('post');
     }
@@ -76,9 +74,9 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_edit_a_post()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
-        $post = factory(Post::class)->create();
+        $post = factory(Post::class)->create(['author_id' => $user->id]);
         $this->visit('/admin/posts/'.$post->id.'/edit');
         $this->assertViewHas('post');
     }
@@ -86,10 +84,10 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_update_a_post()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
         $data = ['title' => 'New Title', 'content' => 'New Content'];
-        $post = factory(Post::class)->create();
+        $post = factory(Post::class)->create(['author_id' => $user->id]);
 
         $this->put('/admin/posts/'.$post->id, $data);
         $this->seeInDatabase('posts', ['title' => $data['title']]);
@@ -99,13 +97,14 @@ class PostsControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_delete_a_post()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
         $data = [
             'title'     => 'Post Title',
             'slug'      => 'post-title',
             'excerpt'   => 'Post Excerpt',
             'content'   => 'Post Content',
+            'author_id' => $user->id,
         ];
         $post = factory(Post::class)->create($data);
 

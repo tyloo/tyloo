@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreatePostTagPivotTable extends Migration
+class CreateTopicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class CreatePostTagPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_tag', function (Blueprint $table) {
+        Schema::create('topics', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('post_id');
-            $table->integer('tag_id');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('content');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreatePostTagPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('post_tag');
+        Schema::drop('topics');
     }
 }

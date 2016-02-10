@@ -32,7 +32,7 @@ class WorkController extends Controller
     public function index()
     {
         $works = $this->works->with('tags')->all();
-        $tags = $this->tags->all();
+        $tags = $this->tags->has('works')->all();
 
         return view('frontend.pages.works.index', compact('works', 'tags'));
     }

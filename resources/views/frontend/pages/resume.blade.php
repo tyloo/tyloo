@@ -78,7 +78,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
+                <li>
                     <div class="timeline-panel">
                         <div class="heading no-margin">
                             <h4>{!! trans('app.frontend.resume.education.2.title') !!}</h4>
@@ -101,43 +101,43 @@
             </div>
             <div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.1.label') !!}</p>
-                <div class="progress" data-sr="enter right move 100px over 1s">
+                <div class="progress reveal-left">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 100%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.1.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.2.label') !!}</p>
-                <div class="progress" data-sr="enter left move 100px over 1s">
+                <div class="progress reveal-right">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 100%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.2.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.3.label') !!}</p>
-                <div class="progress" data-sr="enter left move 100px over 1s">
+                <div class="progress reveal-left">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 70%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.3.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.4.label') !!}</p>
-                <div class="progress" data-sr="enter right move 100px over 1s">
+                <div class="progress reveal-right">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 60%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.4.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.5.label') !!}</p>
-                <div class="progress" data-sr="enter left move 100px over 1s">
+                <div class="progress reveal-left">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 100%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.5.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.6.label') !!}</p>
-                <div class="progress" data-sr="enter left move 100px over 1s">
+                <div class="progress reveal-right">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 80%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.6.level') }}</span>
                     </div>
                 </div>
                 <p class="progress-head">{!! trans('app.frontend.resume.skills.7.label') !!}</p>
-                <div class="progress" data-sr="enter left move 100px over 1s">
+                <div class="progress reveal-left">
                     <div class="progress-bar progress-bar-primary" role="progressbar" style="width: 90%">
                         <span class="progress-bar-tooltip">{{ trans('app.frontend.resume.skills.7.level') }}</span>
                     </div>

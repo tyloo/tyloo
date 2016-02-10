@@ -1,16 +1,18 @@
-@if(!empty($works))
+@if($works->count() > 0)
     <div id="owl-carousel-thumb" class="owl-carousel">
-    @foreach($works as $work)
-        <div class="thumbnail">
-            <div class="caption v-wrap">
-                <div class="thumbnail-caption-holder v-box">
-                    <h4 class="text-white">{{ $work->title }}</h4>
-                    <a href="{{ route('works.show', ['slug' => $work->slug]) }}" class="btn btn-rw btn-clear"><i class="fa fa-search"></i> View</a>
+        @foreach($works as $work)
+            <div>
+                <div class="thumbnail">
+                    <div class="caption">
+                        <div class="thumbnail-caption-holder">
+                            <h4 class="text-white">{{ $work->title }}</h4>
+                            <a href="{{ route('works.show', ['slug' => $work->slug]) }}" class="btn btn-rw btn-clear"><span class="ion-android-search"></span> View</a>
+                        </div>
+                    </div>
+                    <img src="{{ asset($work->image) }}" alt="...">
                 </div>
             </div>
-            <img src="{{ asset($work->image) }}" alt="...">
-        </div>
-    @endforeach
+        @endforeach
     </div>
 @else
     <p>There is no Work in the database.</p>

@@ -13,7 +13,7 @@ class WorksControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/img/logo.png');
-        $uploadPath = '/uploads/work-title.png';
+        $uploadPath = '/uploads/works/work-title.png';
 
         $this->visit('/admin/works/create')
             ->type('Work Title', 'title')
@@ -61,9 +61,8 @@ class WorksControllerTest extends AbstractTestCase
     /** @test */
     public function it_has_a_page_showing_a_single_work()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
-        $user = factory(User::class)->create();
         $work = factory(Work::class)->create([
             'title'     => 'Work Title',
             'slug'      => 'work-title',
@@ -76,9 +75,9 @@ class WorksControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_edit_a_work()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
-        $work = factory(Work::class)->create();
+        $work = factory(Work::class)->create(['author_id' => $user->id]);
         $this->visit('/admin/works/'.$work->id.'/edit');
         $this->assertViewHas('work');
     }
@@ -86,10 +85,10 @@ class WorksControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_update_a_work()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
         $data = ['title' => 'New Title', 'content' => 'New Content'];
-        $work = factory(Work::class)->create();
+        $work = factory(Work::class)->create(['author_id' => $user->id]);
 
         $this->put('/admin/works/'.$work->id, $data);
         $this->seeInDatabase('works', ['title' => $data['title']]);
@@ -99,13 +98,14 @@ class WorksControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_delete_a_work()
     {
-        $this->createAndBe();
+        $user = $this->createAndBe();
 
         $data = [
             'title'     => 'Work Title',
             'slug'      => 'work-title',
             'excerpt'   => 'Work Excerpt',
             'content'   => 'Work Content',
+            'author_id' => $user->id
         ];
         $work = factory(Work::class)->create($data);
 

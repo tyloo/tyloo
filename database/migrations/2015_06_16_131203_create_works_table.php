@@ -21,11 +21,10 @@ class CreateWorksTable extends Migration
             $table->string('image')->nullable();
             $table->integer('author_id')->unsigned();
             $table->string('link')->nullable();
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
-            $table->foreign('author_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
+
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -95,6 +95,13 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('admin.posts.index') }}"><i class="fa fa-eye"></i> List Posts</a></li>
                         <li><a href="{{ route('admin.posts.create') }}"><i class="fa fa-plus"></i> Add a Post</a></li>
+                        <li class="treeview">
+                            <a href="{{ route('admin.topics.index') }}"><i class="fa fa-tags"></i> <span>Topics</span> <i class="fa fa-angle-left pull-right"></i></a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{ route('admin.topics.index') }}"><i class="fa fa-eye"></i> List Topics</a></li>
+                                <li><a href="{{ route('admin.topics.create') }}"><i class="fa fa-plus"></i> Add a Topic</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -102,13 +109,21 @@
                     <ul class="treeview-menu">
                         <li><a href="{{ route('admin.works.index') }}"><i class="fa fa-eye"></i> List Works</a></li>
                         <li><a href="{{ route('admin.works.create') }}"><i class="fa fa-plus"></i> Add a Work</a></li>
+                        <li class="treeview">
+                            <a href="{{ route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-eye"></i> List Tags</a></li>
+                                <li><a href="{{ route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="{{ route('admin.tags.index') }}"><i class="fa fa-tags"></i> <span>Tags</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ route('admin.customers.index') }}"><i class="fa fa-files-o"></i> <span>Customers</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('admin.tags.index') }}"><i class="fa fa-eye"></i> List Tags</a></li>
-                        <li><a href="{{ route('admin.tags.create') }}"><i class="fa fa-plus"></i> Add a Tag</a></li>
+                        <li><a href="{{ route('admin.customers.index') }}"><i class="fa fa-eye"></i> List Customers</a></li>
+                        <li><a href="{{ route('admin.customers.create') }}"><i class="fa fa-plus"></i> Add a Cusotmer</a></li>
+
                     </ul>
                 </li>
                 <li class="treeview">

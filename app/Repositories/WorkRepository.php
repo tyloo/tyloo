@@ -25,4 +25,17 @@ class WorkRepository extends BaseRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
+
+    /**
+     * Check if collection has relation in it.
+     *
+     * @param $relation
+     *
+     * @return $this
+     */
+    public function has($relation)
+    {
+        $this->model = $this->model->has($relation);
+        return $this;
+    }
 }

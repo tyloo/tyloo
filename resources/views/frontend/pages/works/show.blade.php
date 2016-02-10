@@ -9,6 +9,11 @@
             <div class="row text-center">
                 <p class="lead mb30">{{ $work->title }}</p>
                 <img class="img-thumbnail" src="{{ $work->image }}" alt="{{ $work->title }}">
+                <div class="row mt40">
+                    @foreach($work->tags as $tag)
+                        <a href="{{ route('works.tag', ['slug' => $tag->slug]) }}"><span class="label label-info">{{ $tag->name }}</span></a>
+                    @endforeach
+                </div>
             </div>
 
             <div class="row mt40">

@@ -4,3 +4,4 @@
 /.env
 /database/database.sqlite
 /public/sitemap.xml
+Envoy.blade.php

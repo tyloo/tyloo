@@ -114,8 +114,12 @@ class WorksController extends Controller
     }
 
     /**
+     * We create or update the Work.
+     *
      * @param array    $data
      * @param int|null $id
+     *
+     * @return Work
      */
     protected function saveWork(array $data = [], $id = null)
     {
@@ -127,10 +131,11 @@ class WorksController extends Controller
         // We create the Work
         if ($id === null) {
             $data['author_id'] = Auth::id();
-            $this->works->create($data);
-        } else {
-            $this->works->update($data, $id);
+
+            return $this->works->create($data);
         }
+
+        return $this->works->update($data, $id);
     }
 
     /**
@@ -143,7 +148,7 @@ class WorksController extends Controller
      */
     protected function buildImage($slug, $image)
     {
-        $filePath = '/uploads/'.$slug.'.'.$image->getClientOriginalExtension();
+        $filePath = '/uploads/works/'.$slug.'.'.$image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;

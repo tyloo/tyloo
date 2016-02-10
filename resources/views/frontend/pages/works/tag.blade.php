@@ -5,33 +5,43 @@
 
     <section class="mt40 mb40">
         <div class="container">
-            <div class="row">
+            <ul class="row">
                 <!-- Works -->
-                <div class="col-sm-12">
+                <ul id="myPortfolio" class="col-sm-12 text-center">
                     @forelse($works as $work)
-                        <div class="blog-post mb40">
-                            <a href="{{ route('blog.show', ['slug' => $work->slug]) }}"><img class="img-responsive full-width" src="{{ $work->image }}" alt=""></a>
-                            <div class="blog-post-holder">
-                                <ul class="list-inline posted-info">
-                                    <li>{{ trans('app.by') }} <a href="#">{{ $work->author->name }}</a></li>
-                                    <li>{{ $work->created_at->diffForHumans() }}</li>
-                                </ul>
-                                <hr align="left" class="mt15 mb10">
-                                <h2><a href="{{ route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h2>
-                                {!! $work->excerpt !!}
-                                <a href="{{ route('works.show', ['slug' => $work->slug]) }}" class="btn btn-rw btn-primary mt10">{{ trans('app.btn-read-more') }}</a>
+                        <li class="item illustration col-sm-4 mix all {{ $work->tags->implode('slug', ' ') }}">
+                            <div class="border">
+                                <div class="view port-borderless image-hover-1">
+                                    <img class="img-responsive" src="{{ $work->image }}" alt="..." />
+                                    <div class="mask">
+                                        <div class="image-hover-content">
+                                            <a href="{{ $work->image }}" class="info image-zoom-link">
+                                                <div class="image-icon-holder"><span class="fa fa-search portfolio-icons"></span></div>
+                                            </a>
+                                            <a href="{{ route('works.show', ['slug' => $work->slug]) }}" class="info">
+                                                <div class="image-icon-holder"><span class="fa fa-link portfolio-icons"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-text background-white">
+                                    <h3 class="portfolio-title"><a href="{{ route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h3>
+                                    <div class="project-category">Illustration</div>
+                                </div>
                             </div>
-                        </div>
+                        </li>
                     @empty
-                        <p>
-                            {{ trans('app.frontend.works.tag.no-work-found') }}
-                        </p>
+                        <li>
+                            <p>
+                                {{ trans('app.frontend.works.tag.no-work-found') }}
+                            </p>
+                        </li>
                     @endforelse
 
                     <nav class="text-center">
                         {!! $works->render() !!}
                     </nav>
-                </div>
+                </ul>
                 <!-- /Works -->
             </div>
         </div>

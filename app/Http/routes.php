@@ -15,7 +15,7 @@ Route::group(['middleware' => ['web']], function () {
         // Blog
         Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
         Route::get('blog/{slug}', ['as' => 'blog.show', 'uses' => 'BlogController@show']);
-        Route::get('blog/tag/{slug}', ['as' => 'blog.tag', 'uses' => 'BlogController@tag']);
+        Route::get('blog/topic/{slug}', ['as' => 'blog.topic', 'uses' => 'BlogController@topic']);
 
         // Works
         Route::get('works', ['as' => 'works.index', 'uses' => 'WorkController@index']);
@@ -23,7 +23,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('works/tag/{slug}', ['as' => 'works.tag', 'uses' => 'WorkController@tag']);
     });
 
-    Route::group(['namespace'      => 'Backend', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
         Route::group(['middleware' => 'auth'], function () {
             // Dashboard
             Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);
@@ -36,9 +36,13 @@ Route::group(['middleware' => ['web']], function () {
             Route::resource('posts', 'PostsController');
             Route::get('posts/delete/{id}', ['as' => 'admin.posts.destroy', 'uses' => 'PostsController@destroy']);
 
-            // Posts
+            // Works
             Route::resource('works', 'WorksController');
             Route::get('works/delete/{id}', ['as' => 'admin.works.destroy', 'uses' => 'WorksController@destroy']);
+
+            // Customers
+            Route::resource('customers', 'CustomersController');
+            Route::get('customers/delete/{id}', ['as' => 'admin.customers.destroy', 'uses' => 'CustomersController@destroy']);
 
             // Users
             Route::resource('users', 'UsersController');
@@ -47,6 +51,10 @@ Route::group(['middleware' => ['web']], function () {
             // Tags
             Route::resource('tags', 'TagsController');
             Route::get('tags/delete/{id}', ['as' => 'admin.tags.destroy', 'uses' => 'TagsController@destroy']);
+
+            // Tags
+            Route::resource('topics', 'TopicsController');
+            Route::get('topics/delete/{id}', ['as' => 'admin.topics.destroy', 'uses' => 'TopicsController@destroy']);
 
             // Profile
             Route::get('profile', ['as' => 'admin.auth.profile', 'uses' => 'Auth\ProfileController@index']);

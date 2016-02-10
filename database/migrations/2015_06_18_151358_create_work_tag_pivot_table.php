@@ -14,8 +14,11 @@ class CreateWorkTagPivotTable extends Migration
     {
         Schema::create('work_tag', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('work_id');
-            $table->integer('tag_id');
+            $table->integer('work_id')->unsigned();
+            $table->integer('tag_id')->unsigned();
+
+            $table->foreign('work_id')->references('id')->on('works')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
         });
     }
 

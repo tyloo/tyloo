@@ -12,40 +12,49 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+    // Common
+    mix.copy(
+        './node_modules/font-awesome/fonts',
+        'public/css/fonts'
+    );
+
+    // Frontend
     mix.styles([
-        "common/font-awesome.min.css",
-        "common/bootstrap.min.css",
-        "frontend/bootstrap-social.css",
-        "frontend/animate.min.css",
-        "frontend/owl.carousel.css",
-        "frontend/magnific-popup.css",
-        "frontend/style.css"
+        "./node_modules/font-awesome/css/font-awesome.min.css",
+        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./node_modules/bootstrap-social/bootstrap-social.css",
+        "./node_modules/animate.css/animate.min.css",
+        "./node_modules/owl-carousel-2/assets/owl.carousel.min.css",
+        "./node_modules/magnific-popup/dist/magnific-popup.css",
+        "frontend.css",
+        "tyloo.fr.css"
     ], 'public/assets/css/frontend.css');
 
     mix.scripts([
-        "common/jquery-2.1.4.min.js",
-        "common/bootstrap.min.js",
-        "frontend/jquery.easing.min.js",
-        "frontend/jquery.magnific-popup.min.js",
-        "frontend/jquery.mixitup.min.js",
-        "frontend/owl.carousel.min.js",
-        "frontend/scrollReveal.js",
-        "frontend/skrollr.min.js",
-        "frontend/main.js"
+        "./node_modules/jquery/dist/jquery.min.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "./node_modules/jquery-easing/jquery.easing.1.3.js",
+        "./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js",
+        "./vendor/patrickkunka/mixitup/build/jquery.mixitup.min.js",
+        "./node_modules/owl-carousel-2/owl.carousel.min.js",
+        "./node_modules/scrollreveal/dist/scrollreveal.min.js",
+        "./node_modules/skrollr/dist/skrollr.min.js",
+        "frontend.js"
     ], 'public/assets/js/frontend.js');
 
+    // Backend
     mix.styles([
-        "common/font-awesome.min.css",
-        "common/bootstrap.min.css",
-        "backend/AdminLTE.min.css",
-        "backend/skin-blue.min.css",
-        "backend/summernote.css"
+        "./node_modules/font-awesome/css/font-awesome.min.css",
+        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./node_modules/admin-lte/dist/css/AdminLTE.min.css",
+        "./node_modules/admin-lte/dist/css/skins/skin-blue.min.css",
+        "./node_modules/summernote/dist/summernote.css"
     ], 'public/assets/css/backend.css');
 
     mix.scripts([
-        "common/jquery-2.1.4.min.js",
-        "common/bootstrap.min.js",
-        "backend/summernote.min.js",
-        "backend/app.min.js",
+        "./node_modules/jquery/dist/jquery.min.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "./node_modules/summernote/dist/summernote.min.js",
+        "backend.js",
     ], 'public/assets/js/backend.js');
 });

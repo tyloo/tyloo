@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 use App\Repositories\TagRepository;
+use App\Repositories\TopicRepository;
 
 class BlogController extends Controller
 {
@@ -14,14 +15,14 @@ class BlogController extends Controller
     protected $posts;
 
     /**
-     * @var \App\Repositories\TagRepository
+     * @var \App\Repositories\TopicRepository
      */
-    protected $tags;
+    protected $topics;
 
-    public function __construct(PostRepository $posts, TagRepository $tags)
+    public function __construct(PostRepository $posts, TopicRepository $topics)
     {
         $this->posts = $posts;
-        $this->tags = $tags;
+        $this->topics = $topics;
     }
 
     /**
@@ -32,8 +33,9 @@ class BlogController extends Controller
     public function index()
     {
         $posts = $this->posts->with('author')->paginate(5);
+        $topics = $this->topics->all();
 
-        return view('frontend.pages.blog.index', compact('posts'));
+        return view('frontend.pages.blog.index', compact('posts', 'topics'));
     }
 
     /**
@@ -57,11 +59,12 @@ class BlogController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function tag($slug)
+    public function topic($slug)
     {
-        $tag = $this->tags->findByField('slug', $slug)->first();
-        $posts = $tag->posts()->paginate(5);
+        $topic = $this->topics->findByField('slug', $slug)->first();
+        $posts = $topic->posts()->paginate(5);
+        $topics = $this->topics->all();
 
-        return view('frontend.pages.blog.tag', compact('tag', 'posts'));
+        return view('frontend.pages.blog.topic', compact('topic', 'posts', 'topics'));
     }
 }

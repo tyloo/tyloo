@@ -25,7 +25,7 @@
                                         <p>
                                             {!! trans('app.frontend.home.carousel.1.content') !!}
                                         </p>
-                                        <a href="{{ route('blog.index') }}" class="btn btn-rw btn-primary">{{ trans('app.frontend.home.carousel.1.link') }} <i class="fa fa-arrow-right"></i></a>
+                                        <a href="{{ route('blog.index') }}" class="btn btn-rw btn-default">{{ trans('app.frontend.home.carousel.1.link') }} <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                                 <div class="fadeInLeft-animated" data-animation="fadeInLeft">
@@ -134,7 +134,7 @@
 
             {{-- Accordion --}}
             <div class="row">
-                <div class="col-sm-6" data-sr="enter left">
+                <div class="col-sm-6 reveal">
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -173,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6" data-sr="enter bottom">
+                <div class="col-sm-6 reveal">
                     <img src="/assets/img/showcase.png" width="555" height="316" class="img-responsive showcase-image" alt="Responsive Showcase">
                 </div>
             </div>
@@ -188,10 +188,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb30">
+                        @if($works->count() > 0)
+                            <div class="owl-controls">
+                                <div id="customNav" class="owl-nav"></div>
+                            </div>
+                        @endif
                         <h4>{{ trans('app.frontend.home.recent-work') }}</h4>
-                        <div class="owl-controls">
-                            <div id="customNav" class="owl-nav"></div>
-                        </div>
                     </div>
                     @include('frontend.partials.home._lastWorks')
                 </div>

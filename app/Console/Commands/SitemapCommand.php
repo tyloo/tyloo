@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Post;
+use App\Work;
 use Illuminate\Console\Command;
 use samdark\sitemap\Sitemap;
 
@@ -30,6 +31,7 @@ class SitemapCommand extends Command
     public function handle()
     {
         $posts = $this->getPosts();
+        $works = $this->getWorks();
         $sitemap = new Sitemap(public_path('sitemap.xml'));
 
         $sitemap->addItem(config('app.url').'/', time(), Sitemap::DAILY, 0.9);
@@ -38,7 +40,10 @@ class SitemapCommand extends Command
         $sitemap->addItem(config('app.url').'/works', time(), Sitemap::DAILY, 0.8);
         // @codeCoverageIgnoreStart
         foreach ($posts as $post) {
-            $sitemap->addItem(config('app.url').'/'.$post->type.'/'.$post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
+            $sitemap->addItem(config('app.url').'/blog/'.$post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
+        }
+        foreach ($works as $work) {
+            $sitemap->addItem(config('app.url').'/works/'.$work->slug, $work->updated_at->timestamp, Sitemap::DAILY, 0.7);
         }
         // @codeCoverageIgnoreEnd
 
@@ -52,6 +57,14 @@ class SitemapCommand extends Command
      */
     public function getPosts()
     {
-        return Post::all(['type', 'slug', 'updated_at']);
+        return Post::all(['slug', 'updated_at']);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getWorks()
+    {
+        return Work::all(['slug', 'updated_at']);
     }
 }

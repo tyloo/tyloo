@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,25 +10,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        if (app()->environment() == 'testing') {
-            DB::statement('PRAGMA foreign_keys = OFF');
-        } else {
-            DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        }
-
         Model::unguard();
 
         $this->call('UserTableSeeder');
         $this->call('PostTableSeeder');
         $this->call('WorkTableSeeder');
+        $this->call('CustomerTableSeeder');
         $this->call('TagTableSeeder');
+        $this->call('TopicTableSeeder');
 
         Model::reguard();
-
-        if (app()->environment() == 'testing') {
-            DB::statement('PRAGMA foreign_keys = ON');
-        } else {
-            DB::statement('SET FOREIGN_KEY_CHECKS = 1');
-        }
     }
 }

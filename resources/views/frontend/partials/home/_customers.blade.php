@@ -1,6 +1,6 @@
 @if(!empty($customers))
     @foreach($customers as $customer)
-        <div class="col-sm-2 col-xs-4 mb30-xs" data-sr="enter left">
+        <div class="col-sm-2 col-xs-4 mb30-xs reveal">
             <a href="{{ $customer->link }}" target="_blank"><img src="{{ asset($customer->image) }}" class="img-responsive clients-img" alt="{{ $customer->name }}"></a>
         </div>
     @endforeach

@@ -26,7 +26,8 @@
         "predis/predis": "^1.0",
         "guzzlehttp/guzzle": "^6.1",
         "fzaninotto/faker": "~1.5",
-        "prettus/l5-repository": "^2.1"
+        "prettus/l5-repository": "^2.1",
+        "patrickkunka/mixitup": "^2.1"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",

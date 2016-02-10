@@ -11,8 +11,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->truncate();
-
         $tyloo = [
             'name'           => 'Julien Bonvarlet',
             'email'          => 'jbonva@gmail.com',

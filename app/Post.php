@@ -42,8 +42,8 @@ class Post extends Model implements Transformable
     /**
      * Get all the tags for a given Post.
      */
-    public function tags()
+    public function topics()
     {
-        return $this->belongsToMany(Tag::class, 'post_tag');
+        return $this->belongsToMany(Topic::class, 'post_topic');
     }
 }

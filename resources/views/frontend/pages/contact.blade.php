@@ -6,8 +6,8 @@
     <!-- Map -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 no-padding googleMap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41926.50578308724!2d2.491977499999993!3d48.94574299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e613637e3baf4d%3A0xdab0d8387e2a4a50!2sAulnay-sous-Bois!5e0!3m2!1sen!2sfr!4v1438076184452" height="350" frameborder="0"></iframe>
+            <div class="col-xs-12 no-padding" style="margin-bottom: -7px;">
+                <iframe class="googleMaps" height="350" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41926.50578308724!2d2.491977499999993!3d48.94574299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e613637e3baf4d%3A0xdab0d8387e2a4a50!2sAulnay-sous-Bois!5e0!3m2!1sen!2sfr!4v1438076184452"></iframe>
             </div>
         </div>
     </div>

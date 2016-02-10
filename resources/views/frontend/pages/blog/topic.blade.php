@@ -1,13 +1,17 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.front.blog.index.page-title', ['tag_name' => $tag->name]), 'pageNameBreadcrumb' => trans('app.front.blog.tag.breadcrumb-title')])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.blog.index.page-title', ['topic_name' => $topic->name]), 'pageNameBreadcrumb' => trans('app.frontend.blog.topic.breadcrumb-title')])
 
     <section class="mt40 mb40">
         <div class="container">
             <div class="row">
                 <!-- Blog Posts -->
                 <div class="col-sm-8">
+                    <div class="heading no-margin-bottom pt15">
+                        <h2>Blog posts for topic "{{ $topic->name }}"</h2>
+                    </div>
+
                     @forelse($posts as $post)
                         <div class="blog-post mb40">
                             <a href="{{ route('blog.show', ['slug' => $post->slug]) }}"><img class="img-responsive full-width" src="{{ $post->image }}" alt=""></a>
@@ -24,7 +28,7 @@
                         </div>
                     @empty
                         <p>
-                            {{ trans('app.front.blog.tag.no-post-found') }}
+                            {{ trans('app.frontend.blog.topic.no-post-found') }}
                         </p>
                     @endforelse
 
