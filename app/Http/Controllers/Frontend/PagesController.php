@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
 use App\Jobs\SendContactEmail;
+use App\Repositories\CustomerRepository;
 use App\Repositories\WorkRepository;
 
 class PagesController extends Controller
@@ -12,11 +13,17 @@ class PagesController extends Controller
     /**
      * @var \App\Repositories\WorkRepository
      */
-    private $works;
+    protected $works;
 
-    public function __construct(WorkRepository $works)
+    /**
+     * @var \App\Repositories\CustomerRepository
+     */
+    protected $customers;
+
+    public function __construct(WorkRepository $works, CustomerRepository $customers)
     {
         $this->works = $works;
+        $this->customers = $customers;
     }
 
     /**
@@ -27,8 +34,9 @@ class PagesController extends Controller
     public function home()
     {
         $works = $this->works->all();
+        $customers = $this->customers->all();
 
-        return view('frontend.pages.home', compact('works'));
+        return view('frontend.pages.home', compact('works', 'customers'));
     }
 
     /**

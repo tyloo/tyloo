@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.blog.index.page-title', ['topic_name' => $topic->name]), 'pageNameBreadcrumb' => trans('app.frontend.blog.topic.breadcrumb-title')])
+    @include('frontend.partials.common.header._headerPage', ['pageName' => trans('app.frontend.blog.topic.page-title', ['topic_name' => $topic->name]), 'pageNameBreadcrumb' => trans('app.frontend.blog.topic.breadcrumb-title')])
 
     <section class="mt40 mb40">
         <div class="container">
@@ -9,7 +9,7 @@
                 <!-- Blog Posts -->
                 <div class="col-sm-8">
                     <div class="heading no-margin-bottom pt15">
-                        <h2>Blog posts for topic "{{ $topic->name }}"</h2>
+                        <h2>{!! trans('app.frontend.blog.topic.page-title', ['topic_name' => $topic->name]) !!}</h2>
                     </div>
 
                     @forelse($posts as $post)

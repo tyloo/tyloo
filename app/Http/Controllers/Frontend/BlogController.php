@@ -48,8 +48,9 @@ class BlogController extends Controller
     public function show($slug)
     {
         $post = $this->posts->findByField('slug', $slug)->first();
+        $topics = $this->topics->all();
 
-        return view('frontend.pages.blog.show', compact('post'));
+        return view('frontend.pages.blog.show', compact('post', 'topics'));
     }
 
     /**

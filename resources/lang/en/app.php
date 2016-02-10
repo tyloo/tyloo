@@ -288,6 +288,9 @@ return [
                 'title'         => 'Last Posts',
                 'no-post-found' => 'No post found in the database.',
             ],
+            'topics' => [
+                'title'         => 'Topics',
+            ]
         ],
         'common' => [
             'about'      => [

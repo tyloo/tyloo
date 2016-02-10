@@ -1,6 +1,6 @@
 @if($works->count() > 0)
     <div id="owl-carousel-thumb" class="owl-carousel">
-        @foreach($works as $work)
+        @forelse($works as $work)
             <div>
                 <div class="thumbnail">
                     <div class="caption">

@@ -315,7 +315,7 @@ $(document).ready(function () {
     /* /Activate skrollr.js */
 
     /* Owl carousel thumbnail caption slider */
-    $('#owl-carousel-thumb').owlCarousel({
+    $('#owl-carousel-thumb, #owl-carousel-thumb-customers').owlCarousel({
         loop: true,
         margin: 30,
         nav: true,
