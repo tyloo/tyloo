@@ -31,7 +31,6 @@ class TagsControllerTest extends AbstractTestCase
         $data = [
             'name'    => 'Tag Name',
             'slug'    => 'tag-name',
-            'content' => 'Tag Content',
         ];
 
         $this->post('/admin/tags', $data);
@@ -64,7 +63,7 @@ class TagsControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
 
-        $data = ['name' => 'New Name', 'content' => 'New Content'];
+        $data = ['name' => 'New Name'];
         $tag = factory(Tag::class)->create();
 
         $this->put('/admin/tags/'.$tag->id, $data);
@@ -80,7 +79,6 @@ class TagsControllerTest extends AbstractTestCase
         $data = [
             'name'    => 'Tag Name',
             'slug'    => 'tag-name',
-            'content' => 'Tag Content',
         ];
         $tag = factory(Tag::class)->create($data);
 
