@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 use App\Repositories\TagRepository;
-use App\Repositories\TopicRepository;
 
 class BlogController extends Controller
 {
@@ -15,14 +14,14 @@ class BlogController extends Controller
     protected $posts;
 
     /**
-     * @var \App\Repositories\TopicRepository
+     * @var \App\Repositories\TagRepository
      */
-    protected $topics;
+    protected $tags;
 
-    public function __construct(PostRepository $posts, TopicRepository $topics)
+    public function __construct(PostRepository $posts, TagRepository $tags)
     {
         $this->posts = $posts;
-        $this->topics = $topics;
+        $this->tags = $tags;
     }
 
     /**
@@ -33,9 +32,9 @@ class BlogController extends Controller
     public function index()
     {
         $posts = $this->posts->with('author')->paginate(5);
-        $topics = $this->topics->all();
+        $tags = $this->tags->all();
 
-        return view('frontend.pages.blog.index', compact('posts', 'topics'));
+        return view('frontend.pages.blog.index', compact('posts', 'tags'));
     }
 
     /**
@@ -48,9 +47,9 @@ class BlogController extends Controller
     public function show($slug)
     {
         $post = $this->posts->findByField('slug', $slug)->first();
-        $topics = $this->topics->all();
+        $tags = $this->tags->all();
 
-        return view('frontend.pages.blog.show', compact('post', 'topics'));
+        return view('frontend.pages.blog.show', compact('post', 'tags'));
     }
 
     /**
@@ -60,12 +59,12 @@ class BlogController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function topic($slug)
+    public function tag($slug)
     {
-        $topic = $this->topics->findByField('slug', $slug)->first();
-        $posts = $topic->posts()->paginate(5);
-        $topics = $this->topics->all();
+        $tag = $this->tags->findByField('slug', $slug)->first();
+        $posts = $tag->posts()->paginate(5);
+        $tags = $this->tags->all();
 
-        return view('frontend.pages.blog.topic', compact('topic', 'posts', 'topics'));
+        return view('frontend.pages.blog.tag', compact('tag', 'posts', 'tags'));
     }
 }

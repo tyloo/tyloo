@@ -40,10 +40,10 @@ class Work extends Model implements Transformable
     }
 
     /**
-     * Get all the tags for a given Post.
+     * Get all of the tags for the post.
      */
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'work_tag');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 }

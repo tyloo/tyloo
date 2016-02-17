@@ -69,14 +69,3 @@ $factory->define(App\Tag::class, function (Faker\Generator $faker) {
         'content' => $faker->text(200),
     ];
 });
-
-
-$factory->define(App\Topic::class, function (Faker\Generator $faker) {
-    $name = $faker->unique()->word;
-
-    return [
-        'name'    => $name,
-        'slug'    => str_slug($name),
-        'content' => $faker->text(200),
-    ];
-});

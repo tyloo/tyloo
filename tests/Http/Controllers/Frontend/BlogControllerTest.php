@@ -3,7 +3,7 @@
 namespace App\Tests\Http\Controllers\Frontend;
 
 use App\Post;
-use App\Topic;
+use App\Tag;
 use App\User;
 use Tests\AbstractTestCase;
 
@@ -14,8 +14,8 @@ class BlogControllerTest extends AbstractTestCase
     {
         $user = factory(User::class)->create();
         $posts = factory(Post::class, 10)->create(['author_id' => $user->id]);
-        $topic = factory(Topic::class)->create();
-        $topic->posts()->sync($posts);
+        $tag = factory(Tag::class)->create();
+        $tag->posts()->sync($posts);
 
         $this->visit('/blog');
         $this->assertViewHas('posts');
@@ -31,10 +31,10 @@ class BlogControllerTest extends AbstractTestCase
     }
 
     /** @test */
-    public function it_has_a_page_listing_posts_from_a_topic()
+    public function it_has_a_page_listing_posts_from_a_tag()
     {
-        $topic = factory(Topic::class)->create();
-        $this->visit('/blog/topic/'.$topic->slug);
+        $tag = factory(Tag::class)->create();
+        $this->visit('/blog/tag/'.$tag->slug);
         $this->assertViewHas('posts');
     }
 }

@@ -15,7 +15,7 @@ Route::group(['middleware' => ['web']], function () {
         // Blog
         Route::get('blog', ['as' => 'blog.index', 'uses' => 'BlogController@index']);
         Route::get('blog/{slug}', ['as' => 'blog.show', 'uses' => 'BlogController@show']);
-        Route::get('blog/topic/{slug}', ['as' => 'blog.topic', 'uses' => 'BlogController@topic']);
+        Route::get('blog/tag/{slug}', ['as' => 'blog.tag', 'uses' => 'BlogController@tag']);
 
         // Works
         Route::get('works', ['as' => 'works.index', 'uses' => 'WorkController@index']);
@@ -51,10 +51,6 @@ Route::group(['middleware' => ['web']], function () {
             // Tags
             Route::resource('tags', 'TagsController');
             Route::get('tags/delete/{id}', ['as' => 'admin.tags.destroy', 'uses' => 'TagsController@destroy']);
-
-            // Tags
-            Route::resource('topics', 'TopicsController');
-            Route::get('topics/delete/{id}', ['as' => 'admin.topics.destroy', 'uses' => 'TopicsController@destroy']);
 
             // Profile
             Route::get('profile', ['as' => 'admin.auth.profile', 'uses' => 'Auth\ProfileController@index']);

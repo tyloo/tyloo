@@ -15,9 +15,9 @@ class TagTest extends AbstractTestCase
     public function it_has_posts()
     {
         $mock = Mockery::mock('App\Tag')->makePartial();
-        $mock->shouldReceive('belongsToMany')
+        $mock->shouldReceive('morphedByMany')
             ->once()
-            ->with('App\Post', 'post_tag')
+            ->with('App\Post', 'taggable')
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->posts());
@@ -27,9 +27,9 @@ class TagTest extends AbstractTestCase
     public function it_has_works()
     {
         $mock = Mockery::mock('App\Tag')->makePartial();
-        $mock->shouldReceive('belongsToMany')
+        $mock->shouldReceive('morphedByMany')
             ->once()
-            ->with('App\Work', 'work_tag')
+            ->with('App\Work', 'taggable')
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->works());

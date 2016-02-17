@@ -2,19 +2,19 @@
   "private": true,
   "devDependencies": {
     "admin-lte": "^2.3.2",
-    "animate.css": "^3.4.0",
+    "animate.css": "^3.5.1",
     "bootstrap": "^3.3.6",
     "bootstrap-social": "^4.11.0",
     "bootstrap-tagsinput": "^0.7.1",
     "font-awesome": "^4.5.0",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "jquery": "^2.2.0",
     "jquery-easing": "0.0.1",
-    "laravel-elixir": "^4.2.0",
+    "laravel-elixir": "^5.0.0",
     "magnific-popup": "^1.0.1",
     "owl-carousel-2": "0.0.3",
     "scrollreveal": "^3.0.9",
     "skrollr": "^0.6.26",
-    "summernote": "^0.7.3"
+    "summernote": "^0.8.1"
   }
 }

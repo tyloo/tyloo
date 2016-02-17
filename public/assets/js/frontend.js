@@ -315,11 +315,32 @@ $(document).ready(function () {
     /* /Activate skrollr.js */
 
     /* Owl carousel thumbnail caption slider */
-    $('#owl-carousel-thumb, #owl-carousel-thumb-customers').owlCarousel({
+    $('#owl-carousel-thumb').owlCarousel({
         loop: true,
+        dots: false,
         margin: 30,
         nav: true,
         navContainer: '#customNav',
+        navText: ["<span><</span>", "<span>></span>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+
+    $('#owl-carousel-thumb-customers').owlCarousel({
+        loop: true,
+        dots: false,
+        margin: 30,
+        nav: false,
+        navContainer: '#customNav-customers',
         navText: ["<span><</span>", "<span>></span>"],
         responsive: {
             0: {

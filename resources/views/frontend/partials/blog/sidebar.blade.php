@@ -2,4 +2,4 @@
 
 @include('frontend.partials.blog.blocks.about')
 
-@include('frontend.partials.blog.blocks.topics')
+@include('frontend.partials.blog.blocks.tags')

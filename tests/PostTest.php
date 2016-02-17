@@ -25,9 +25,9 @@ class PostTest extends AbstractTestCase
     public function it_has_tags()
     {
         $mock = Mockery::mock(Post::class)->makePartial();
-        $mock->shouldReceive('belongsToMany')
+        $mock->shouldReceive('morphToMany')
             ->once()
-            ->with(Tag::class, 'post_tag')
+            ->with(Tag::class, 'taggable')
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->tags());

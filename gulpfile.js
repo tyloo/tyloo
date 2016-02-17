@@ -14,8 +14,11 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     // Common
     mix.copy(
-        './node_modules/font-awesome/fonts',
-        'public/css/fonts'
+        [
+            './node_modules/font-awesome/fonts',
+            './node_modules/summernote/dist',
+        ],
+        'public/assets/fonts'
     );
 
     // Frontend
@@ -54,6 +57,7 @@ elixir(function(mix) {
     mix.scripts([
         "./node_modules/jquery/dist/jquery.min.js",
         "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "./node_modules/summernote/dist/summernote.min.js",
         "./node_modules/summernote/dist/summernote.min.js",
         "backend.js",
     ], 'public/assets/js/backend.js');

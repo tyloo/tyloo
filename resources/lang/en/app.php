@@ -250,8 +250,8 @@ return [
                 'page-title'       => 'Blog',
                 'breadcrumb-title' => 'Blog',
             ],
-            'topic'   => [
-                'page-title'       => 'Blog - All Posts with topic ":topic_name"',
+            'tag'   => [
+                'page-title'       => 'Blog - All Posts with tag ":tag_name"',
                 'breadcrumb-title' => 'Blog',
                 'no-post-found'    => 'No post have been found in the database...',
             ],
@@ -288,8 +288,8 @@ return [
                 'title'         => 'Last Posts',
                 'no-post-found' => 'No post found in the database.',
             ],
-            'topics' => [
-                'title'         => 'Topics',
+            'tags' => [
+                'title'         => 'Tags',
             ]
         ],
         'common' => [

@@ -32,10 +32,18 @@ class Tag extends Model implements Transformable
     protected $hidden = [];
 
     /**
-     * Get all the works for a given Tag.
+     * Get all of the posts that are assigned this tag.
+     */
+    public function posts()
+    {
+        return $this->morphedByMany(Post::class, 'taggable');
+    }
+
+    /**
+     * Get all of the videos that are assigned this tag.
      */
     public function works()
     {
-        return $this->belongsToMany(Work::class, 'work_tag');
+        return $this->morphedByMany(Work::class, 'taggable');
     }
 }

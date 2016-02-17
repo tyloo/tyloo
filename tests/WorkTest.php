@@ -25,9 +25,9 @@ class WorkTest extends AbstractTestCase
     public function it_has_tags()
     {
         $mock = Mockery::mock(Work::class)->makePartial();
-        $mock->shouldReceive('belongsToMany')
+        $mock->shouldReceive('morphToMany')
             ->once()
-            ->with(Tag::class, 'work_tag')
+            ->with(Tag::class, 'taggable')
             ->andReturn('mocked');
 
         $this->assertEquals('mocked', $mock->tags());
