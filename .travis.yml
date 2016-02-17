@@ -13,7 +13,7 @@ before_install:
   - mysql -e "create database IF NOT EXISTS tyloo;" -uroot
 
 before_script:
-  - cp .env.example .env
+  - cp .env.travis .env
   - touch database/database.sqlite
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
