@@ -75,8 +75,8 @@ class CustomersControllerTest extends AbstractTestCase
         $this->createAndBe();
 
         $data = [
-            'label'     => 'Acme',
-            'description'   => 'Customer description',
+            'label'       => 'Acme',
+            'description' => 'Customer description',
         ];
         $customer = factory(Customer::class)->create($data);
 

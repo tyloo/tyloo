@@ -2,7 +2,6 @@
 
 namespace App\Tests\Http\Controllers\Backend;
 
-use App\User;
 use App\Work;
 use Tests\AbstractTestCase;
 
@@ -51,7 +50,7 @@ class WorksControllerTest extends AbstractTestCase
             'slug'      => 'work-title',
             'excerpt'   => 'Work Excerpt',
             'content'   => 'Work Content',
-            'tags'      => 'tag1,tag2'
+            'tags'      => 'tag1,tag2',
         ];
 
         $this->post('/admin/works', $data);
@@ -106,7 +105,7 @@ class WorksControllerTest extends AbstractTestCase
             'slug'      => 'work-title',
             'excerpt'   => 'Work Excerpt',
             'content'   => 'Work Content',
-            'author_id' => $user->id
+            'author_id' => $user->id,
         ];
         $work = factory(Work::class)->create($data);
 
