@@ -50,6 +50,7 @@ class PostsControllerTest extends AbstractTestCase
             'slug'      => 'post-title',
             'excerpt'   => 'Post Excerpt',
             'content'   => 'Post Content',
+            'tags'      => 'tag1,tag2'
         ];
 
         $this->post('/admin/posts', $data);
@@ -86,7 +87,7 @@ class PostsControllerTest extends AbstractTestCase
     {
         $user = $this->createAndBe();
 
-        $data = ['title' => 'New Title', 'content' => 'New Content'];
+        $data = ['title' => 'New Title', 'content' => 'New Content', 'tags' => 'tag1,tag2,tag3'];
         $post = factory(Post::class)->create(['author_id' => $user->id]);
 
         $this->put('/admin/posts/'.$post->id, $data);

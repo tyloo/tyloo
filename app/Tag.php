@@ -32,6 +32,13 @@ class Tag extends Model implements Transformable
     protected $hidden = [];
 
     /**
+     * No timestamp here.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * Get all of the posts that are assigned this tag.
      */
     public function posts()

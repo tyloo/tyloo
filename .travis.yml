@@ -10,7 +10,7 @@ matrix:
     - php: hhvm
 
 before_install:
-  - mysql -e "create database IF NOT EXISTS tyloo-test;" -uroot
+  - mysql -e "create database IF NOT EXISTS `tyloo-test`;" -uroot
 
 before_script:
   - cp .env.example .env

@@ -20,17 +20,24 @@
         @include('errors.formErrors')
 
         <div class="form-group">
-            <input type="text" name="title" value="{{ old('title', $work->title) }}" placeholder="Title" class="form-control">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="{{ old('title', $work->title) }}" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="slug" value="{{ $work->slug }}" placeholder="Slug" class="form-control" disabled="disabled">
-            <input type="hidden" name="slug" value="{{ $work->slug }}">
+            <label for="slug">Slug</label>
+            <input type="text" name="slug" id="slug" value="{{ $work->slug }}" class="form-control" disabled="disabled">
         </div>
         <div class="form-group">
-            <textarea class="form-control summernote" name="excerpt" placeholder="Excerpt" cols="30" rows="10">{{ old('excerpt', $work->excerpt) }}</textarea>
+            <label for="excerpt">Excerpt</label>
+            <textarea name="excerpt" id="excerpt" cols="30" rows="10" class="form-control summernote">{{ old('excerpt', $work->excerpt) }}</textarea>
         </div>
         <div class="form-group">
-            <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content', $work->content) }}</textarea>
+            <label for="content">Content</label>
+            <textarea name="content" id="content" cols="30" rows="10" class="form-control summernote">{{ old('content', $work->content) }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" name="tags" id="tags" value="{{ old('tags', $work->tags->implode('name', ',')) }}" class="form-control">
         </div>
         <div class="form-group">
             <div>

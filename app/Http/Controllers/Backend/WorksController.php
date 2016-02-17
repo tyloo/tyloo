@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WorkRequest;
+use App\Repositories\TagRepository;
 use App\Repositories\WorkRepository;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
@@ -15,9 +17,15 @@ class WorksController extends Controller
      */
     protected $works;
 
-    public function __construct(WorkRepository $works)
+    /**
+     * @var \App\Repositories\TagRepository
+     */
+    protected $tags;
+
+    public function __construct(WorkRepository $works, TagRepository $tags)
     {
         $this->works = $works;
+        $this->tags = $tags;
     }
 
     /**
@@ -132,10 +140,12 @@ class WorksController extends Controller
         if ($id === null) {
             $data['author_id'] = Auth::id();
 
-            return $this->works->create($data);
+            $work = $this->works->create($data);
+        } else {
+            $work = $this->works->update($data, $id);
         }
 
-        return $this->works->update($data, $id);
+        $this->saveTags($data, $work);
     }
 
     /**
@@ -152,5 +162,20 @@ class WorksController extends Controller
         Image::make($image)->save(public_path($filePath));
 
         return $filePath;
+    }
+
+    /**
+     * Save the tags for the Post.
+     *
+     * @param array $data
+     * @param       $post
+     */
+    protected function saveTags(array $data, $post)
+    {
+        $tags = explode(',', $data['tags']);
+        foreach ($tags as $tag) {
+            Tag::firstOrCreate(['name' => $tag, 'slug' => str_slug($tag)]);
+        }
+        $post->tags()->sync($this->tags->findWhereIn('name', $tags)->pluck('id')->toArray());
     }
 }

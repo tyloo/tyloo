@@ -1,6 +1,7 @@
 <?php
 
 Route::group(['middleware' => ['web']], function () {
+    // Frontend
     Route::group(['namespace' => 'Frontend'], function () {
         // Home
         Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
@@ -23,6 +24,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('works/tag/{slug}', ['as' => 'works.tag', 'uses' => 'WorkController@tag']);
     });
 
+    // Backend
     Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
         Route::group(['middleware' => 'auth'], function () {
             // Dashboard
@@ -51,6 +53,7 @@ Route::group(['middleware' => ['web']], function () {
             // Tags
             Route::resource('tags', 'TagsController');
             Route::get('tags/delete/{id}', ['as' => 'admin.tags.destroy', 'uses' => 'TagsController@destroy']);
+            Route::get('tags.json', ['as' => 'admin.tags.indexRaw', 'uses' => 'TagsController@indexRaw']);
 
             // Profile
             Route::get('profile', ['as' => 'admin.auth.profile', 'uses' => 'Auth\ProfileController@index']);

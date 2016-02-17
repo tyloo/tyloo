@@ -31,6 +31,18 @@ class TagsController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function indexRaw()
+    {
+        $tags = $this->tags->all()->pluck('name');
+
+        return $tags;
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\View\View

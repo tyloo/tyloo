@@ -24,9 +24,6 @@
         <div class="form-group">
             <input type="text" name="slug" value="{{ old('slug') }}" placeholder="Slug" class="form-control">
         </div>
-        <div class="form-group">
-            <textarea class="form-control summernote" name="content" placeholder="Content" cols="30" rows="10">{{ old('content') }}</textarea>
-        </div>
         <button type="submit" class="btn btn-rw btn-primary">Submit</button>
     </form>
 @stop

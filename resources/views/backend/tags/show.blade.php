@@ -21,7 +21,6 @@
                         <div class="blog-post-holder">
                             <h1>{{ $tag->name }}</h1>
                             <h2>{{ $tag->slug }}</h2>
-                            {!! $tag->content !!}
                         </div>
                     </div>
                 </div>

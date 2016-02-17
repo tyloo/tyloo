@@ -51,6 +51,7 @@ class WorksControllerTest extends AbstractTestCase
             'slug'      => 'work-title',
             'excerpt'   => 'Work Excerpt',
             'content'   => 'Work Content',
+            'tags'      => 'tag1,tag2'
         ];
 
         $this->post('/admin/works', $data);
@@ -87,7 +88,7 @@ class WorksControllerTest extends AbstractTestCase
     {
         $user = $this->createAndBe();
 
-        $data = ['title' => 'New Title', 'content' => 'New Content'];
+        $data = ['title' => 'New Title', 'content' => 'New Content', 'tags' => 'tag1,tag2,tag3'];
         $work = factory(Work::class)->create(['author_id' => $user->id]);
 
         $this->put('/admin/works/'.$work->id, $data);
