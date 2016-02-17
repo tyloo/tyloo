@@ -27,9 +27,9 @@ $factory->define(App\Customer::class, function (Faker\Generator $faker) {
     $label = substr($faker->sentence(rand(3, 7)), 0, -1);
 
     return [
-        'label'     => $label,
-        'description'   => '<p>'.$faker->text(2000).'</p>',
-        'image'     => $faker->imageUrl(750, 346, 'cats', false),
+        'label'       => $label,
+        'description' => '<p>'.$faker->text(2000).'</p>',
+        'image'       => $faker->imageUrl(750, 346, 'cats', false),
     ];
 });
 
@@ -64,7 +64,7 @@ $factory->define(App\Tag::class, function (Faker\Generator $faker) {
     $name = $faker->unique()->word;
 
     return [
-        'name'    => $name,
-        'slug'    => str_slug($name),
+        'name' => $name,
+        'slug' => str_slug($name),
     ];
 });

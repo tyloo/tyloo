@@ -36,6 +36,7 @@ class TagRepository extends BaseRepository
     public function has($relation)
     {
         $this->model = $this->model->has($relation);
+
         return $this;
     }
 }

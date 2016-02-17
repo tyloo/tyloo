@@ -23,12 +23,12 @@ class CustomerRequest extends Request
     {
         if ($this->method() == 'PUT') {
             return [
-                'label'   => 'required|max:255',
+                'label' => 'required|max:255',
             ];
         }
 
         return [
-            'label'   => 'required|max:255',
+            'label' => 'required|max:255',
             'image' => 'required|image',
         ];
     }

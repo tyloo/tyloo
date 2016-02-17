@@ -50,7 +50,7 @@ class PostsControllerTest extends AbstractTestCase
             'slug'      => 'post-title',
             'excerpt'   => 'Post Excerpt',
             'content'   => 'Post Content',
-            'tags'      => 'tag1,tag2'
+            'tags'      => 'tag1,tag2',
         ];
 
         $this->post('/admin/posts', $data);

@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CustomerRequest;
-use App\Http\Requests\WorkRequest;
 use App\Repositories\CustomerRepository;
-use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
 class CustomersController extends Controller

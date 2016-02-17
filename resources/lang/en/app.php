@@ -290,7 +290,7 @@ return [
             ],
             'tags' => [
                 'title'         => 'Tags',
-            ]
+            ],
         ],
         'common' => [
             'about'      => [

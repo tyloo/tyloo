@@ -72,7 +72,7 @@ class CustomersControllerTest extends AbstractTestCase
     /** @test */
     public function it_can_delete_a_customer()
     {
-        $user = $this->createAndBe();
+        $this->createAndBe();
 
         $data = [
             'label'     => 'Acme',

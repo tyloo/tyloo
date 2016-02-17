@@ -141,8 +141,7 @@ class PostsController extends Controller
             $data['author_id'] = Auth::id();
 
             $post = $this->posts->create($data);
-        }
-        else {
+        } else {
             $post = $this->posts->update($data, $id);
         }
 
