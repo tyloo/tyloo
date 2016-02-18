@@ -17,9 +17,6 @@ before_script:
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source
   - travis_retry php artisan migrate
-  - travis_retry pwd
-  - travis_retry ls -la /home/travis/build/tyloo/tyloo/public/uploads
-  - travis_retry chmod -R 777 /home/travis/build/tyloo/tyloo/public/uploads/customers
 
 script:
   - phpunit
