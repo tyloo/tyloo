@@ -26,12 +26,4 @@ class WorkControllerTest extends AbstractTestCase
         $this->call('GET', '/works/'.$work->slug);
         $this->assertViewHas('work');
     }
-
-    /** @test */
-    public function it_has_a_page_listing_works_from_a_tag()
-    {
-        $tag = factory(Tag::class)->create();
-        $this->visit('/works/tag/'.$tag->slug);
-        $this->assertViewHas('works');
-    }
 }

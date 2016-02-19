@@ -5,8 +5,8 @@
     <meta name="author" content="Julien 'Tyloo' Bonvarlet <jbonva@gmail.com>">
     <meta name="description" content="Design - description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="/assets/img/favicon.ico">
-    <title>Tyloo.fr - Engineer, Web Developer, Google Deployment Specialist and Rugbyman!</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+    <title>Tyloo.fr - Engineer, Web Developer and Rugbyman!</title>
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700%7CRaleway:200,300,400,700">
     <link rel="stylesheet" href="/assets/css/frontend.css">

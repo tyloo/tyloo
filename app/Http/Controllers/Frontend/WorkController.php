@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\Criterias\LastFive;
 use App\Repositories\TagRepository;
 use App\Repositories\WorkRepository;
 
@@ -47,23 +48,8 @@ class WorkController extends Controller
     public function show($slug)
     {
         $work = $this->works->findByField('slug', $slug)->first();
-        $works = $this->works->all();
+        $works = $this->works->pushCriteria(new LastFive())->all();
 
         return view('frontend.pages.works.show', compact('work', 'works'));
-    }
-
-    /**
-     * Display a listing of the resource based on a tag.
-     *
-     * @param $slug
-     *
-     * @return \Illuminate\View\View
-     */
-    public function tag($slug)
-    {
-        $tag = $this->tags->findByField('slug', $slug)->first();
-        $works = $tag->works()->paginate(5);
-
-        return view('frontend.pages.works.tag', compact('tag', 'works'));
     }
 }

@@ -9,7 +9,7 @@
             @if($tags->count() > 0)
                 <div class="row mb30" style="visibility: visible; ">
                     <ul class="nav nav-pills col-xs-12 text-center">
-                        <li class="filter active" data-filter=".all">All</li>
+                        <li class="filter active" data-filter=".all">{{ trans('app.all') }}</li>
                         @foreach($tags as $tag)
                             <li class="filter" data-filter=".{{ $tag->slug }}">{{ $tag->name }}</li>
                         @endforeach
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="portfolio-text background-white">
                                     <h3 class="portfolio-title"><a href="{{ route('works.show', ['slug' => $work->slug]) }}">{{ $work->title }}</a></h3>
-                                    <div class="project-category">Illustration</div>
+                                    <div class="project-category">{{ $work->tags->count() > 0 ? ucfirst($work->tags->first()->name) : '' }}</div>
                                 </div>
                             </div>
                         </li>

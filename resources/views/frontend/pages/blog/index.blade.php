@@ -9,24 +9,7 @@
                 <!-- Blog Posts -->
                 <div class="col-sm-8">
                     @forelse($posts as $post)
-                        <div class="blog-post mb40">
-                            <a href="{{ route('blog.show', ['slug' => $post->slug]) }}"><img class="img-responsive full-width" src="{{ $post->image }}" alt=""></a>
-                            <div class="blog-post-holder">
-                                <ul class="list-inline posted-info">
-                                    <li>{{ trans('app.by') }} <a href="#">{{ $post->author->name }}</a></li>
-                                    <li>{{ $post->created_at->diffForHumans() }}</li>
-                                    <li>
-                                        @foreach($post->tags as $tag)
-                                            <a class="label label-info" href="{{ route('blog.tag', ['slug' => $tag->slug]) }}">{{ $tag->name }}</a>
-                                        @endforeach
-                                    </li>
-                                </ul>
-                                <hr align="left" class="mt15 mb10">
-                                <h2><a href="{{ route('blog.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a></h2>
-                                {!! $post->excerpt !!}
-                                <a href="{{ route('blog.show', ['slug' => $post->slug]) }}" class="btn btn-rw btn-primary mt10">{{ trans('app.btn-read-more') }}</a>
-                            </div>
-                        </div>
+                        @include('frontend.partials.blog.post', ['links' => true])
                     @empty
                         <p>
                             {{ trans('app.frontend.blog.index.no-post-found') }}

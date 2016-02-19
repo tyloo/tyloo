@@ -21,7 +21,6 @@ Route::group(['middleware' => ['web']], function () {
         // Works
         Route::get('works', ['as' => 'works.index', 'uses' => 'WorkController@index']);
         Route::get('works/{slug}', ['as' => 'works.show', 'uses' => 'WorkController@show']);
-        Route::get('works/tag/{slug}', ['as' => 'works.tag', 'uses' => 'WorkController@tag']);
     });
 
     // Backend

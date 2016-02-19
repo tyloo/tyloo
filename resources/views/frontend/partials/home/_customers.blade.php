@@ -7,5 +7,5 @@
         @endforeach
     </div>
 @else
-    <p>There is no Customer in the database.</p>
+    <p>{{ trans('app.frontend.home.customers.no-customer-found') }}</p>
 @endif

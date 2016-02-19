@@ -31,7 +31,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = $this->posts->with('author')->paginate(5);
+        $posts = $this->posts->with(['author', 'tags'])->paginate(5);
         $tags = $this->tags->all();
 
         return view('frontend.pages.blog.index', compact('posts', 'tags'));
@@ -46,7 +46,7 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        $post = $this->posts->findByField('slug', $slug)->first();
+        $post = $this->posts->with('tags')->findByField('slug', $slug)->first();
         $tags = $this->tags->all();
 
         return view('frontend.pages.blog.show', compact('post', 'tags'));
@@ -62,7 +62,7 @@ class BlogController extends Controller
     public function tag($slug)
     {
         $tag = $this->tags->findByField('slug', $slug)->first();
-        $posts = $tag->posts()->paginate(5);
+        $posts = $tag->posts()->with(['author', 'tags'])->paginate(5);
         $tags = $this->tags->all();
 
         return view('frontend.pages.blog.tag', compact('tag', 'posts', 'tags'));

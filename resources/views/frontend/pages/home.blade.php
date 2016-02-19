@@ -193,7 +193,7 @@
                                 <div id="customNav" class="owl-nav"></div>
                             </div>
                         @endif
-                        <h4>{{ trans('app.frontend.home.recent-work') }}</h4>
+                        <h4>{{ trans('app.frontend.home.recent-work.title') }}</h4>
                     </div>
                     @include('frontend.partials.home._lastWorks')
                 </div>
@@ -208,7 +208,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading mb30">
-                        <h4>{{ trans('app.frontend.home.customers') }}</h4>
+                        <h4>{{ trans('app.frontend.home.customers.title') }}</h4>
                         <div class="owl-controls">
                             <div id="customNav" class="owl-nav"></div>
                         </div>

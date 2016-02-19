@@ -15,5 +15,5 @@
         @endforeach
     </div>
 @else
-    <p>There is no Work in the database.</p>
+    <p>{{ trans('app.frontend.home.recent-work.no-work-found') }}</p>
 @endif

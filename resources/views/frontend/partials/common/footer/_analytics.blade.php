@@ -4,6 +4,6 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-65328436-1', 'auto');
+    ga('create', env('ANALYTICS_ID'), 'auto');
     ga('send', 'pageview');
 </script>

@@ -12,7 +12,7 @@ class PostsControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/img/logo.png');
-        $uploadPath = 'uploads/posts/post-title.png';
+        $uploadPath = '/uploads/posts/post-title.png';
 
         $this->visit('/admin/posts/create')
             ->type('Post Title', 'title')
@@ -20,6 +20,7 @@ class PostsControllerTest extends AbstractTestCase
             ->type('Post Content', 'content')
             ->attach($absolutePathToFile, 'image')
             ->press('Submit');
+
         $this->seeInDatabase('posts', ['image' => $uploadPath]);
         unlink(public_path($uploadPath));
     }

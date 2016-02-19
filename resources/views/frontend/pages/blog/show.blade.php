@@ -7,18 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8">
-                    <div class="blog-post mb40">
-                        <img class="img-responsive full-width" src="{{ $post->image }}" alt="">
-                        <div class="blog-post-holder">
-                            <ul class="list-inline posted-info">
-                                <li>{{ trans('app.by') }} <a href="#">{{ $post->author->name }}</a></li>
-                                <li>{{ $post->created_at->diffForHumans() }}</li>
-                            </ul>
-                            <hr align="left" class="mt15 mb10">
-                            <h2>{{ $post->title }}</h2>
-                            {!! $post->content !!}
-                        </div>
-                    </div>
+                    @include('frontend.partials.blog.post', ['links' => false])
                     <div id="disqus_thread"></div>
                     <script type="text/javascript">
                         /* * * CONFIGURATION VARIABLES * * */

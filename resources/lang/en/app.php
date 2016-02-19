@@ -12,6 +12,7 @@ return [
     'phone'            => 'Phone',
     'btn-submit'       => 'Submit',
     'btn-read-more'    => 'Read more',
+    'all'              => 'All',
 
     'menu' => [
         'home'    => 'Home',
@@ -121,8 +122,14 @@ return [
                                   <p>Indeed, I love hanging out with friends (well, I live in Paris, the best city in the world! Isn't it? :)), play Rugby (because I feel like a Beast there...), I watch a lot of TV shows and other cool stuff!</p>",
                 ],
             ],
-            'recent-work'   => 'Recent Work',
-            'customers'     => 'Customers',
+            'recent-work'   => [
+                'title'         => 'Recent Work',
+                'no-work-found' => 'There is no Work in the database.',
+            ],
+            'customers'     => [
+                'title'             => 'Customers',
+                'no-customer-found' => 'There is no Customer in the database.',
+            ],
         ],
         'resume'  => [
             'page-title'       => 'My Resume',
@@ -288,8 +295,8 @@ return [
                 'title'         => 'Last Posts',
                 'no-post-found' => 'No post found in the database.',
             ],
-            'tags' => [
-                'title'         => 'Tags',
+            'tags'       => [
+                'title' => 'Tags',
             ],
         ],
         'common' => [
