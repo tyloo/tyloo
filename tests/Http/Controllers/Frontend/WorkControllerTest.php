@@ -2,7 +2,6 @@
 
 namespace App\Tests\Http\Controllers\Frontend;
 
-use App\Tag;
 use App\User;
 use App\Work;
 use Tests\AbstractTestCase;
