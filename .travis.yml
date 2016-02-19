@@ -19,4 +19,4 @@ before_script:
   - travis_retry php artisan migrate
 
 script:
-  - phpunit
+  - vendor/bin/phpunit

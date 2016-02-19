@@ -15,6 +15,11 @@
                                 <ul class="list-inline posted-info">
                                     <li>{{ trans('app.by') }} <a href="#">{{ $post->author->name }}</a></li>
                                     <li>{{ $post->created_at->diffForHumans() }}</li>
+                                    <li>
+                                        @foreach($post->tags as $tag)
+                                            <a class="label label-info" href="{{ route('blog.tag', ['slug' => $tag->slug]) }}">{{ $tag->name }}</a>
+                                        @endforeach
+                                    </li>
                                 </ul>
                                 <hr align="left" class="mt15 mb10">
                                 <h2><a href="{{ route('blog.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a></h2>

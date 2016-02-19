@@ -8,10 +8,6 @@
             <div class="row">
                 <!-- Blog Posts -->
                 <div class="col-sm-8">
-                    <div class="heading no-margin-bottom pt15">
-                        <h2>{!! trans('app.frontend.blog.tag.page-title', ['tag_name' => $tag->name]) !!}</h2>
-                    </div>
-
                     @forelse($posts as $post)
                         <div class="blog-post mb40">
                             <a href="{{ route('blog.show', ['slug' => $post->slug]) }}"><img class="img-responsive full-width" src="{{ $post->image }}" alt=""></a>
