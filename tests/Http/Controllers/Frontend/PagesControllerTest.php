@@ -34,4 +34,13 @@ class PagesControllerTest extends AbstractTestCase
         ];
         $this->post('/contact', $data);
     }
+
+    /** @test **/
+    public function it_can_translate_the_website() {
+        $this->assertEquals('en', app()->getLocale());
+
+        $this->visit('/translate/fr');
+
+        $this->assertEquals('fr', app()->getLocale());
+    }
 }

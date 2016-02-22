@@ -1,8 +1,8 @@
 <?php
 
 // Frontend
-Route::group(['namespace' => 'Frontend'], function () {
-    Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web']], function () {
+    Route::group(['namespace' => 'Frontend'], function () {
         // Home
         Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     });
 
     // Backend
-    Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'web'], function () {
+    Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
         Route::group(['middleware' => 'auth'], function () {
             // Dashboard
             Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);
