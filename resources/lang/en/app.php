@@ -279,7 +279,7 @@ return [
             ],
             'last-posts' => [
                 'title'         => 'Last Posts',
-                'no-post-found' => 'No post found in the database.',
+                'no-post-found' => 'No Post found in the database.',
             ],
             'tags'       => [
                 'title' => 'Tags',
@@ -297,7 +297,7 @@ return [
             'copyright'  => 'Copyright &copy; 1988-:this_year (and still counting...) <strong>Julien \'Tyloo\' Bonvarlet</strong>. All rights reserved. Website crafted with <i class="fa fa-heart"></i> (and coffee...) in Laravel and a lot of black magic.',
             'last-posts' => [
                 'title'         => 'From the Blog',
-                'no-post-found' => 'No post found in the database.',
+                'no-post-found' => 'No Post found in the database.',
             ],
             'social'     => [
                 'title' => 'Social Networks',
