@@ -15,7 +15,6 @@ class UserTableSeeder extends Seeder
             'name'           => 'Julien Bonvarlet',
             'email'          => 'jbonva@gmail.com',
             'password'       => '123456',
-            'avatar'         => '//www.gravatar.com/avatar/'.md5('jbonva@gmail.com'),
         ]);
     }
 }
