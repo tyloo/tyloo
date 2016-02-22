@@ -11,7 +11,7 @@
     "jquery": "^2.2.0",
     "jquery-easing": "0.0.1",
     "laravel-elixir": "^5.0.0",
-    "magnific-popup": "^1.0.1",
+    "magnific-popup": "^1.1.0",
     "owl-carousel-2": "0.0.3",
     "scrollreveal": "^3.0.9",
     "skrollr": "^0.6.26",
