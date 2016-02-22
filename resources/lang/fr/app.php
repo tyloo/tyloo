@@ -257,7 +257,7 @@ return [
             'index' => [
                 'page-title'       => 'Projets réalisés',
                 'breadcrumb-title' => 'Projets',
-                'no-post-found'    => "Il n'y a aucun Projet en base de données.",
+                'no-work-found'    => "Il n'y a aucun Projet en base de données.",
             ],
             'show'  => [
                 'page-title'       => 'Projets réalisés',
@@ -267,7 +267,7 @@ return [
             'tag'   => [
                 'page-title'       => 'Projets réalisés - Tous les projets comportant le tag ":tag_name"',
                 'breadcrumb-title' => 'Projets',
-                'no-post-found'    => "Il n'y a aucun Projet en base de données.",
+                'no-work-found'    => "Il n'y a aucun Projet en base de données.",
             ],
         ],
     ],

@@ -241,7 +241,7 @@ return [
             'index' => [
                 'page-title'       => 'Blog',
                 'breadcrumb-title' => 'Blog',
-                'no-post-found'    => 'No post have been found in the database...',
+                'no-post-found'    => 'No Post have been found in the database...',
             ],
             'show'  => [
                 'page-title'       => 'Blog',
@@ -250,14 +250,14 @@ return [
             'tag'   => [
                 'page-title'       => 'Blog - All Posts with tag ":tag_name"',
                 'breadcrumb-title' => 'Blog',
-                'no-post-found'    => 'No post have been found in the database...',
+                'no-post-found'    => 'No Post have been found in the database...',
             ],
         ],
         'works'   => [
             'index' => [
                 'page-title'       => 'My Works',
                 'breadcrumb-title' => 'Works',
-                'no-post-found'    => 'No work have been found in the database...',
+                'no-work-found'    => 'No Work have been found in the database...',
             ],
             'show'  => [
                 'page-title'       => 'My Works',
@@ -267,7 +267,7 @@ return [
             'tag'   => [
                 'page-title'       => 'My Works - All works with tag ":tag_name"',
                 'breadcrumb-title' => 'Works',
-                'no-post-found'    => 'No work have been found in the database...',
+                'no-work-found'    => 'No Work have been found in the database...',
             ],
         ],
     ],
