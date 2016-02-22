@@ -2,6 +2,16 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
+## v1.4.0 - 2016-02-22
+
+### Added
+- Make it i18n
+- Tags are now polymorphic and added to pages
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+
 ## v1.3.1 - 2016-01-25
 
 ### Added
