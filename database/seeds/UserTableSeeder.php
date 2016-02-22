@@ -11,16 +11,11 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $count = App\User::count();
-        if ($count == 0) {
-            $tyloo = [
-                'name'           => 'Julien Bonvarlet',
-                'email'          => 'jbonva@gmail.com',
-                'password'       => '123456',
-                'avatar'         => '//www.gravatar.com/avatar/'.md5('jbonva@gmail.com'),
-            ];
-            factory(App\User::class)->create($tyloo);
-        }
-        factory(App\User::class, 9)->create();
+        factory(App\User::class)->create([
+            'name'           => 'Julien Bonvarlet',
+            'email'          => 'jbonva@gmail.com',
+            'password'       => '123456',
+            'avatar'         => '//www.gravatar.com/avatar/'.md5('jbonva@gmail.com'),
+        ]);
     }
 }
