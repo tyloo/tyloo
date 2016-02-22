@@ -1,8 +1,8 @@
 <?php
 
-Route::group(['middleware' => ['web']], function () {
-    // Frontend
-    Route::group(['namespace' => 'Frontend'], function () {
+// Frontend
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::group(['middleware' => ['web']], function () {
         // Home
         Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
@@ -21,10 +21,13 @@ Route::group(['middleware' => ['web']], function () {
         // Works
         Route::get('works', ['as' => 'works.index', 'uses' => 'WorkController@index']);
         Route::get('works/{slug}', ['as' => 'works.show', 'uses' => 'WorkController@show']);
+
+        // Translate
+        Route::get('translate/{lang}', ['as' => 'translate', 'uses' => 'PagesController@translate']);
     });
 
     // Backend
-    Route::group(['namespace' => 'Backend', 'prefix' => 'admin'], function () {
+    Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'web'], function () {
         Route::group(['middleware' => 'auth'], function () {
             // Dashboard
             Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);

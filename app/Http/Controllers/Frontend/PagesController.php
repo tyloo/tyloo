@@ -72,4 +72,18 @@ class PagesController extends Controller
 
         return view('frontend.pages.contact')->withSuccess(trans('app.frontend.contact.confirmMailSent'));
     }
+
+    /**
+     * Translate the website.
+     *
+     * @param $lang string
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function translate($lang)
+    {
+        session()->set('language', $lang);
+
+        return redirect()->back();
+    }
 }

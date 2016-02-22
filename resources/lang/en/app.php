@@ -141,17 +141,7 @@ return [
                     'dates'     => 'September 2015 - Today',
                     'details'   => '<ul class="list-arrow-color no-margin">
                                         <li>Developed Web Applications on Laravel.</li>
-                                        <li>Developed Core Java Applications.</li>
-                                        <li>Passed the following Google certifications :
-                                            <ul class="list-arrow-color no-margin">
-                                                <li>Google Deployment Specialist (Google Search Appliance)</li>
-                                                <li>Google Apps 100</li>
-                                                <li>Google Cloud Platform 300</li>
-                                            </ul>
-                                        </li>
-                                        <li>Deployed Google Search Appliance projects for some customers.</li>
-                                        <li>Search & Development based on solutions related to Google for Work.</li>
-                                        <li>Created a dynamic library on PHP to administrate and monitor a GSA.</li>
+                                        <li>Created and maintained Open Source packages.</li>
                                     </ul>',
                 ],
                 2       => [
@@ -196,7 +186,7 @@ return [
                     'dates'     => 'September 2008 - December 2009',
                     'details'   => '<ul class="list-arrow-color no-margin">
                                         <li>Developed and remade the entire Websites of the Company.</li>
-                                        <li>Created some tools and technicals for SEO and SEM.</li>
+                                        <li>Created some tools and technics for SEO and SEM.</li>
                                     </ul>',
                 ],
             ],
@@ -283,10 +273,6 @@ return [
     ],
     'blocks'   => [
         'blog'   => [
-            'about'      => [
-                'title' => 'About',
-                'text'  => "Here you'll find useful (well I guess so) stuff related to Laravel, Security, PHP in general and maybe other IT-nerdy stuff. Enjoy and feel free to leave me feedbacks in comments!",
-            ],
             'sidebar'    => [
                 'title' => 'The Laboratory',
                 'text'  => "In this section, I'll try to share you cool ideas, tools and techniques I learnt. I think that sharing my knowlege with you guys is important and I hope it might be useful for you. I was lucky to find some guys like me before, teaching me those stuff very kindly. So I guess it's now my turn ;)",

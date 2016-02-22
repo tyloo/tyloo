@@ -2,60 +2,60 @@
 
 return [
 
-    'by'               => 'By',
-    'name'             => 'Name',
+    'by'               => 'Par',
+    'name'             => 'Nom',
     'email'            => 'Email',
-    'password'         => 'Password',
-    'password-confirm' => 'Confirm Password',
+    'password'         => 'Mot de passe',
+    'password-confirm' => 'Confirmez',
     'message'          => 'Message',
     'information'      => 'Information',
-    'phone'            => 'Phone',
-    'btn-submit'       => 'Submit',
-    'btn-read-more'    => 'Read more',
-    'all'              => 'All',
+    'phone'            => 'Tel',
+    'btn-submit'       => 'Envoyer',
+    'btn-read-more'    => 'Lire la suite',
+    'all'              => 'Tout',
 
     'menu' => [
-        'home'    => 'Home',
-        'resume'  => 'Resume',
-        'works'   => 'Works',
+        'home'    => 'Accueil',
+        'resume'  => 'CV',
+        'works'   => 'Projets',
         'blog'    => 'Blog',
         'contact' => 'Contact',
     ],
 
     'auth' => [
-        'login-page-title'     => 'Sign In!',
-        'login-title'          => 'Sign in to start your session',
-        'remember-me'          => 'Remember me',
-        'btn-sign-in'          => 'Sign In',
-        'forgot-password'      => 'I forgot my password!',
-        'profile'              => 'Profile',
-        'welcome'              => 'Welcome, :user_name!',
-        'reset-password-title' => 'Reset your Password now',
+        'login-page-title'     => 'Authentification',
+        'login-title'          => 'Authentifiez-vous pour démarrer votre session',
+        'remember-me'          => 'Se rappeler de moi',
+        'btn-sign-in'          => 'Authentifier',
+        'forgot-password'      => "J'ai perdu mon mot de passe !",
+        'profile'              => 'Profil',
+        'welcome'              => 'Bienvenue, :user_name !',
+        'reset-password-title' => 'Récuppérer mon mot de passe',
     ],
 
     'emails' => [
         'contact'  => [
-            'contact-message'    => 'Contact Message',
-            'contact-heading'    => 'Hello Master,',
-            'contact-info-text'  => 'A Contact form has been filled on the website <a href=":website_url">:website_url</a>!',
-            'here-are-the-infos' => 'Here are the informations:',
-            'bottom-message'     => 'Sincerely,<br>BB8',
+            'contact-message'    => 'Demande de contact',
+            'contact-heading'    => 'Bonjour Maître,',
+            'contact-info-text'  => 'Un formulaire de contact a été renseigné sur le site <a href=":website_url">:website_url</a> !',
+            'here-are-the-infos' => 'Voici les informations :',
+            'bottom-message'     => 'Cordialement,<br>BB8',
         ],
         'password' => [
-            'password-reset'    => 'Password Reset',
-            'password-heading'  => 'Hello sir,',
-            'password-content1' => "You asked for a password reset, and because I am kind, I'll give you one new!",
-            'password-content2' => 'Here is the link to create a new password: :reset_url',
-            'bottom-message'    => 'Sincerely,<br>BB8',
+            'password-reset'    => 'Réinitialisation de votre mot de passe',
+            'password-heading'  => 'Bonjour,',
+            'password-content1' => "Vous avez demandé à réinitialiser votre mot de passe, et parce que je suis bon, je vais vous en fournir un nouveau !",
+            'password-content2' => 'Voici le lien pour pouvoir générer un nouveau mot de passe : :reset_url',
+            'bottom-message'    => 'Cordialement,<br>BB8',
         ],
     ],
 
     'errors' => [
-        '404'        => 'Four Oh Four!',
-        '503'        => 'Be right back.',
+        '404'        => 'Quatre Cent Quatre !',
+        '503'        => 'En maintenance.',
         'formErrors' => [
-            'heading'      => '<strong>Whoops!</strong> Houston, we have a problem!',
-            'fix-mistakes' => 'Please fix those mistakes:',
+            'heading'      => '<strong>Whoops!</strong> Houston, nous avons un problème !',
+            'fix-mistakes' => 'Veuillez corriger ces erreurs :',
         ],
     ],
 
@@ -65,143 +65,133 @@ return [
 
     'frontend' => [
         'contact' => [
-            'page-title'       => 'Get in Touch!',
+            'page-title'       => 'Contactez-moi !',
             'breadcrumb-title' => 'Contact',
-            'form-heading'     => "Let's get in touch!",
-            'form-text'        => "Feel free to fill that form to enter in contact with me. I'll try to answer you as quick as possible!",
-            'confirmMailSent'  => "<strong>Contact Form received!</strong><p>Your contact form has been received. I'll try to answer you as soon as possible!<br>Thank you ;)</p>",
+            'form-heading'     => "Mettons-nous en contact !",
+            'form-text'        => "Veuillez remplir ce formulaire afin d'entrer en contact avec moi. Je vais essayer de vous répondre le plus rapidement possible !",
+            'confirmMailSent'  => "<strong>Votre demande a bien été reçue !</strong><p>Votre demande a bien été reçue. Je vais essayer de vous répondre le plus rapidement possible !<br>Merci ;)</p>",
         ],
         'home'    => [
             'carousel'      => [
                 1 => [
-                    'title'   => 'Passionate & Flexible',
-                    'content' => "You might have not realized yet, but I'm in love with my job! Indeed, I always wanted to work on computers and started to learn how to code very early in my life. Since then I try to be able to adapt to new technologies and new techniques...",
-                    'link'    => 'Check out my Resume for more',
+                    'title'   => 'Passionné &  Flexible',
+                    'content' => "Vous ne l'avez peut-être pas encore vu, mais j'adore mon métier ! En effet, j'ai toujours voulu travailler dans l'informatique et j'ai commencé à apprendre les ficelles du code depuis ma tendre enfance. Depuis cette révélation, j'essaie de m'adapter aux nouvelles tendances et techniques...",
+                    'link'    => 'Consultez mon CV pour en savoir plus',
                 ],
                 2 => [
-                    'title'   => 'Laravel enthousiast',
-                    'content' => "During my studies, I discovered this PHP Framework and I gotta say : IT WAS A BLAST!<br>To sum things up, this amazing toolset allows you to create websites and apps blazing fast! More importantly and I think It's a big feature : you code just like you speak! ;)",
-                    'link'    => 'Check out my Blog for more',
+                    'title'   => 'Fan de Laravel',
+                    'content' => "Durant mes études, j'ai découvert ce Framework PHP et je dois bien l'avouer : ÇA DÉCHIRE !<br>Pour faire court, cette boîte à outils vous permet de créer des sites web et des applications ultra rapidement ! Plus important et je pense que c'est une bonne fonctionnalité : vous codez comme vous parlez et c'est très intuitif ! ;)",
+                    'link'    => 'Consultez mon Blog pour en savoir plus',
                 ],
                 3 => [
-                    'title'   => 'Sharing is Caring',
-                    'content' => "I always wanted to be a teacher somehow in my life. The thing is, if you are able to learn something to someone, you can validate the fact that you fully understand the subject. More interesting, with the power of the Interwebs, if you make some mistakes and don't tell the truth, Internet guardians (trolls somehow) will just put you in troubles and you'll be forced to tell the truth. Finally, you start to correct yourself and you become better...",
+                    'title'   => 'Aimer partager',
+                    'content' => "J'ai toujours voulu être professeur un moment dans ma vie. Pour être franc, si vous êtes capable d'enseigner, vous pouvez valider le fait que vous maîtrisez entièrement votre sujet. Plus généralement, avec la puissance d'Internent, si vous vous trompez dans votre explication, les Gardiens du web (des trolls en quelque sorte) vont vous ridiculiser et vous serez forcé de changer votre jugement. Finalement, vous commencerez à vous corriger et donc à vous améliorer...",
                 ],
             ],
             'three-reasons' => [
                 1 => [
-                    'title'   => 'All for the Code.',
-                    'content' => "When I was a child, I wanted to work on computers. That's why I became an engineer and Web Developer!",
+                    'title'   => 'Tout pour le  Code.',
+                    'content' => "Quand j'étais petit, je voulais travailler dans l'informatique. C'est pourquoi je suis devenu ingénieur et développeur Web !",
                 ],
                 2 => [
-                    'title'   => 'Never stop learning.',
-                    'content' => 'Whereas I have been graduated for several years, I keep learning many things everyday. I am the kind of guy that love new technologies and trending projects.',
+                    'title'   => "Ne jamais cesser d'apprendre.",
+                    'content' => "Malgrès le fait d'avoir terminé mes études depuis plusieurs années, je continue d'en apprendre tous les jours. Je suis le genre de personne à aimer découvrir les nouvelles technologies et techniques.",
                 ],
                 3 => [
-                    'title'   => 'Rugby is my duty.',
-                    'content' => 'I started playing Rugby 3 years ago. From that time, I started to think as a team, not for myself as an individual. That capacity helps me a lot at work with my collegues.',
+                    'title'   => 'Le Rugby est ma passion.',
+                    'content' => "J'ai commencé le Rugby il y a 3 ans. Depuis ce jour, j'ai commencé à penser comme une équipe et non pour moi-même. Cette capacité m'aide énormémnt dans ma vie professionnelle et en particularité dans ma relation avec mes collègues.",
                 ],
             ],
             'about-me'      => [
-                'title' => 'About Me',
-                'link'  => 'Need to know more? Check out My Resume',
+                'title' => 'A propos de moi',
+                'link'  => 'Vous voulez en savoir plus ? Consultez mon CV',
                 1       => [
-                    'title'   => 'Raise the PHP Flag!',
-                    'content' => "<p>Since I'm a child (well, actually I started nerd stuff when I was 14...) I develop applications in PHP.</p>
-                                  <p>That being said, I could see the evolution of this language since PHP4. At this time (and because I was a novice), nothing was really structured. You didn't have the Framework echosystem and I have to admit that it was really painful...</p>
-                                  <p>Nowadays, with tools like Laravel, Carbon, PHPUnit and others, it's becoming something big and you no longer hear \"No big website runs with PHP. It's a fact. Period. (insert Trollface here)\"</p>",
+                    'title'   => 'Hisser haut le drapeau PHP !',
+                    'content' => "<p>Depuis que je suis enfant (j'ai commencé les \"trucs de Geek\" à 14 ans en fait), je développe des applications en PHP.</p>
+                                  <p>Ceci étant dit, j'ai pu voir l'évolution de ce langage depuis la version 4. A l'époque (et parce que j'étais débutant), rien n'étant très structué pour moi. Vous n'aviez pas tout l'echosystème de Framework et je dois l'admettre, c'était très compliqué...</p>
+                                  <p>De nos jours, avec des outils comme Laravel, Carbon, PHPUnit et d'autres, c'est devenu une suite solide et vous n'entendez plus beaucoup des phrases comme : \"Aucun gros site web ne tourne sur PHP. C'est un fait. Fin de la discussion. (insérer une Trollface ici)\"</p>",
                 ],
                 2       => [
-                    'title'   => 'Brace yourself. Laravel is coming!',
-                    'content' => '<p>Recently (well, for two years now), I discovered the Laravel Framework and I felt in love! Indeed, this Framework based on Symfony and other useful libraries is meant to be "easy" and allows you to develop and deploy projects really quickly!</p>
-                                  <p>If you check my <a href=":blog_url">Blog</a>, you\'ll be able to find tips, ideas and other stuff linked to Laravel... Don\'t hesitate to check them and leave me some feedback ;)</p>',
+                    'title'   => 'Préparez vous. Laravel arrive !',
+                    'content' => '<p>Récemment (en fait, depuis déjà 2 ans), j\'ai découvert le Framework Laravel et je suis tombé amoureux ! En effet, ce Framework basé sur Symfony et d\'autres librairies utiles est prévu pour une utilisation "simple" et vous permet de développer et de déployer des projets très rapidement et proprement !</p>
+                                  <p>Si vous consultez mon <a href=":blog_url">Blog</a>, vous pourrez y trouver des astuces, idées et autres articles liés à Laravel... N\'hésitez pas à les lire et à me faire des retours ;)</p>',
                 ],
                 3       => [
-                    'title'   => 'Code is not everything... Get a life bro!',
-                    'content' => "<p>Well, now come the cool part, at least I hope it is. As you can imagine, I'm not a robot and I don't have only nerdy activities in my life!</p>
-                                  <p>Indeed, I love hanging out with friends (well, I live in Paris, the best city in the world! Isn't it? :)), play Rugby (because I feel like a Beast there...), I watch a lot of TV shows and other cool stuff!</p>",
+                    'title'   => "Coder n'est pas une finalité en soit.",
+                    'content' => "<p>Bon, maintenant arrive la partie sympa, du moins je l'espère. Comme vous pouvez vous l'imaginer, je ne suis pas un robot et je n'ai pas que des activités de Geek dans ma vie !</p>
+                                  <p>En effet, j'adore sortir avec mes amis (je vis à Paris, la meilleure ville au monde ! N'est-ce pas ? :)), joue au Rugby (parce que je me déchaîne sur le terrain...), regarde beaucoup de séries et d'autres choses sympa !</p>",
                 ],
             ],
             'recent-work'   => [
-                'title'         => 'Recent Work',
-                'no-work-found' => 'There is no Work in the database.',
+                'title'         => 'Projets récents',
+                'no-work-found' => "Il n'y a aucun Projet en base de données.",
             ],
             'customers'     => [
-                'title'             => 'Customers',
-                'no-customer-found' => 'There is no Customer in the database.',
+                'title'             => 'Clients',
+                'no-customer-found' => "Il n'y a aucun Client en base de données.",
             ],
         ],
         'resume'  => [
-            'page-title'       => 'My Resume',
-            'breadcrumb-title' => 'Resume',
+            'page-title'       => 'Mon CV',
+            'breadcrumb-title' => 'CV',
             'work-experience'  => [
-                'title' => 'Work Experience',
+                'title' => 'Espérience professionnelle',
                 1       => [
-                    'job-title' => 'Engineer @ <strong>CarvingLabs</strong>',
-                    'dates'     => 'September 2015 - Today',
+                    'job-title' => "Ingénieur d'étude @ <strong>CarvingLabs</strong>",
+                    'dates'     => "Septembre 2015 - Aujourd'hui",
                     'details'   => '<ul class="list-arrow-color no-margin">
-                                        <li>Developed Web Applications on Laravel.</li>
-                                        <li>Developed Core Java Applications.</li>
-                                        <li>Passed the following Google certifications :
-                                            <ul class="list-arrow-color no-margin">
-                                                <li>Google Deployment Specialist (Google Search Appliance)</li>
-                                                <li>Google Apps 100</li>
-                                                <li>Google Cloud Platform 300</li>
-                                            </ul>
-                                        </li>
-                                        <li>Deployed Google Search Appliance projects for some customers.</li>
-                                        <li>Search & Development based on solutions related to Google for Work.</li>
-                                        <li>Created a dynamic library on PHP to administrate and monitor a GSA.</li>
+                                        <li>Développement d\'applications web sur le Framework Laravel.</li>
+                                        <li>Création de librairies et packages Open Source.</li>
                                     </ul>',
                 ],
                 2       => [
                     'job-title' => 'Google Deployment Specialist @ <strong>NRX</strong>',
-                    'dates'     => 'October 2012 - September 2015',
+                    'dates'     => 'Octobre 2012 - Septembre 2015',
                     'details'   => '<ul class="list-arrow-color no-margin">
-                                        <li>Developed Web Applications on Laravel, Symfony 2 and Zend Framework 3.</li>
-                                        <li>Developed Core Java Applications.</li>
-                                        <li>Passed the following Google certifications :
+                                        <li>Développement d\'applications web sur le Framework Laravel, Symfony 2 et Zend Framework 3.</li>
+                                        <li>Développement d\'applications natives en Java.</li>
+                                        <li>Obtention des certifications Google suivantes :
                                             <ul class="list-arrow-color no-margin">
                                                 <li>Google Deployment Specialist (Google Search Appliance)</li>
                                                 <li>Google Apps 100</li>
                                                 <li>Google Cloud Platform 300</li>
                                             </ul>
                                         </li>
-                                        <li>Deployed Google Search Appliance projects for some customers.</li>
-                                        <li>Search & Development based on solutions related to Google for Work.</li>
-                                        <li>Created a dynamic library on PHP to administrate and monitor a GSA.</li>
+                                        <li>Déploiement de projets Google Search Appliance (GSA) pour différents clients.</li>
+                                        <li>Recherche & Développement de solutions liées à Google for Work.</li>
+                                        <li>Création de librairies dynamiques en PHP pour pouvoir administrer et monitorer une GSA.</li>
                                     </ul>',
                 ],
                 3       => [
-                    'job-title' => 'Developer Web & Mobile @ <strong>Lemonway</strong>',
-                    'dates'     => 'September 2011 - September 2012',
+                    'job-title' => 'Developpeur Web & Mobile @ <strong>Lemonway</strong>',
+                    'dates'     => 'Septembre 2011 - Septembre 2012',
                     'details'   => '<ul class="list-arrow-color no-margin">
-                                        <li>Developed the company\'s Website.</li>
-                                        <li>Developed the company\'s Mobile App.</li>
-                                        <li>Developed iPhone and Android applications for some customers.</li>
+                                        <li>Développement du site web de l\'entreprise.</li>
+                                        <li>Développement du site web modible de l\'entreprise.</li>
+                                        <li>Développement d\'applications iPhone et Android pour différents clients.</li>
                                     </ul>',
                 ],
                 4       => [
-                    'job-title' => 'Sys Admin @ <strong>Autoscout24 France</strong>',
-                    'dates'     => 'January 2010 - August 2011',
+                    'job-title' => 'Administrateur Réseaux @ <strong>Autoscout24 France</strong>',
+                    'dates'     => 'Janvier 2010 - Août 2011',
                     'details'   => '<ul class="list-arrow-color no-margin">
-                                        <li>Management of Software Interface for some customers.</li>
-                                        <li>Handling of the Computers Listing.</li>
-                                        <li>Helpdesk customers.</li>
-                                        <li>Developed softwares in PHP to automatize some tasks.</li>
+                                        <li>Administration de logiciels d\'interfaçage pour des clients.</li>
+                                        <li>Gestion du parc informatique de l\'entreprise.</li>
+                                        <li>Assistance auprès de la clientèle.</li>
+                                        <li>Développement d\'outils en PHP afin d\'automatiser certaines tâches.</li>
                                     </ul>',
                 ],
                 5       => [
-                    'job-title' => 'Web Developer @ <strong>Call Assurances</strong>',
-                    'dates'     => 'September 2008 - December 2009',
+                    'job-title' => 'Développeur Web @ <strong>Call Assurances</strong>',
+                    'dates'     => 'Septembre 2008 - Décembre 2009',
                     'details'   => '<ul class="list-arrow-color no-margin">
-                                        <li>Developed and remade the entire Websites of the Company.</li>
-                                        <li>Created some tools and technicals for SEO and SEM.</li>
+                                        <li>Développement et refonte complète du site web de l\'entreprise.</li>
+                                        <li>Création d\'outils et de techniques permettant d\'améliorer le référencement naturel de l\'entreprise.</li>
                                     </ul>',
                 ],
             ],
             'education'        => [
-                'title' => 'Education',
+                'title' => 'Formation',
                 1       => [
                     'title' => 'Master Web & e-Business @ <strong>ESGI</strong>',
                     'dates' => '2012 - 2014',
@@ -211,12 +201,12 @@ return [
                     'dates' => '2011 - 2012',
                 ],
                 3       => [
-                    'title' => 'BTS Sys Admin @ <strong>ISEFAC Paris</strong>',
+                    'title' => 'BTS Administrateur Réseaux @ <strong>ISEFAC Paris</strong>',
                     'dates' => '2008 - August 2010',
                 ],
             ],
             'skills'           => [
-                'title' => 'Technical Skills',
+                'title' => 'Compétences techniques',
                 1       => [
                     'label' => 'PHP',
                     'level' => 'Expert',
@@ -227,23 +217,23 @@ return [
                 ],
                 3       => [
                     'label' => 'Symfony 2',
-                    'level' => 'Working on it',
+                    'level' => "J'y travaille",
                 ],
                 4       => [
                     'label' => 'Mobile (iOS &amp; Android)',
-                    'level' => 'Made some cool things!',
+                    'level' => "J'ai fait des choses sympa !",
                 ],
                 5       => [
-                    'label' => 'HTML &amp; CSS (Bootstrap and other tools)',
+                    'label' => 'HTML &amp; CSS (Bootstrap et autres outils)',
                     'level' => 'Expert',
                 ],
                 6       => [
-                    'label' => 'Versioning (Git) and Agile',
-                    'level' => "We're getting good here...",
+                    'label' => 'Versioning (Git) et méthode Agile',
+                    'level' => "On commence à être au point...",
                 ],
                 7       => [
                     'label' => 'Design',
-                    'level' => 'Rainbows and Unicorns!',
+                    'level' => 'Licornes et arcs-en-ciel !',
                 ],
             ],
         ],
@@ -251,49 +241,45 @@ return [
             'index' => [
                 'page-title'       => 'Blog',
                 'breadcrumb-title' => 'Blog',
-                'no-post-found'    => 'No post have been found in the database...',
+                'no-post-found'    => "Il n'y a aucun Billet en base de données.",
             ],
             'show'  => [
                 'page-title'       => 'Blog',
                 'breadcrumb-title' => 'Blog',
             ],
             'tag'   => [
-                'page-title'       => 'Blog - All Posts with tag ":tag_name"',
+                'page-title'       => 'Blog - Tous les billets comportant le tag ":tag_name"',
                 'breadcrumb-title' => 'Blog',
-                'no-post-found'    => 'No post have been found in the database...',
+                'no-post-found'    => "Il n'y a aucun Billet en base de données.",
             ],
         ],
         'works'   => [
             'index' => [
-                'page-title'       => 'My Works',
-                'breadcrumb-title' => 'Works',
-                'no-post-found'    => 'No work have been found in the database...',
+                'page-title'       => 'Projets réalisés',
+                'breadcrumb-title' => 'Projets',
+                'no-post-found'    => "Il n'y a aucun Projet en base de données.",
             ],
             'show'  => [
-                'page-title'       => 'My Works',
-                'breadcrumb-title' => 'Works',
-                'recent-work'      => 'Recent Work',
+                'page-title'       => 'Projets réalisés',
+                'breadcrumb-title' => 'Projets',
+                'recent-work'      => 'Projets récents',
             ],
             'tag'   => [
-                'page-title'       => 'My Works - All works with tag ":tag_name"',
-                'breadcrumb-title' => 'Works',
-                'no-post-found'    => 'No work have been found in the database...',
+                'page-title'       => 'Projets réalisés - Tous les projets comportant le tag ":tag_name"',
+                'breadcrumb-title' => 'Projets',
+                'no-post-found'    => "Il n'y a aucun Projet en base de données.",
             ],
         ],
     ],
     'blocks'   => [
         'blog'   => [
-            'about'      => [
-                'title' => 'About',
-                'text'  => "Here you'll find useful (well I guess so) stuff related to Laravel, Security, PHP in general and maybe other IT-nerdy stuff. Enjoy and feel free to leave me feedbacks in comments!",
-            ],
             'sidebar'    => [
-                'title' => 'The Laboratory',
-                'text'  => "In this section, I'll try to share you cool ideas, tools and techniques I learnt. I think that sharing my knowlege with you guys is important and I hope it might be useful for you. I was lucky to find some guys like me before, teaching me those stuff very kindly. So I guess it's now my turn ;)",
+                'title' => 'Le laboratoire',
+                'text'  => "Dans cette section, je vais essayer de vous partager des sujets intéressants, des outils et techniques que j'ai appris. Je pense qu'il est important de partager mes connaissances avec vous et j'espèreque ça vous sera utile. J'ai eu la chance de trouver des gens comme moi auparavant, prenant du temps et de la patience pour m'apprendre des choses. Je pense donc que c'est à mon tout d'en faire de même ;)",
             ],
             'last-posts' => [
-                'title'         => 'Last Posts',
-                'no-post-found' => 'No post found in the database.',
+                'title'         => 'Derniers billets',
+                'no-post-found' => "Il n'y a aucun Billet en base de données.",
             ],
             'tags'       => [
                 'title' => 'Tags',
@@ -301,20 +287,20 @@ return [
         ],
         'common' => [
             'about'      => [
-                'title' => 'About Me',
-                'text'  => "My name is Julien 'Tyloo' Bonvarlet and I'm an engineer specialised in Web Development. I work mainly on PHP applications and especially on the Laravel Framework.",
-                'link'  => 'Want to know more?',
+                'title' => 'A propos',
+                'text'  => "Je m'appelle Julien 'Tyloo' Bonvarlet et je suis un ingénieur spécialisé en développement Web. Je travaille principalement sur des applications PHP et en particulier sur le Framework Laravel.",
+                'link'  => 'Vous voulez en savoir plus ?',
             ],
             'contact'    => [
-                'title' => 'Get in touch!',
+                'title' => 'Entrer en contact !',
             ],
-            'copyright'  => 'Copyright &copy; 1988-:this_year (and still counting...) <strong>Julien \'Tyloo\' Bonvarlet</strong>. All rights reserved. Website crafted with <i class="fa fa-heart"></i> (and coffee...) in Laravel and a lot of black magic.',
+            'copyright'  => 'Copyright &copy; 1988-:this_year (et ça continue...) <strong>Julien \'Tyloo\' Bonvarlet</strong>. Tous droits réservés. Site web réalisé avec <i class="fa fa-heart"></i> (et du café...) en Laravel et beaucoup de magie noire.',
             'last-posts' => [
-                'title'         => 'From the Blog',
-                'no-post-found' => 'No post found in the database.',
+                'title'         => 'Depuis le Blog',
+                'no-post-found' => "Il n'y a aucun Billet en base de données.",
             ],
             'social'     => [
-                'title' => 'Social Networks',
+                'title' => 'Réseaux sociaux',
             ],
         ],
     ],
