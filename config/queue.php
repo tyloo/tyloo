@@ -54,7 +54,7 @@ return [
             'key'    => 'your-public-key',
             'secret' => 'your-secret-key',
             'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue'  => 'your-queue-url',
+            'queue'  => 'your-queue-name',
             'region' => 'us-east-1',
         ],
 

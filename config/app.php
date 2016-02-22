@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug'           => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url'             => 'https://tyloo.fr',
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone'        => 'UTC',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale'          => 'en',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,9 +91,9 @@ return [
     |
     */
 
-    'key'             => env('APP_KEY'),
+    'key' => env('APP_KEY'),
 
-    'cipher'          => 'AES-256-CBC',
+    'cipher' => 'AES-256-CBC',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'log'             => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'single'),
 
     /*
     |--------------------------------------------------------------------------
@@ -121,7 +121,7 @@ return [
     |
     */
 
-    'providers'       => [
+    'providers' => [
 
         /*
          * Laravel Framework Service Providers...
@@ -173,7 +173,7 @@ return [
     |
     */
 
-    'aliases'         => [
+    'aliases' => [
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
