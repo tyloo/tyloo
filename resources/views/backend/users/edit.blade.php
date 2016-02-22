@@ -32,9 +32,6 @@
         <div class="form-group">
             <input type="password" name="password_confirmation" placeholder="Confirm Password" class="form-control">
         </div>
-        <div class="form-group">
-            <input type="text" name="avatar" placeholder="Avatar" value="{{ old('avatar', $user->avatar) }}" class="form-control">
-        </div>
         <button type="submit" class="btn btn-rw btn-primary">Submit</button>
     </form>
 @stop
