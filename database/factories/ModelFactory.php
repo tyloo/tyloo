@@ -12,13 +12,10 @@
 */
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    $email = $faker->email;
-
     return [
         'name'           => $faker->name,
         'email'          => $faker->email,
         'password'       => str_random(10),
-        'avatar'         => '//www.gravatar.com/avatar/'.md5(strtolower(trim($email))),
         'remember_token' => str_random(10),
     ];
 });
