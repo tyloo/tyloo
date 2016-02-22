@@ -24,7 +24,7 @@
         </thead>
     @forelse($users as $user)
         <tr>
-            <td><img src="{{ $user->avatar }}?s=20" class="img-circle" alt="User Image"> {{ $user->name }}</td>
+            <td><img src="//www.gravatar.com/avatar/{{ md5($user->email) }}?s=20" class="img-circle" alt="User Image"> {{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->created_at->diffForHumans() }}</td>
             <td><a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-info" target="_blank"><i class="fa fa-eye"></i> View</a>

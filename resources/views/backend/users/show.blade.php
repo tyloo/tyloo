@@ -21,7 +21,7 @@
                         <div class="blog-post-holder">
                             <h1>{{ $user->name }}</h1>
                             <h3>{{ $user->email }}</h3>
-                            <h3><img src="{{ $user->avatar }}?s=90" class="img-circle" alt="User Image"></h3>
+                            <h3><img src="//www.gravatar.com/avatar/{{ md5($user->email) }}?s=90" class="img-circle" alt="User Image"></h3>
                         </div>
                     </div>
                 </div>
