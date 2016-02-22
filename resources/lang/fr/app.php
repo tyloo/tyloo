@@ -44,7 +44,7 @@ return [
         'password' => [
             'password-reset'    => 'Réinitialisation de votre mot de passe',
             'password-heading'  => 'Bonjour,',
-            'password-content1' => "Vous avez demandé à réinitialiser votre mot de passe, et parce que je suis bon, je vais vous en fournir un nouveau !",
+            'password-content1' => 'Vous avez demandé à réinitialiser votre mot de passe, et parce que je suis bon, je vais vous en fournir un nouveau !',
             'password-content2' => 'Voici le lien pour pouvoir générer un nouveau mot de passe : :reset_url',
             'bottom-message'    => 'Cordialement,<br>BB8',
         ],
@@ -67,9 +67,9 @@ return [
         'contact' => [
             'page-title'       => 'Contactez-moi !',
             'breadcrumb-title' => 'Contact',
-            'form-heading'     => "Mettons-nous en contact !",
+            'form-heading'     => 'Mettons-nous en contact !',
             'form-text'        => "Veuillez remplir ce formulaire afin d'entrer en contact avec moi. Je vais essayer de vous répondre le plus rapidement possible !",
-            'confirmMailSent'  => "<strong>Votre demande a bien été reçue !</strong><p>Votre demande a bien été reçue. Je vais essayer de vous répondre le plus rapidement possible !<br>Merci ;)</p>",
+            'confirmMailSent'  => '<strong>Votre demande a bien été reçue !</strong><p>Votre demande a bien été reçue. Je vais essayer de vous répondre le plus rapidement possible !<br>Merci ;)</p>',
         ],
         'home'    => [
             'carousel'      => [
@@ -229,7 +229,7 @@ return [
                 ],
                 6       => [
                     'label' => 'Versioning (Git) et méthode Agile',
-                    'level' => "On commence à être au point...",
+                    'level' => 'On commence à être au point...',
                 ],
                 7       => [
                     'label' => 'Design',
