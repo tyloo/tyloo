@@ -23,7 +23,7 @@ class User extends Authenticatable implements Transformable
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'avatar'];
+    protected $fillable = ['name', 'email', 'password'];
 
     /**
      * The attributes excluded from the model's JSON form.
