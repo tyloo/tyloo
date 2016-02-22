@@ -213,10 +213,8 @@
                             <div id="customNav" class="owl-nav"></div>
                         </div>
                     </div>
+                    @include('frontend.partials.home._customers')
                 </div>
-            </div>
-            <div class="row">
-                @include('frontend.partials.home._customers')
             </div>
         </div>
     </section>
