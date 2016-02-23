@@ -9,14 +9,21 @@ matrix:
   allow_failures:
     - php: hhvm
 
+addons:
+    code_climate:
+        repo_token: 822795719849692635a8afced2d2478026498dbd31f84e900682f14e2e867a09
+
 before_install:
   - mysql -e "create database IF NOT EXISTS tylootest;" -uroot
 
 before_script:
   - cp .env.travis .env
   - travis_retry composer self-update
-  - travis_retry composer install --prefer-source
+  - travis_retry composer install --prefer-source --no-interaction
   - travis_retry php artisan migrate
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-"clover=build/logs/clover.xml"
+
+after_script:
+  - vendor/bin/test-reporter
