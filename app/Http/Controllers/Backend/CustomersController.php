@@ -149,6 +149,6 @@ class CustomersController extends Controller
         $filePath = 'uploads/customers/'.$slug.'.'.$image->getClientOriginalExtension();
         Image::make($image)->save(public_path($filePath));
 
-        return $filePath;
+        return '/' . $filePath;
     }
 }
