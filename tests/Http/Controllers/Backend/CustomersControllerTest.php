@@ -12,7 +12,7 @@ class CustomersControllerTest extends AbstractTestCase
     {
         $this->createAndBe();
         $absolutePathToFile = public_path('assets/img/logo.png');
-        $uploadPath = 'uploads/customers/acme.png';
+        $uploadPath = '/uploads/customers/acme.png';
 
         $this->visit('/admin/customers/create')->type('Acme', 'label')->type('May the Force be with you... Always.', 'description')->attach($absolutePathToFile, 'image')->press('Submit');
 
