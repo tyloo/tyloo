@@ -8,9 +8,9 @@ body {
 .background-main {
     background-color: #00B7EB !important;
 }
-.carousel-item1 { background-image:url('../img/backgrounds/bg1.png') }
-.carousel-item2 { background-image:url('../img/backgrounds/bg4.jpg') }
-.carousel-item3 { background-image:url('../img/backgrounds/bg5.jpg') }
+.carousel-item1 { background-image:url('../img/bg1.png') }
+.carousel-item2 { background-image:url('../img/bg2.jpg') }
+.carousel-item3 { background-image:url('../img/bg3.jpg') }
 /* /Carousel */
 
 /* Navigation */
