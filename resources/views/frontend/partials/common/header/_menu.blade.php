@@ -7,9 +7,9 @@
         <li{{ Request::is('contact') ? ' class=active' : '' }}><a href="{{ route('contact') }}">{{ trans('app.menu.contact') }}</a></li>
 
         @if(app()->getLocale() == 'en')
-            <li><a href="{{ route('translate', ['lang' => 'fr']) }}" data-toggle="tooltip" data-placement="bottom" title="Version française"><img src="/assets/img/fr.png" alt=""></a></li>
+            <li><a href="{{ route('translate', ['lang' => 'fr']) }}" data-toggle="tooltip" data-placement="bottom" title="Version française"><img src="/assets/img/fr.png" width="16" height="11" alt=""></a></li>
         @else
-            <li><a href="{{ route('translate', ['lang' => 'en']) }}" data-toggle="tooltip" data-placement="bottom" title="English Version"><img src="/assets/img/us.png" alt=""></a></li>
+            <li><a href="{{ route('translate', ['lang' => 'en']) }}" data-toggle="tooltip" data-placement="bottom" title="English Version"><img src="/assets/img/us.png" width="16" height="11" alt=""></a></li>
         @endif
         <li class="navbar-social visible-lg-block"><a href="https://github.com/tyloo" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-github-alt"></i></a></li>
         <li class="navbar-social visible-lg-block"><a href="https://www.linkedin.com/pub/julien-bonvarlet/32/427/778" class="btn btn-social-icon btn-rw btn-primary btn-xs"><i class="fa fa-linkedin"></i></a></li>
