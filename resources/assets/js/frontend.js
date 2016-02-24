@@ -1,24 +1,26 @@
 $(document).ready(function () {
     /* Scroll Reveal */
-    var configLeft = {
-        origin   : 'left',
-        distance : '100px',
-        delay    : 100,
-        duration : 1000,
-        easing   : 'ease',
-        scale    : 1.1
-    };
-    var configRight = {
-        origin   : 'right',
-        distance : '100px',
-        delay    : 200,
-        duration : 1000,
-        easing   : 'ease',
-        scale    : 1.1
-    };
-    window.sr = new ScrollReveal();
-    sr.reveal('.reveal-left', configLeft);
-    sr.reveal('.reveal-right', configRight);
+    if ($('.reveal-left').length > 0 && $('.reveal-right').length > 0) {
+        var configLeft = {
+            origin   : 'left',
+            distance : '100px',
+            delay    : 100,
+            duration : 1000,
+            easing   : 'ease',
+            scale    : 1.1
+        };
+        var configRight = {
+            origin   : 'right',
+            distance : '100px',
+            delay    : 200,
+            duration : 1000,
+            easing   : 'ease',
+            scale    : 1.1
+        };
+        window.sr = new ScrollReveal();
+        sr.reveal('.reveal-left', configLeft);
+        sr.reveal('.reveal-right', configRight);
+    }
     /* /Scroll Reveal */
 
     /* Image zoom */
