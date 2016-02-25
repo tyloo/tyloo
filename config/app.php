@@ -159,7 +159,6 @@ return [
 
         // Vendor Providers
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
-        Prettus\Repository\Providers\RepositoryServiceProvider::class, // Repositories
 
     ],
     /*
