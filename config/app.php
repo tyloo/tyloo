@@ -159,6 +159,7 @@ return [
 
         // Vendor Providers
         Intervention\Image\ImageServiceProvider::class, // Image Manipulation
+        Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider::class, // BugSnag
 
     ],
     /*
@@ -207,6 +208,7 @@ return [
 
         // Custom Aliases
         'Image'     => Intervention\Image\Facades\Image::class, // Image Manipulation
+        'Bugsnag'   => Bugsnag\BugsnagLaravel\BugsnagFacade::class,
 
     ],
 
