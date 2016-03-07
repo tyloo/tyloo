@@ -25,7 +25,7 @@ return [
     | Example: array('development', 'production')
     |
     */
-    'notify_release_stages' => env('BUGSNAG_NOTIFY_RELEASE_STAGES', null),
+    'notify_release_stages' => env('BUGSNAG_NOTIFY_RELEASE_STAGES', 'production'),
 
     /*
     |--------------------------------------------------------------------------
