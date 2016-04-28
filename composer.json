@@ -10,6 +10,7 @@
     ],
     "homepage": "https://github.com/tyloo/tyloo",
     "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "Julien 'Tyloo' Bonvarlet",
@@ -58,13 +59,11 @@
             "php artisan key:generate"
         ],
             "post-install-cmd": [
-            "php artisan clear-compiled",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize"
         ],
-            "pre-update-cmd": [
-            "php artisan clear-compiled"
-        ],
             "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
         ]
     },
@@ -73,7 +72,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.3.x-dev"
+            "dev-master": "1.4.x-dev"
         }
     }
 }

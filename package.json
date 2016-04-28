@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
   "devDependencies": {
     "admin-lte": "^2.3.3",
     "animate.css": "^3.5.1",

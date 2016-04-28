@@ -1,7 +1,7 @@
 /build
 /node_modules
 /vendor
-/.env
-/database/database.sqlite
 /public/sitemap.xml
+/public/storage
 Envoy.blade.php
+.env

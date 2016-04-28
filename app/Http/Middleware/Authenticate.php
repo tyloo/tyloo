@@ -21,7 +21,7 @@ class Authenticate
     public function handle(Request $request, Closure $next, Guard $guard = null)
     {
         if (Auth::guard($guard)->guest()) {
-            if ($request->ajax()) {
+            if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
                 return redirect()->guest(route('admin.auth.login'));
