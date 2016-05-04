@@ -2,6 +2,33 @@
 
 All Notable changes to `tyloo/tyloo` will be documented in this file
 
+## v1.4.3 - 2016-05-04
+
+### Added
+- Assets are now loaded by SASS.
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+
+## v1.4.2 - 2016-02-29
+
+### Added
+- Updated dependencies (mainly)
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+
+## v1.4.1 - 2016-02-24
+
+### Added
+- Minor changes. Fixed Google Analytics, removed avatar on users (auto gravatar) and fixed avatar tests
+
+### TODO
+- Make thoses pages dynamic (and the menu ?)
+- Add the possibility to add more pages
+
 ## v1.4.0 - 2016-02-22
 
 ### Added
