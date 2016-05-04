@@ -24,6 +24,11 @@ class SitemapCommand extends Command
     protected $description = 'Generates the Sitemap';
 
     /**
+     * @var Sitemap
+     */
+    protected $sitemap;
+
+    /**
      * Execute the console command.
      *
      * @return mixed
@@ -32,7 +37,7 @@ class SitemapCommand extends Command
     {
         $posts = Post::all(['slug', 'updated_at']);
         $works = Work::all(['slug', 'updated_at']);
-        $sitemap = new Sitemap(public_path('sitemap.xml'));
+        $this->sitemap = new Sitemap(public_path('sitemap.xml'));
 
         $this->comment('Starting generating the Sitemap...');
 
@@ -56,14 +61,14 @@ class SitemapCommand extends Command
         }
         // @codeCoverageIgnoreEnd
 
-        $sitemap->write();
+        $this->sitemap->write();
 
         $this->comment('Sitemap generated successfully!');
     }
 
     protected function addItem($url, $strength)
     {
-        $sitemap->addItem($url, time(), Sitemap::DAILY, $strength);
+        $this->sitemap->addItem($url, time(), Sitemap::DAILY, $strength);
         $this->info('"'.$url.'/" added to the sitemap!');
     }
 }
