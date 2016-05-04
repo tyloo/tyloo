@@ -1,0 +1,35 @@
+.alert
+  font-weight:                          400
+  border-radius:                        2px
+
+.alert-success-rw, .alert-info-rw, .alert-warning-rw, .alert-danger-rw
+  border: 0
+  color: #FFF
+.alert-success-rw
+  background-color:                     #2ECC71
+  border-left:                          6px solid #19AA56
+.alert-info-rw
+  background-color:                     #3498DB
+  border-left:                          6px solid #237DB9
+.alert-warning-rw
+  background-color:                     #F39C12
+  border-left:                          6px solid #DA8A0C
+.alert-danger-rw
+  background-color:                     #E74C3C
+  border-left:                          6px solid #CC3B2C
+
+.alert-clear
+  border-color:                         #D2D2D2
+
+.close
+  opacity:                              .4
+
+.close, .alert-success-rw .close, .alert-info-rw .close, .alert-warning-rw .close, .alert-danger-rw .close
+  &:hover, &:focus
+    color:                              #FFF
+    opacity:                            1
+
+.alert-success-rw, .alert-info-rw, .alert-warning-rw, .alert-danger-rw
+  & .alert-link
+    color:                              #FFF
+    text-decoration:                    underline

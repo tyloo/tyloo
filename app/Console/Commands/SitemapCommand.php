@@ -30,20 +30,29 @@ class SitemapCommand extends Command
      */
     public function handle()
     {
-        $posts = $this->getPosts();
-        $works = $this->getWorks();
+        $posts = Post::all(['slug', 'updated_at']);
+        $works = Work::all(['slug', 'updated_at']);
         $sitemap = new Sitemap(public_path('sitemap.xml'));
 
-        $sitemap->addItem(config('app.url').'/', time(), Sitemap::DAILY, 0.9);
-        $sitemap->addItem(config('app.url').'/resume', time(), Sitemap::DAILY, 0.8);
-        $sitemap->addItem(config('app.url').'/blog', time(), Sitemap::DAILY, 0.8);
-        $sitemap->addItem(config('app.url').'/works', time(), Sitemap::DAILY, 0.8);
+        $this->comment('Starting generating the Sitemap...');
+
+        // Home
+        $this->addItem(config('app.url').'/', 0.9);
+        // Resume
+        $this->addItem(config('app.url').'/resume', 0.8);
+        // Blog index
+        $this->addItem(config('app.url').'/blog', 0.8);
+        // Works index
+        $this->addItem(config('app.url').'/works', 0.8);
+
         // @codeCoverageIgnoreStart
+        // Blog posts
         foreach ($posts as $post) {
-            $sitemap->addItem(config('app.url').'/blog/'.$post->slug, $post->updated_at->timestamp, Sitemap::DAILY, 0.7);
+            $this->addItem(config('app.url').'/blog/'.$post->slug, 0.7);
         }
+        // Works items
         foreach ($works as $work) {
-            $sitemap->addItem(config('app.url').'/works/'.$work->slug, $work->updated_at->timestamp, Sitemap::DAILY, 0.7);
+            $this->addItem(config('app.url').'/works/'.$work->slug, 0.7);
         }
         // @codeCoverageIgnoreEnd
 
@@ -52,19 +61,9 @@ class SitemapCommand extends Command
         $this->comment('Sitemap generated successfully!');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function getPosts()
+    protected function addItem($url, $strength)
     {
-        return Post::all(['slug', 'updated_at']);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function getWorks()
-    {
-        return Work::all(['slug', 'updated_at']);
+        $sitemap->addItem($url, time(), Sitemap::DAILY, $strength);
+        $this->info('"'.$url.'/" added to the sitemap!');
     }
 }

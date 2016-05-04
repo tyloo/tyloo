@@ -17,16 +17,7 @@ elixir(function(mix) {
     // Fonts Summernote
     .copy('./node_modules/summernote/dist/font', 'public/assets/css/font')
     // Frontend
-    .styles([
-        "./node_modules/font-awesome/css/font-awesome.min.css",
-        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "./node_modules/bootstrap-social/bootstrap-social.css",
-        "./node_modules/animate.css/animate.min.css",
-        "./node_modules/owl-carousel-2/assets/owl.carousel.min.css",
-        "./node_modules/magnific-popup/dist/magnific-popup.css",
-        "frontend.css",
-        "tyloo.fr.css"
-    ], 'public/assets/css/frontend.css')
+    .sass('frontend.sass', 'public/assets/css')
     .scripts([
         "./node_modules/jquery/dist/jquery.min.js",
         "./node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -39,16 +30,7 @@ elixir(function(mix) {
         "frontend.js"
     ], 'public/assets/js/frontend.js')
     // Backend
-    .styles([
-        "./node_modules/font-awesome/css/font-awesome.min.css",
-        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "./node_modules/admin-lte/dist/css/AdminLTE.min.css",
-        "./node_modules/admin-lte/dist/css/skins/skin-blue.min.css",
-        "./node_modules/summernote/dist/summernote.css",
-        "./node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css",
-        "./node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput-typeahead.css",
-        "backend.css",
-    ], 'public/assets/css/backend.css')
+    .sass('backend.sass', 'public/assets/css')
     .scripts([
         "./node_modules/jquery/dist/jquery.min.js",
         "./node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -57,5 +39,5 @@ elixir(function(mix) {
         "./node_modules/summernote/dist/summernote.min.js",
         "./node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js",
         "backend.js",
-    ], 'public/assets/js/backend.js');
+     ], 'public/assets/js/backend.js');
 });

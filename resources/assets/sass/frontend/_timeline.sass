@@ -1,0 +1,85 @@
+.timeline
+  list-style:                           none
+  padding:                              60px 0 60px
+  position:                             relative
+
+.timeline>li
+  margin-bottom:                        20px
+  position:                             relative
+
+.timeline>li:last-child
+  margin-bottom:                        0
+
+.timeline>li:before, .timeline>li:after
+  content:                              " "
+  display:                              table
+
+.timeline>li:after
+  clear:                                both
+
+.timeline>li:before, .timeline>li:after
+  content:                              " "
+  display:                              table
+
+.timeline>li:after
+  clear:                                both
+
+.timeline>li>.timeline-panel
+  width:                                46%
+  float:                                left
+  border:                               1px dotted #d2d2d2
+  border-radius:                        2px
+  padding:                              20px
+  position:                             relative
+  background-color:                     #FFF
+
+.timeline>li>.timeline-badge
+  color:                                #FFF
+  width:                                25px
+  height:                               25px
+  line-height:                          25px
+  font-size:                            1.4em
+  text-align:                           center
+  position:                             absolute
+  top:                                  28px
+  left:                                 50%
+  margin-left:                          -12.5px
+  background-color:                     #999
+  z-index:                              1
+  border-radius:                        50%
+
+.timeline>li.timeline-inverted>.timeline-panel
+  float:                                right
+
+.timeline>li.timeline-inverted>.timeline-panel:before
+  border-left-width:                    0
+  border-right-width:                   15px
+  left:                                 -15px
+  right:                                auto
+
+.timeline>li.timeline-inverted>.timeline-panel:after
+  border-left-width:                    0
+  border-right-width:                   14px
+  left:                                 -14px
+  right:                                auto
+
+.timeline-badge.primary
+  background-color:                     #00B7EB !important
+.timeline-badge.success
+  background-color:                     #2ecc71 !important
+.timeline-badge.warning
+  background-color:                     #f39c12 !important
+.timeline-badge.danger
+  background-color:                     #e74c3c !important
+.timeline-badge.info
+  background-color:                     #3498db !important
+
+.timeline-title
+  margin-top:                           0
+  color:                                inherit
+
+.timeline-body>p, .timeline-body>ul
+  margin-bottom:                        0
+
+.timeline-body>p + p
+  margin-top:                           5px
