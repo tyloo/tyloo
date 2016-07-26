@@ -1,0 +1,15 @@
+{
+    "name": "Frontend",
+    "alias": "frontend",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Frontend\\Providers\\FrontendServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}

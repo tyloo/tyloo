@@ -1,0 +1,15 @@
+{
+	"name": "tyloo/blog",
+	"description": "",
+	"authors": [
+		{
+			"name": "Julien Bonvarlet",
+			"email": "jbonva@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Modules\\Blog\\": ""
+		}
+	}
+}

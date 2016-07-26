@@ -1,0 +1,15 @@
+{
+    "name": "Portfolio",
+    "alias": "portfolio",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Portfolio\\Providers\\PortfolioServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
