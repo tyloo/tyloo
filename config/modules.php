@@ -24,24 +24,24 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
-        'files' => [
-            'start' => 'start.php',
-            'routes' => 'Http/routes.php',
-            'json' => 'module.json',
-            'views/index' => 'Resources/views/index.blade.php',
-            'views/master' => 'Resources/views/layouts/master.blade.php',
+        'path'    => base_path().'/vendor/nwidart/laravel-modules/src/Commands/stubs',
+        'files'   => [
+            'start'           => 'start.php',
+            'routes'          => 'Http/routes.php',
+            'json'            => 'module.json',
+            'views/index'     => 'Resources/views/index.blade.php',
+            'views/master'    => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
-            'composer' => 'composer.json',
+            'composer'        => 'composer.json',
         ],
         'replacements' => [
-            'start' => ['LOWER_NAME'],
-            'routes' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
-            'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
-            'views/index' => ['LOWER_NAME'],
-            'views/master' => ['STUDLY_NAME'],
+            'start'           => ['LOWER_NAME'],
+            'routes'          => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
+            'json'            => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
+            'views/index'     => ['LOWER_NAME'],
+            'views/master'    => ['STUDLY_NAME'],
             'scaffold/config' => ['STUDLY_NAME'],
-            'composer' => [
+            'composer'        => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
                 'VENDOR',
@@ -94,22 +94,22 @@ return [
         */
 
         'generator' => [
-            'assets' => 'Assets',
-            'config' => 'Config',
-            'command' => 'Console',
-            'event' => 'Events',
-            'listener' => 'Events/Handlers',
-            'migration' => 'Database/Migrations',
-            'model' => 'Entities',
+            'assets'     => 'Assets',
+            'config'     => 'Config',
+            'command'    => 'Console',
+            'event'      => 'Events',
+            'listener'   => 'Events/Handlers',
+            'migration'  => 'Database/Migrations',
+            'model'      => 'Entities',
             'repository' => 'Repositories',
-            'seeder' => 'Database/Seeders',
+            'seeder'     => 'Database/Seeders',
             'controller' => 'Http/Controllers',
-            'filter' => 'Http/Middleware',
-            'request' => 'Http/Requests',
-            'provider' => 'Providers',
-            'lang' => 'Resources/lang',
-            'views' => 'Resources/views',
-            'test' => 'Tests',
+            'filter'     => 'Http/Middleware',
+            'request'    => 'Http/Requests',
+            'provider'   => 'Providers',
+            'lang'       => 'Resources/lang',
+            'views'      => 'Resources/views',
+            'test'       => 'Tests',
         ],
     ],
     /*
@@ -124,7 +124,7 @@ return [
 
     'scan' => [
         'enabled' => false,
-        'paths' => [
+        'paths'   => [
             base_path('vendor/*/*'),
         ],
     ],
@@ -140,7 +140,7 @@ return [
     'composer' => [
         'vendor' => 'tyloo',
         'author' => [
-            'name' => 'Julien Bonvarlet',
+            'name'  => 'Julien Bonvarlet',
             'email' => 'jbonva@gmail.com',
         ],
     ],
@@ -153,8 +153,8 @@ return [
     |
     */
     'cache' => [
-        'enabled' => false,
-        'key' => 'laravel-modules',
+        'enabled'  => false,
+        'key'      => 'laravel-modules',
         'lifetime' => 60,
     ],
     /*
