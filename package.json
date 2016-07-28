@@ -5,8 +5,8 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "bulma": "^0.1.0",
     "gulp": "^3.9.1",
-    "laravel-elixir": "^6.0.0-9",
-    "bootstrap-sass": "^3.3.7"
+    "laravel-elixir": "^6.0.0-9"
   }
 }
