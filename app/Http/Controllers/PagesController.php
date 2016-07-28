@@ -53,4 +53,14 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+
+    /**
+     * Contact page handling.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function postContact()
+    {
+        return view('pages.contact');
+    }
 }

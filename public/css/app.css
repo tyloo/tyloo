@@ -4104,4 +4104,16 @@ a.panel-block:hover {
       .footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
         border-bottom-color: #1fc8db; }
 
+.image.is-centered {
+  margin: 0 auto; }
+
+.image.is-128x128-rounded img {
+  border-radius: 128px; }
+
+section.hero .hero-body .content.is-large .title {
+  font-size: 42px; }
+
+section.hero .hero-body .content.is-large .subtitle {
+  font-size: 28px; }
+
 /*# sourceMappingURL=app.css.map */

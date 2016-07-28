@@ -1,1 +1,25 @@
 @import "node_modules/bulma/bulma";
+
+.image {
+  &.is-centered {
+    margin:0 auto;
+  }
+  &.is-128x128 {
+    &-rounded img {
+      border-radius:128px;
+    }
+  }
+}
+
+section.hero {
+  & .hero-body {
+    & .content.is-large {
+      & .title {
+        font-size:42px;
+      }
+      & .subtitle {
+        font-size:28px;
+      }
+    }
+  }
+}
