@@ -4110,10 +4110,25 @@ a.panel-block:hover {
 .image.is-128x128-rounded img {
   border-radius: 128px; }
 
+section.hero.is-dark .container > .nav {
+  box-shadow: none; }
+  section.hero.is-dark .container > .nav > .nav-left > .nav-logo.nav-item:first-child:not(.is-tab) {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Fredoka One', cursive;
+    padding-left: 10px; }
+
 section.hero .hero-body .content.is-large .title {
-  font-size: 42px; }
+  font-size: 42px;
+  margin-top: 20px; }
 
 section.hero .hero-body .content.is-large .subtitle {
-  font-size: 28px; }
+  font-size: 28px;
+  margin-top: 20px; }
+
+@media (max-width: 768px) {
+  section.hero.is-dark .container > .nav > .nav-left > .nav-logo.nav-item:first-child:not(.is-tab) {
+    padding-top: 5px;
+    padding-bottom: 5px; } }
 
 /*# sourceMappingURL=app.css.map */

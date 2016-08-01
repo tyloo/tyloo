@@ -9,12 +9,13 @@
     <meta name="description" content="@yield('meta_description', 'Tyloo description')">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
-<section class="hero is-primary is-medium is-bold">
+<section class="hero is-dark is-medium is-bold">
     <div class="hero-head">
         <div class="container">
             <nav class="nav">
@@ -29,11 +30,11 @@
                 </span>
 
                 <div id="nav-menu" class="nav-right nav-menu">
-                    <a class="nav-item is-active" href="{{ route('pages.home') }}">Home</a>
-                    <a class="nav-item is-active" href="{{ route('pages.resume') }}">Résumé</a>
-                    <a class="nav-item is-active" href="{{ route('pages.projects.index') }}">Projects</a>
-                    <a class="nav-item is-active" href="{{ route('pages.blog.index') }}">Blog</a>
-                    <a class="nav-item is-active" href="{{ route('pages.contact') }}">Contact</a>
+                    <a class="nav-item is-tab{{ active_state('/') }}" href="{{ route('pages.home') }}">Home</a>
+                    <a class="nav-item is-tab{{ active_state('resume') }}" href="{{ route('pages.resume') }}">Résumé</a>
+                    <a class="nav-item is-tab{{ active_state('projects') }}" href="{{ route('pages.projects.index') }}">Projects</a>
+                    <a class="nav-item is-tab{{ active_state('blog') }}" href="{{ route('pages.blog.index') }}">Blog</a>
+                    <a class="nav-item is-tab{{ active_state('contact') }}" href="{{ route('pages.contact') }}">Contact</a>
                 </div>
             </nav>
         </div>

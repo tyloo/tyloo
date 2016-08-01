@@ -12,13 +12,49 @@
 }
 
 section.hero {
+  &.is-dark {
+    & .container {
+      & > .nav {
+        box-shadow: none;
+
+        & > .nav-left {
+          & > .nav-logo.nav-item:first-child:not(.is-tab) {
+            text-transform: uppercase;
+            font-size:28px;
+            font-family: 'Fredoka One', cursive;
+            padding-left:10px;
+          }
+        }
+      }
+    }
+  }
+
   & .hero-body {
     & .content.is-large {
       & .title {
         font-size:42px;
+        margin-top:20px;
       }
       & .subtitle {
         font-size:28px;
+        margin-top:20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section.hero {
+    &.is-dark {
+      & .container {
+        & > .nav {
+          & > .nav-left {
+            & > .nav-logo.nav-item:first-child:not(.is-tab) {
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
+          }
+        }
       }
     }
   }
