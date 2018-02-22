@@ -207,7 +207,6 @@ return [
 
         // Custom Aliases
         'Image'     => Intervention\Image\Facades\Image::class, // Image Manipulation
-        'Bugsnag'   => Bugsnag\BugsnagLaravel\BugsnagFacade::class,
 
     ],
 
