@@ -8,7 +8,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Assets are now loaded by SASS.
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 
 ## v1.4.2 - 2016-02-29
@@ -17,7 +17,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Updated dependencies (mainly)
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 
 ## v1.4.1 - 2016-02-24
@@ -26,7 +26,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Minor changes. Fixed Google Analytics, removed avatar on users (auto gravatar) and fixed avatar tests
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 
 ## v1.4.0 - 2016-02-22
@@ -36,7 +36,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Tags are now polymorphic and added to pages
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 
 ## v1.3.1 - 2016-01-25
@@ -45,7 +45,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Separated Works from Blog
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 - Make it i18n
 
@@ -55,7 +55,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Upgraded to 5.2
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 - Make it i18n
 
@@ -67,7 +67,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Implemented more tests
 
 ### TODO
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 - Make a search engine. GSA ? :)
 - Use Gulp with minify and other stuff (Laravel Elixir)
@@ -89,7 +89,7 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Stuff to do on the design
 - Rework content (and the bullshit)
 - Implement more tests
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 - Make a search engine. GSA ? :)
 
@@ -107,6 +107,6 @@ All Notable changes to `tyloo/tyloo` will be documented in this file
 - Implement backend and backend design
 - Implement more tests
 - Create the Blog with dynamic content
-- Make thoses pages dynamic (and the menu ?)
+- Make those pages dynamic (and the menu ?)
 - Add the possibility to add more pages
 - Make a search engine. GSA ? :)
