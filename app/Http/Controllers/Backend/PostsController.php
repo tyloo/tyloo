@@ -12,6 +12,9 @@ use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
+
+
+   
     /**
      * @var \App\Repositories\PostRepository
      */
